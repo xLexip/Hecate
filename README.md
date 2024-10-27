@@ -1,0 +1,1 @@
+[![SonarCloud](https://sonarcloud.io/api/project_badges/quality_gate?project=xLexip_Hecate)](https://sonarcloud.io/summary/new_code?id=xLexip_Hecate)
