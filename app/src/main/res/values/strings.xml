@@ -1,3 +1,4 @@
 <resources>
-	<string name="app_name">Hecate</string>
+	<string name="app_name">Adaptive Theme</string>
+	<string name="action_use_adaptive_theme">Use adaptive theme</string>
 </resources>
