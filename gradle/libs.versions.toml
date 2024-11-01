@@ -10,7 +10,7 @@ junitVersion = "1.2.1"
 kotlin = "2.0.20"
 lifecycleRuntimeKtx = "2.8.7"
 lifecycleViewmodelCompose = "2.8.7"
-material = "1.4.+"
+material = "1.12.+"
 preference = "1.2.1"
 
 [libraries]
