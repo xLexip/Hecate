@@ -37,7 +37,7 @@ fun SwitchPreferenceCard(text: String, isChecked: Boolean, onCheckedChange: (Boo
 			.fillMaxWidth(),
 		shape = MaterialTheme.shapes.extraLarge,
 		colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
-		onClick = { onCheckedChange(isChecked) }
+		onClick = { onCheckedChange(!isChecked) }
 	) {
 		Row(
 			modifier = Modifier
