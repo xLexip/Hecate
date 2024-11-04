@@ -12,6 +12,7 @@
 
 package dev.lexip.hecate.ui
 
+import android.app.UiModeManager
 import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -29,6 +30,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.lexip.hecate.data.UserPreferencesRepository
 import dev.lexip.hecate.ui.theme.HecateTheme
+import dev.lexip.hecate.util.DarkThemeHandler
 
 // Data Store
 private const val USER_PREFERENCES_NAME = "user_preferences"
@@ -40,14 +42,18 @@ class MainActivity : ComponentActivity() {
 		super.onCreate(savedInstanceState)
 		installSplashScreen()
 		enableEdgeToEdge()
+
 		setContent {
 			val viewModel: AdaptiveThemeViewModel = viewModel(
 				factory = AdaptiveThemeViewModelFactory(
-					UserPreferencesRepository(dataStore)
+					UserPreferencesRepository(dataStore),
+					DarkThemeHandler(
+						contentResolver,
+						getSystemService(UI_MODE_SERVICE) as UiModeManager
+					)
 				)
 			)
 			val state by viewModel.uiState.collectAsState()
-
 			HecateTheme {
 				AdaptiveThemeScreen(state, viewModel::updateServiceEnabled)
 			}
