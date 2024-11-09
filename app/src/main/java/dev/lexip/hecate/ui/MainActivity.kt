@@ -12,7 +12,6 @@
 
 package dev.lexip.hecate.ui
 
-import android.app.UiModeManager
 import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -42,10 +41,7 @@ class MainActivity : ComponentActivity() {
 			val viewModel: AdaptiveThemeViewModel = viewModel(
 				factory = AdaptiveThemeViewModelFactory(
 					UserPreferencesRepository(dataStore),
-					DarkThemeHandler(
-						contentResolver,
-						getSystemService(UI_MODE_SERVICE) as UiModeManager
-					)
+					DarkThemeHandler(applicationContext)
 				)
 			)
 			val state by viewModel.uiState.collectAsState()

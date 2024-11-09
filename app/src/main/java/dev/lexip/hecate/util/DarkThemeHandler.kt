@@ -13,9 +13,10 @@
 package dev.lexip.hecate.util
 
 import android.app.UiModeManager
-import android.content.ContentResolver
+import android.content.Context
 import android.provider.Settings.Secure
 import android.util.Log
+import java.lang.ref.WeakReference
 
 private const val TAG = "DarkThemeHandler"
 private const val SECURE_SETTINGS_KEY = "ui_night_mode"
@@ -23,10 +24,12 @@ private const val SECURE_SETTINGS_KEY = "ui_night_mode"
 /**
  * Handler for managing the system dark theme.
  */
-class DarkThemeHandler(
-	private val contentResolver: ContentResolver,
-	private val uiModeManager: UiModeManager
-) {
+class DarkThemeHandler(context: Context) {
+	private val contextRef = WeakReference(context)
+	private val contentResolver = contextRef.get()?.contentResolver
+	private val uiModeManager =
+		contextRef.get()?.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+
 	/**
 	 * @return True if the system dark theme is enabled, false otherwise.
 	 */
@@ -44,9 +47,14 @@ class DarkThemeHandler(
 	 */
 	fun setDarkTheme(enable: Boolean) {
 		val targetMode = if (enable) UiModeManager.MODE_NIGHT_YES else UiModeManager.MODE_NIGHT_NO
-		Log.i(TAG, "Setting dark mode to: $targetMode")
-		Secure.putInt(contentResolver, SECURE_SETTINGS_KEY, targetMode)
-		refreshUi()
+
+		// Only write the setting and update the UI when the setting has actually changed.
+		if (enable != isDarkThemeEnabled()) {
+			Log.i(TAG, "Setting dark mode to: $targetMode")
+			Secure.putInt(contentResolver, SECURE_SETTINGS_KEY, targetMode)
+			refreshUi()
+		}
+
 	}
 
 	/**
