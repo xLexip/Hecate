@@ -2,7 +2,7 @@
 activityCompose = "1.9.3"
 agp = "8.7.2"
 appcompat = "1.7.0"
-composeBom = "2024.10.01"
+composeBom = "2024.12.01"
 coreKtx = "1.15.0"
 coreSplashscreenVersion = "1.0.1"
 datastorePreferencesCore = "1.1.1"
