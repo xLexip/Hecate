@@ -74,10 +74,8 @@ class AdaptiveThemeViewModel(
 		}
 	}
 
-	fun updateAdaptiveThemeThresholdLux(lux: Float) {
-		viewModelScope.launch {
-			userPreferencesRepository.updateAdaptiveThemeThresholdLux(lux)
-		}
+	private suspend fun updateAdaptiveThemeThresholdLux(lux: Float) {
+		userPreferencesRepository.updateAdaptiveThemeThresholdLux(lux)
 	}
 
 }

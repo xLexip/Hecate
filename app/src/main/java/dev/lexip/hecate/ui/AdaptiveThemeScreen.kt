@@ -46,7 +46,7 @@ import dev.lexip.hecate.ui.theme.hecateTopAppBarColors
 @Composable
 fun AdaptiveThemeScreen(
 	uiState: AdaptiveThemeUiState,
-	updateServiceEnabled: (Boolean) -> Unit,
+	updateAdaptiveThemeEnabled: (Boolean) -> Unit,
 ) {
 	val scrollBehavior =
 		TopAppBarDefaults.enterAlwaysScrollBehavior()
@@ -88,8 +88,8 @@ fun AdaptiveThemeScreen(
 				text = stringResource(
 					id = R.string.action_use_adaptive_theme
 				),
-				isChecked = uiState.isAdaptiveThemeEnabled,
-				onCheckedChange = { checked -> updateServiceEnabled(checked) }
+				isChecked = uiState.adaptiveThemeEnabled,
+				onCheckedChange = { checked -> updateAdaptiveThemeEnabled(checked) }
 
 			)
 		}

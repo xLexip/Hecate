@@ -19,28 +19,31 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
+import androidx.datastore.preferences.core.floatPreferencesKey
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 
+private const val TAG = "UserPreferencesRepository"
+
 data class UserPreferences(
-	val serviceEnabled: Boolean
+	val adaptiveThemeEnabled: Boolean,
+	val adaptiveThemeThresholdLux: Float
 )
 
 class UserPreferencesRepository(private val dataStore: DataStore<Preferences>) {
 
-	private val className: String = this::class.java.simpleName
-
 	private object PreferencesKeys {
-		val SERVICE_ENABLED = booleanPreferencesKey("service_enabled")
+		val ADAPTIVE_THEME_ENABLED = booleanPreferencesKey("adaptive_theme_enabled")
+		val ADAPTIVE_THEME_THRESHOLD_LUX = floatPreferencesKey("adaptive_theme_threshold_lux")
 	}
 
 	val userPreferencesFlow: Flow<UserPreferences> = dataStore.data
 		.catch { exception ->
 			// dataStore.data throws an IOException when an error is encountered when reading data
 			if (exception is IOException) {
-				Log.e(className, "Error reading user preferences.", exception)
+				Log.e(TAG, "Error reading user preferences.", exception)
 				emit(emptyPreferences())
 			} else {
 				throw exception
@@ -54,13 +57,22 @@ class UserPreferencesRepository(private val dataStore: DataStore<Preferences>) {
 
 	private fun mapUserPreferences(preferences: Preferences): UserPreferences {
 		// Get our show completed value, defaulting to false if not set:
-		val serviceEnabled = preferences[PreferencesKeys.SERVICE_ENABLED] == true
-		return UserPreferences(serviceEnabled)
+		preferences[PreferencesKeys.ADAPTIVE_THEME_ENABLED] == true
+		val adaptiveThemeEnabled = preferences[PreferencesKeys.ADAPTIVE_THEME_ENABLED] == true
+		val adaptiveThemeThresholdLux =
+			preferences[PreferencesKeys.ADAPTIVE_THEME_THRESHOLD_LUX] ?: 100f
+		return UserPreferences(adaptiveThemeEnabled, adaptiveThemeThresholdLux)
 	}
 
-	suspend fun updateServiceEnabled(enabled: Boolean) {
+	suspend fun updateAdaptiveThemeEnabled(enabled: Boolean) {
 		dataStore.edit { preferences ->
-			preferences[PreferencesKeys.SERVICE_ENABLED] = enabled
+			preferences[PreferencesKeys.ADAPTIVE_THEME_ENABLED] = enabled
+		}
+	}
+
+	suspend fun updateAdaptiveThemeThresholdLux(lux: Float) {
+		dataStore.edit { preferences ->
+			preferences[PreferencesKeys.ADAPTIVE_THEME_THRESHOLD_LUX] = lux
 		}
 	}
 
