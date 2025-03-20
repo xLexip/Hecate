@@ -49,10 +49,12 @@ android {
 }
 
 dependencies {
+	implementation(libs.androidx.localbroadcastmanager)
 	implementation(libs.androidx.core.splashscreen.v100)
 	implementation(libs.androidx.activity.compose)
 	implementation(libs.androidx.appcompat)
 	implementation(libs.androidx.core.ktx)
+	implementation(libs.androidx.datastore.preferences)
 	implementation(libs.androidx.lifecycle.runtime.ktx)
 	implementation(libs.androidx.lifecycle.viewmodel.compose)
 	implementation(libs.androidx.material3)

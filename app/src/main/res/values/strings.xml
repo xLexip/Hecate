@@ -1,3 +1,7 @@
 <resources>
-	<string name="app_name">Hecate</string>
+	<string name="app_name">Adaptive Theme</string>
+	<string name="action_disable_notification">Disable notification</string>
+	<string name="action_use_adaptive_theme">Use adaptive theme</string>
+	<string name="notification_channel_service">Background Activity</string>
+	<string name="notification_service_running">Service running…</string>
 </resources>
