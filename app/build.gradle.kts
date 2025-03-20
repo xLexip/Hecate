@@ -49,6 +49,7 @@ android {
 }
 
 dependencies {
+	implementation(libs.androidx.localbroadcastmanager)
 	implementation(libs.androidx.core.splashscreen.v100)
 	implementation(libs.androidx.activity.compose)
 	implementation(libs.androidx.appcompat)

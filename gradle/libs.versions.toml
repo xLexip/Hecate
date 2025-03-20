@@ -12,6 +12,7 @@ junitVersion = "1.2.1"
 kotlin = "2.0.21"
 lifecycleRuntimeKtx = "2.8.7"
 lifecycleViewmodelCompose = "2.8.7"
+localbroadcastmanager = "1.1.0"
 material = "1.12.0"
 preference = "1.2.1"
 
@@ -26,6 +27,7 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-localbroadcastmanager = { module = "androidx.localbroadcastmanager:localbroadcastmanager", version.ref = "localbroadcastmanager" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }

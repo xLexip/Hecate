@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 xLexip <https://lexip.dev>
+ * Copyright (C) 2024-2025 xLexip <https://lexip.dev>
  *
  * Licensed under the GNU General Public License, Version 3.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,22 +12,27 @@
 
 package dev.lexip.hecate.ui
 
+import android.content.Intent
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import dev.lexip.hecate.HecateApplication
 import dev.lexip.hecate.data.UserPreferencesRepository
+import dev.lexip.hecate.services.BroadcastReceiverService
 import dev.lexip.hecate.util.DarkThemeHandler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+private const val TAG = "AdaptiveThemeViewModel"
 
 data class AdaptiveThemeUiState(
-	val isAdaptiveThemeEnabled: Boolean = false
+	val adaptiveThemeEnabled: Boolean = false
 )
 
 class AdaptiveThemeViewModel(
+	private val application: HecateApplication,
 	private val userPreferencesRepository: UserPreferencesRepository,
 	private var darkThemeHandler: DarkThemeHandler
 ) : ViewModel() {
@@ -39,23 +44,46 @@ class AdaptiveThemeViewModel(
 		viewModelScope.launch {
 			userPreferencesRepository.userPreferencesFlow.collect { userPreferences ->
 				_uiState.value = AdaptiveThemeUiState(
-					isAdaptiveThemeEnabled = userPreferences.serviceEnabled
+					adaptiveThemeEnabled = userPreferences.adaptiveThemeEnabled
 				)
 			}
 		}
 	}
 
-	fun updateServiceEnabled(enable: Boolean) {
+	/**
+	 * Starts the broadcast receiver service. When it exists
+	 * its onStartCommand() will be called again.
+	 */
+	private fun startBroadcastReceiverService() {
+		val intent = Intent(application.applicationContext, BroadcastReceiverService::class.java)
+		application.applicationContext.startService(intent)
+	}
+
+	private fun stopBroadcastReceiverService() {
+		val intent = Intent(application.applicationContext, BroadcastReceiverService::class.java)
+		application.applicationContext.stopService(intent)
+	}
+
+
+	fun updateAdaptiveThemeEnabled(enable: Boolean) {
 		// TODO Check for android.permission.WRITE_SECURE_SETTINGS
 		viewModelScope.launch {
-			darkThemeHandler.setDarkTheme(enable) // Temporary
-			userPreferencesRepository.updateServiceEnabled(enable)
+			userPreferencesRepository.updateAdaptiveThemeEnabled(enable)
+			if (enable) startBroadcastReceiverService() else stopBroadcastReceiverService()
+			updateAdaptiveThemeThresholdLux(500f) // todo
+		}
+	}
+
+	fun updateAdaptiveThemeThresholdLux(lux: Float) {
+		viewModelScope.launch {
+			userPreferencesRepository.updateAdaptiveThemeThresholdLux(lux)
 		}
 	}
 
 }
 
 class AdaptiveThemeViewModelFactory(
+	private val application: HecateApplication,
 	private val userPreferencesRepository: UserPreferencesRepository,
 	private val darkThemeHandler: DarkThemeHandler
 ) : ViewModelProvider.Factory {
@@ -64,6 +92,7 @@ class AdaptiveThemeViewModelFactory(
 		if (modelClass.isAssignableFrom(AdaptiveThemeViewModel::class.java)) {
 			@Suppress("UNCHECKED_CAST")
 			return AdaptiveThemeViewModel(
+				application,
 				userPreferencesRepository,
 				darkThemeHandler
 			) as T
