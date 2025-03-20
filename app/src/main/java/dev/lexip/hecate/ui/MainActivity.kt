@@ -12,7 +12,6 @@
 
 package dev.lexip.hecate.ui
 
-import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -20,15 +19,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.viewmodel.compose.viewModel
+import dev.lexip.hecate.HecateApplication
 import dev.lexip.hecate.data.UserPreferencesRepository
 import dev.lexip.hecate.ui.theme.HecateTheme
 import dev.lexip.hecate.util.DarkThemeHandler
-
-// Data Store
-private const val USER_PREFERENCES_NAME = "user_preferences"
-private val Context.dataStore by preferencesDataStore(USER_PREFERENCES_NAME)
 
 class MainActivity : ComponentActivity() {
 
@@ -38,15 +33,17 @@ class MainActivity : ComponentActivity() {
 		enableEdgeToEdge()
 
 		setContent {
-			val viewModel: AdaptiveThemeViewModel = viewModel(
+			val dataStore = (this.applicationContext as HecateApplication).userPreferencesDataStore
+			val adaptiveThemeViewModel: AdaptiveThemeViewModel = viewModel(
 				factory = AdaptiveThemeViewModelFactory(
+					this.application as HecateApplication,
 					UserPreferencesRepository(dataStore),
 					DarkThemeHandler(applicationContext)
 				)
 			)
-			val state by viewModel.uiState.collectAsState()
+			val state by adaptiveThemeViewModel.uiState.collectAsState()
 			HecateTheme {
-				AdaptiveThemeScreen(state, viewModel::updateServiceEnabled)
+				AdaptiveThemeScreen(state, adaptiveThemeViewModel::updateAdaptiveThemeEnabled)
 			}
 		}
 

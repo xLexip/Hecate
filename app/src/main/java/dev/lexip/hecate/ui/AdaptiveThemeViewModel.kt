@@ -50,10 +50,15 @@ class AdaptiveThemeViewModel(
 		}
 	}
 
-	/**
-	 * Starts the broadcast receiver service. When it exists
-	 * its onStartCommand() will be called again.
-	 */
+	fun updateAdaptiveThemeEnabled(enable: Boolean) {
+		// TODO #30: Check for android.permission.WRITE_SECURE_SETTINGS
+		viewModelScope.launch {
+			userPreferencesRepository.updateAdaptiveThemeEnabled(enable)
+			if (enable) startBroadcastReceiverService() else stopBroadcastReceiverService()
+			updateAdaptiveThemeThresholdLux(500f)
+		}
+	}
+
 	private fun startBroadcastReceiverService() {
 		val intent = Intent(application.applicationContext, BroadcastReceiverService::class.java)
 		application.applicationContext.startService(intent)
@@ -63,21 +68,9 @@ class AdaptiveThemeViewModel(
 		val intent = Intent(application.applicationContext, BroadcastReceiverService::class.java)
 		application.applicationContext.stopService(intent)
 	}
-
-
-	fun updateAdaptiveThemeEnabled(enable: Boolean) {
-		// TODO Check for android.permission.WRITE_SECURE_SETTINGS
-		viewModelScope.launch {
-			userPreferencesRepository.updateAdaptiveThemeEnabled(enable)
-			if (enable) startBroadcastReceiverService() else stopBroadcastReceiverService()
-			updateAdaptiveThemeThresholdLux(500f) // todo
-		}
-	}
-
-	fun updateAdaptiveThemeThresholdLux(lux: Float) {
-		viewModelScope.launch {
-			userPreferencesRepository.updateAdaptiveThemeThresholdLux(lux)
-		}
+	
+	private suspend fun updateAdaptiveThemeThresholdLux(lux: Float) {
+		userPreferencesRepository.updateAdaptiveThemeThresholdLux(lux)
 	}
 
 }

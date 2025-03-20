@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 xLexip <https://lexip.dev>
+ * Copyright (C) 2024-2025 xLexip <https://lexip.dev>
  *
  * Licensed under the GNU General Public License, Version 3.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ class DarkThemeHandler(context: Context) {
 	fun isDarkThemeEnabled(): Boolean {
 		val enabled =
 			Secure.getInt(contentResolver, SECURE_SETTINGS_KEY) == UiModeManager.MODE_NIGHT_YES
-		Log.d(TAG, "isDarkModeEnabled: $enabled")
+		Log.d(TAG, "Device dark theme enabled: $enabled")
 		return enabled
 	}
 
@@ -50,7 +50,7 @@ class DarkThemeHandler(context: Context) {
 
 		// Only write the setting and update the UI when the setting has actually changed.
 		if (enable != isDarkThemeEnabled()) {
-			Log.i(TAG, "Setting dark mode to: $targetMode")
+			Log.i(TAG, "Switching dark theme to: $targetMode")
 			Secure.putInt(contentResolver, SECURE_SETTINGS_KEY, targetMode)
 			refreshUi()
 		}
@@ -65,8 +65,8 @@ class DarkThemeHandler(context: Context) {
 	 * @see <a href="https://developer.android.com/reference/android/app/UiModeManager#setNightMode(int)">UiModeManager.setNightMode(int)</a>
 	 */
 	private fun refreshUi() {
-		Log.d(TAG, "Refreshing the system UI after dark theme change")
+		Log.d(TAG, "Refreshing system UI after dark theme change...")
 		uiModeManager.enableCarMode(0)
-		uiModeManager.disableCarMode(0)
+		uiModeManager.disableCarMode(UiModeManager.DISABLE_CAR_MODE_GO_HOME)
 	}
 }

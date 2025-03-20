@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 xLexip <https://lexip.dev>
+ * Copyright (C) 2024-2025 xLexip <https://lexip.dev>
  *
  * Licensed under the GNU General Public License, Version 3.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun SwitchPreferenceCard(text: String, isChecked: Boolean, onCheckedChange: (Boolean) -> Unit) {
-	val mainSwitchTextSize = (MaterialTheme.typography.titleLarge.fontSize.value - 1).sp
+	val mainSwitchTextSize = (MaterialTheme.typography.titleLarge.fontSize.value - 2).sp
 
 	Card(
 		modifier = Modifier
@@ -42,7 +42,8 @@ fun SwitchPreferenceCard(text: String, isChecked: Boolean, onCheckedChange: (Boo
 		Row(
 			modifier = Modifier
 				.fillMaxWidth()
-				.padding(PaddingValues(16.dp)),
+				.padding(PaddingValues(16.dp))
+				.padding(start = 4.dp),
 			verticalAlignment = Alignment.CenterVertically,
 			horizontalArrangement = Arrangement.SpaceBetween
 		) {
