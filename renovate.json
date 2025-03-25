@@ -7,5 +7,22 @@
   "baseBranches": [
 	"develop"
   ],
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "packageRules": [
+	{
+	  "groupName": "Patched Dependencies",
+	  "groupSlug": "patch-updates",
+	  "matchUpdateTypes": [
+		"patch"
+	  ]
+	},
+	{
+	  "commitMessageAction": "Apply",
+	  "groupName": "Minor Dependency Updates",
+	  "groupSlug": "minor-updates",
+	  "matchUpdateTypes": [
+		"minor"
+	  ]
+	}
+  ]
 }
