@@ -1,4 +1,4 @@
-import org.gradle.api.JavaVersion.VERSION_22
+import org.gradle.api.JavaVersion.VERSION_23
 
 plugins {
 	alias(libs.plugins.android.application)
@@ -8,12 +8,12 @@ plugins {
 
 android {
 	namespace = "dev.lexip.hecate"
-	compileSdk = 35
+	compileSdk = 36
 
 	defaultConfig {
 		applicationId = "dev.lexip.hecate"
 		minSdk = 31
-		targetSdk = 35
+		targetSdk = 36
 		versionCode = 1
 		versionName = "1.0.0"
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -29,11 +29,11 @@ android {
 		}
 	}
 	compileOptions {
-		sourceCompatibility = VERSION_22
-		targetCompatibility = VERSION_22
+		sourceCompatibility = VERSION_23
+		targetCompatibility = VERSION_23
 	}
 	kotlinOptions {
-		jvmTarget = "22"
+		jvmTarget = "23"
 	}
 	buildFeatures {
 		compose = true
@@ -49,10 +49,12 @@ android {
 }
 
 dependencies {
+	implementation(libs.androidx.localbroadcastmanager)
 	implementation(libs.androidx.core.splashscreen.v100)
 	implementation(libs.androidx.activity.compose)
 	implementation(libs.androidx.appcompat)
 	implementation(libs.androidx.core.ktx)
+	implementation(libs.androidx.datastore.preferences)
 	implementation(libs.androidx.lifecycle.runtime.ktx)
 	implementation(libs.androidx.lifecycle.viewmodel.compose)
 	implementation(libs.androidx.material3)

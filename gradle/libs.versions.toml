@@ -1,17 +1,19 @@
 [versions]
-activityCompose = "1.9.3"
-agp = "8.7.2"
+activityCompose = "1.10.1"
+agp = "8.9.1"
 appcompat = "1.7.0"
-composeBom = "2024.10.01"
+composeBom = "2025.03.00"
 coreKtx = "1.15.0"
 coreSplashscreenVersion = "1.0.1"
+datastorePreferencesCore = "1.1.3"
 espressoCore = "3.6.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
-kotlin = "2.0.20"
+kotlin = "2.1.20"
 lifecycleRuntimeKtx = "2.8.7"
 lifecycleViewmodelCompose = "2.8.7"
-material = "1.12.+"
+localbroadcastmanager = "1.1.0"
+material = "1.12.0"
 preference = "1.2.1"
 
 [libraries]
@@ -20,16 +22,18 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-splashscreen-v100 = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreenVersion" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferencesCore" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-localbroadcastmanager = { module = "androidx.localbroadcastmanager:localbroadcastmanager", version.ref = "localbroadcastmanager" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version = "1.7.8" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

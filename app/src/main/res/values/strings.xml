@@ -1,3 +1,8 @@
 <resources>
-	<string name="app_name">Hecate</string>
+	<string name="app_name">Adaptive theme</string>
+	<string name="action_disable_notification">Disable notification</string>
+	<string name="action_use_adaptive_theme">Use adaptive theme</string>
+	<string name="description_adaptive_theme">Adaptive Theme automatically adjusts the device theme based on ambient brightness. It enhances visibility in bright conditions while optimizing battery life.</string>
+	<string name="notification_channel_service">Background Activity</string>
+	<string name="notification_service_running">Adaptive theme is active</string>
 </resources>
