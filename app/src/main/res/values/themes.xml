@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Hecate" parent="android:Theme.Material.Light.NoActionBar" />
+	<style name="Theme.Hecate" parent="android:Theme.Material.NoActionBar" />
+
+	<style name="Theme.App.Starting" parent="Theme.SplashScreen">
+		<item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+		<item name="android:windowSplashScreenAnimationDuration">0</item>
+		<item name="postSplashScreenTheme">@style/Theme.Hecate</item>
+		<item name="android:windowSplashScreenIconBackgroundColor">#424654</item>
+	</style>
+
 </resources>

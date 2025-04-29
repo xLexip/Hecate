@@ -5,7 +5,7 @@ on:
       - main
       - develop
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [ opened, synchronize, reopened ]
 jobs:
   build:
     name: Build and analyze
@@ -36,5 +36,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-         ./gradlew lint --build-cache
-         ./gradlew build sonar --info --build-cache
+          ./gradlew lint --build-cache
+          ./gradlew build sonar --info --build-cache
