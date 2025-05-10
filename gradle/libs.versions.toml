@@ -5,7 +5,7 @@ appcompat = "1.7.0"
 composeBom = "2025.04.01"
 coreKtx = "1.16.0"
 coreSplashscreenVersion = "1.0.1"
-datastorePreferencesCore = "1.1.4"
+datastorePreferencesCore = "1.1.6"
 espressoCore = "3.6.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -33,7 +33,7 @@ androidx-preference = { group = "androidx.preference", name = "preference", vers
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version = "1.8.0" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version = "1.8.1" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
