@@ -34,6 +34,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.lexip.hecate.R
@@ -48,7 +49,7 @@ fun AdaptiveThemeScreen(
 ) {
 	val scrollBehavior =
 		TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
-	val horizontalOffsetPadding = 4.dp
+	val horizontalOffsetPadding = 8.dp
 	Scaffold(
 		modifier = Modifier
 			.nestedScroll(scrollBehavior.nestedScrollConnection),
@@ -62,7 +63,8 @@ fun AdaptiveThemeScreen(
 				title = {
 					Text(
 						text = stringResource(id = R.string.app_name),
-						style = MaterialTheme.typography.displaySmall
+						style = MaterialTheme.typography.displaySmall,
+						fontWeight = FontWeight.Medium
 					)
 				},
 				scrollBehavior = scrollBehavior
@@ -74,12 +76,12 @@ fun AdaptiveThemeScreen(
 				.windowInsetsPadding(WindowInsets.systemGestures.only(WindowInsetsSides.Horizontal))
 				.fillMaxSize()
 				.padding(innerPadding)
-				.padding(horizontal = horizontalOffsetPadding)
 				.verticalScroll(rememberScrollState()),
 			verticalArrangement = Arrangement.spacedBy(32.dp)
 
 		) {
 			Text(
+				modifier = Modifier.padding(horizontal = horizontalOffsetPadding),
 				text = stringResource(id = R.string.description_adaptive_theme),
 				style = MaterialTheme.typography.bodyLarge.copy(lineHeight = 22.sp)
 			)

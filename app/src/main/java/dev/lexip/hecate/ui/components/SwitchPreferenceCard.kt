@@ -13,47 +13,68 @@
 package dev.lexip.hecate.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 
 @Composable
 fun SwitchPreferenceCard(text: String, isChecked: Boolean, onCheckedChange: (Boolean) -> Unit) {
-	val mainSwitchTextSize = (MaterialTheme.typography.titleLarge.fontSize.value - 2).sp
-
 	Card(
 		modifier = Modifier
 			.fillMaxWidth(),
-		shape = MaterialTheme.shapes.extraLarge,
+		shape = RoundedCornerShape(percent = 100),
 		colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
 		onClick = { onCheckedChange(!isChecked) }
 	) {
 		Row(
 			modifier = Modifier
 				.fillMaxWidth()
-				.padding(PaddingValues(16.dp))
-				.padding(start = 4.dp),
+				.padding(top = 12.dp, bottom = 12.dp, start = 32.dp, end = 20.dp),
 			verticalAlignment = Alignment.CenterVertically,
 			horizontalArrangement = Arrangement.SpaceBetween
 		) {
 			Text(
-				style = MaterialTheme.typography.titleLarge,
-				fontSize = mainSwitchTextSize,
+				style = MaterialTheme.typography.titleMedium,
 				color = MaterialTheme.colorScheme.onPrimaryContainer,
 				text = text
 			)
-			Switch(checked = isChecked, onCheckedChange = onCheckedChange)
+			Switch(
+				checked = isChecked,
+				onCheckedChange = onCheckedChange,
+				thumbContent = if (isChecked) {
+					{
+						Icon(
+							imageVector = Icons.Filled.Check,
+							contentDescription = null,
+							modifier = Modifier.size(SwitchDefaults.IconSize),
+						)
+					}
+				} else {
+					{
+						Icon(
+							imageVector = Icons.Filled.Clear,
+							contentDescription = null,
+							modifier = Modifier.size(SwitchDefaults.IconSize),
+						)
+					}
+				}
+			)
 		}
 	}
 }
