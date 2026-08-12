@@ -14,15 +14,19 @@ It can also update your **wallpaper** to match the active theme.
 <br>
 
 <a href="https://play.google.com/store/apps/details?id=dev.lexip.hecate&referrer=utm_source%3Dgithub%26utm_medium%3Dreadme_button">
-    <img src=".github/resources/get-it-on-google-play.svg" alt="Get it on Google Play" width="180"/>
+    <img src=".github/resources/get-it-on-google-play.svg" alt="Get Adaptive Theme on Google Play" width="180"/>
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/xLexip/Adaptive-Theme/releases">
-    <img src=".github/resources/github-releases.png" alt="GitHub Releases" width="180"/>
+    <img src=".github/resources/github-releases.png" alt="Get Adaptive Theme as .APK on GitHub Releases" width="180"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22dev.lexip.hecate%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FxLexip%2FAdaptive-Theme%22%2C%22author%22%3A%22xLexip%22%2C%22name%22%3A%22Adaptive%20Theme%22%7D">
+    <img src="https://raw.githubusercontent.com/xLexip/Adaptive-Theme/develop/.github/resources/get-it-on-obtainium.svg" alt="Get Adaptive Theme on Obtainium" width="180">
 </a>
 &nbsp;&nbsp;
 <a href="https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api&referrer=utm_source%3Dgithub_xlexip">
-    <img src=".github/resources/works-with-shizuku.png" alt="Shizuku" width="180"/>
+    <img src=".github/resources/works-with-shizuku.png" alt="Works with Shizuku" width="180"/>
 </a>
 &nbsp;&nbsp;
 </div>
