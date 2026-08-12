@@ -36,7 +36,7 @@ runs:
         distribution: 'zulu'
 
     - name: Set up Gradle
-      uses: gradle/actions/setup-gradle@90ddb51e90a5fd9ba75f40cf85156b7b41bf76a3 # v6
+      uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6
       with:
         validate-wrappers: true
         cache-read-only: ${{ inputs.gradle-cache-read-only }}
