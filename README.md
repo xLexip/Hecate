@@ -25,7 +25,7 @@ It can also update your **wallpaper** to match the active theme.
     <img src="https://raw.githubusercontent.com/xLexip/Adaptive-Theme/develop/.github/resources/get-it-on-obtainium.svg" alt="Get Adaptive Theme on Obtainium" width="180">
 </a>
 &nbsp;&nbsp;
-<a href="https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api&referrer=utm_source%3Dgithub_xlexip">
+<a href="#">
     <img src=".github/resources/works-with-shizuku.png" alt="Works with Shizuku" width="180"/>
 </a>
 &nbsp;&nbsp;
