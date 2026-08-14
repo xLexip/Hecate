@@ -12,8 +12,6 @@ exifInterface = "1.4.2"
 firebaseBom = "34.17.0"
 firebaseAnalytics = "23.2.0"
 firebaseCrashlytics = "20.1.0"
-googleFirebaseCrashlytics = "3.0.7"
-googleServices = "4.5.0"
 junit = "4.13.2"
 junitVersion = "1.3.0"
 kotlin = "2.4.10"
@@ -73,5 +71,3 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "googleFirebaseCrashlytics" }
-google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }

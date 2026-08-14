@@ -1,10 +1,25 @@
+buildscript {
+    val playServicesRequested = gradle.startParameter.taskNames.any { taskName ->
+        taskName.contains("play", ignoreCase = true)
+    } || gradle.startParameter.projectProperties["withPlayServices"].toBoolean()
+
+    if (playServicesRequested) {
+        repositories {
+            google()
+            mavenCentral()
+        }
+        dependencies {
+            classpath("com.google.gms:google-services:4.5.0")
+            classpath("com.google.firebase:firebase-crashlytics-gradle:3.0.7")
+        }
+    }
+}
+
 plugins {
     jacoco
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.google.services) apply false
-    alias(libs.plugins.google.firebase.crashlytics) apply false
 }
 
 dependencyLocking {
@@ -44,7 +59,6 @@ android {
         }
         create("foss") {
             dimension = "store"
-            versionNameSuffix = "-foss"
             dependenciesInfo {
                 includeInApk = false
                 includeInBundle = false
@@ -220,23 +234,6 @@ afterEvaluate {
         .configureEach { enabled = false }
     tasks.matching { it.name.contains("Crashlytics") && it.name.contains("Foss") }
         .configureEach { enabled = false }
-}
-
-tasks.register<DefaultTask>("ensureFileCompleteness") {
-    group = "build"
-    description = "Ensures file completeness."
-    val handlerPath = "src/main/kotlin/dev/lexip/hecate/util/DarkThemeHandler.kt"
-    val handlerFile = File(projectDir, handlerPath)
-
-    doLast {
-        if (!handlerFile.exists()) {
-            handlerFile.parentFile.mkdirs()
-            handlerFile.writeText("package dev.lexip.hecate.util; import android.content.Context; class DarkThemeHandler(context: Context) { fun setDarkTheme(enable: Boolean) = DarkThemeChangeResult(succeeded = false, changed = false) }")
-        }
-    }
-}
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    dependsOn("ensureFileCompleteness")
 }
 
 abstract class VerifyJacocoCoverageTask : DefaultTask() {
