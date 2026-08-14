@@ -1,0 +1,37 @@
+<b>Adaptive Theme</b> alterna todo el sistema Android entre los modos claro y oscuro según la luz ambiental, sin depender de la puesta de sol ni de un horario fijo. Disfruta del modo claro cuando hay mucha luz y del modo oscuro cuando hay poca, con un umbral que tú decides.
+
+<b>Funciones</b>
+
+<ul>
+<li>Utiliza el sensor físico de luz ambiental del dispositivo</li>
+<li>Umbral de lux personalizable y ajustes predefinidos para interiores, exteriores y luz diurna intensa</li>
+<li>Sincronización de fondos de pantalla claros y oscuros para la pantalla de inicio y la pantalla de bloqueo</li>
+<li>Bloqueo nocturno opcional para mantener el modo oscuro durante el horario que elijas</li>
+<li>Botón de Ajustes rápidos para un control cómodo</li>
+<li>Interfaz Material You y más de 50 idiomas</li>
+</ul>
+
+<b>Eficiente por diseño</b>
+
+El sensor se consulta brevemente al encender la pantalla en lugar de permanecer activo todo el tiempo. Antes de cambiar el tema, Adaptive Theme comprueba que una mano o un bolsillo no estén tapando el sensor. Así, el cambio se produce al encender la pantalla y no te interrumpe mientras utilizas otra aplicación.
+
+<b>Configuración única</b>
+
+Android no permite normalmente que una aplicación convencional modifique ajustes protegidos del sistema como el tema. Por eso es necesario conceder una sola vez el permiso <b>WRITE_SECURE_SETTINGS</b>. Este permiso no proporciona acceso root ni permite leer datos personales. Adaptive Theme lo utiliza exclusivamente para cambiar el modo claro u oscuro del sistema, y se revoca al desinstalar la aplicación.
+
+El asistente ofrece varias opciones:
+
+<ul>
+<li>WebADB mediante una sencilla página web desde un ordenador u otro dispositivo Android, sin instalar ADB</li>
+<li>Shizuku y sus variantes compatibles, necesarios solo una vez para conceder el permiso</li>
+<li>Root en dispositivos compatibles</li>
+<li>Un comando ADB manual: adb shell pm grant dev.lexip.hecate android.permission.WRITE_SECURE_SETTINGS</li>
+</ul>
+
+<b>Más información</b>
+
+Adaptive Theme requiere Android 14 o una versión posterior. Por ahora no es compatible con tabletas.
+
+La versión FOSS se publica bajo la licencia GPL-3.0 y no contiene anuncios, analíticas, informes de fallos, rastreadores ni bibliotecas privativas.
+
+Consulta el <a href="https://github.com/xLexip/Adaptive-Theme">README y las preguntas frecuentes</a> para solucionar problemas y obtener más información.

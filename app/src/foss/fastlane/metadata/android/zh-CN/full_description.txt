@@ -1,0 +1,37 @@
+<b>Adaptive Theme</b> 会根据周围环境的亮度，在 Android 的系统级浅色与深色模式之间切换，不依赖日落时间或固定日程。环境明亮时使用浅色模式，光线较暗时使用深色模式，切换阈值由你决定。
+
+<b>主要功能</b>
+
+<ul>
+<li>使用设备内置的实体环境光传感器</li>
+<li>可自定义照度阈值，并提供室内、室外和明亮日光等预设</li>
+<li>壁纸主题同步：为主屏幕和锁屏分别设置浅色与深色壁纸</li>
+<li>可选的夜间锁定功能，在指定时段内保持深色模式</li>
+<li>通过快速设置磁贴轻松控制</li>
+<li>Material You 界面，支持 50 多种语言</li>
+</ul>
+
+<b>高效的工作方式</b>
+
+应用不会持续监测传感器，而只会在屏幕亮起后短暂读取一次。切换主题前，Adaptive Theme 还会检查传感器是否被手或口袋遮挡。因此，主题会在亮屏时完成切换，不会在你使用其他应用时突然打断操作。
+
+<b>仅需设置一次</b>
+
+Android 通常不允许普通应用修改系统主题等受保护的系统设置，因此需要为 Adaptive Theme 一次性授予 <b>WRITE_SECURE_SETTINGS</b> 权限。该权限不会提供 root 访问权，也不允许应用读取个人数据。Adaptive Theme 只会用它切换系统的浅色与深色模式；卸载应用后，该权限也会被撤销。
+
+设置向导提供以下方式：
+
+<ul>
+<li>在电脑或另一台 Android 设备上打开简单网页，通过 WebADB 授权，无需安装 ADB</li>
+<li>使用 Shizuku 或兼容的 Shizuku 分支，仅在授予权限时需要运行一次</li>
+<li>在支持的设备上使用 root</li>
+<li>手动运行 ADB 命令：adb shell pm grant dev.lexip.hecate android.permission.WRITE_SECURE_SETTINGS</li>
+</ul>
+
+<b>其他信息</b>
+
+Adaptive Theme 需要 Android 14 或更高版本，目前暂不支持平板电脑。
+
+FOSS 版本以 GPL-3.0 许可证发布，不含广告、分析、崩溃报告、跟踪器或专有库。
+
+如需排查问题或了解更多信息，请参阅<a href="https://github.com/xLexip/Adaptive-Theme">项目 README 与常见问题</a>。
