@@ -188,6 +188,13 @@ tasks.register<VerifyJacocoCoverageTask>("verifyFossDebugCoverage") {
     )
 }
 
+tasks.register<VerifyFossStoreMetadataTask>("verifyFossStoreMetadata") {
+    group = "verification"
+    description = "Verifies that upstream F-Droid metadata is complete and within supported limits."
+    metadataDirectory.set(layout.projectDirectory.dir("src/foss/fastlane/metadata/android"))
+    expectedVersionCode.set(android.defaultConfig.versionCode)
+}
+
 dependencies {
     implementation(libs.androidx.localbroadcastmanager)
     implementation(libs.androidx.core.splashscreen.v100)
@@ -283,6 +290,88 @@ abstract class VerifyJacocoCoverageTask : DefaultTask() {
             }
         }
     }
+}
+
+abstract class VerifyFossStoreMetadataTask : DefaultTask() {
+    @get:InputDirectory
+    abstract val metadataDirectory: DirectoryProperty
+
+    @get:Input
+    abstract val expectedVersionCode: Property<Int>
+
+    @TaskAction
+    fun verifyMetadata() {
+        val metadataRoot = metadataDirectory.get().asFile
+        val localeDirectories = metadataRoot.listFiles { file -> file.isDirectory }
+            ?.sortedBy { it.name }
+            .orEmpty()
+
+        check(localeDirectories.any { it.name == "en-US" }) {
+            "F-Droid metadata must include the en-US fallback locale."
+        }
+
+        val supportedTags = setOf(
+            "a", "b", "big", "blockquote", "br", "cite", "em", "i", "li", "ol",
+            "small", "strike", "strong", "sub", "sup", "tt", "u", "ul"
+        )
+        val htmlTagPattern = Regex("</?([A-Za-z0-9]+)(?:\\s+[^>]*)?/?>")
+
+        localeDirectories.forEach { localeDirectory ->
+            val title = requiredText(localeDirectory, "title.txt")
+            val shortDescription = requiredText(localeDirectory, "short_description.txt")
+            val fullDescription = requiredText(localeDirectory, "full_description.txt")
+
+            check(title.codePointLength() <= 50) {
+                "${localeDirectory.name}/title.txt exceeds 50 characters."
+            }
+            check(shortDescription.codePointLength() <= 80) {
+                "${localeDirectory.name}/short_description.txt exceeds 80 characters."
+            }
+            check(!shortDescription.endsWith('.')) {
+                "${localeDirectory.name}/short_description.txt must not end with a dot."
+            }
+            check(fullDescription.codePointLength() <= 4000) {
+                "${localeDirectory.name}/full_description.txt exceeds 4000 characters."
+            }
+
+            val unsupportedTags = htmlTagPattern.findAll(fullDescription)
+                .map { it.groupValues[1].lowercase() }
+                .filterNot(supportedTags::contains)
+                .toSet()
+            check(unsupportedTags.isEmpty()) {
+                "${localeDirectory.name}/full_description.txt uses unsupported tags: " +
+                    unsupportedTags.sorted().joinToString()
+            }
+        }
+
+        val fallbackLocale = metadataRoot.resolve("en-US")
+        val imageDirectory = fallbackLocale.resolve("images")
+        check(imageDirectory.resolve("icon.png").isFile) {
+            "F-Droid metadata must include en-US/images/icon.png."
+        }
+        check(
+            imageDirectory.resolve("featureGraphic.png").isFile ||
+                imageDirectory.resolve("phoneScreenshots").listFiles()?.any { it.isFile } == true
+        ) {
+            "F-Droid metadata must include a feature graphic or phone screenshot."
+        }
+
+        val changelog = requiredText(
+            fallbackLocale.resolve("changelogs"),
+            "${expectedVersionCode.get()}.txt"
+        )
+        check(changelog.codePointLength() <= 500) {
+            "The changelog for versionCode ${expectedVersionCode.get()} exceeds 500 characters."
+        }
+    }
+
+    private fun requiredText(directory: File, fileName: String): String {
+        val file = directory.resolve(fileName)
+        check(file.isFile) { "Missing required F-Droid metadata file: ${file.invariantSeparatorsPath}" }
+        return file.readText(Charsets.UTF_8).trim()
+    }
+
+    private fun String.codePointLength(): Int = codePointCount(0, length)
 }
 
 jacoco {
