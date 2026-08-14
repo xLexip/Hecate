@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="shizuku_install_url" translatable="false">https://github.com/RikkaApps/Shizuku/releases/latest</string>
+</resources>

@@ -479,7 +479,7 @@ class SetupViewModel(
 		exitSetup()
 		val intent = Intent(
 			Intent.ACTION_VIEW,
-			"https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api".toUri()
+			context.getString(R.string.shizuku_install_url).toUri()
 		).apply {
 			addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 		}
