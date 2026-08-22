@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">설정되지 않음</string>
 	<string name="live_wallpaper_warning_title">라이브 배경화면 사용 중</string>
 	<string name="live_wallpaper_warning_message">배경화면 동기화를 사용 설정하면 현재 라이브 배경화면이 라이트 모드와 다크 모드용 정적 배경화면으로 교체됩니다. 계속할까요?</string>
+	<string name="github_star_prompt_description">Adaptive Theme은 무료이며 광고가 없고 오픈 소스입니다. 유용하게 사용하고 있다면 GitHub의 별표로 무료로 간단히 후원할 수 있습니다.</string>
+	<string name="github_star_prompt_action">GitHub에서 별표 주기 ↗</string>
+	<string name="github_star_prompt_dismiss_description">영구히 숨기기</string>
+	<string name="github_star_prompt_thank_you">감사합니다!</string>
 </resources>

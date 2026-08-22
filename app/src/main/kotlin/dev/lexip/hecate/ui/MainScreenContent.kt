@@ -55,6 +55,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
@@ -67,6 +70,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.runtime.withFrameNanos
@@ -86,6 +90,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.lexip.hecate.R
 import dev.lexip.hecate.data.AdaptiveThreshold
+import dev.lexip.hecate.ui.components.GitHubStarPromptCard
 import dev.lexip.hecate.ui.components.MainSwitchPreferenceCard
 import dev.lexip.hecate.ui.components.SetupRequiredCard
 import dev.lexip.hecate.ui.components.ThreeDotMenu
@@ -96,6 +101,7 @@ import dev.lexip.hecate.ui.components.preferences.SliderDetailCard
 import dev.lexip.hecate.ui.components.preferences.TimePickerPreferenceDialog
 import dev.lexip.hecate.ui.theme.hecateTopAppBarColors
 import java.util.Calendar
+import kotlinx.coroutines.launch
 
 private val ScreenHorizontalMargin = 20.dp
 private val horizontalOffsetPadding = 8.dp
@@ -113,6 +119,8 @@ fun MainScreenContent(
 ) {
 	val haptic = LocalHapticFeedback.current
 	val scrollState = rememberScrollState()
+	val snackbarHostState = remember { SnackbarHostState() }
+	val coroutineScope = rememberCoroutineScope()
 	var isLargeTitleVisible by remember { mutableStateOf(true) }
 	var showCustomDialog by remember { mutableStateOf(false) }
 	var showNightStartPicker by remember { mutableStateOf(false) }
@@ -152,6 +160,7 @@ fun MainScreenContent(
 	Scaffold(
 		modifier = Modifier.fillMaxSize(),
 		containerColor = MaterialTheme.colorScheme.surfaceContainer,
+		snackbarHost = { SnackbarHost(snackbarHostState) },
 		topBar = {
 			MainScreenTopBar(
 				showCollapsedTitle = !isLargeTitleVisible,
@@ -210,6 +219,32 @@ fun MainScreenContent(
 				onShowNightStartPicker = { showNightStartPicker = true },
 				onShowNightEndPicker = { showNightEndPicker = true }
 			)
+			if (uiState.showGitHubStarPrompt &&
+				!isBatterySaverActive &&
+				!isDeviceCovered
+			) {
+				val dismissMessage = stringResource(
+					R.string.github_star_prompt_dismiss_description
+				)
+				val cancelLabel = stringResource(R.string.action_cancel)
+				GitHubStarPromptCard(
+					onImpression = callbacks.onGitHubStarPromptImpression,
+					onDismiss = {
+						callbacks.onDismissGitHubStarPrompt()
+						coroutineScope.launch {
+							val result = snackbarHostState.showSnackbar(
+								message = dismissMessage,
+								actionLabel = cancelLabel,
+								withDismissAction = true
+							)
+							if (result == SnackbarResult.ActionPerformed) {
+								callbacks.onUndoGitHubStarPromptDismissal()
+							}
+						}
+					},
+					onOpenGitHub = callbacks.onOpenGitHubRepository
+				)
+			}
 			Spacer(modifier = Modifier.padding(bottom = 4.dp))
 		}
 	}

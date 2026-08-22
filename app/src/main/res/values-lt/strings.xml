@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Nenustatytas</string>
 	<string name="live_wallpaper_warning_title">Aktyvus animuotasis ekrano fonas</string>
 	<string name="live_wallpaper_warning_message">Įjungus ekrano fonų sinchronizavimą, dabartinis animuotasis ekrano fonas bus pakeistas statiniais šviesaus ir tamsaus režimo ekrano fonais. Ar tęsti?</string>
+	<string name="github_star_prompt_description">Adaptive Theme yra nemokama, be reklamų ir atvirojo kodo programa. Jei ji jums naudinga, galite ją nemokamai paremti pažymėdami žvaigždute „GitHub“.</string>
+	<string name="github_star_prompt_action">Pažymėti žvaigždute „GitHub“ ↗</string>
+	<string name="github_star_prompt_dismiss_description">Slėpti visam laikui</string>
+	<string name="github_star_prompt_thank_you">Ačiū!</string>
 </resources>

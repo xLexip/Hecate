@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Nav iestatīts</string>
 	<string name="live_wallpaper_warning_title">Aktīvs kustīgs fona attēls</string>
 	<string name="live_wallpaper_warning_message">Ieslēdzot fona attēlu sinhronizāciju, pašreizējais kustīgais fona attēls tiks aizstāts ar statiskiem fona attēliem gaišajam un tumšajam režīmam. Vai turpināt?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ir bezmaksas, bez reklāmām un ar atvērto pirmkodu. Ja lietotne jums noder, varat to vienkārši bez maksas atbalstīt, piešķirot zvaigznīti GitHub.</string>
+	<string name="github_star_prompt_action">Piešķirt zvaigznīti GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Paslēpt uz visiem laikiem</string>
+	<string name="github_star_prompt_thank_you">Paldies!</string>
 </resources>

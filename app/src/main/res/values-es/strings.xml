@@ -118,4 +118,8 @@
 	<string name="wallpaper_status_not_set">Sin configurar</string>
 	<string name="live_wallpaper_warning_title">Fondo de pantalla animado activo</string>
 	<string name="live_wallpaper_warning_message">Activar la sincronización del fondo de pantalla reemplazará tu fondo animado actual por imágenes estáticas para los modos claro y oscuro. ¿Quieres continuar?</string>
+	<string name="github_star_prompt_description">Adaptive Theme es gratis, no tiene anuncios y es de código abierto. Si te resulta útil, una estrella en GitHub es una forma sencilla de apoyarlo gratis.</string>
+	<string name="github_star_prompt_action">Dar una estrella en GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ocultar para siempre</string>
+	<string name="github_star_prompt_thank_you">¡Gracias!</string>
 </resources>

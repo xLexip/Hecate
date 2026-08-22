@@ -118,4 +118,8 @@
 	<string name="wallpaper_status_not_set">Ayarlanmadı</string>
 	<string name="live_wallpaper_warning_title">Canlı duvar kâğıdı etkin</string>
 	<string name="live_wallpaper_warning_message">Duvar kâğıdı eşitleme etkinleştirildiğinde mevcut canlı duvar kâğıdınız, açık ve koyu mod için statik duvar kâğıtlarıyla değiştirilir. Devam etmek istiyor musunuz?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ücretsiz, reklamsız ve açık kaynaklıdır. İşinize yarıyorsa GitHub’da yıldız vermek onu ücretsiz desteklemenin kolay bir yoludur.</string>
+	<string name="github_star_prompt_action">GitHub’da yıldız ver ↗</string>
+	<string name="github_star_prompt_dismiss_description">Sonsuza dek gizle</string>
+	<string name="github_star_prompt_thank_you">Teşekkürler!</string>
 </resources>

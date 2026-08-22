@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">לא הוגדר</string>
 	<string name="live_wallpaper_warning_title">טפט מונפש פעיל</string>
 	<string name="live_wallpaper_warning_message">הפעלת סנכרון הטפטים תחליף את הטפט המונפש הנוכחי בטפטים קבועים למצב בהיר ולמצב כהה. להמשיך?</string>
+	<string name="github_star_prompt_description">Adaptive Theme הוא חינמי, ללא פרסומות ובקוד פתוח. אם הוא שימושי עבורך, כוכב ב-GitHub הוא דרך פשוטה לתמוך בו בחינם.</string>
+	<string name="github_star_prompt_action">הוספת כוכב ב-GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">הסתרה לצמיתות</string>
+	<string name="github_star_prompt_thank_you">תודה!</string>
 </resources>

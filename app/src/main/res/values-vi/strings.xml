@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Chưa đặt</string>
 	<string name="live_wallpaper_warning_title">Hình nền động đang hoạt động</string>
 	<string name="live_wallpaper_warning_message">Việc bật đồng bộ hóa hình nền sẽ thay hình nền động hiện tại bằng hình nền tĩnh cho chế độ sáng và tối. Bạn có muốn tiếp tục không?</string>
+	<string name="github_star_prompt_description">Adaptive Theme miễn phí, không quảng cáo và có mã nguồn mở. Nếu ứng dụng hữu ích với bạn, tặng sao trên GitHub là một cách đơn giản để hỗ trợ ứng dụng miễn phí.</string>
+	<string name="github_star_prompt_action">Tặng sao trên GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ẩn vĩnh viễn</string>
+	<string name="github_star_prompt_thank_you">Cảm ơn!</string>
 </resources>

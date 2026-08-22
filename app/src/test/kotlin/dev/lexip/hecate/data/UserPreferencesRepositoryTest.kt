@@ -77,6 +77,13 @@ class UserPreferencesRepositoryTest {
 		assertFalse(preferences.wallpaperSyncEnabled)
 		assertNull(preferences.dayWallpaperUri)
 		assertNull(preferences.nightWallpaperUri)
+		assertFalse(preferences.githubStarPromptDismissed)
+		assertEquals(0, preferences.githubStarPromptImpressionCount)
+		assertEquals(
+			NO_SUPPORT_PROMPT_EPOCH_DAY,
+			preferences.githubStarPromptLastImpressionEpochDay
+		)
+		assertEquals(NO_SUPPORT_PROMPT_EPOCH_DAY, preferences.reviewPromptLastRequestEpochDay)
 	}
 
 	@Test
@@ -149,6 +156,21 @@ class UserPreferencesRepositoryTest {
 		preferences = repository.fetchInitialPreferences()
 		assertNull(preferences.dayWallpaperUri)
 		assertNull(preferences.nightWallpaperUri)
+	}
+
+	@Test
+	fun supportPromptStateIsPersistedAndImpressionsAreCountedOncePerDay() = runTest {
+		repository.recordGitHubStarPromptImpression(20_000L)
+		repository.recordGitHubStarPromptImpression(20_000L)
+		repository.recordGitHubStarPromptImpression(20_001L)
+		repository.updateGitHubStarPromptDismissed(true)
+		repository.updateReviewPromptLastRequestEpochDay(19_999L)
+
+		val preferences = repository.fetchInitialPreferences()
+		assertEquals(2, preferences.githubStarPromptImpressionCount)
+		assertEquals(20_001L, preferences.githubStarPromptLastImpressionEpochDay)
+		assertTrue(preferences.githubStarPromptDismissed)
+		assertEquals(19_999L, preferences.reviewPromptLastRequestEpochDay)
 	}
 
 	@Test

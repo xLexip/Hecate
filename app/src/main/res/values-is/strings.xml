@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Ekki stillt</string>
 	<string name="live_wallpaper_warning_title">Lifandi veggfóður virkt</string>
 	<string name="live_wallpaper_warning_message">Ef samstilling veggfóðurs er virkjuð verður núverandi lifandi veggfóðri skipt út fyrir kyrrstæðar myndir fyrir ljósa og dökka stillingu. Halda áfram?</string>
+	<string name="github_star_prompt_description">Adaptive Theme er ókeypis, án auglýsinga og með opinn frumkóða. Ef appið nýtist þér er stjarna á GitHub einföld leið til að styðja það ókeypis.</string>
+	<string name="github_star_prompt_action">Gefa stjörnu á GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Fela varanlega</string>
+	<string name="github_star_prompt_thank_you">Takk!</string>
 </resources>

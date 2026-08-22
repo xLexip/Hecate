@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Nincs beállítva</string>
 	<string name="live_wallpaper_warning_title">Élő háttérkép aktív</string>
 	<string name="live_wallpaper_warning_message">A háttérkép-szinkronizálás bekapcsolása a jelenlegi élő háttérképet a világos és sötét mód statikus háttérképeire cseréli. Folytatja?</string>
+	<string name="github_star_prompt_description">Az Adaptive Theme ingyenes, reklámmentes és nyílt forráskódú. Ha hasznosnak találod, egy GitHub-csillaggal egyszerűen és ingyen támogathatod.</string>
+	<string name="github_star_prompt_action">Csillag a GitHubon ↗</string>
+	<string name="github_star_prompt_dismiss_description">Elrejtés örökre</string>
+	<string name="github_star_prompt_thank_you">Köszönjük!</string>
 </resources>

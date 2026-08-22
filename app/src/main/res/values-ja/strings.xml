@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">未設定</string>
 	<string name="live_wallpaper_warning_title">ライブ壁紙が有効です</string>
 	<string name="live_wallpaper_warning_message">壁紙の同期を有効にすると、現在のライブ壁紙がライトモードとダークモード用の静止画に置き換えられます。続行しますか？</string>
+	<string name="github_star_prompt_description">Adaptive Theme は無料、広告なし、オープンソースです。役に立ったら、GitHub のスターで無料で気軽に応援できます。</string>
+	<string name="github_star_prompt_action">GitHub でスターする ↗</string>
+	<string name="github_star_prompt_dismiss_description">永久に非表示</string>
+	<string name="github_star_prompt_thank_you">ありがとうございます！</string>
 </resources>

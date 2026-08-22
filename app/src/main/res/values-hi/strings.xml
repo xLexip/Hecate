@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">सेट नहीं है</string>
 	<string name="live_wallpaper_warning_title">लाइव वॉलपेपर चालू है</string>
 	<string name="live_wallpaper_warning_message">वॉलपेपर सिंक चालू करने पर मौजूदा लाइव वॉलपेपर को लाइट और डार्क मोड के स्थिर वॉलपेपर से बदल दिया जाएगा। क्या आप जारी रखना चाहते हैं?</string>
+	<string name="github_star_prompt_description">Adaptive Theme मुफ़्त, विज्ञापन-मुक्त और ओपन सोर्स है। अगर यह आपके लिए उपयोगी है, तो GitHub पर स्टार देकर आप इसे आसानी से मुफ़्त में समर्थन दे सकते हैं।</string>
+	<string name="github_star_prompt_action">GitHub पर स्टार दें ↗</string>
+	<string name="github_star_prompt_dismiss_description">हमेशा के लिए छिपाएँ</string>
+	<string name="github_star_prompt_thank_you">धन्यवाद!</string>
 </resources>

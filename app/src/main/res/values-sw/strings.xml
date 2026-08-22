@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Haijawekwa</string>
 	<string name="live_wallpaper_warning_title">Mandhari-nyuma hai inatumika</string>
 	<string name="live_wallpaper_warning_message">Kuwasha usawazishaji kutabadilisha mandhari-nyuma hai ya sasa na picha tuli za hali angavu na nyeusi. Uendelee?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ni bila malipo, haina matangazo na ina chanzo huria. Ikiwa ni muhimu kwako, kutoa nyota kwenye GitHub ni njia rahisi ya kuiunga mkono bila malipo.</string>
+	<string name="github_star_prompt_action">Toa nyota kwenye GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ficha milele</string>
+	<string name="github_star_prompt_thank_you">Asante!</string>
 </resources>

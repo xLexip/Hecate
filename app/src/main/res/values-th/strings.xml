@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">ไม่ได้ตั้งค่า</string>
 	<string name="live_wallpaper_warning_title">วอลเปเปอร์เคลื่อนไหวทำงานอยู่</string>
 	<string name="live_wallpaper_warning_message">การเปิดการซิงค์วอลเปเปอร์จะแทนที่วอลเปเปอร์เคลื่อนไหวปัจจุบันด้วยวอลเปเปอร์ภาพนิ่งสำหรับโหมดสว่างและโหมดมืด ต้องการดำเนินการต่อไหม</string>
+	<string name="github_star_prompt_description">Adaptive Theme ใช้งานฟรี ไม่มีโฆษณา และเป็นโอเพนซอร์ส หากแอปมีประโยชน์สำหรับคุณ การให้ดาวบน GitHub เป็นวิธีง่าย ๆ ในการสนับสนุนแอปได้ฟรี</string>
+	<string name="github_star_prompt_action">ให้ดาวบน GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">ซ่อนตลอดไป</string>
+	<string name="github_star_prompt_thank_you">ขอบคุณ!</string>
 </resources>

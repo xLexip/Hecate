@@ -97,6 +97,14 @@ object Logger {
 		}
 	}
 
+	fun logGitHubStarPromptAction(context: Context, action: String) {
+		ifAllowed {
+			analytics(context).logEvent("github_star_prompt") {
+				param("action", action)
+			}
+		}
+	}
+
 	fun logSetupStarted(context: Context, hasShizuku: Boolean) {
 		ifAllowed {
 			analytics(context).logEvent("setup_started") {

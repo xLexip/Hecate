@@ -24,6 +24,7 @@ import dev.lexip.hecate.FakeWallpaperPlatform
 import dev.lexip.hecate.FakeWallpaperImagePreparer
 import dev.lexip.hecate.MainDispatcherRule
 import dev.lexip.hecate.data.AdaptiveThreshold
+import dev.lexip.hecate.data.NO_SUPPORT_PROMPT_EPOCH_DAY
 import dev.lexip.hecate.data.UserPreferences
 import dev.lexip.hecate.util.WallpaperSlot
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -46,6 +47,7 @@ import org.robolectric.annotation.Config
 
 private const val DAY_WALLPAPER_URI = "content://wallpaper/day"
 private const val NIGHT_WALLPAPER_URI = "content://wallpaper/night"
+private const val TODAY_EPOCH_DAY = 20_000L
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(RobolectricTestRunner::class)
@@ -235,6 +237,7 @@ class MainViewModelTest {
 	fun reviewRequestIsEmittedOnlyOncePerViewModelSession() =
 		runTest(mainDispatcherRule.dispatcher) {
 			preferences.emit(preferences.current.copy(adaptiveThemeEnabled = true))
+			installMetadata.fromPlayStore = true
 			installMetadata.installedDaysAgo = 3
 			val viewModel = createViewModel()
 			val events = mutableListOf<UiEvent>()
@@ -248,6 +251,13 @@ class MainViewModelTest {
 			advanceUntilIdle()
 
 			assertEquals(listOf(RequestInAppReview), events)
+			assertEquals(
+				NO_SUPPORT_PROMPT_EPOCH_DAY,
+				preferences.current.reviewPromptLastRequestEpochDay
+			)
+			viewModel.recordReviewPromptLaunch()
+			advanceUntilIdle()
+			assertEquals(TODAY_EPOCH_DAY, preferences.current.reviewPromptLastRequestEpochDay)
 			viewModel.onUiPaused()
 		}
 
@@ -255,6 +265,7 @@ class MainViewModelTest {
 	fun firstBrightnessThresholdChangeDoesNotRequestReview() =
 		runTest(mainDispatcherRule.dispatcher) {
 			preferences.emit(preferences.current.copy(adaptiveThemeEnabled = true))
+			installMetadata.fromPlayStore = true
 			installMetadata.installedDaysAgo = 3
 			val viewModel = createViewModel()
 			val events = mutableListOf<UiEvent>()
@@ -271,6 +282,70 @@ class MainViewModelTest {
 			advanceUntilIdle()
 			assertEquals(listOf(RequestInAppReview), events)
 			viewModel.onUiPaused()
+		}
+
+	@Test
+	fun githubStarPromptPersistsImpressionDismissalAndUndo() =
+		runTest(mainDispatcherRule.dispatcher) {
+			preferences.emit(
+				preferences.current.copy(
+					adaptiveThemeEnabled = true,
+					hasSetupCompleted = true
+				)
+			)
+			installMetadata.installedDaysAgo = GITHUB_STAR_PROMPT_MIN_INSTALL_DAYS
+			val viewModel = createViewModel()
+			advanceUntilIdle()
+
+			assertTrue(viewModel.uiState.value.showGitHubStarPrompt)
+			viewModel.recordGitHubStarPromptImpression()
+			viewModel.recordGitHubStarPromptImpression()
+			advanceUntilIdle()
+			assertEquals(1, preferences.current.githubStarPromptImpressionCount)
+			assertEquals(
+				TODAY_EPOCH_DAY,
+				preferences.current.githubStarPromptLastImpressionEpochDay
+			)
+			assertTrue(viewModel.uiState.value.showGitHubStarPrompt)
+
+			viewModel.dismissGitHubStarPrompt()
+			advanceUntilIdle()
+			assertTrue(preferences.current.githubStarPromptDismissed)
+			assertFalse(viewModel.uiState.value.showGitHubStarPrompt)
+
+			viewModel.undoGitHubStarPromptDismissal()
+			advanceUntilIdle()
+			assertFalse(preferences.current.githubStarPromptDismissed)
+			assertTrue(viewModel.uiState.value.showGitHubStarPrompt)
+		}
+
+	@Test
+	fun renderedGitHubPromptBlocksReviewRequestImmediately() =
+		runTest(mainDispatcherRule.dispatcher) {
+			preferences.emit(
+				preferences.current.copy(
+					adaptiveThemeEnabled = true,
+					hasSetupCompleted = true
+				)
+			)
+			installMetadata.fromPlayStore = true
+			installMetadata.installedDaysAgo = GITHUB_STAR_PROMPT_MIN_INSTALL_DAYS
+			val viewModel = createViewModel()
+			val events = mutableListOf<UiEvent>()
+			backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) {
+				viewModel.uiEvents.toList(events)
+			}
+			advanceUntilIdle()
+
+			viewModel.recordGitHubStarPromptImpression()
+			viewModel.checkReviewPrompt()
+			advanceUntilIdle()
+
+			assertTrue(events.isEmpty())
+			assertEquals(
+				TODAY_EPOCH_DAY,
+				preferences.current.githubStarPromptLastImpressionEpochDay
+			)
 		}
 
 	@Test
@@ -432,6 +507,7 @@ class MainViewModelTest {
 		wallpaperPlatform = wallpaperPlatform,
 		wallpaperImagePreparer = wallpaperImagePreparer,
 		ioDispatcher = mainDispatcherRule.dispatcher,
-		mainDispatcher = mainDispatcherRule.dispatcher
+		mainDispatcher = mainDispatcherRule.dispatcher,
+		todayEpochDay = { TODAY_EPOCH_DAY }
 	)
 }

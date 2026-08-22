@@ -118,4 +118,8 @@
 	<string name="wallpaper_status_not_set">Niet ingesteld</string>
 	<string name="live_wallpaper_warning_title">Live achtergrond actief</string>
 	<string name="live_wallpaper_warning_message">Als je achtergrondsynchronisatie inschakelt, wordt je huidige live achtergrond vervangen door statische achtergronden voor de lichte en donkere modus. Wil je doorgaan?</string>
+	<string name="github_star_prompt_description">Adaptive Theme is gratis, advertentievrij en open source. Als de app nuttig voor je is, kun je die eenvoudig gratis steunen met een ster op GitHub.</string>
+	<string name="github_star_prompt_action">Ster geven op GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Voor altijd verbergen</string>
+	<string name="github_star_prompt_thank_you">Bedankt!</string>
 </resources>

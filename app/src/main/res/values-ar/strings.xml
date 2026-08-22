@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">لم يتم الضبط</string>
 	<string name="live_wallpaper_warning_title">خلفية متحركة نشطة</string>
 	<string name="live_wallpaper_warning_message">سيؤدي تفعيل مزامنة الخلفيات إلى استبدال الخلفية المتحركة الحالية بخلفيتين ثابتتين للوضعين الفاتح والداكن. هل تريد المتابعة؟</string>
+	<string name="github_star_prompt_description">Adaptive Theme مجاني وخالٍ من الإعلانات ومفتوح المصدر. إذا كان مفيدًا لك، فإن إضافة نجمة على GitHub طريقة بسيطة لدعمه مجانًا.</string>
+	<string name="github_star_prompt_action">إضافة نجمة على GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">إخفاء نهائيًا</string>
+	<string name="github_star_prompt_thank_you">شكرًا!</string>
 </resources>

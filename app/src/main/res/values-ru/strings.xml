@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Не установлены</string>
 	<string name="live_wallpaper_warning_title">Включены живые обои</string>
 	<string name="live_wallpaper_warning_message">При включении синхронизации текущие живые обои будут заменены статичными обоями для светлой и тёмной темы. Продолжить?</string>
+	<string name="github_star_prompt_description">Adaptive Theme — бесплатное приложение без рекламы с открытым исходным кодом. Если оно вам полезно, бесплатно поддержите его, поставив звезду на GitHub.</string>
+	<string name="github_star_prompt_action">Поставить звезду на GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Скрыть навсегда</string>
+	<string name="github_star_prompt_thank_you">Спасибо!</string>
 </resources>

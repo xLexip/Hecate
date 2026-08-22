@@ -118,4 +118,8 @@
 	<string name="wallpaper_status_not_set">Não definido</string>
 	<string name="live_wallpaper_warning_title">Plano de fundo animado ativo</string>
 	<string name="live_wallpaper_warning_message">Ativar a sincronização substituirá o plano de fundo animado atual por planos de fundo estáticos para os modos claro e escuro. Quer continuar?</string>
+	<string name="github_star_prompt_description">O Adaptive Theme é gratuito, sem anúncios e de código aberto. Se ele for útil para você, uma estrela no GitHub é uma forma simples de apoiá-lo gratuitamente.</string>
+	<string name="github_star_prompt_action">Dar uma estrela no GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ocultar para sempre</string>
+	<string name="github_star_prompt_thank_you">Obrigado!</string>
 </resources>

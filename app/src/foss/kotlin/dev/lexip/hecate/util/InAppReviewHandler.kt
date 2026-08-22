@@ -16,7 +16,7 @@ import android.app.Activity
 
 object InAppReviewHandler {
 
-	fun triggerReview(activity: Activity) {
+	fun triggerReview(activity: Activity, onLaunchStarted: () -> Unit) {
 		// No-op for FOSS flavor
 	}
 }

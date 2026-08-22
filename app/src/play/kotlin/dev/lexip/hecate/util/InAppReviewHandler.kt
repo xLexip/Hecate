@@ -25,7 +25,7 @@ object InAppReviewHandler {
 
 	private const val TAG = "InAppReviewHandler"
 
-	fun triggerReview(activity: Activity) {
+	fun triggerReview(activity: Activity, onLaunchStarted: () -> Unit) {
 
 		val manager = if (BuildConfig.DEBUG) {
 			FakeReviewManager(activity)
@@ -38,6 +38,7 @@ object InAppReviewHandler {
 			if (task.isSuccessful) {
 				val reviewInfo = task.result
 				val flow = manager.launchReviewFlow(activity, reviewInfo)
+				onLaunchStarted()
 				flow.addOnCompleteListener { flowTask ->
 					if (BuildConfig.DEBUG) {
 						Toast.makeText(

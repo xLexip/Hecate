@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">സജ്ജമാക്കിയിട്ടില്ല</string>
 	<string name="live_wallpaper_warning_title">ലൈവ് വാൾപേപ്പർ സജീവമാണ്</string>
 	<string name="live_wallpaper_warning_message">വാൾപേപ്പർ സമന്വയം ഓണാക്കിയാൽ നിലവിലെ ലൈവ് വാൾപേപ്പർ ലൈറ്റ്, ഡാർക്ക് മോഡുകൾക്കുള്ള നിശ്ചല വാൾപേപ്പറുകളാൽ മാറ്റപ്പെടും. തുടരണോ?</string>
+	<string name="github_star_prompt_description">Adaptive Theme സൗജന്യവും പരസ്യരഹിതവും ഓപ്പൺ സോഴ്‌സുമാണ്. ഇത് നിങ്ങൾക്ക് ഉപകാരപ്പെടുന്നുവെങ്കിൽ, GitHub-ൽ സ്റ്റാർ നൽകുന്നത് അതിനെ സൗജന്യമായി പിന്തുണയ്ക്കാനുള്ള ലളിതമായ മാർഗമാണ്.</string>
+	<string name="github_star_prompt_action">GitHub-ൽ സ്റ്റാർ നൽകുക ↗</string>
+	<string name="github_star_prompt_dismiss_description">എന്നേക്കുമായി മറയ്ക്കുക</string>
+	<string name="github_star_prompt_thank_you">നന്ദി!</string>
 </resources>

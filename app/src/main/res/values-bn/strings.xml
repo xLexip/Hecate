@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">সেট করা নেই</string>
 	<string name="live_wallpaper_warning_title">লাইভ ওয়ালপেপার সক্রিয়</string>
 	<string name="live_wallpaper_warning_message">ওয়ালপেপার সিঙ্ক চালু করলে বর্তমান লাইভ ওয়ালপেপারটি হালকা ও গাঢ় মোডের স্থির ওয়ালপেপার দিয়ে প্রতিস্থাপিত হবে। চালিয়ে যাবেন?</string>
+	<string name="github_star_prompt_description">Adaptive Theme বিনামূল্যের, বিজ্ঞাপনমুক্ত এবং ওপেন সোর্স। এটি আপনার কাজে লাগলে GitHub-এ একটি স্টার দিয়ে বিনামূল্যে সহজেই এটিকে সমর্থন করতে পারেন।</string>
+	<string name="github_star_prompt_action">GitHub-এ স্টার দিন ↗</string>
+	<string name="github_star_prompt_dismiss_description">চিরতরে লুকান</string>
+	<string name="github_star_prompt_thank_you">ধন্যবাদ!</string>
 </resources>

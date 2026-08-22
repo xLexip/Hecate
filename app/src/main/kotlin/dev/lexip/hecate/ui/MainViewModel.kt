@@ -26,6 +26,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import dev.lexip.hecate.Application
 import dev.lexip.hecate.data.AdaptiveThreshold
+import dev.lexip.hecate.data.UserPreferences
 import dev.lexip.hecate.data.UserPreferencesDataSource
 import dev.lexip.hecate.data.UserPreferencesRepository
 import dev.lexip.hecate.logging.Logger
@@ -58,9 +59,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import java.time.LocalDate
 
 private const val TAG = "MainViewModel"
-private const val REVIEW_MIN_SWITCH_COUNT = 10
 
 sealed interface UiEvent
 
@@ -83,7 +84,8 @@ data class MainUiState(
 	val wallpaperSyncEnabled: Boolean = false,
 	val dayWallpaperUri: String? = null,
 	val nightWallpaperUri: String? = null,
-	val showLiveWallpaperWarningDialog: Boolean = false
+	val showLiveWallpaperWarningDialog: Boolean = false,
+	val showGitHubStarPrompt: Boolean = false
 )
 
 class MainViewModel internal constructor(
@@ -102,7 +104,8 @@ class MainViewModel internal constructor(
 	private val wallpaperImagePreparer: WallpaperImagePreparer =
 		WallpaperImagePreprocessor(application.applicationContext),
 	private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
-	private val mainDispatcher: CoroutineDispatcher = Dispatchers.Main
+	private val mainDispatcher: CoroutineDispatcher = Dispatchers.Main,
+	private val todayEpochDay: () -> Long = { LocalDate.now().toEpochDay() }
 ) : ViewModel() {
 
 	private val _uiState = MutableStateFlow(MainUiState())
@@ -276,6 +279,8 @@ class MainViewModel internal constructor(
 	private var serviceEnabledAtStart: Boolean? = null
 	private var reviewRequestedInSession: Boolean = false
 	private var hasChangedBrightnessThresholdInSession: Boolean = false
+	private var githubStarPromptImpressionRecordedInSession: Boolean = false
+	private var latestUserPreferences: UserPreferences? = null
 	private val wallpaperSelectionMutex = Mutex()
 
 	init {
@@ -291,6 +296,7 @@ class MainViewModel internal constructor(
 
 		viewModelScope.launch {
 			userPreferencesRepository.userPreferencesFlow.collect { userPreferences ->
+				latestUserPreferences = userPreferences
 				if (serviceEnabledAtStart == null) {
 					serviceEnabledAtStart = userPreferences.adaptiveThemeEnabled
 				}
@@ -304,12 +310,33 @@ class MainViewModel internal constructor(
 					nightEndMinutes = userPreferences.nightEndMinutes,
 					wallpaperSyncEnabled = userPreferences.wallpaperSyncEnabled,
 					dayWallpaperUri = userPreferences.dayWallpaperUri,
-					nightWallpaperUri = userPreferences.nightWallpaperUri
+					nightWallpaperUri = userPreferences.nightWallpaperUri,
+					showGitHubStarPrompt = shouldShowGitHubStarPrompt(userPreferences)
 				)
 
 				updateUiSensorMonitoring()
 			}
 		}
+	}
+
+	private fun shouldShowGitHubStarPrompt(
+		userPreferences: UserPreferences
+	): Boolean {
+		if (githubStarPromptImpressionRecordedInSession) {
+			return userPreferences.hasSetupCompleted &&
+				userPreferences.adaptiveThemeEnabled &&
+				!userPreferences.githubStarPromptDismissed
+		}
+		return shouldShowGitHubStarPrompt(
+			GitHubStarPromptEligibility(
+				hasSetupCompleted = userPreferences.hasSetupCompleted,
+				adaptiveThemeEnabled = userPreferences.adaptiveThemeEnabled,
+				daysSinceFirstInstall = installMetadataProvider.daysSinceFirstInstall(),
+				dismissed = userPreferences.githubStarPromptDismissed,
+				lastReviewRequestEpochDay = userPreferences.reviewPromptLastRequestEpochDay,
+				todayEpochDay = todayEpochDay()
+			)
+		)
 	}
 
 	private suspend fun resetLegacyWallpaperSelectionIfNeeded() {
@@ -395,8 +422,21 @@ class MainViewModel internal constructor(
 	}
 
 	private fun shouldPromptForReview(): Boolean {
-		val daysSinceFirstInstall = installMetadataProvider.daysSinceFirstInstall()
-		return !reviewRequestedInSession && serviceEnabledAtStart == true && daysSinceFirstInstall >= 2
+		val preferences = latestUserPreferences ?: return false
+		return shouldRequestReview(
+			ReviewPromptEligibility(
+				isPlayStoreInstall = installMetadataProvider.isInstalledFromPlayStore(),
+				serviceEnabledAtStart = serviceEnabledAtStart == true,
+				daysSinceFirstInstall = installMetadataProvider.daysSinceFirstInstall(),
+				requestedInSession = reviewRequestedInSession,
+				githubPromptRenderedInSession =
+					githubStarPromptImpressionRecordedInSession,
+				lastReviewRequestEpochDay = preferences.reviewPromptLastRequestEpochDay,
+				lastGitHubImpressionEpochDay =
+					preferences.githubStarPromptLastImpressionEpochDay,
+				todayEpochDay = todayEpochDay()
+			)
+		)
 	}
 
 	fun checkReviewPrompt() {
@@ -405,6 +445,59 @@ class MainViewModel internal constructor(
 			viewModelScope.launch {
 				_uiEvents.emit(RequestInAppReview)
 			}
+		}
+	}
+
+	fun recordReviewPromptLaunch() {
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateReviewPromptLastRequestEpochDay(todayEpochDay())
+		}
+	}
+
+	fun recordGitHubStarPromptImpression() {
+		if (!_uiState.value.showGitHubStarPrompt ||
+			githubStarPromptImpressionRecordedInSession
+		) return
+
+		githubStarPromptImpressionRecordedInSession = true
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.recordGitHubStarPromptImpression(todayEpochDay())
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "impression"
+			)
+		}
+	}
+
+	fun dismissGitHubStarPrompt() {
+		_uiState.value = _uiState.value.copy(showGitHubStarPrompt = false)
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateGitHubStarPromptDismissed(true)
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "dismiss"
+			)
+		}
+	}
+
+	fun undoGitHubStarPromptDismissal() {
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateGitHubStarPromptDismissed(false)
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "undo_dismiss"
+			)
+		}
+	}
+
+	fun onGitHubStarPromptOpened() {
+		_uiState.value = _uiState.value.copy(showGitHubStarPrompt = false)
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateGitHubStarPromptDismissed(true)
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "open_github"
+			)
 		}
 	}
 

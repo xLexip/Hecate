@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">సెట్ చేయలేదు</string>
 	<string name="live_wallpaper_warning_title">లైవ్ వాల్‌పేపర్ యాక్టివ్‌గా ఉంది</string>
 	<string name="live_wallpaper_warning_message">వాల్‌పేపర్ సింక్‌ను ఆన్ చేస్తే ప్రస్తుత లైవ్ వాల్‌పేపర్ లైట్ మరియు డార్క్ మోడ్‌ల స్టాటిక్ వాల్‌పేపర్‌లతో భర్తీ అవుతుంది. కొనసాగించాలా?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ఉచితం, ప్రకటనలు లేనిది మరియు ఓపెన్ సోర్స్. ఇది మీకు ఉపయోగకరంగా ఉంటే, GitHubలో స్టార్ ఇవ్వడం దీనికి ఉచితంగా మద్దతు ఇచ్చే సులభమైన మార్గం.</string>
+	<string name="github_star_prompt_action">GitHubలో స్టార్ ఇవ్వండి ↗</string>
+	<string name="github_star_prompt_dismiss_description">శాశ్వతంగా దాచు</string>
+	<string name="github_star_prompt_thank_you">ధన్యవాదాలు!</string>
 </resources>

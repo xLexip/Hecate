@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">ಹೊಂದಿಸಲಾಗಿಲ್ಲ</string>
 	<string name="live_wallpaper_warning_title">ಲೈವ್ ವಾಲ್‌ಪೇಪರ್ ಸಕ್ರಿಯವಾಗಿದೆ</string>
 	<string name="live_wallpaper_warning_message">ವಾಲ್‌ಪೇಪರ್ ಸಿಂಕ್ ಆನ್ ಮಾಡಿದರೆ ಈಗಿನ ಲೈವ್ ವಾಲ್‌ಪೇಪರ್ ಅನ್ನು ಲೈಟ್ ಮತ್ತು ಡಾರ್ಕ್ ಮೋಡ್‌ಗಳ ಸ್ಥಿರ ವಾಲ್‌ಪೇಪರ್‌ಗಳಿಂದ ಬದಲಾಯಿಸಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಸಬೇಕೇ?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ಉಚಿತ, ಜಾಹೀರಾತು-ರಹಿತ ಮತ್ತು ಮುಕ್ತ ಮೂಲವಾಗಿದೆ. ಇದು ನಿಮಗೆ ಉಪಯುಕ್ತವಾಗಿದ್ದರೆ, GitHub ನಲ್ಲಿ ಸ್ಟಾರ್ ನೀಡುವುದು ಅದನ್ನು ಉಚಿತವಾಗಿ ಬೆಂಬಲಿಸುವ ಸರಳ ಮಾರ್ಗವಾಗಿದೆ.</string>
+	<string name="github_star_prompt_action">GitHub ನಲ್ಲಿ ಸ್ಟಾರ್ ನೀಡಿ ↗</string>
+	<string name="github_star_prompt_dismiss_description">ಶಾಶ್ವತವಾಗಿ ಮರೆಮಾಡಿ</string>
+	<string name="github_star_prompt_thank_you">ಧನ್ಯವಾದಗಳು!</string>
 </resources>

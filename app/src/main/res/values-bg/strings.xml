@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Не е зададен</string>
 	<string name="live_wallpaper_warning_title">Активен динамичен тапет</string>
 	<string name="live_wallpaper_warning_message">Включването на синхронизирането ще замени текущия динамичен тапет със статични тапети за светъл и тъмен режим. Искате ли да продължите?</string>
+	<string name="github_star_prompt_description">Adaptive Theme е безплатно приложение без реклами и с отворен код. Ако ви е полезно, можете лесно и безплатно да го подкрепите със звезда в GitHub.</string>
+	<string name="github_star_prompt_action">Добавяне на звезда в GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Скриване завинаги</string>
+	<string name="github_star_prompt_thank_you">Благодарим!</string>
 </resources>

@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">未設定</string>
 	<string name="live_wallpaper_warning_title">動態桌布已啟用</string>
 	<string name="live_wallpaper_warning_message">啟用桌布同步後，目前的動態桌布將替換為淺色與深色模式的靜態桌布。要繼續嗎？</string>
+	<string name="github_star_prompt_description">Adaptive Theme 免費、無廣告且開放原始碼。如果對您有幫助，在 GitHub 上給予星號就是免費支持它的簡單方式。</string>
+	<string name="github_star_prompt_action">在 GitHub 上給星 ↗</string>
+	<string name="github_star_prompt_dismiss_description">永久隱藏</string>
+	<string name="github_star_prompt_thank_you">謝謝！</string>
 </resources>

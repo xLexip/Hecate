@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Ni nastavljeno</string>
 	<string name="live_wallpaper_warning_title">Aktivno živo ozadje</string>
 	<string name="live_wallpaper_warning_message">Vklop sinhronizacije bo trenutno živo ozadje zamenjal s statičnima ozadjema za svetli in temni način. Želite nadaljevati?</string>
+	<string name="github_star_prompt_description">Adaptive Theme je brezplačen, brez oglasov in odprtokoden. Če vam koristi, ga lahko preprosto in brezplačno podprete z zvezdico na GitHubu.</string>
+	<string name="github_star_prompt_action">Dodaj zvezdico na GitHubu ↗</string>
+	<string name="github_star_prompt_dismiss_description">Skrij za vedno</string>
+	<string name="github_star_prompt_thank_you">Hvala!</string>
 </resources>

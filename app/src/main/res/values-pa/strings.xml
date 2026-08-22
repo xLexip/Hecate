@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">ਸੈੱਟ ਨਹੀਂ</string>
 	<string name="live_wallpaper_warning_title">ਲਾਈਵ ਵਾਲਪੇਪਰ ਚਾਲੂ ਹੈ</string>
 	<string name="live_wallpaper_warning_message">ਵਾਲਪੇਪਰ ਸਿੰਕ ਚਾਲੂ ਕਰਨ ਨਾਲ ਮੌਜੂਦਾ ਲਾਈਵ ਵਾਲਪੇਪਰ ਹਲਕੇ ਅਤੇ ਗੂੜ੍ਹੇ ਮੋਡ ਦੇ ਸਥਿਰ ਵਾਲਪੇਪਰਾਂ ਨਾਲ ਬਦਲ ਜਾਵੇਗਾ। ਜਾਰੀ ਰੱਖਣਾ ਹੈ?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ਮੁਫ਼ਤ, ਇਸ਼ਤਿਹਾਰ-ਮੁਕਤ ਅਤੇ ਓਪਨ ਸੋਰਸ ਹੈ। ਜੇ ਇਹ ਤੁਹਾਡੇ ਲਈ ਲਾਭਦਾਇਕ ਹੈ, ਤਾਂ GitHub ਉੱਤੇ ਸਟਾਰ ਦੇਣਾ ਇਸ ਨੂੰ ਮੁਫ਼ਤ ਸਮਰਥਨ ਕਰਨ ਦਾ ਸੌਖਾ ਤਰੀਕਾ ਹੈ।</string>
+	<string name="github_star_prompt_action">GitHub ਉੱਤੇ ਸਟਾਰ ਦਿਓ ↗</string>
+	<string name="github_star_prompt_dismiss_description">ਹਮੇਸ਼ਾ ਲਈ ਲੁਕਾਓ</string>
+	<string name="github_star_prompt_thank_you">ਧੰਨਵਾਦ!</string>
 </resources>

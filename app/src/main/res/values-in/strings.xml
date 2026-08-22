@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Belum disetel</string>
 	<string name="live_wallpaper_warning_title">Wallpaper animasi aktif</string>
 	<string name="live_wallpaper_warning_message">Mengaktifkan sinkronisasi wallpaper akan mengganti wallpaper animasi saat ini dengan wallpaper statis untuk mode terang dan gelap. Lanjutkan?</string>
+	<string name="github_star_prompt_description">Adaptive Theme gratis, bebas iklan, dan bersumber terbuka. Jika aplikasi ini berguna bagi Anda, memberi bintang di GitHub adalah cara mudah untuk mendukungnya secara gratis.</string>
+	<string name="github_star_prompt_action">Beri bintang di GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Sembunyikan selamanya</string>
+	<string name="github_star_prompt_thank_you">Terima kasih!</string>
 </resources>

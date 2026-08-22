@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">未设置</string>
 	<string name="live_wallpaper_warning_title">动态壁纸已启用</string>
 	<string name="live_wallpaper_warning_message">启用壁纸同步后，当前的动态壁纸将替换为浅色和深色模式的静态壁纸。是否继续？</string>
+	<string name="github_star_prompt_description">Adaptive Theme 免费、无广告且开源。如果它对您有帮助，在 GitHub 上点亮星标就是免费支持它的简单方式。</string>
+	<string name="github_star_prompt_action">在 GitHub 上加星 ↗</string>
+	<string name="github_star_prompt_dismiss_description">永久隐藏</string>
+	<string name="github_star_prompt_thank_you">谢谢！</string>
 </resources>

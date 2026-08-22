@@ -118,4 +118,8 @@
 	<string name="wallpaper_status_not_set">Nenastavena</string>
 	<string name="live_wallpaper_warning_title">Je aktivní živá tapeta</string>
 	<string name="live_wallpaper_warning_message">Zapnutím synchronizace tapet nahradíte aktuální živou tapetu statickými tapetami pro světlý a tmavý režim. Chcete pokračovat?</string>
+	<string name="github_star_prompt_description">Adaptive Theme je zdarma, bez reklam a s otevřeným zdrojovým kódem. Pokud vám pomáhá, můžete ho jednoduše a zdarma podpořit hvězdičkou na GitHubu.</string>
+	<string name="github_star_prompt_action">Přidat hvězdičku na GitHubu ↗</string>
+	<string name="github_star_prompt_dismiss_description">Skrýt navždy</string>
+	<string name="github_star_prompt_thank_you">Děkujeme!</string>
 </resources>

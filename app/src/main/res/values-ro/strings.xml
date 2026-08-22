@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Nesetată</string>
 	<string name="live_wallpaper_warning_title">Imagine de fundal animată activă</string>
 	<string name="live_wallpaper_warning_message">Activarea sincronizării va înlocui imaginea de fundal animată actuală cu imagini statice pentru modul luminos și cel întunecat. Vrei să continui?</string>
+	<string name="github_star_prompt_description">Adaptive Theme este gratuită, fără reclame și cu sursă deschisă. Dacă vă este utilă, o stea pe GitHub este o modalitate simplă de a o susține gratuit.</string>
+	<string name="github_star_prompt_action">Adaugă o stea pe GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ascunde pentru totdeauna</string>
+	<string name="github_star_prompt_thank_you">Mulțumim!</string>
 </resources>

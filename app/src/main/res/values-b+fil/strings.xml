@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Hindi nakatakda</string>
 	<string name="live_wallpaper_warning_title">Aktibo ang live wallpaper</string>
 	<string name="live_wallpaper_warning_message">Kapag in-on ang pag-sync, papalitan ang kasalukuyang live wallpaper ng mga static na wallpaper para sa light at dark mode. Magpatuloy?</string>
+	<string name="github_star_prompt_description">Libre, walang ad, at open source ang Adaptive Theme. Kung kapaki-pakinabang ito sa iyo, simpleng paraan ang pag-star sa GitHub para suportahan ito nang libre.</string>
+	<string name="github_star_prompt_action">I-star sa GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Itago magpakailanman</string>
+	<string name="github_star_prompt_thank_you">Salamat!</string>
 </resources>

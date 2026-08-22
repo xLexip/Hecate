@@ -113,6 +113,23 @@ class FakeUserPreferencesDataSource(
 	override suspend fun updateWallpaperStorageVersion(version: Int) {
 		state.value = current.copy(wallpaperStorageVersion = version)
 	}
+
+	override suspend fun recordGitHubStarPromptImpression(epochDay: Long) {
+		val isNewDay = current.githubStarPromptLastImpressionEpochDay != epochDay
+		state.value = current.copy(
+			githubStarPromptImpressionCount = current.githubStarPromptImpressionCount +
+					if (isNewDay) 1 else 0,
+			githubStarPromptLastImpressionEpochDay = epochDay
+		)
+	}
+
+	override suspend fun updateGitHubStarPromptDismissed(dismissed: Boolean) {
+		state.value = current.copy(githubStarPromptDismissed = dismissed)
+	}
+
+	override suspend fun updateReviewPromptLastRequestEpochDay(epochDay: Long) {
+		state.value = current.copy(reviewPromptLastRequestEpochDay = epochDay)
+	}
 }
 
 open class FakeSensorReader : SensorReader {

@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Није постављено</string>
 	<string name="live_wallpaper_warning_title">Жива позадина је активна</string>
 	<string name="live_wallpaper_warning_message">Укључивањем синхронизације тренутна жива позадина биће замењена статичним позадинама за светли и тамни режим. Желите ли да наставите?</string>
+	<string name="github_star_prompt_description">Adaptive Theme је бесплатан, без огласа и отвореног кода. Ако вам је користан, звездица на GitHub-у је једноставан бесплатан начин да га подржите.</string>
+	<string name="github_star_prompt_action">Додај звездицу на GitHub-у ↗</string>
+	<string name="github_star_prompt_dismiss_description">Сакриј заувек</string>
+	<string name="github_star_prompt_thank_you">Хвала!</string>
 </resources>

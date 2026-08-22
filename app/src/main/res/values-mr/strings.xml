@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">सेट केलेले नाही</string>
 	<string name="live_wallpaper_warning_title">लाइव्ह वॉलपेपर सुरू आहे</string>
 	<string name="live_wallpaper_warning_message">वॉलपेपर सिंक सुरू केल्यावर सध्याचा लाइव्ह वॉलपेपर फिकट आणि गडद मोडच्या स्थिर वॉलपेपरने बदलला जाईल. पुढे जायचे?</string>
+	<string name="github_star_prompt_description">Adaptive Theme विनामूल्य, जाहिरात-मुक्त आणि मुक्त स्रोत आहे. ते तुम्हाला उपयुक्त वाटत असल्यास, GitHub वर स्टार देणे हा त्याला विनामूल्य पाठिंबा देण्याचा सोपा मार्ग आहे.</string>
+	<string name="github_star_prompt_action">GitHub वर स्टार द्या ↗</string>
+	<string name="github_star_prompt_dismiss_description">कायमचे लपवा</string>
+	<string name="github_star_prompt_thank_you">धन्यवाद!</string>
 </resources>

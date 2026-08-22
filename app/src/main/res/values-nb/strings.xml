@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">Ikke angitt</string>
 	<string name="live_wallpaper_warning_title">Levende bakgrunn er aktiv</string>
 	<string name="live_wallpaper_warning_message">Hvis du slår på synkronisering av bakgrunner, erstattes den levende bakgrunnen med statiske bakgrunner for lys og mørk modus. Vil du fortsette?</string>
+	<string name="github_star_prompt_description">Adaptive Theme er gratis, uten reklame og med åpen kildekode. Hvis appen er nyttig for deg, kan du enkelt støtte den gratis med en stjerne på GitHub.</string>
+	<string name="github_star_prompt_action">Gi en stjerne på GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Skjul for alltid</string>
+	<string name="github_star_prompt_thank_you">Takk!</string>
 </resources>

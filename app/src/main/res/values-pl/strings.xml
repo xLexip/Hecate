@@ -118,4 +118,8 @@
 	<string name="wallpaper_status_not_set">Nieustawiona</string>
 	<string name="live_wallpaper_warning_title">Aktywna animowana tapeta</string>
 	<string name="live_wallpaper_warning_message">Włączenie synchronizacji tapet zastąpi bieżącą animowaną tapetę statycznymi tapetami dla trybu jasnego i ciemnego. Czy chcesz kontynuować?</string>
+	<string name="github_star_prompt_description">Adaptive Theme jest bezpłatna, bez reklam i ma otwarty kod źródłowy. Jeśli jest dla Ciebie przydatna, możesz łatwo wesprzeć ją bezpłatnie, dodając gwiazdkę na GitHubie.</string>
+	<string name="github_star_prompt_action">Dodaj gwiazdkę na GitHubie ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ukryj na zawsze</string>
+	<string name="github_star_prompt_thank_you">Dziękujemy!</string>
 </resources>

@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">سیٹ نہیں</string>
 	<string name="live_wallpaper_warning_title">لائیو وال پیپر فعال ہے</string>
 	<string name="live_wallpaper_warning_message">وال پیپر سنک فعال کرنے سے موجودہ لائیو وال پیپر روشن اور گہرے موڈ کے جامد وال پیپرز سے بدل جائے گا۔ جاری رکھیں؟</string>
+	<string name="github_star_prompt_description">Adaptive Theme مفت، اشتہارات سے پاک اور اوپن سورس ہے۔ اگر یہ آپ کے لیے مفید ہے تو GitHub پر اسٹار دینا اسے مفت سپورٹ کرنے کا ایک آسان طریقہ ہے۔</string>
+	<string name="github_star_prompt_action">GitHub پر اسٹار دیں ↗</string>
+	<string name="github_star_prompt_dismiss_description">ہمیشہ کے لیے چھپائیں</string>
+	<string name="github_star_prompt_thank_you">شکریہ!</string>
 </resources>

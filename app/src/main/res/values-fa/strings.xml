@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">تنظیم‌نشده</string>
 	<string name="live_wallpaper_warning_title">پس‌زمینهٔ زنده فعال است</string>
 	<string name="live_wallpaper_warning_message">با فعال کردن همگام‌سازی، پس‌زمینهٔ زندهٔ فعلی با پس‌زمینه‌های ثابت برای حالت روشن و تیره جایگزین می‌شود. ادامه می‌دهید؟</string>
+	<string name="github_star_prompt_description">Adaptive Theme رایگان، بدون تبلیغ و متن‌باز است. اگر برایتان مفید است، ستاره‌دادن در GitHub راه ساده‌ای برای حمایت رایگان از آن است.</string>
+	<string name="github_star_prompt_action">ستاره‌دادن در GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">برای همیشه پنهان شود</string>
+	<string name="github_star_prompt_thank_you">متشکرم!</string>
 </resources>

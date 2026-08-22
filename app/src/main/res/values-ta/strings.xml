@@ -101,4 +101,8 @@
 	<string name="wallpaper_status_not_set">அமைக்கப்படவில்லை</string>
 	<string name="live_wallpaper_warning_title">லைவ் வால்பேப்பர் இயக்கத்தில் உள்ளது</string>
 	<string name="live_wallpaper_warning_message">வால்பேப்பர் ஒத்திசைவை இயக்கினால் தற்போதைய லைவ் வால்பேப்பர் வெளிர் மற்றும் இருள் பயன்முறைகளுக்கான நிலையான வால்பேப்பர்களால் மாற்றப்படும். தொடரவா?</string>
+	<string name="github_star_prompt_description">Adaptive Theme இலவசமானது, விளம்பரமற்றது மற்றும் திறந்த மூலமாகும். இது உங்களுக்கு பயனுள்ளதாக இருந்தால், GitHub-ல் ஸ்டார் வழங்குவது அதை இலவசமாக ஆதரிப்பதற்கான எளிய வழியாகும்.</string>
+	<string name="github_star_prompt_action">GitHub-ல் ஸ்டார் வழங்கவும் ↗</string>
+	<string name="github_star_prompt_dismiss_description">என்றென்றும் மறை</string>
+	<string name="github_star_prompt_thank_you">நன்றி!</string>
 </resources>

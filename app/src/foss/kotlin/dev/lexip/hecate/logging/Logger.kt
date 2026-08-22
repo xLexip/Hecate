@@ -56,6 +56,10 @@ object Logger {
 		// No-op for FOSS build
 	}
 
+	fun logGitHubStarPromptAction(context: Context, action: String) {
+		// No-op for FOSS build
+	}
+
 	fun logSetupStarted(context: Context, hasShizuku: Boolean) {
 		// No-op for FOSS build
 	}

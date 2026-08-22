@@ -118,4 +118,8 @@
 	<string name="wallpaper_status_not_set">Не встановлено</string>
 	<string name="live_wallpaper_warning_title">Живі шпалери активні</string>
 	<string name="live_wallpaper_warning_message">Увімкнення синхронізації замінить поточні живі шпалери статичними для світлого й темного режимів. Продовжити?</string>
+	<string name="github_star_prompt_description">Adaptive Theme — безплатний застосунок без реклами з відкритим кодом. Якщо він корисний для вас, підтримайте його безкоштовно, поставивши зірку на GitHub.</string>
+	<string name="github_star_prompt_action">Поставити зірку на GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Сховати назавжди</string>
+	<string name="github_star_prompt_thank_you">Дякуємо!</string>
 </resources>

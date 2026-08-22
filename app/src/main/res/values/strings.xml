@@ -57,6 +57,13 @@
 	<string name="title_notification_channel_service">Theme Switching Service</string>
 	<string name="title_send_feedback">Send Feedback</string>
 	<string name="title_support_project">Support the project</string>
+	<string name="github_star_prompt_description">
+		Adaptive Theme is free, ad-free, and open source.
+		If it’s useful to you, a GitHub star is a simple way to support it for free.
+	</string>
+	<string name="github_star_prompt_action">Star on GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Hide forever</string>
+	<string name="github_star_prompt_thank_you">Thank you!</string>
 
 	<string name="adaptive_threshold_bright">Bright</string>
 	<string name="adaptive_threshold_custom">Custom</string>
