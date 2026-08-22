@@ -46,6 +46,9 @@ object Logger {
 		context: Context,
 		targetMode: Int,
 		succeeded: Boolean,
+		verificationAttempt: Int,
+		verificationElapsedMs: Long,
+		effectiveUiMode: Int,
 		screenOnProximityResult: ScreenOnProximityResult
 	) {
 		// No-op for FOSS build

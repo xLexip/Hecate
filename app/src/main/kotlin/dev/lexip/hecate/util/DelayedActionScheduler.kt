@@ -10,7 +10,7 @@
  * Please see the License for specific terms regarding permissions and limitations.
  */
 
-package dev.lexip.hecate.broadcasts
+package dev.lexip.hecate.util
 
 import android.os.Handler
 import android.os.Looper
