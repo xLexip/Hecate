@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">테스트 리뷰 절차가 완료됨</string>
 	<string name="easter_egg_answer">삶, 우주, 그리고 모든 것에 대한 궁극적인 질문의 답.</string>
 	<string name="description_service_purpose">주변 밝기에 따라 Android의 라이트 모드와 다크 모드를 전환합니다.</string>
-	<string name="description_switching_conditions">테마는 화면이 켜진 직후에만, 그리고 센서가 가려져 있지 않은 경우에만 변경됩니다.</string>
+	<string name="description_switching_conditions">테마는 화면이 켜진 후 잠시 동안에만, 그리고 센서가 가려져 있지 않은 경우에만 변경됩니다.</string>
 	<string name="description_notification_service_running">화면이 켜질 때 시스템 테마를 조정할 준비가 되었습니다.</string>
 	<string name="device_covered_title">센서가 가려짐</string>
 	<string name="device_covered_message">조도 센서가 가려져 있어 테마 전환이 일시중지되었습니다.</string>

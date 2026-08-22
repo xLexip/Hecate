@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">சோதனை மதிப்பாய்வு முடிந்தது</string>
 	<string name="easter_egg_answer">வாழ்க்கை, பிரபஞ்சம் மற்றும் அனைத்தையும் பற்றிய இறுதிக் கேள்விக்கான விடை.</string>
 	<string name="description_service_purpose">சுற்றுப்புற ஒளியின் அடிப்படையில் Android-ஐ வெளிர் மற்றும் இருள் பயன்முறைகளுக்கு இடையே மாற்றுகிறது.</string>
-	<string name="description_switching_conditions">திரை இயக்கப்பட்ட உடனேயே மற்றும் சென்சார் மறைக்கப்படாதபோது மட்டுமே தீம் மாறும்.</string>
+	<string name="description_switching_conditions">திரை இயக்கப்பட்ட சிறிது நேரத்திற்குள் மற்றும் சென்சார் மறைக்கப்படாதபோது மட்டுமே தீம் மாறும்.</string>
 	<string name="description_notification_service_running">திரை இயக்கப்படும்போது சிஸ்டம் தீமை மாற்றத் தயார்.</string>
 	<string name="device_covered_title">சென்சார் மறைக்கப்பட்டுள்ளது</string>
 	<string name="device_covered_message">ஒளி சென்சார் மறைக்கப்பட்டுள்ளதால் தீம் மாற்றம் இடைநிறுத்தப்பட்டுள்ளது.</string>

@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testovacie hodnotenie bolo dokončené</string>
 	<string name="easter_egg_answer">Odpoveď na základnú otázku života, vesmíru a vôbec.</string>
 	<string name="description_service_purpose">Prepína Android medzi svetlým a tmavým režimom podľa okolitého svetla.</string>
-	<string name="description_switching_conditions">Motív sa zmení iba bezprostredne po zapnutí obrazovky a iba ak snímač nie je zakrytý.</string>
+	<string name="description_switching_conditions">Motív sa zmení iba krátko po zapnutí obrazovky a iba ak snímač nie je zakrytý.</string>
 	<string name="description_notification_service_running">Pripravené upraviť systémový motív po zapnutí obrazovky.</string>
 	<string name="device_covered_title">Snímač je zakrytý</string>
 	<string name="device_covered_message">Prepínanie motívu je pozastavené, pretože snímač svetla je zakrytý.</string>

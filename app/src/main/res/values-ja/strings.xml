@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">テスト用レビュー フローが完了しました</string>
 	<string name="easter_egg_answer">生命、宇宙、そして万物についての究極の疑問の答え。</string>
 	<string name="description_service_purpose">周囲の明るさに応じて Android のライトモードとダークモードを切り替えます。</string>
-	<string name="description_switching_conditions">テーマは、画面が点灯した直後に限り、センサーが覆われていない場合にのみ切り替わります。</string>
+	<string name="description_switching_conditions">テーマは、画面が点灯してからしばらくの間に限り、センサーが覆われていない場合にのみ切り替わります。</string>
 	<string name="description_notification_service_running">画面の点灯時にシステムテーマを調整できます。</string>
 	<string name="device_covered_title">センサーが覆われています</string>
 	<string name="device_covered_message">光センサーが覆われているため、テーマの切り替えを一時停止しています。</string>

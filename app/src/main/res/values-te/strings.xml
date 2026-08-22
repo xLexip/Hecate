@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">టెస్ట్ రివ్యూ ప్రక్రియ పూర్తయింది</string>
 	<string name="easter_egg_answer">జీవితం, విశ్వం మరియు అన్నింటి గురించిన అంతిమ ప్రశ్నకు సమాధానం.</string>
 	<string name="description_service_purpose">పరిసర కాంతి ఆధారంగా Androidను లైట్ మరియు డార్క్ మోడ్‌ల మధ్య మారుస్తుంది.</string>
-	<string name="description_switching_conditions">స్క్రీన్ ఆన్ అయిన వెంటనే మరియు సెన్సార్ కప్పబడనప్పుడు మాత్రమే థీమ్ మారుతుంది.</string>
+	<string name="description_switching_conditions">స్క్రీన్ ఆన్ అయిన కొద్దిసేపటికే మరియు సెన్సార్ కప్పబడనప్పుడు మాత్రమే థీమ్ మారుతుంది.</string>
 	<string name="description_notification_service_running">స్క్రీన్ ఆన్ అయినప్పుడు సిస్టమ్ థీమ్‌ను సర్దుబాటు చేయడానికి సిద్ధంగా ఉంది.</string>
 	<string name="device_covered_title">సెన్సార్ కప్పబడింది</string>
 	<string name="device_covered_message">లైట్ సెన్సార్ కప్పబడినందున థీమ్ మార్పు పాజ్ చేయబడింది.</string>

@@ -26,37 +26,43 @@ class ProximitySensorManager(context: Context) : SensorEventListener, ProximityS
 	private val sensorManager: SensorManager =
 		context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
 	private val proximitySensor: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
-	private lateinit var callback: (Float) -> Unit
+	private var callback: ((Float) -> Unit)? = null
 
 	override val hasProximitySensor: Boolean
 		get() = proximitySensor != null
+	override val maximumRange: Float
+		get() = proximitySensor?.maximumRange ?: 0f
 
 	override fun startListening(
 		callback: (Float) -> Unit,
 		sensorDelay: Int
-	) {
-		if (!hasProximitySensor) {
+	): Boolean {
+		val sensor = proximitySensor
+		if (sensor == null) {
 			Log.w(
 				TAG,
 				"Proximity sensor not available on this device; startListening() will be a no-op."
 			)
-			return
+			return false
 		}
 
 		this.callback = callback
-		proximitySensor?.let {
-			Log.d(TAG, "Registering proximity sensor listener...")
-			sensorManager.registerListener(this, it, sensorDelay)
+		Log.d(TAG, "Registering proximity sensor listener...")
+		val registered = sensorManager.registerListener(this, sensor, sensorDelay)
+		if (!registered) {
+			this.callback = null
 		}
+		return registered
 	}
 
 	override fun stopListening() {
+		callback = null
 		sensorManager.unregisterListener(this)
 	}
 
 	override fun onSensorChanged(event: SensorEvent) {
 		val distance = event.values[0]
-		this.callback.invoke(distance)
+		callback?.invoke(distance)
 		Log.d(TAG, "Proximity sensor distance: $distance cm")
 	}
 

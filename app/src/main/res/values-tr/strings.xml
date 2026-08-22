@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Tema, yalnızca ekran açıldıktan hemen sonra ve yalnızca sensörün üzeri kapalı değilse değişir.
+		Tema, yalnızca ekran açıldıktan kısa süre sonra ve yalnızca sensörün üzeri kapalı değilse değişir.
 	</string>
 
 	<string name="description_notification_service_running">

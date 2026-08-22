@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">آزمائشی جائزے کا عمل مکمل ہو گیا</string>
 	<string name="easter_egg_answer">زندگی، کائنات اور ہر چیز کے متعلق حتمی سوال کا جواب۔</string>
 	<string name="description_service_purpose">Android کو ارد گرد کی روشنی کے مطابق روشن اور گہرے موڈ کے درمیان تبدیل کرتا ہے۔</string>
-	<string name="description_switching_conditions">تھیم صرف اسکرین آن ہونے کے فوراً بعد اور صرف اس صورت میں تبدیل ہوتی ہے جب سینسر ڈھکا نہ ہو۔</string>
+	<string name="description_switching_conditions">تھیم صرف اسکرین آن ہونے کے کچھ ہی دیر بعد اور صرف اس صورت میں تبدیل ہوتی ہے جب سینسر ڈھکا نہ ہو۔</string>
 	<string name="description_notification_service_running">اسکرین آن ہونے پر سسٹم تھیم کو ایڈجسٹ کرنے کے لیے تیار ہے۔</string>
 	<string name="device_covered_title">سینسر ڈھکا ہوا ہے</string>
 	<string name="device_covered_message">روشنی کا سینسر ڈھکا ہونے کی وجہ سے تھیم کی تبدیلی روک دی گئی ہے۔</string>

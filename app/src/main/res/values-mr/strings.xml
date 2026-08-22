@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">चाचणी पुनरावलोकन प्रक्रिया पूर्ण झाली</string>
 	<string name="easter_egg_answer">जीवन, विश्व आणि सर्वकाही याबद्दलच्या अंतिम प्रश्नाचे उत्तर.</string>
 	<string name="description_service_purpose">सभोवतालच्या प्रकाशानुसार Android ला फिकट आणि गडद मोडमध्ये बदलते.</string>
-	<string name="description_switching_conditions">थीम फक्त स्क्रीन सुरू झाल्यानंतर लगेच आणि सेन्सर झाकलेला नसेल तरच बदलते.</string>
+	<string name="description_switching_conditions">थीम फक्त स्क्रीन सुरू झाल्यानंतर थोड्याच वेळात आणि सेन्सर झाकलेला नसेल तरच बदलते.</string>
 	<string name="description_notification_service_running">स्क्रीन सुरू झाल्यावर सिस्टम थीम बदलण्यासाठी तयार.</string>
 	<string name="device_covered_title">सेन्सर झाकलेला आहे</string>
 	<string name="device_covered_message">प्रकाश सेन्सर झाकलेला असल्यामुळे थीम बदलणे थांबवले आहे.</string>

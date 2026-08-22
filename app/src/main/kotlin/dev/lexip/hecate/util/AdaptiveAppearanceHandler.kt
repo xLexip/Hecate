@@ -27,7 +27,7 @@ private data class WallpaperSyncConfiguration(
 )
 
 class AdaptiveAppearanceHandler internal constructor(
-	private val setDarkTheme: (Boolean) -> DarkThemeChangeResult,
+	private val setDarkTheme: (Boolean, ScreenOnProximityResult) -> DarkThemeChangeResult,
 	private val scheduleWallpaperForTheme: (Boolean, String?, String?) -> Unit
 ) {
 	@Volatile
@@ -45,8 +45,11 @@ class AdaptiveAppearanceHandler internal constructor(
 		)
 	}
 
-	fun applyAppearance(useDarkTheme: Boolean): DarkThemeChangeResult {
-		val result = setDarkTheme(useDarkTheme)
+	fun applyAppearance(
+		useDarkTheme: Boolean,
+		screenOnProximityResult: ScreenOnProximityResult
+	): DarkThemeChangeResult {
+		val result = setDarkTheme(useDarkTheme, screenOnProximityResult)
 		val wallpaperConfig = wallpaperSyncConfiguration
 
 		if (result.succeeded && result.changed &&

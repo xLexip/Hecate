@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">পরীক্ষামূলক পর্যালোচনা প্রক্রিয়া সম্পন্ন হয়েছে</string>
 	<string name="easter_egg_answer">জীবন, মহাবিশ্ব ও সবকিছুর চূড়ান্ত প্রশ্নের উত্তর।</string>
 	<string name="description_service_purpose">চারপাশের আলোর ভিত্তিতে Android-কে হালকা ও গাঢ় মোডের মধ্যে পরিবর্তন করে।</string>
-	<string name="description_switching_conditions">স্ক্রিন চালু হওয়ার ঠিক পরেই এবং সেন্সর ঢাকা না থাকলেই থিম পরিবর্তন হয়।</string>
+	<string name="description_switching_conditions">স্ক্রিন চালু হওয়ার কিছুক্ষণ পরেই এবং সেন্সর ঢাকা না থাকলেই থিম পরিবর্তন হয়।</string>
 	<string name="description_notification_service_running">স্ক্রিন চালু হলে সিস্টেম থিম সামঞ্জস্য করতে প্রস্তুত।</string>
 	<string name="device_covered_title">সেন্সর ঢাকা</string>
 	<string name="device_covered_message">আলোর সেন্সর ঢাকা থাকায় থিম পরিবর্তন সাময়িকভাবে বন্ধ আছে।</string>

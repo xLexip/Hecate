@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Fluxul de evaluare de test s-a încheiat</string>
 	<string name="easter_egg_answer">Răspunsul la întrebarea supremă despre viață, univers și tot restul.</string>
 	<string name="description_service_purpose">Comută Android între modul luminos și cel întunecat în funcție de lumina ambientală.</string>
-	<string name="description_switching_conditions">Tema se schimbă numai imediat după pornirea ecranului și numai dacă senzorul nu este acoperit.</string>
+	<string name="description_switching_conditions">Tema se schimbă numai la scurt timp după pornirea ecranului și numai dacă senzorul nu este acoperit.</string>
 	<string name="description_notification_service_running">Pregătit să ajusteze tema sistemului la pornirea ecranului.</string>
 	<string name="device_covered_title">Senzor acoperit</string>
 	<string name="device_covered_message">Comutarea temei este întreruptă deoarece senzorul de lumină este acoperit.</string>

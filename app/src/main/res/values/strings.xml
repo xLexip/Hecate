@@ -27,7 +27,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		The theme changes only immediately after the screen turns on, and only if the sensor is uncovered.
+		The theme changes only shortly after the screen turns on, and only if the sensor is uncovered.
 	</string>
 
 	<string name="description_notification_service_running">

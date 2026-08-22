@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Тема змінюється лише відразу після ввімкнення екрана і лише якщо датчик не закритий.
+		Тема змінюється лише невдовзі після ввімкнення екрана і лише якщо датчик не закритий.
 	</string>
 
 	<string name="description_notification_service_running">

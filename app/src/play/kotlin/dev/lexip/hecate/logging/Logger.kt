@@ -16,6 +16,8 @@ import android.content.Context
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import dev.lexip.hecate.util.ScreenOnProximityResult
+import dev.lexip.hecate.util.ThemeSwitchSkipReason
 
 object Logger {
 
@@ -71,12 +73,33 @@ object Logger {
 	fun logThemeSwitched(
 		context: Context,
 		targetMode: Int,
-		succeeded: Boolean
+		succeeded: Boolean,
+		screenOnProximityResult: ScreenOnProximityResult
 	) {
 		ifAllowed {
 			analytics(context).logEvent("theme_switched") {
 				param("target_mode", targetMode.toLong())
 				param("succeeded", if (succeeded) 1L else 0L)
+				param(
+					"screen_on_proximity_result",
+					screenOnProximityResult.analyticsValue
+				)
+			}
+		}
+	}
+
+	fun logThemeSwitchSkipped(
+		context: Context,
+		reason: ThemeSwitchSkipReason,
+		screenOnProximityResult: ScreenOnProximityResult
+	) {
+		ifAllowed {
+			analytics(context).logEvent("theme_switch_skipped") {
+				param("reason", reason.analyticsValue)
+				param(
+					"screen_on_proximity_result",
+					screenOnProximityResult.analyticsValue
+				)
 			}
 		}
 	}

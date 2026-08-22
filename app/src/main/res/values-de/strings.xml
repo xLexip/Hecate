@@ -23,7 +23,7 @@
     </string>
 
 	<string name="description_switching_conditions">
-		Das Theme wird nur unmittelbar nach dem Einschalten des Bildschirms geändert und nur, wenn der Sensor nicht verdeckt ist.
+		Das Theme wird nur kurz nach dem Einschalten des Bildschirms geändert und nur, wenn der Sensor nicht verdeckt ist.
 	</string>
 
 	<string name="description_notification_service_running">

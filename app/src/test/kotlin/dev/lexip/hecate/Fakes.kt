@@ -132,14 +132,18 @@ class FakeUserPreferencesDataSource(
 	}
 }
 
-open class FakeSensorReader : SensorReader {
+open class FakeSensorReader(
+	var registrationSucceeds: Boolean = true
+) : SensorReader {
 	private var callback: ((Float) -> Unit)? = null
 	var startCalls = 0
 	var stopCalls = 0
 
-	override fun startListening(callback: (Float) -> Unit, sensorDelay: Int) {
+	override fun startListening(callback: (Float) -> Unit, sensorDelay: Int): Boolean {
 		startCalls++
+		if (!registrationSucceeds) return false
 		this.callback = callback
+		return true
 	}
 
 	override fun stopListening() {
@@ -153,8 +157,10 @@ open class FakeSensorReader : SensorReader {
 }
 
 class FakeProximitySensorReader(
-	override val hasProximitySensor: Boolean = true
-) : FakeSensorReader(), ProximitySensorReader
+	override val hasProximitySensor: Boolean = true,
+	override val maximumRange: Float = 5f,
+	registrationSucceeds: Boolean = true
+) : FakeSensorReader(registrationSucceeds), ProximitySensorReader
 
 class FakeAdaptiveThemeServiceController : AdaptiveThemeServiceController {
 	var startCalls = 0

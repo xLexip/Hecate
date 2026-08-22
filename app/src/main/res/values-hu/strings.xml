@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">A tesztértékelési folyamat befejeződött</string>
 	<string name="easter_egg_answer">A válasz az élet, a világmindenség meg minden végső kérdésére.</string>
 	<string name="description_service_purpose">A környezeti fény alapján vált az Android világos és sötét módja között.</string>
-	<string name="description_switching_conditions">A téma csak közvetlenül a képernyő bekapcsolása után változik, és csak akkor, ha az érzékelő nincs letakarva.</string>
+	<string name="description_switching_conditions">A téma csak röviddel a képernyő bekapcsolása után változik, és csak akkor, ha az érzékelő nincs letakarva.</string>
 	<string name="description_notification_service_running">Készen áll a rendszertéma módosítására a képernyő bekapcsolásakor.</string>
 	<string name="device_covered_title">Az érzékelő le van takarva</string>
 	<string name="device_covered_message">A témaváltás szünetel, mert a fényérzékelő le van takarva.</string>

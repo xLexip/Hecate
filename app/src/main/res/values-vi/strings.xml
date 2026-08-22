@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Đã hoàn tất quy trình đánh giá thử</string>
 	<string name="easter_egg_answer">Câu trả lời cho câu hỏi tối thượng về sự sống, vũ trụ và vạn vật.</string>
 	<string name="description_service_purpose">Chuyển Android giữa chế độ sáng và tối dựa trên ánh sáng xung quanh.</string>
-	<string name="description_switching_conditions">Chủ đề chỉ thay đổi ngay sau khi màn hình bật và chỉ khi cảm biến không bị che.</string>
+	<string name="description_switching_conditions">Chủ đề chỉ thay đổi trong thời gian ngắn sau khi màn hình bật và chỉ khi cảm biến không bị che.</string>
 	<string name="description_notification_service_running">Sẵn sàng điều chỉnh giao diện hệ thống khi màn hình bật.</string>
 	<string name="device_covered_title">Cảm biến bị che</string>
 	<string name="device_covered_message">Đã tạm dừng chuyển đổi giao diện vì cảm biến ánh sáng bị che.</string>

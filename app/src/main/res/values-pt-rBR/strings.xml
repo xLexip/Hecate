@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		O tema muda apenas imediatamente após a tela ligar e somente se o sensor não estiver coberto.
+		O tema muda apenas pouco depois que a tela liga e somente se o sensor não estiver coberto.
 	</string>
 
 	<string name="description_notification_service_running">

@@ -13,6 +13,8 @@
 package dev.lexip.hecate.logging
 
 import android.content.Context
+import dev.lexip.hecate.util.ScreenOnProximityResult
+import dev.lexip.hecate.util.ThemeSwitchSkipReason
 
 object Logger {
 
@@ -43,7 +45,16 @@ object Logger {
 	fun logThemeSwitched(
 		context: Context,
 		targetMode: Int,
-		succeeded: Boolean
+		succeeded: Boolean,
+		screenOnProximityResult: ScreenOnProximityResult
+	) {
+		// No-op for FOSS build
+	}
+
+	fun logThemeSwitchSkipped(
+		context: Context,
+		reason: ThemeSwitchSkipReason,
+		screenOnProximityResult: ScreenOnProximityResult
 	) {
 		// No-op for FOSS build
 	}

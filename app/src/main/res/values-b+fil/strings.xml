@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Tapos na ang test review flow</string>
 	<string name="easter_egg_answer">Ang sagot sa sukdulang tanong tungkol sa buhay, sansinukob, at lahat ng bagay.</string>
 	<string name="description_service_purpose">Inililipat ang Android sa light at dark mode batay sa liwanag sa paligid.</string>
-	<string name="description_switching_conditions">Nagbabago lang ang tema kaagad pagkatapos bumukas ang screen, at kapag hindi natatakpan ang sensor.</string>
+	<string name="description_switching_conditions">Nagbabago lang ang tema ilang sandali pagkatapos bumukas ang screen, at kapag hindi natatakpan ang sensor.</string>
 	<string name="description_notification_service_running">Handang ayusin ang tema ng system kapag bumukas ang screen.</string>
 	<string name="device_covered_title">Natatakpan ang sensor</string>
 	<string name="device_covered_message">Naka-pause ang pagpapalit ng tema dahil natatakpan ang light sensor.</string>

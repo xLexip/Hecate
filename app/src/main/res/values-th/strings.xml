@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">ขั้นตอนรีวิวทดสอบเสร็จสิ้น</string>
 	<string name="easter_egg_answer">คำตอบของคำถามสูงสุดเกี่ยวกับชีวิต จักรวาล และทุกสิ่ง</string>
 	<string name="description_service_purpose">สลับ Android ระหว่างโหมดสว่างและโหมดมืดตามแสงแวดล้อม</string>
-	<string name="description_switching_conditions">ธีมจะเปลี่ยนเฉพาะทันทีหลังเปิดหน้าจอ และเฉพาะเมื่อเซ็นเซอร์ไม่ถูกบังเท่านั้น</string>
+	<string name="description_switching_conditions">ธีมจะเปลี่ยนเฉพาะในช่วงสั้นๆ หลังเปิดหน้าจอ และเฉพาะเมื่อเซ็นเซอร์ไม่ถูกบังเท่านั้น</string>
 	<string name="description_notification_service_running">พร้อมปรับธีมของระบบเมื่อเปิดหน้าจอ</string>
 	<string name="device_covered_title">เซ็นเซอร์ถูกบัง</string>
 	<string name="device_covered_message">หยุดการสลับธีมชั่วคราวเพราะเซ็นเซอร์แสงถูกบัง</string>

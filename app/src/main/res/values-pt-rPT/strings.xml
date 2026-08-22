@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Fluxo de avaliação de teste concluído</string>
 	<string name="easter_egg_answer">A resposta à questão fundamental sobre a vida, o universo e tudo o resto.</string>
 	<string name="description_service_purpose">Alterna o Android entre os modos claro e escuro com base na luz ambiente.</string>
-	<string name="description_switching_conditions">O tema só muda imediatamente depois de o ecrã ligar e apenas se o sensor não estiver tapado.</string>
+	<string name="description_switching_conditions">O tema só muda pouco depois de o ecrã ligar e apenas se o sensor não estiver tapado.</string>
 	<string name="description_notification_service_running">Pronto para ajustar o tema do sistema quando o ecrã for ligado.</string>
 	<string name="device_covered_title">Sensor tapado</string>
 	<string name="device_covered_message">A mudança de tema está em pausa porque o sensor de luz está tapado.</string>

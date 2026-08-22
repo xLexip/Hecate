@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Η δοκιμαστική διαδικασία αξιολόγησης ολοκληρώθηκε</string>
 	<string name="easter_egg_answer">Η απάντηση στο υπέρτατο ερώτημα για τη ζωή, το σύμπαν και τα πάντα.</string>
 	<string name="description_service_purpose">Εναλλάσσει το Android μεταξύ φωτεινής και σκοτεινής λειτουργίας ανάλογα με τον φωτισμό περιβάλλοντος.</string>
-	<string name="description_switching_conditions">Το θέμα αλλάζει μόνο αμέσως μετά την ενεργοποίηση της οθόνης και μόνο αν ο αισθητήρας δεν είναι καλυμμένος.</string>
+	<string name="description_switching_conditions">Το θέμα αλλάζει μόνο λίγο μετά την ενεργοποίηση της οθόνης και μόνο αν ο αισθητήρας δεν είναι καλυμμένος.</string>
 	<string name="description_notification_service_running">Έτοιμο για προσαρμογή του θέματος συστήματος όταν ενεργοποιείται η οθόνη.</string>
 	<string name="device_covered_title">Ο αισθητήρας είναι καλυμμένος</string>
 	<string name="device_covered_message">Η εναλλαγή θέματος έχει διακοπεί επειδή ο αισθητήρας φωτός είναι καλυμμένος.</string>

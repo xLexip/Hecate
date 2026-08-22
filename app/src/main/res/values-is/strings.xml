@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Prófunarferli umsagnar lokið</string>
 	<string name="easter_egg_answer">Svarið við hinni endanlegu spurningu um lífið, alheiminn og allt.</string>
 	<string name="description_service_purpose">Skiptir Android á milli ljósrar og dökkrar stillingar eftir umhverfislýsingu.</string>
-	<string name="description_switching_conditions">Þemað breytist aðeins strax eftir að kveikt er á skjánum og aðeins ef skynjarinn er ekki hulinn.</string>
+	<string name="description_switching_conditions">Þemað breytist aðeins skömmu eftir að kveikt er á skjánum og aðeins ef skynjarinn er ekki hulinn.</string>
 	<string name="description_notification_service_running">Tilbúið að laga kerfisþemað þegar kveikt er á skjánum.</string>
 	<string name="device_covered_title">Skynjari hulinn</string>
 	<string name="device_covered_message">Þemaskipti eru í bið vegna þess að ljósneminn er hulinn.</string>

@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">ટેસ્ટ સમીક્ષા પ્રક્રિયા પૂર્ણ થઈ</string>
 	<string name="easter_egg_answer">જીવન, બ્રહ્માંડ અને દરેક વસ્તુ વિશેના અંતિમ પ્રશ્નનો જવાબ.</string>
 	<string name="description_service_purpose">આસપાસના પ્રકાશના આધારે Android ને લાઇટ અને ડાર્ક મોડ વચ્ચે બદલે છે.</string>
-	<string name="description_switching_conditions">થીમ ફક્ત સ્ક્રીન ચાલુ થયા પછી તરત જ અને સેન્સર ઢંકાયેલો ન હોય ત્યારે જ બદલાય છે.</string>
+	<string name="description_switching_conditions">થીમ ફક્ત સ્ક્રીન ચાલુ થયા પછી થોડા સમયમાં અને સેન્સર ઢંકાયેલો ન હોય ત્યારે જ બદલાય છે.</string>
 	<string name="description_notification_service_running">સ્ક્રીન ચાલુ થાય ત્યારે સિસ્ટમ થીમ બદલવા માટે તૈયાર.</string>
 	<string name="device_covered_title">સેન્સર ઢંકાયેલો છે</string>
 	<string name="device_covered_message">લાઇટ સેન્સર ઢંકાયેલો હોવાથી થીમ બદલવાનું થોભાવ્યું છે.</string>

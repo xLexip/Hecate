@@ -23,7 +23,7 @@
     </string>
 
 	<string name="description_switching_conditions">
-       El tema cambia solo inmediatamente después de que se enciende la pantalla y solo si el sensor está descubierto.
+       El tema cambia solo poco después de que se enciende la pantalla y solo si el sensor está descubierto.
     </string>
 
 	<string name="description_notification_service_running">

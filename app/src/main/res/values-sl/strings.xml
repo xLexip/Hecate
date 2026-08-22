@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Preskusni postopek ocenjevanja je končan</string>
 	<string name="easter_egg_answer">Odgovor na temeljno vprašanje o življenju, vesolju in sploh vsem.</string>
 	<string name="description_service_purpose">Preklaplja Android med svetlim in temnim načinom glede na svetlobo okolice.</string>
-	<string name="description_switching_conditions">Tema se spremeni le takoj po vklopu zaslona in le, če tipalo ni prekrito.</string>
+	<string name="description_switching_conditions">Tema se spremeni le kmalu po vklopu zaslona in le, če tipalo ni prekrito.</string>
 	<string name="description_notification_service_running">Pripravljeno na prilagoditev sistemske teme ob vklopu zaslona.</string>
 	<string name="device_covered_title">Tipalo je prekrito</string>
 	<string name="device_covered_message">Preklapljanje teme je začasno ustavljeno, ker je tipalo svetlobe prekrito.</string>
