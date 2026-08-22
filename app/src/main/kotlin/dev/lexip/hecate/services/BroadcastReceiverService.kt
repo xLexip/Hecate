@@ -57,6 +57,7 @@ class BroadcastReceiverService : Service() {
 
 	// Utils
 	private lateinit var adaptiveAppearanceHandler: AdaptiveAppearanceHandler
+	private lateinit var darkThemeHandler: DarkThemeHandler
 	private lateinit var wallpaperUpdateScheduler: WallpaperUpdateScheduler
 	private lateinit var lightSensorManager: LightSensorManager
 	private lateinit var proximitySensorManager: ProximitySensorManager
@@ -192,6 +193,9 @@ class BroadcastReceiverService : Service() {
 		if (this::proximitySensorManager.isInitialized) {
 			proximitySensorManager.stopListening()
 		}
+		if (this::darkThemeHandler.isInitialized) {
+			darkThemeHandler.cancelPendingVerification()
+		}
 		serviceScope.cancel()
 	}
 
@@ -277,8 +281,9 @@ class BroadcastReceiverService : Service() {
 				dispatcher = Dispatchers.IO.limitedParallelism(1),
 				applyWallpaper = wallpaperHandler::applyWallpaperForTheme
 			)
+			darkThemeHandler = DarkThemeHandler(this)
 			adaptiveAppearanceHandler = AdaptiveAppearanceHandler(
-				setDarkTheme = DarkThemeHandler(this)::setDarkTheme,
+				setDarkTheme = darkThemeHandler::setDarkTheme,
 				scheduleWallpaperForTheme = wallpaperUpdateScheduler::schedule
 			)
 		}

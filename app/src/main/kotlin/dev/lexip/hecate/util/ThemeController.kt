@@ -29,7 +29,8 @@ enum class ThemeSwitchSkipReason(val analyticsValue: String) {
 	PROXIMITY_INVALID_READING("proximity_invalid_reading"),
 	LIGHT_REGISTRATION_FAILED("light_registration_failed"),
 	LIGHT_READING_TIMEOUT("light_reading_timeout"),
-	LIGHT_INVALID_READING("light_invalid_reading")
+	LIGHT_INVALID_READING("light_invalid_reading"),
+	THEME_TRANSITION_IN_PROGRESS("theme_transition_in_progress")
 }
 
 /** Boundary around the privileged system-theme implementation. */
@@ -44,7 +45,7 @@ class DarkThemeController(
 		enabled: Boolean,
 		screenOnProximityResult: ScreenOnProximityResult
 	) {
-		handler.setDarkTheme(enabled, screenOnProximityResult)
+		handler.setDarkTheme(enabled, screenOnProximityResult) { }
 	}
 }
 
@@ -55,6 +56,6 @@ class AdaptiveAppearanceController(
 		enabled: Boolean,
 		screenOnProximityResult: ScreenOnProximityResult
 	) {
-		handler.applyAppearance(enabled, screenOnProximityResult)
+		handler.applyAppearance(enabled, screenOnProximityResult) { }
 	}
 }

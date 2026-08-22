@@ -74,12 +74,18 @@ object Logger {
 		context: Context,
 		targetMode: Int,
 		succeeded: Boolean,
+		verificationAttempt: Int,
+		verificationElapsedMs: Long,
+		effectiveUiMode: Int,
 		screenOnProximityResult: ScreenOnProximityResult
 	) {
 		ifAllowed {
 			analytics(context).logEvent("theme_switched") {
 				param("target_mode", targetMode.toLong())
 				param("succeeded", if (succeeded) 1L else 0L)
+				param("verification_attempt", verificationAttempt.toLong())
+				param("verification_elapsed_ms", verificationElapsedMs)
+				param("effective_ui_mode", effectiveUiMode.toLong())
 				param(
 					"screen_on_proximity_result",
 					screenOnProximityResult.analyticsValue

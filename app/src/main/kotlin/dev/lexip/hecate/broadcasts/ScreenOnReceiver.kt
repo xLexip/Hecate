@@ -18,7 +18,9 @@ import android.content.Intent
 import dev.lexip.hecate.logging.Logger
 import dev.lexip.hecate.util.AdaptiveAppearanceController
 import dev.lexip.hecate.util.AdaptiveAppearanceHandler
+import dev.lexip.hecate.util.DelayedActionScheduler
 import dev.lexip.hecate.util.LightSensorManager
+import dev.lexip.hecate.util.MainThreadDelayedActionScheduler
 import dev.lexip.hecate.util.MinuteProvider
 import dev.lexip.hecate.util.ProximitySensorManager
 import dev.lexip.hecate.util.ProximitySensorReader

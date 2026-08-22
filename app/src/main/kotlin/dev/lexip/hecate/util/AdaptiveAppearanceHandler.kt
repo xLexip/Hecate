@@ -27,7 +27,11 @@ private data class WallpaperSyncConfiguration(
 )
 
 class AdaptiveAppearanceHandler internal constructor(
-	private val setDarkTheme: (Boolean, ScreenOnProximityResult) -> DarkThemeChangeResult,
+	private val setDarkTheme: (
+		Boolean,
+		ScreenOnProximityResult,
+		(DarkThemeChangeResult) -> Unit
+	) -> Unit,
 	private val scheduleWallpaperForTheme: (Boolean, String?, String?) -> Unit
 ) {
 	@Volatile
@@ -47,23 +51,25 @@ class AdaptiveAppearanceHandler internal constructor(
 
 	fun applyAppearance(
 		useDarkTheme: Boolean,
-		screenOnProximityResult: ScreenOnProximityResult
-	): DarkThemeChangeResult {
-		val result = setDarkTheme(useDarkTheme, screenOnProximityResult)
-		val wallpaperConfig = wallpaperSyncConfiguration
+		screenOnProximityResult: ScreenOnProximityResult,
+		onComplete: (DarkThemeChangeResult) -> Unit = {}
+	) {
+		setDarkTheme(useDarkTheme, screenOnProximityResult) { result ->
+			val wallpaperConfig = wallpaperSyncConfiguration
 
-		if (result.succeeded && result.changed &&
-			wallpaperConfig.enabled &&
-			!wallpaperConfig.dayWallpaperUri.isNullOrEmpty() &&
-			!wallpaperConfig.nightWallpaperUri.isNullOrEmpty()
-		) {
-			scheduleWallpaperForTheme(
-				useDarkTheme,
-				wallpaperConfig.dayWallpaperUri,
-				wallpaperConfig.nightWallpaperUri
-			)
+			if (result.succeeded && result.changed &&
+				wallpaperConfig.enabled &&
+				!wallpaperConfig.dayWallpaperUri.isNullOrEmpty() &&
+				!wallpaperConfig.nightWallpaperUri.isNullOrEmpty()
+			) {
+				scheduleWallpaperForTheme(
+					useDarkTheme,
+					wallpaperConfig.dayWallpaperUri,
+					wallpaperConfig.nightWallpaperUri
+				)
+			}
+
+			onComplete(result)
 		}
-
-		return result
 	}
 }
