@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testflödet för omdömen har slutförts</string>
 	<string name="easter_egg_answer">Svaret på den yttersta frågan om livet, universum och allting.</string>
 	<string name="description_service_purpose">Växlar Android mellan ljust och mörkt läge utifrån omgivningsljuset.</string>
-	<string name="description_switching_conditions">Temat ändras endast direkt efter att skärmen tänds och endast om sensorn inte är täckt.</string>
+	<string name="description_switching_conditions">Temat ändras endast kort efter att skärmen tänds och endast om sensorn inte är täckt.</string>
 	<string name="description_notification_service_running">Redo att anpassa systemtemat när skärmen tänds.</string>
 	<string name="device_covered_title">Sensorn är täckt</string>
 	<string name="device_covered_message">Temaväxlingen har pausats eftersom ljussensorn är täckt.</string>

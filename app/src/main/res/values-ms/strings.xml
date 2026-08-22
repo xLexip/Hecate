@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Aliran ulasan ujian selesai</string>
 	<string name="easter_egg_answer">Jawapan kepada persoalan utama tentang kehidupan, alam semesta dan segala-galanya.</string>
 	<string name="description_service_purpose">Menukar Android antara mod cerah dan gelap berdasarkan cahaya persekitaran.</string>
-	<string name="description_switching_conditions">Tema hanya berubah sejurus selepas skrin dihidupkan dan hanya jika penderia tidak dilitupi.</string>
+	<string name="description_switching_conditions">Tema hanya berubah seketika selepas skrin dihidupkan dan hanya jika penderia tidak dilitupi.</string>
 	<string name="description_notification_service_running">Sedia melaraskan tema sistem apabila skrin dihidupkan.</string>
 	<string name="device_covered_title">Penderia dilitupi</string>
 	<string name="device_covered_message">Penukaran tema dijeda kerana penderia cahaya dilitupi.</string>

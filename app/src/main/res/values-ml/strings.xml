@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">പരീക്ഷണ അവലോകന നടപടി പൂർത്തിയായി</string>
 	<string name="easter_egg_answer">ജീവിതം, പ്രപഞ്ചം, എല്ലാം എന്നിവയെക്കുറിച്ചുള്ള ആത്യന്തിക ചോദ്യത്തിനുള്ള ഉത്തരം.</string>
 	<string name="description_service_purpose">ചുറ്റുമുള്ള വെളിച്ചത്തെ അടിസ്ഥാനമാക്കി Android-നെ ലൈറ്റ്, ഡാർക്ക് മോഡുകൾക്കിടയിൽ മാറ്റുന്നു.</string>
-	<string name="description_switching_conditions">സ്ക്രീൻ ഓണായ ഉടൻ മാത്രവും സെൻസർ മറഞ്ഞിട്ടില്ലെങ്കിൽ മാത്രവും തീം മാറും.</string>
+	<string name="description_switching_conditions">സ്ക്രീൻ ഓണായി കുറച്ചുസമയത്തിനുള്ളിലും സെൻസർ മറഞ്ഞിട്ടില്ലെങ്കിൽ മാത്രവും തീം മാറും.</string>
 	<string name="description_notification_service_running">സ്ക്രീൻ ഓണാകുമ്പോൾ സിസ്റ്റം തീം ക്രമീകരിക്കാൻ തയ്യാറാണ്.</string>
 	<string name="device_covered_title">സെൻസർ മറഞ്ഞിരിക്കുന്നു</string>
 	<string name="device_covered_message">ലൈറ്റ് സെൻസർ മറഞ്ഞതിനാൽ തീം മാറ്റം താൽക്കാലികമായി നിർത്തി.</string>

@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Flux de valoració de prova completat</string>
 	<string name="easter_egg_answer">La resposta a la pregunta definitiva sobre la vida, l’univers i tota la resta.</string>
 	<string name="description_service_purpose">Alterna Android entre els modes clar i fosc segons la llum ambiental.</string>
-	<string name="description_switching_conditions">El tema només canvia immediatament després d’encendre la pantalla i només si el sensor no està cobert.</string>
+	<string name="description_switching_conditions">El tema només canvia poc després d’encendre la pantalla i només si el sensor no està cobert.</string>
 	<string name="description_notification_service_running">A punt per ajustar el tema del sistema en encendre la pantalla.</string>
 	<string name="device_covered_title">Sensor cobert</string>
 	<string name="device_covered_message">El canvi de tema està en pausa perquè el sensor de llum està cobert.</string>

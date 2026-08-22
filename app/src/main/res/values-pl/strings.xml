@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Motyw zmienia się tylko bezpośrednio po włączeniu ekranu i tylko wtedy, gdy czujnik nie jest zasłonięty.
+		Motyw zmienia się tylko krótko po włączeniu ekranu i tylko wtedy, gdy czujnik nie jest zasłonięty.
 	</string>
 
 	<string name="description_notification_service_running">

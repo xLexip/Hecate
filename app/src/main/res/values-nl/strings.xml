@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Het thema verandert alleen onmiddellijk nadat het scherm wordt ingeschakeld, en alleen als de sensor niet bedekt is.
+		Het thema verandert alleen kort nadat het scherm wordt ingeschakeld, en alleen als de sensor niet bedekt is.
 	</string>
 
 	<string name="description_notification_service_running">

@@ -18,11 +18,12 @@ interface SensorReader {
 	fun startListening(
 		callback: (Float) -> Unit,
 		sensorDelay: Int = SensorManager.SENSOR_DELAY_FASTEST
-	)
+	): Boolean
 
 	fun stopListening()
 }
 
 interface ProximitySensorReader : SensorReader {
 	val hasProximitySensor: Boolean
+	val maximumRange: Float
 }

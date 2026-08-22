@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">测试评价流程已完成</string>
 	<string name="easter_egg_answer">关于生命、宇宙以及一切终极问题的答案。</string>
 	<string name="description_service_purpose">根据环境光线在 Android 的浅色和深色模式之间切换。</string>
-	<string name="description_switching_conditions">主题仅会在屏幕亮起后立即切换，且仅在传感器未被遮挡时。</string>
+	<string name="description_switching_conditions">主题仅会在屏幕亮起后的短时间内切换，且仅在传感器未被遮挡时。</string>
 	<string name="description_notification_service_running">已准备好在屏幕亮起时调整系统主题。</string>
 	<string name="device_covered_title">传感器被遮挡</string>
 	<string name="device_covered_message">光线传感器被遮挡，主题切换已暂停。</string>

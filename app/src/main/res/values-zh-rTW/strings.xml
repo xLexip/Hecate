@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">測試評論流程已完成</string>
 	<string name="easter_egg_answer">生命、宇宙以及萬事萬物之終極問題的答案。</string>
 	<string name="description_service_purpose">根據環境光線切換 Android 的淺色與深色模式。</string>
-	<string name="description_switching_conditions">主題只會在螢幕亮起後立即切換，且僅在感應器未被遮住時。</string>
+	<string name="description_switching_conditions">主題只會在螢幕亮起後的短時間內切換，且僅在感應器未被遮住時。</string>
 	<string name="description_notification_service_running">已準備好在螢幕亮起時調整系統主題。</string>
 	<string name="device_covered_title">感應器被遮住</string>
 	<string name="device_covered_message">光線感應器被遮住，因此已暫停切換主題。</string>

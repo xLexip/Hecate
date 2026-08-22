@@ -177,6 +177,7 @@ class BroadcastReceiverService : Service() {
 		super.onDestroy()
 		Log.i(TAG, "Service is being destroyed...")
 		screenOnReceiver?.let {
+			it.cancelPendingEvaluation()
 			Log.d(TAG, "Unregistering screen-on receiver...")
 			try {
 				unregisterReceiver(it)

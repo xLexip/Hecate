@@ -26,25 +26,29 @@ class LightSensorManager(context: Context) : SensorEventListener, SensorReader {
 	private val sensorManager: SensorManager =
 		context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
 	private val lightSensor: Sensor? = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
-	private lateinit var callback: (Float) -> Unit
+	private var callback: ((Float) -> Unit)? = null
 
 	override fun startListening(
 		callback: (Float) -> Unit,
 		sensorDelay: Int
-	) {
+	): Boolean {
+		val sensor = lightSensor ?: return false
 		this.callback = callback
-		lightSensor?.let {
-			sensorManager.registerListener(this, it, sensorDelay)
+		val registered = sensorManager.registerListener(this, sensor, sensorDelay)
+		if (!registered) {
+			this.callback = null
 		}
+		return registered
 	}
 
 	override fun stopListening() {
+		callback = null
 		sensorManager.unregisterListener(this)
 	}
 
 	override fun onSensorChanged(event: SensorEvent) {
 		val lightValue = event.values[0]
-		this.callback.invoke(lightValue)
+		callback?.invoke(lightValue)
 		Log.d(TAG, "Light sensor value: $lightValue lx")
 	}
 

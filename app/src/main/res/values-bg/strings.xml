@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Тестовият процес за оценка завърши</string>
 	<string name="easter_egg_answer">Отговорът на върховния въпрос за живота, Вселената и всичко останало.</string>
 	<string name="description_service_purpose">Превключва Android между светъл и тъмен режим според околната светлина.</string>
-	<string name="description_switching_conditions">Темата се променя само веднага след включване на екрана и само ако сензорът не е покрит.</string>
+	<string name="description_switching_conditions">Темата се променя само малко след включване на екрана и само ако сензорът не е покрит.</string>
 	<string name="description_notification_service_running">В готовност за промяна на системната тема при включване на екрана.</string>
 	<string name="device_covered_title">Сензорът е покрит</string>
 	<string name="device_covered_message">Превключването на темата е поставено на пауза, защото сензорът за светлина е покрит.</string>

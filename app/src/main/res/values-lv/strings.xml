@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testa atsauksmes process pabeigts</string>
 	<string name="easter_egg_answer">Atbilde uz galveno jautājumu par dzīvi, Visumu un visu pārējo.</string>
 	<string name="description_service_purpose">Pārslēdz Android gaišo un tumšo režīmu atbilstoši apkārtējam apgaismojumam.</string>
-	<string name="description_switching_conditions">Motīvs mainās tikai uzreiz pēc ekrāna ieslēgšanas un tikai tad, ja sensors nav aizsegts.</string>
+	<string name="description_switching_conditions">Motīvs mainās tikai īsi pēc ekrāna ieslēgšanas un tikai tad, ja sensors nav aizsegts.</string>
 	<string name="description_notification_service_running">Gatavs pielāgot sistēmas motīvu pēc ekrāna ieslēgšanas.</string>
 	<string name="device_covered_title">Sensors ir aizsegts</string>
 	<string name="device_covered_message">Motīva pārslēgšana ir apturēta, jo gaismas sensors ir aizsegts.</string>

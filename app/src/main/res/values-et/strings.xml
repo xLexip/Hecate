@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testarvustuse protsess on lõpetatud</string>
 	<string name="easter_egg_answer">Vastus ülimale küsimusele elust, universumist ja kõigest.</string>
 	<string name="description_service_purpose">Vahetab Androidi heleda ja tumeda režiimi vahel ümbritseva valguse järgi.</string>
-	<string name="description_switching_conditions">Teema muutub ainult kohe pärast ekraani sisselülitamist ja ainult siis, kui andur pole kaetud.</string>
+	<string name="description_switching_conditions">Teema muutub ainult veidi pärast ekraani sisselülitamist ja ainult siis, kui andur pole kaetud.</string>
 	<string name="description_notification_service_running">Valmis kohandama süsteemi teemat ekraani sisselülitamisel.</string>
 	<string name="device_covered_title">Andur on kaetud</string>
 	<string name="device_covered_message">Teema vahetamine on peatatud, sest valgusandur on kaetud.</string>

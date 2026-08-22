@@ -51,7 +51,10 @@ class DarkThemeHandler(context: Context) {
      * @return The result of attempting to change the system theme.
      */
     @Synchronized
-    fun setDarkTheme(enable: Boolean): DarkThemeChangeResult {
+    fun setDarkTheme(
+        enable: Boolean,
+        screenOnProximityResult: ScreenOnProximityResult
+    ): DarkThemeChangeResult {
         val isCurrentlyDark = isDarkThemeEnabled()
         val configuredMode = Secure.getInt(
             contentResolver,
@@ -95,7 +98,8 @@ class DarkThemeHandler(context: Context) {
         Logger.logThemeSwitched(
             context = appContext,
             targetMode = plan.targetMode,
-            succeeded = succeeded
+            succeeded = succeeded,
+            screenOnProximityResult = screenOnProximityResult
         )
 
         return DarkThemeChangeResult(

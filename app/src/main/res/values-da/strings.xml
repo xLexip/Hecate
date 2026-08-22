@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testanmeldelse gennemført</string>
 	<string name="easter_egg_answer">Svaret på det ultimative spørgsmål om livet, universet og alt.</string>
 	<string name="description_service_purpose">Skifter Android mellem lys og mørk tilstand ud fra det omgivende lys.</string>
-	<string name="description_switching_conditions">Temaet ændres kun lige efter, at skærmen tændes, og kun hvis sensoren ikke er dækket.</string>
+	<string name="description_switching_conditions">Temaet ændres kun kort efter, at skærmen tændes, og kun hvis sensoren ikke er dækket.</string>
 	<string name="description_notification_service_running">Klar til at tilpasse systemtemaet, når skærmen tændes.</string>
 	<string name="device_covered_title">Sensor dækket</string>
 	<string name="device_covered_message">Temaskift er sat på pause, fordi lyssensoren er dækket.</string>

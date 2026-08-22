@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">ಪರೀಕ್ಷಾ ವಿಮರ್ಶೆ ಪ್ರಕ್ರಿಯೆ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
 	<string name="easter_egg_answer">ಜೀವನ, ಬ್ರಹ್ಮಾಂಡ ಮತ್ತು ಎಲ್ಲದರ ಅಂತಿಮ ಪ್ರಶ್ನೆಗೆ ಉತ್ತರ.</string>
 	<string name="description_service_purpose">ಸುತ್ತಲಿನ ಬೆಳಕಿನ ಆಧಾರದಲ್ಲಿ Android ಅನ್ನು ಲೈಟ್ ಮತ್ತು ಡಾರ್ಕ್ ಮೋಡ್‌ಗಳ ನಡುವೆ ಬದಲಾಯಿಸುತ್ತದೆ.</string>
-	<string name="description_switching_conditions">ಪರದೆ ಆನ್ ಆದ ತಕ್ಷಣ ಮತ್ತು ಸೆನ್ಸರ್ ಮುಚ್ಚಿಲ್ಲದಿದ್ದಾಗ ಮಾತ್ರ ಥೀಮ್ ಬದಲಾಗುತ್ತದೆ.</string>
+	<string name="description_switching_conditions">ಪರದೆ ಆನ್ ಆದ ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತು ಸೆನ್ಸರ್ ಮುಚ್ಚಿಲ್ಲದಿದ್ದಾಗ ಮಾತ್ರ ಥೀಮ್ ಬದಲಾಗುತ್ತದೆ.</string>
 	<string name="description_notification_service_running">ಪರದೆ ಆನ್ ಆದಾಗ ಸಿಸ್ಟಮ್ ಥೀಮ್ ಹೊಂದಿಸಲು ಸಿದ್ಧವಾಗಿದೆ.</string>
 	<string name="device_covered_title">ಸೆನ್ಸರ್ ಮುಚ್ಚಿದೆ</string>
 	<string name="device_covered_message">ಬೆಳಕಿನ ಸೆನ್ಸರ್ ಮುಚ್ಚಿರುವುದರಿಂದ ಥೀಮ್ ಬದಲಾವಣೆ ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ.</string>

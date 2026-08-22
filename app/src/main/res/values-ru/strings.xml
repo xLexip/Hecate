@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Тестовый процесс отзыва завершён</string>
 	<string name="easter_egg_answer">Ответ на главный вопрос жизни, Вселенной и всего остального.</string>
 	<string name="description_service_purpose">Переключает Android между светлой и тёмной темой в зависимости от окружающего освещения.</string>
-	<string name="description_switching_conditions">Тема меняется только сразу после включения экрана и только если датчик не закрыт.</string>
+	<string name="description_switching_conditions">Тема меняется только вскоре после включения экрана и только если датчик не закрыт.</string>
 	<string name="description_notification_service_running">Готово изменить системную тему при включении экрана.</string>
 	<string name="device_covered_title">Датчик закрыт</string>
 	<string name="device_covered_message">Переключение темы приостановлено, потому что датчик освещения закрыт.</string>

@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Probni postupak ocenjivanja je završen</string>
 	<string name="easter_egg_answer">Odgovor na krajnje pitanje o životu, svemiru i svemu ostalom.</string>
 	<string name="description_service_purpose">Prebacuje Android između svetlog i tamnog režima na osnovu okolnog svetla.</string>
-	<string name="description_switching_conditions">Tema se menja samo odmah nakon uključivanja ekrana i samo ako senzor nije prekriven.</string>
+	<string name="description_switching_conditions">Tema se menja samo ubrzo nakon uključivanja ekrana i samo ako senzor nije prekriven.</string>
 	<string name="description_notification_service_running">Spremno za prilagođavanje sistemske teme pri uključivanju ekrana.</string>
 	<string name="device_covered_title">Senzor je prekriven</string>
 	<string name="device_covered_message">Prebacivanje teme je pauzirano jer je senzor svetla prekriven.</string>

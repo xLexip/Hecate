@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">टेस्ट समीक्षा प्रक्रिया पूरी हुई</string>
 	<string name="easter_egg_answer">ज़िंदगी, ब्रह्मांड और हर चीज़ से जुड़े सबसे बड़े सवाल का जवाब।</string>
 	<string name="description_service_purpose">आस-पास की रोशनी के हिसाब से Android को लाइट और डार्क मोड के बीच बदलता है।</string>
-	<string name="description_switching_conditions">थीम केवल स्क्रीन चालू होने के तुरंत बाद और सेंसर ढका न होने पर ही बदलती है।</string>
+	<string name="description_switching_conditions">थीम केवल स्क्रीन चालू होने के कुछ ही समय बाद और सेंसर ढका न होने पर ही बदलती है।</string>
 	<string name="description_notification_service_running">स्क्रीन चालू होने पर सिस्टम थीम बदलने के लिए तैयार है।</string>
 	<string name="device_covered_title">सेंसर ढका हुआ है</string>
 	<string name="device_covered_message">लाइट सेंसर ढका होने की वजह से थीम बदलना रोका गया है।</string>

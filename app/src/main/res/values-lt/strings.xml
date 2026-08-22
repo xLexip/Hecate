@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Bandomasis vertinimo procesas baigtas</string>
 	<string name="easter_egg_answer">Atsakymas į svarbiausią klausimą apie gyvenimą, visatą ir visa kita.</string>
 	<string name="description_service_purpose">Perjungia „Android“ šviesų ir tamsų režimą pagal aplinkos apšvietimą.</string>
-	<string name="description_switching_conditions">Tema keičiama tik iškart įjungus ekraną ir tik jei jutiklis neuždengtas.</string>
+	<string name="description_switching_conditions">Tema keičiama tik netrukus įjungus ekraną ir tik jei jutiklis neuždengtas.</string>
 	<string name="description_notification_service_running">Pasiruošta pakeisti sistemos temą įjungus ekraną.</string>
 	<string name="device_covered_title">Jutiklis uždengtas</string>
 	<string name="device_covered_message">Temos perjungimas pristabdytas, nes šviesos jutiklis uždengtas.</string>

@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">اكتملت عملية التقييم التجريبية</string>
 	<string name="easter_egg_answer">الإجابة عن السؤال الأعظم حول الحياة والكون وكل شيء.</string>
 	<string name="description_service_purpose">يبدّل Android بين الوضعين الفاتح والداكن حسب الإضاءة المحيطة.</string>
-	<string name="description_switching_conditions">يتغير المظهر فقط مباشرةً بعد تشغيل الشاشة وفقط إذا لم يكن المستشعر مغطى.</string>
+	<string name="description_switching_conditions">يتغير المظهر فقط بعد وقت قصير من تشغيل الشاشة وفقط إذا لم يكن المستشعر مغطى.</string>
 	<string name="description_notification_service_running">جاهز لضبط مظهر النظام عند تشغيل الشاشة.</string>
 	<string name="device_covered_title">المستشعر مغطى</string>
 	<string name="device_covered_message">تم إيقاف تبديل المظهر مؤقتًا لأن مستشعر الضوء مغطى.</string>

@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Le thème ne change qu’immédiatement après l’allumage de l’écran, et seulement si le capteur n’est pas couvert.
+		Le thème ne change que peu après l’allumage de l’écran, et seulement si le capteur n’est pas couvert.
 	</string>
 
 	<string name="description_notification_service_running">

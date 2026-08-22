@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">תהליך דירוג הבדיקה הושלם</string>
 	<string name="easter_egg_answer">התשובה לשאלה הגדולה של החיים, היקום וכל השאר.</string>
 	<string name="description_service_purpose">מעביר את Android בין מצב בהיר למצב כהה לפי התאורה בסביבה.</string>
-	<string name="description_switching_conditions">ערכת הנושא משתנה רק מיד לאחר שהמסך נדלק ורק אם החיישן אינו מכוסה.</string>
+	<string name="description_switching_conditions">ערכת הנושא משתנה רק זמן קצר לאחר שהמסך נדלק ורק אם החיישן אינו מכוסה.</string>
 	<string name="description_notification_service_running">מוכן להתאים את ערכת הנושא של המערכת כשהמסך נדלק.</string>
 	<string name="device_covered_title">החיישן מכוסה</string>
 	<string name="device_covered_message">החלפת ערכת הנושא הושהתה כי חיישן האור מכוסה.</string>

@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Alur ulasan uji selesai</string>
 	<string name="easter_egg_answer">Jawaban atas pertanyaan utama tentang kehidupan, alam semesta, dan segalanya.</string>
 	<string name="description_service_purpose">Mengalihkan Android antara mode terang dan gelap berdasarkan cahaya sekitar.</string>
-	<string name="description_switching_conditions">Tema hanya berubah segera setelah layar dinyalakan dan hanya jika sensor tidak tertutup.</string>
+	<string name="description_switching_conditions">Tema hanya berubah sesaat setelah layar dinyalakan dan hanya jika sensor tidak tertutup.</string>
 	<string name="description_notification_service_running">Siap menyesuaikan tema sistem saat layar dinyalakan.</string>
 	<string name="device_covered_title">Sensor tertutup</string>
 	<string name="device_covered_message">Peralihan tema dijeda karena sensor cahaya tertutup.</string>

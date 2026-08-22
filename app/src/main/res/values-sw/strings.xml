@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Mchakato wa majaribio ya ukaguzi umekamilika</string>
 	<string name="easter_egg_answer">Jibu la swali kuu kuhusu maisha, ulimwengu na kila kitu.</string>
 	<string name="description_service_purpose">Hubadilisha Android kati ya hali angavu na hali nyeusi kulingana na mwanga wa mazingira.</string>
-	<string name="description_switching_conditions">Mandhari hubadilika tu mara tu skrini inapowashwa na tu kama kihisi hakijafunikwa.</string>
+	<string name="description_switching_conditions">Mandhari hubadilika tu muda mfupi baada ya skrini kuwashwa na tu kama kihisi hakijafunikwa.</string>
 	<string name="description_notification_service_running">Tayari kurekebisha mandhari ya mfumo skrini inapowashwa.</string>
 	<string name="device_covered_title">Kihisi kimefunikwa</string>
 	<string name="device_covered_message">Ubadilishaji wa mandhari umesitishwa kwa sababu kihisi cha mwanga kimefunikwa.</string>

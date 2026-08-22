@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">فرایند آزمایشی بازبینی تکمیل شد</string>
 	<string name="easter_egg_answer">پاسخ پرسش نهایی دربارهٔ زندگی، جهان و همه‌چیز.</string>
 	<string name="description_service_purpose">Android را بر اساس نور محیط بین حالت روشن و تیره جابه‌جا می‌کند.</string>
-	<string name="description_switching_conditions">پوسته فقط بلافاصله پس از روشن شدن صفحه و تنها در صورتی تغییر می‌کند که حسگر پوشیده نباشد.</string>
+	<string name="description_switching_conditions">پوسته فقط اندکی پس از روشن شدن صفحه و تنها در صورتی تغییر می‌کند که حسگر پوشیده نباشد.</string>
 	<string name="description_notification_service_running">آمادهٔ تنظیم پوستهٔ سیستم هنگام روشن شدن صفحه است.</string>
 	<string name="device_covered_title">حسگر پوشیده است</string>
 	<string name="device_covered_message">تغییر پوسته متوقف شده است، زیرا حسگر نور پوشیده است.</string>

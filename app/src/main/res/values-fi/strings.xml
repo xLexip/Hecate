@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testiarvostelu suoritettu</string>
 	<string name="easter_egg_answer">Vastaus perimmäiseen kysymykseen elämästä, maailmankaikkeudesta ja kaikesta.</string>
 	<string name="description_service_purpose">Vaihtaa Androidin vaalean ja tumman tilan välillä ympäristön valon mukaan.</string>
-	<string name="description_switching_conditions">Teema vaihtuu vain heti näytön käynnistyttyä ja vain, jos tunnistinta ei ole peitetty.</string>
+	<string name="description_switching_conditions">Teema vaihtuu vain pian näytön käynnistyttyä ja vain, jos tunnistinta ei ole peitetty.</string>
 	<string name="description_notification_service_running">Valmis mukauttamaan järjestelmän teemaa, kun näyttö käynnistyy.</string>
 	<string name="device_covered_title">Tunnistin peitetty</string>
 	<string name="device_covered_message">Teeman vaihto on keskeytetty, koska valoisuustunnistin on peitetty.</string>

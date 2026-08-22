@@ -158,8 +158,12 @@ class MainViewModel internal constructor(
 
 		if (isListeningToProximity) return
 		isListeningToProximity = true
-		proximitySensorManager.startListening({ distance: Float ->
-			val covered = distance < 5f
+		val registered = proximitySensorManager.startListening({ distance: Float ->
+			val maximumRange = proximitySensorManager.maximumRange
+			val covered = distance.isFinite() &&
+				maximumRange.isFinite() &&
+				maximumRange > 0f &&
+				distance < maximumRange
 			if (covered) {
 				if (_uiState.value.isDeviceCovered || coveredJob?.isActive == true) return@startListening
 				coveredJob = viewModelScope.launch {
@@ -185,6 +189,10 @@ class MainViewModel internal constructor(
 				}
 			}
 		}, sensorDelay = SensorManager.SENSOR_DELAY_UI)
+		if (!registered) {
+			isListeningToProximity = false
+			Log.w(TAG, "Failed to register proximity sensor listener in MainViewModel.")
+		}
 	}
 
 	private fun stopProximityListening() {
@@ -365,11 +373,15 @@ class MainViewModel internal constructor(
 	private fun startLightSensorListening() {
 		if (isListeningToSensor) return
 		isListeningToSensor = true
-		lightSensorManager.startListening({ lux: Float ->
+		val registered = lightSensorManager.startListening({ lux: Float ->
 			viewModelScope.launch {
 				updateCurrentSensorLux(lux)
 			}
 		}, sensorDelay = SensorManager.SENSOR_DELAY_NORMAL)
+		if (!registered) {
+			isListeningToSensor = false
+			Log.w(TAG, "Failed to register light sensor listener in MainViewModel.")
+		}
 	}
 
 	private fun stopLightSensorListening() {
