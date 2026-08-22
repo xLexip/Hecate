@@ -30,6 +30,14 @@
 			"matchUpdateTypes": [
 				"minor"
 			]
+		},
+		{
+			"commitMessageAction": "Apply",
+			"groupName": "Android Gradle Plugin Updates",
+			"groupSlug": "android-gradle-plugin",
+			"matchPackageNames": [
+				"com.android.application"
+			]
 		}
 	]
 }
