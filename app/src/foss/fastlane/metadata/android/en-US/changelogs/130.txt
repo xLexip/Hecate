@@ -1,3 +1,0 @@
-Fixed continuous sensor readings when enabling Adaptive Theme from Quick Settings.
-
-Improved wallpaper decoding, window inset handling, and release resource optimization.
