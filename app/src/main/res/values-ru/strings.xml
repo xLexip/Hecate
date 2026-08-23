@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Другие способы</string>
 	<string name="setup_grant_title">Шаг 3. Предоставьте разрешение со второго устройства</string>
 	<string name="setup_grant_body">Откройте эту ссылку на втором устройстве и следуйте инструкциям:</string>
-	<string name="setup_alternatives">Также можно самостоятельно выполнить команду ADB или предоставить разрешение с помощью root-доступа. Shizuku тоже поддерживается.</string>
+	<string name="setup_alternatives">Также можно самостоятельно выполнить команду ADB или предоставить разрешение с помощью root-доступа.</string>
 	<string name="setup_permission_granted">Разрешение предоставлено.</string>
 	<string name="setup_permission_not_granted">Разрешение ещё не предоставлено. Завершите настройку с помощью второго устройства.</string>
 	<string name="setup_usb_debugging_disabled">Включить отладку по USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Это безопасно?</string>
 	<string name="setup_is_this_safe_body">Это разрешение позволяет приложениям изменять защищённые системные настройки. Adaptive Theme использует его только для таких функций, как переключение тёмной темы. При удалении приложения разрешение отзывается. Исходный код открыт на GitHub.</string>
 	<string name="setup_shizuku_title">Другой способ: Shizuku</string>
-	<string name="setup_shizuku_description">Если вы уже используете Shizuku, второе устройство и ADB не понадобятся. Shizuku нужен только один раз для предоставления разрешения.</string>
+	<string name="setup_shizuku_description">С Shizuku второе устройство и ADB не понадобятся. Приложение нужно только один раз для предоставления разрешения.</string>
 	<string name="setup_shizuku_action">Использовать Shizuku</string>
+	<string name="setup_shizuku_install_action">Установить Shizuku</string>
 	<string name="setup_action_use_root">Использовать root-доступ</string>
 	<string name="setup_root_request">Запрос root-доступа…</string>
 	<string name="setup_root_grant_failed">Не удалось предоставить разрешение с помощью root-доступа.</string>

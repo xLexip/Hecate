@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Drugi načini</string>
 	<string name="setup_grant_title">3. korak: dodelite dovoljenje iz druge naprave</string>
 	<string name="setup_grant_body">Odprite to povezavo v drugi napravi in sledite navodilom:</string>
-	<string name="setup_alternatives">Ukaz ADB lahko izvedete tudi sami ali dovoljenje dodelite s korenskim dostopom. Podprt je tudi Shizuku.</string>
+	<string name="setup_alternatives">Ukaz ADB lahko izvedete tudi sami ali dovoljenje dodelite s korenskim dostopom.</string>
 	<string name="setup_permission_granted">Dovoljenje je dodeljeno.</string>
 	<string name="setup_permission_not_granted">Dovoljenje še ni dodeljeno. Dokončajte nastavitev z drugo napravo.</string>
 	<string name="setup_usb_debugging_disabled">Vklopi odpravljanje napak USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Je to varno?</string>
 	<string name="setup_is_this_safe_body">To dovoljenje aplikacijam omogoča spreminjanje zaščitenih sistemskih nastavitev. Adaptive Theme ga uporablja le za funkcije, kot je preklapljanje temnega načina. Z odstranitvijo aplikacije se dovoljenje prekliče. Izvorna koda je javno dostopna na GitHubu.</string>
 	<string name="setup_shizuku_title">Druga možnost: Shizuku</string>
-	<string name="setup_shizuku_description">Če že uporabljate Shizuku, ne potrebujete druge naprave ali ADB-ja. Shizuku potrebujete le enkrat za dodelitev dovoljenja.</string>
+	<string name="setup_shizuku_description">S Shizukujem ne potrebujete druge naprave ali ADB-ja. Aplikacijo potrebujete le enkrat za dodelitev dovoljenja.</string>
 	<string name="setup_shizuku_action">Uporabi Shizuku</string>
+	<string name="setup_shizuku_install_action">Namesti Shizuku</string>
 	<string name="setup_action_use_root">Uporabi korenski dostop</string>
 	<string name="setup_root_request">Zahtevanje korenskega dostopa…</string>
 	<string name="setup_root_grant_failed">Dovoljenja ni bilo mogoče dodeliti s korenskim dostopom.</string>

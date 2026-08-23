@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Mbinu mbadala</string>
 	<string name="setup_grant_title">Hatua ya 3: Toa ruhusa kutoka kifaa cha pili</string>
 	<string name="setup_grant_body">Fungua kiungo hiki kwenye kifaa cha pili na ufuate maelekezo:</string>
-	<string name="setup_alternatives">Unaweza pia kutekeleza amri ya ADB mwenyewe au kutumia ufikiaji wa root kutoa ruhusa. Shizuku pia inatumika.</string>
+	<string name="setup_alternatives">Unaweza pia kutekeleza amri ya ADB mwenyewe au kutumia ufikiaji wa root kutoa ruhusa.</string>
 	<string name="setup_permission_granted">Ruhusa imetolewa.</string>
 	<string name="setup_permission_not_granted">Ruhusa bado haijatolewa. Kamilisha usanidi kwa kifaa cha pili.</string>
 	<string name="setup_usb_debugging_disabled">Washa Utatuzi wa USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Je, hii ni salama?</string>
 	<string name="setup_is_this_safe_body">Ruhusa hii huruhusu programu kubadilisha mipangilio ya mfumo iliyolindwa. Adaptive Theme huitumia tu kwa vipengele kama kubadilisha hali nyeusi. Kuondoa programu hubatilisha ruhusa. Msimbo chanzo uko wazi kwenye GitHub.</string>
 	<string name="setup_shizuku_title">Mbadala: Shizuku</string>
-	<string name="setup_shizuku_description">Ikiwa tayari unatumia Shizuku, huhitaji kifaa cha pili wala ADB. Shizuku inahitajika mara moja tu kutoa ruhusa.</string>
+	<string name="setup_shizuku_description">Ukitumia Shizuku, huhitaji kifaa cha pili wala ADB. Programu inahitajika mara moja tu kutoa ruhusa.</string>
 	<string name="setup_shizuku_action">Tumia Shizuku</string>
+	<string name="setup_shizuku_install_action">Sakinisha Shizuku</string>
 	<string name="setup_action_use_root">Tumia ufikiaji wa root</string>
 	<string name="setup_root_request">Inaomba ufikiaji wa root…</string>
 	<string name="setup_root_grant_failed">Imeshindwa kutoa ruhusa kwa ufikiaji wa root.</string>

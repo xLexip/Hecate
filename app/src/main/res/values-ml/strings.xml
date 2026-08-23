@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">മറ്റ് മാർഗങ്ങൾ</string>
 	<string name="setup_grant_title">ഘട്ടം 3: രണ്ടാമത്തെ ഉപകരണത്തിൽ നിന്ന് അനുമതി നൽകുക</string>
 	<string name="setup_grant_body">രണ്ടാമത്തെ ഉപകരണത്തിൽ ഈ ലിങ്ക് തുറന്ന് നിർദ്ദേശങ്ങൾ പാലിക്കുക:</string>
-	<string name="setup_alternatives">നിങ്ങൾക്ക് ADB കമാൻഡ് സ്വയം പ്രവർത്തിപ്പിക്കാം, അല്ലെങ്കിൽ root ആക്സസ് ഉപയോഗിച്ച് അനുമതി നൽകാം. Shizuku-വും പിന്തുണയ്ക്കുന്നു.</string>
+	<string name="setup_alternatives">നിങ്ങൾക്ക് ADB കമാൻഡ് സ്വയം പ്രവർത്തിപ്പിക്കാം, അല്ലെങ്കിൽ root ആക്സസ് ഉപയോഗിച്ച് അനുമതി നൽകാം.</string>
 	<string name="setup_permission_granted">അനുമതി നൽകി.</string>
 	<string name="setup_permission_not_granted">അനുമതി ഇതുവരെ നൽകിയിട്ടില്ല. രണ്ടാമത്തെ ഉപകരണം ഉപയോഗിച്ച് സജ്ജീകരണം പൂർത്തിയാക്കുക.</string>
 	<string name="setup_usb_debugging_disabled">USB ഡീബഗ്ഗിംഗ് ഓണാക്കുക</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">ഇത് സുരക്ഷിതമാണോ?</string>
 	<string name="setup_is_this_safe_body">ഈ അനുമതി സംരക്ഷിത സിസ്റ്റം ക്രമീകരണങ്ങൾ മാറ്റാൻ ആപ്പുകളെ അനുവദിക്കുന്നു. Adaptive Theme ഇത് ഡാർക്ക് മോഡ് മാറ്റുന്നത് പോലുള്ള സവിശേഷതകൾക്ക് മാത്രമാണ് ഉപയോഗിക്കുന്നത്. ആപ്പ് അൺഇൻസ്റ്റാൾ ചെയ്താൽ അനുമതി പിൻവലിക്കപ്പെടും. സോഴ്‌സ് കോഡ് GitHub-ൽ പൊതുവായി ലഭ്യമാണ്.</string>
 	<string name="setup_shizuku_title">മറ്റൊരു മാർഗം: Shizuku</string>
-	<string name="setup_shizuku_description">നിങ്ങൾ ഇതിനകം Shizuku ഉപയോഗിക്കുന്നുണ്ടെങ്കിൽ രണ്ടാമത്തെ ഉപകരണമോ ADB-യോ ആവശ്യമില്ല. അനുമതി നൽകാൻ Shizuku ഒരിക്കൽ മാത്രം മതി.</string>
+	<string name="setup_shizuku_description">Shizuku ഉപയോഗിച്ചാൽ രണ്ടാമത്തെ ഉപകരണമോ ADB-യോ ആവശ്യമില്ല. അനുമതി നൽകാൻ ആപ്പ് ഒരിക്കൽ മാത്രം മതി.</string>
 	<string name="setup_shizuku_action">Shizuku ഉപയോഗിക്കുക</string>
+	<string name="setup_shizuku_install_action">Shizuku ഇൻസ്റ്റാൾ ചെയ്യുക</string>
 	<string name="setup_action_use_root">root ആക്സസ് ഉപയോഗിക്കുക</string>
 	<string name="setup_root_request">root ആക്സസ് അഭ്യർഥിക്കുന്നു…</string>
 	<string name="setup_root_grant_failed">root ആക്സസ് ഉപയോഗിച്ച് അനുമതി നൽകാനായില്ല.</string>

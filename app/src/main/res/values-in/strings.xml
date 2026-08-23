@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Metode alternatif</string>
 	<string name="setup_grant_title">Langkah 3: Berikan izin dari perangkat kedua</string>
 	<string name="setup_grant_body">Buka tautan ini di perangkat kedua dan ikuti petunjuknya:</string>
-	<string name="setup_alternatives">Anda juga dapat menjalankan perintah ADB sendiri atau memberikan izin dengan akses root. Shizuku juga didukung.</string>
+	<string name="setup_alternatives">Anda juga dapat menjalankan perintah ADB sendiri atau memberikan izin dengan akses root.</string>
 	<string name="setup_permission_granted">Izin diberikan.</string>
 	<string name="setup_permission_not_granted">Izin belum diberikan. Selesaikan penyiapan dengan perangkat kedua.</string>
 	<string name="setup_usb_debugging_disabled">Aktifkan Debug USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Apakah ini aman?</string>
 	<string name="setup_is_this_safe_body">Izin ini memungkinkan aplikasi mengubah setelan sistem yang dilindungi. Adaptive Theme hanya menggunakannya untuk fitur seperti peralihan mode gelap. Meng-uninstal aplikasi akan mencabut izin. Kode sumber tersedia untuk umum di GitHub.</string>
 	<string name="setup_shizuku_title">Alternatif: Shizuku</string>
-	<string name="setup_shizuku_description">Jika sudah menggunakan Shizuku, Anda tidak memerlukan perangkat kedua atau ADB. Shizuku hanya diperlukan sekali untuk memberikan izin.</string>
+	<string name="setup_shizuku_description">Dengan Shizuku, Anda tidak memerlukan perangkat kedua atau ADB. Aplikasi ini hanya diperlukan sekali untuk memberikan izin.</string>
 	<string name="setup_shizuku_action">Gunakan Shizuku</string>
+	<string name="setup_shizuku_install_action">Instal Shizuku</string>
 	<string name="setup_action_use_root">Gunakan akses root</string>
 	<string name="setup_root_request">Meminta akses root…</string>
 	<string name="setup_root_grant_failed">Tidak dapat memberikan izin dengan akses root.</string>

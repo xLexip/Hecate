@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Metodi alternativi</string>
 	<string name="setup_grant_title">Passaggio 3: concedi l’autorizzazione dal secondo dispositivo</string>
 	<string name="setup_grant_body">Apri questo link sul secondo dispositivo e segui le istruzioni:</string>
-	<string name="setup_alternatives">In alternativa, puoi eseguire un comando ADB o usare l’accesso root per concedere l’autorizzazione. È supportato anche Shizuku.</string>
+	<string name="setup_alternatives">In alternativa, puoi eseguire un comando ADB o usare l’accesso root per concedere l’autorizzazione.</string>
 	<string name="setup_permission_granted">Autorizzazione concessa.</string>
 	<string name="setup_permission_not_granted">Autorizzazione non ancora concessa. Completa la configurazione con il secondo dispositivo.</string>
 	<string name="setup_usb_debugging_disabled">Attiva Debug USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">È sicuro?</string>
 	<string name="setup_is_this_safe_body">Questa autorizzazione consente alle app di modificare impostazioni di sistema protette. Adaptive Theme la usa solo per funzioni come il cambio della modalità scura. Disinstallando l’app, l’autorizzazione viene revocata. Il codice sorgente è pubblico su GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Se usi già Shizuku, non servono un secondo dispositivo o ADB. Shizuku è necessario una sola volta per concedere l’autorizzazione.</string>
+	<string name="setup_shizuku_description">Con Shizuku non servono un secondo dispositivo o ADB. L’app è necessaria una sola volta per concedere l’autorizzazione.</string>
 	<string name="setup_shizuku_action">Usa Shizuku</string>
+	<string name="setup_shizuku_install_action">Installa Shizuku</string>
 	<string name="setup_action_use_root">Usa accesso root</string>
 	<string name="setup_root_request">Richiesta di accesso root…</string>
 	<string name="setup_root_grant_failed">Impossibile concedere l’autorizzazione con l’accesso root.</string>

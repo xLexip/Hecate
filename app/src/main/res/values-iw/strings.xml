@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">שיטות חלופיות</string>
 	<string name="setup_grant_title">שלב 3: הענקת ההרשאה מהמכשיר הנוסף</string>
 	<string name="setup_grant_body">יש לפתוח את הקישור הזה במכשיר הנוסף ולפעול לפי ההוראות:</string>
-	<string name="setup_alternatives">אפשר גם להריץ פקודת ADB באופן ידני או להשתמש בגישת root כדי להעניק את ההרשאה. קיימת גם תמיכה ב-Shizuku.</string>
+	<string name="setup_alternatives">אפשר גם להריץ פקודת ADB באופן ידני או להשתמש בגישת root כדי להעניק את ההרשאה.</string>
 	<string name="setup_permission_granted">ההרשאה הוענקה.</string>
 	<string name="setup_permission_not_granted">ההרשאה עדיין לא הוענקה. יש להשלים את ההגדרה באמצעות המכשיר הנוסף.</string>
 	<string name="setup_usb_debugging_disabled">הפעלת ניפוי באגים ב-USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">האם זה בטוח?</string>
 	<string name="setup_is_this_safe_body">ההרשאה הזו מאפשרת לאפליקציות לשנות הגדרות מערכת מוגנות. Adaptive Theme משתמש בה רק לתכונות כמו החלפת מצב כהה. הסרת האפליקציה מבטלת את ההרשאה. קוד המקור זמין לציבור ב-GitHub.</string>
 	<string name="setup_shizuku_title">אפשרות חלופית: Shizuku</string>
-	<string name="setup_shizuku_description">אם כבר נעשה שימוש ב-Shizuku, אין צורך במכשיר נוסף או ב-ADB. צריך את Shizuku רק פעם אחת כדי להעניק את ההרשאה.</string>
+	<string name="setup_shizuku_description">עם Shizuku אין צורך במכשיר נוסף או ב-ADB. צריך את האפליקציה רק פעם אחת כדי להעניק את ההרשאה.</string>
 	<string name="setup_shizuku_action">שימוש ב-Shizuku</string>
+	<string name="setup_shizuku_install_action">התקנת Shizuku</string>
 	<string name="setup_action_use_root">שימוש בגישת root</string>
 	<string name="setup_root_request">מתבצעת בקשה לגישת root…</string>
 	<string name="setup_root_grant_failed">לא ניתן היה להעניק את ההרשאה באמצעות גישת root.</string>

@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Kaedah alternatif</string>
 	<string name="setup_grant_title">Langkah 3: Berikan kebenaran daripada peranti kedua</string>
 	<string name="setup_grant_body">Buka pautan ini pada peranti kedua dan ikut arahan:</string>
-	<string name="setup_alternatives">Anda juga boleh menjalankan perintah ADB sendiri atau memberikan kebenaran dengan akses root. Shizuku turut disokong.</string>
+	<string name="setup_alternatives">Anda juga boleh menjalankan perintah ADB sendiri atau memberikan kebenaran dengan akses root.</string>
 	<string name="setup_permission_granted">Kebenaran diberikan.</string>
 	<string name="setup_permission_not_granted">Kebenaran belum diberikan. Lengkapkan persediaan dengan peranti kedua.</string>
 	<string name="setup_usb_debugging_disabled">Dayakan Penyahpepijatan USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Adakah ini selamat?</string>
 	<string name="setup_is_this_safe_body">Kebenaran ini membolehkan aplikasi mengubah tetapan sistem yang dilindungi. Adaptive Theme hanya menggunakannya untuk ciri seperti penukaran mod gelap. Menyahpasang aplikasi akan membatalkan kebenaran. Kod sumber tersedia secara umum di GitHub.</string>
 	<string name="setup_shizuku_title">Alternatif: Shizuku</string>
-	<string name="setup_shizuku_description">Jika anda sudah menggunakan Shizuku, anda tidak memerlukan peranti kedua atau ADB. Shizuku hanya diperlukan sekali untuk memberikan kebenaran.</string>
+	<string name="setup_shizuku_description">Dengan Shizuku, anda tidak memerlukan peranti kedua atau ADB. Aplikasi ini hanya diperlukan sekali untuk memberikan kebenaran.</string>
 	<string name="setup_shizuku_action">Gunakan Shizuku</string>
+	<string name="setup_shizuku_install_action">Pasang Shizuku</string>
 	<string name="setup_action_use_root">Gunakan akses root</string>
 	<string name="setup_root_request">Meminta akses root…</string>
 	<string name="setup_root_grant_failed">Tidak dapat memberikan kebenaran dengan akses root.</string>

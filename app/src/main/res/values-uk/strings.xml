@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Інші способи</string>
 	<string name="setup_grant_title">Крок 3: надайте дозвіл із другого пристрою</string>
 	<string name="setup_grant_body">Відкрийте це посилання на другому пристрої й дотримуйтеся вказівок:</string>
-	<string name="setup_alternatives">Також можна самостійно виконати команду ADB або надати дозвіл за допомогою root-доступу. Shizuku теж підтримується.</string>
+	<string name="setup_alternatives">Також можна самостійно виконати команду ADB або надати дозвіл за допомогою root-доступу.</string>
 	<string name="setup_permission_granted">Дозвіл надано.</string>
 	<string name="setup_permission_not_granted">Дозвіл ще не надано. Завершіть налаштування за допомогою другого пристрою.</string>
 	<string name="setup_usb_debugging_disabled">Увімкнути налагодження через USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Це безпечно?</string>
 	<string name="setup_is_this_safe_body">Цей дозвіл дає застосункам змогу змінювати захищені системні налаштування. Adaptive Theme використовує його лише для таких функцій, як перемикання темного режиму. Видалення застосунку відкликає дозвіл. Вихідний код загальнодоступний на GitHub.</string>
 	<string name="setup_shizuku_title">Інший спосіб: Shizuku</string>
-	<string name="setup_shizuku_description">Якщо ви вже користуєтеся Shizuku, другий пристрій і ADB не потрібні. Shizuku потрібен лише один раз, щоб надати дозвіл.</string>
+	<string name="setup_shizuku_description">Із Shizuku другий пристрій і ADB не потрібні. Застосунок потрібен лише один раз, щоб надати дозвіл.</string>
 	<string name="setup_shizuku_action">Використати Shizuku</string>
+	<string name="setup_shizuku_install_action">Установити Shizuku</string>
 	<string name="setup_action_use_root">Використати root-доступ</string>
 	<string name="setup_root_request">Запит root-доступу…</string>
 	<string name="setup_root_grant_failed">Не вдалося надати дозвіл за допомогою root-доступу.</string>

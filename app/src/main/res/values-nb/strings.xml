@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternative metoder</string>
 	<string name="setup_grant_title">Trinn 3: Gi tillatelsen fra den andre enheten</string>
 	<string name="setup_grant_body">Åpne denne lenken på den andre enheten og følg instruksjonene:</string>
-	<string name="setup_alternatives">Du kan også kjøre en ADB-kommando selv eller bruke root-tilgang for å gi tillatelsen. Shizuku støttes også.</string>
+	<string name="setup_alternatives">Du kan også kjøre en ADB-kommando selv eller bruke root-tilgang for å gi tillatelsen.</string>
 	<string name="setup_permission_granted">Tillatelse gitt.</string>
 	<string name="setup_permission_not_granted">Tillatelsen er ikke gitt ennå. Fullfør konfigurasjonen med den andre enheten.</string>
 	<string name="setup_usb_debugging_disabled">Slå på USB-feilsøking</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Er dette trygt?</string>
 	<string name="setup_is_this_safe_body">Denne tillatelsen lar apper endre beskyttede systeminnstillinger. Adaptive Theme bruker den bare til funksjoner som å bytte mørk modus. Tillatelsen trekkes tilbake når appen avinstalleres. Kildekoden er offentlig på GitHub.</string>
 	<string name="setup_shizuku_title">Alternativ: Shizuku</string>
-	<string name="setup_shizuku_description">Hvis du allerede bruker Shizuku, trenger du verken en annen enhet eller ADB. Shizuku trengs bare én gang for å gi tillatelsen.</string>
+	<string name="setup_shizuku_description">Med Shizuku trenger du verken en annen enhet eller ADB. Appen trengs bare én gang for å gi tillatelsen.</string>
 	<string name="setup_shizuku_action">Bruk Shizuku</string>
+	<string name="setup_shizuku_install_action">Installer Shizuku</string>
 	<string name="setup_action_use_root">Bruk root-tilgang</string>
 	<string name="setup_root_request">Ber om root-tilgang…</string>
 	<string name="setup_root_grant_failed">Kunne ikke gi tillatelsen med root-tilgang.</string>

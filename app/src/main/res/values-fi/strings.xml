@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Vaihtoehtoiset menetelmät</string>
 	<string name="setup_grant_title">Vaihe 3: Myönnä lupa toisella laitteella</string>
 	<string name="setup_grant_body">Avaa tämä linkki toisella laitteella ja noudata ohjeita:</string>
-	<string name="setup_alternatives">Voit myös suorittaa ADB-komennon itse tai myöntää luvan pääkäyttäjän oikeuksilla. Myös Shizukua tuetaan.</string>
+	<string name="setup_alternatives">Voit myös suorittaa ADB-komennon itse tai myöntää luvan pääkäyttäjän oikeuksilla.</string>
 	<string name="setup_permission_granted">Lupa myönnetty.</string>
 	<string name="setup_permission_not_granted">Lupaa ei ole vielä myönnetty. Viimeistele määritys toisella laitteella.</string>
 	<string name="setup_usb_debugging_disabled">Ota USB-virheenkorjaus käyttöön</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Onko tämä turvallista?</string>
 	<string name="setup_is_this_safe_body">Tällä luvalla sovellukset voivat muuttaa suojattuja järjestelmäasetuksia. Adaptive Theme käyttää sitä vain esimerkiksi tumman tilan vaihtamiseen. Sovelluksen poistaminen kumoaa luvan. Lähdekoodi on julkisesti saatavilla GitHubissa.</string>
 	<string name="setup_shizuku_title">Vaihtoehto: Shizuku</string>
-	<string name="setup_shizuku_description">Jos käytät jo Shizukua, et tarvitse toista laitetta tai ADB:tä. Shizukua tarvitaan vain kerran luvan myöntämiseen.</string>
+	<string name="setup_shizuku_description">Shizukun avulla et tarvitse toista laitetta tai ADB:tä. Sovellusta tarvitaan vain kerran luvan myöntämiseen.</string>
 	<string name="setup_shizuku_action">Käytä Shizukua</string>
+	<string name="setup_shizuku_install_action">Asenna Shizuku</string>
 	<string name="setup_action_use_root">Käytä pääkäyttäjän oikeuksia</string>
 	<string name="setup_root_request">Pyydetään pääkäyttäjän oikeuksia…</string>
 	<string name="setup_root_grant_failed">Lupaa ei voitu myöntää pääkäyttäjän oikeuksilla.</string>

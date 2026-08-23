@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">متبادل طریقے</string>
 	<string name="setup_grant_title">مرحلہ 3: دوسرے آلے سے اجازت دیں</string>
 	<string name="setup_grant_body">دوسرے آلے پر یہ لنک کھولیں اور ہدایات پر عمل کریں:</string>
-	<string name="setup_alternatives">آپ خود بھی ADB کمانڈ چلا سکتے ہیں یا root رسائی کے ذریعے اجازت دے سکتے ہیں۔ Shizuku بھی معاون ہے۔</string>
+	<string name="setup_alternatives">آپ خود بھی ADB کمانڈ چلا سکتے ہیں یا root رسائی کے ذریعے اجازت دے سکتے ہیں۔</string>
 	<string name="setup_permission_granted">اجازت دے دی گئی۔</string>
 	<string name="setup_permission_not_granted">ابھی اجازت نہیں دی گئی۔ دوسرے آلے کے ذریعے سیٹ اپ مکمل کریں۔</string>
 	<string name="setup_usb_debugging_disabled">USB ڈیبگنگ فعال کریں</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">کیا یہ محفوظ ہے؟</string>
 	<string name="setup_is_this_safe_body">یہ اجازت ایپس کو محفوظ سسٹم ترتیبات تبدیل کرنے دیتی ہے۔ Adaptive Theme اسے صرف گہرا موڈ تبدیل کرنے جیسی خصوصیات کے لیے استعمال کرتا ہے۔ ایپ اَن انسٹال کرنے سے اجازت واپس ہو جاتی ہے۔ ماخذ کوڈ GitHub پر عوامی ہے۔</string>
 	<string name="setup_shizuku_title">متبادل: Shizuku</string>
-	<string name="setup_shizuku_description">اگر آپ پہلے ہی Shizuku استعمال کرتے ہیں تو دوسرے آلے یا ADB کی ضرورت نہیں۔ اجازت دینے کے لیے Shizuku صرف ایک مرتبہ درکار ہے۔</string>
+	<string name="setup_shizuku_description">Shizuku کے ساتھ دوسرے آلے یا ADB کی ضرورت نہیں۔ اجازت دینے کے لیے ایپ صرف ایک مرتبہ درکار ہے۔</string>
 	<string name="setup_shizuku_action">Shizuku استعمال کریں</string>
+	<string name="setup_shizuku_install_action">Shizuku انسٹال کریں</string>
 	<string name="setup_action_use_root">root رسائی استعمال کریں</string>
 	<string name="setup_root_request">root رسائی کی درخواست کی جا رہی ہے…</string>
 	<string name="setup_root_grant_failed">root رسائی سے اجازت نہیں دی جا سکی۔</string>

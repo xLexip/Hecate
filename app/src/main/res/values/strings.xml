@@ -91,7 +91,7 @@
 	<string name="setup_alternative_methods">Alternative methods</string>
 	<string name="setup_grant_title">Step 3: Grant permission from the second device</string>
 	<string name="setup_grant_body">Open this link on the second device and follow the instructions:</string>
-	<string name="setup_alternatives">Alternatively, you can execute an ADB command yourself or use root to grant the permission. Shizuku is also supported.</string>
+	<string name="setup_alternatives">Alternatively, you can execute an ADB command yourself or use root to grant the permission.</string>
 	<string name="setup_permission_granted">Permission granted.</string>
 	<string name="setup_permission_not_granted">Permission not yet granted. Please complete the setup with the other device.</string>
 	<string name="setup_usb_debugging_disabled">Enable USB Debugging</string>
@@ -104,8 +104,9 @@
 	<string name="setup_is_this_safe_title">Is this safe?</string>
 	<string name="setup_is_this_safe_body">This permission allows apps to modify secure system settings. Adaptive Theme uses it only for features such as switching dark mode. Uninstalling the app revokes the permission, and the source code is public on GitHub.</string>
 	<string name="setup_shizuku_title">Alternative: Shizuku</string>
-	<string name="setup_shizuku_description">If you already use Shizuku, you won’t need a second device or ADB. You only need Shizuku once to grant the permission.</string>
+	<string name="setup_shizuku_description">With Shizuku, you won’t need a second device or ADB. You only need it once to grant the permission.</string>
 	<string name="setup_shizuku_action">Use Shizuku instead</string>
+	<string name="setup_shizuku_install_action">Install Shizuku</string>
 	<string name="setup_action_use_root">Use root</string>
 	<string name="setup_root_request">Requesting root access…</string>
 	<string name="setup_root_grant_failed">Could not grant permission with root.</string>

@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternativni načini</string>
 	<string name="setup_grant_title">3. korak: dodijelite dopuštenje s drugog uređaja</string>
 	<string name="setup_grant_body">Otvorite ovu poveznicu na drugom uređaju i slijedite upute:</string>
-	<string name="setup_alternatives">Možete i sami pokrenuti ADB naredbu ili dodijeliti dopuštenje s pomoću root pristupa. Podržan je i Shizuku.</string>
+	<string name="setup_alternatives">Možete i sami pokrenuti ADB naredbu ili dodijeliti dopuštenje s pomoću root pristupa.</string>
 	<string name="setup_permission_granted">Dopuštenje je dodijeljeno.</string>
 	<string name="setup_permission_not_granted">Dopuštenje još nije dodijeljeno. Dovršite postavljanje s pomoću drugog uređaja.</string>
 	<string name="setup_usb_debugging_disabled">Uključi Otklanjanje pogrešaka putem USB-a</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Je li ovo sigurno?</string>
 	<string name="setup_is_this_safe_body">Ovo dopuštenje aplikacijama omogućuje promjenu zaštićenih postavki sustava. Adaptive Theme upotrebljava ga samo za značajke poput prebacivanja tamnog načina rada. Deinstaliranjem aplikacije dopuštenje se ukida. Izvorni kod javno je dostupan na GitHubu.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Ako već upotrebljavate Shizuku, ne trebate drugi uređaj ni ADB. Shizuku je potreban samo jednom za dodjelu dopuštenja.</string>
+	<string name="setup_shizuku_description">Uz Shizuku ne trebate drugi uređaj ni ADB. Aplikacija je potrebna samo jednom za dodjelu dopuštenja.</string>
 	<string name="setup_shizuku_action">Upotrijebi Shizuku</string>
+	<string name="setup_shizuku_install_action">Instaliraj Shizuku</string>
 	<string name="setup_action_use_root">Upotrijebi root pristup</string>
 	<string name="setup_root_request">Traženje root pristupa…</string>
 	<string name="setup_root_grant_failed">Dopuštenje nije moguće dodijeliti root pristupom.</string>

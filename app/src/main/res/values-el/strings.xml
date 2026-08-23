@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Εναλλακτικές μέθοδοι</string>
 	<string name="setup_grant_title">Βήμα 3: Παραχωρήστε την άδεια από τη δεύτερη συσκευή</string>
 	<string name="setup_grant_body">Ανοίξτε αυτόν τον σύνδεσμο στη δεύτερη συσκευή και ακολουθήστε τις οδηγίες:</string>
-	<string name="setup_alternatives">Μπορείτε επίσης να εκτελέσετε μόνοι σας μια εντολή ADB ή να παραχωρήσετε την άδεια με πρόσβαση root. Υποστηρίζεται επίσης το Shizuku.</string>
+	<string name="setup_alternatives">Μπορείτε επίσης να εκτελέσετε μόνοι σας μια εντολή ADB ή να παραχωρήσετε την άδεια με πρόσβαση root.</string>
 	<string name="setup_permission_granted">Η άδεια παραχωρήθηκε.</string>
 	<string name="setup_permission_not_granted">Η άδεια δεν έχει παραχωρηθεί ακόμα. Ολοκληρώστε τη ρύθμιση με τη δεύτερη συσκευή.</string>
 	<string name="setup_usb_debugging_disabled">Ενεργοποίηση Εντοπισμού σφαλμάτων USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Είναι ασφαλές;</string>
 	<string name="setup_is_this_safe_body">Αυτή η άδεια επιτρέπει στις εφαρμογές να αλλάζουν προστατευμένες ρυθμίσεις συστήματος. Το Adaptive Theme τη χρησιμοποιεί μόνο για λειτουργίες όπως η εναλλαγή σκοτεινής λειτουργίας. Η απεγκατάσταση της εφαρμογής ανακαλεί την άδεια. Ο πηγαίος κώδικας είναι δημόσιος στο GitHub.</string>
 	<string name="setup_shizuku_title">Εναλλακτικά: Shizuku</string>
-	<string name="setup_shizuku_description">Αν χρησιμοποιείτε ήδη το Shizuku, δεν χρειάζεστε δεύτερη συσκευή ή ADB. Το Shizuku χρειάζεται μόνο μία φορά για την παραχώρηση της άδειας.</string>
+	<string name="setup_shizuku_description">Με το Shizuku δεν χρειάζεστε δεύτερη συσκευή ή ADB. Η εφαρμογή χρειάζεται μόνο μία φορά για την παραχώρηση της άδειας.</string>
 	<string name="setup_shizuku_action">Χρήση Shizuku</string>
+	<string name="setup_shizuku_install_action">Εγκατάσταση Shizuku</string>
 	<string name="setup_action_use_root">Χρήση πρόσβασης root</string>
 	<string name="setup_root_request">Αίτημα πρόσβασης root…</string>
 	<string name="setup_root_grant_failed">Δεν ήταν δυνατή η παραχώρηση της άδειας με πρόσβαση root.</string>

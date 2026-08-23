@@ -52,7 +52,6 @@ fun C_GrantPermissionScreen(
 	onFinish: () -> Unit,
 	onBack: () -> Unit,
 	onUseRoot: () -> Unit,
-	onInstallShizuku: () -> Unit,
 ) {
 	val haptic = LocalHapticFeedback.current
 
@@ -109,9 +108,7 @@ fun C_GrantPermissionScreen(
 
 				ForExpertsSectionCard(
 					onUseRoot = onUseRoot,
-					onShareADBCommand = onShareExpertCommand,
-					isShizukuInstalled = uiState.isShizukuInstalled,
-					onInstallShizuku = onInstallShizuku
+					onShareADBCommand = onShareExpertCommand
 				)
 			}
 

@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Mètodes alternatius</string>
 	<string name="setup_grant_title">Pas 3: concedeix el permís des del segon dispositiu</string>
 	<string name="setup_grant_body">Obre aquest enllaç al segon dispositiu i segueix les instruccions:</string>
-	<string name="setup_alternatives">També pots executar una ordre ADB o utilitzar l’accés root per concedir el permís. Shizuku també és compatible.</string>
+	<string name="setup_alternatives">També pots executar una ordre ADB o utilitzar l’accés root per concedir el permís.</string>
 	<string name="setup_permission_granted">Permís concedit.</string>
 	<string name="setup_permission_not_granted">El permís encara no s’ha concedit. Completa la configuració amb el segon dispositiu.</string>
 	<string name="setup_usb_debugging_disabled">Activa la depuració USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">És segur?</string>
 	<string name="setup_is_this_safe_body">Aquest permís permet que les aplicacions modifiquin opcions protegides del sistema. Adaptive Theme només l’utilitza per a funcions com canviar el mode fosc. En desinstal·lar l’aplicació, es revoca el permís. El codi font és públic a GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Si ja utilitzes Shizuku, no necessites cap segon dispositiu ni ADB. Shizuku només és necessari una vegada per concedir el permís.</string>
+	<string name="setup_shizuku_description">Amb Shizuku no necessites cap segon dispositiu ni ADB. L’aplicació només és necessària una vegada per concedir el permís.</string>
 	<string name="setup_shizuku_action">Utilitza Shizuku</string>
+	<string name="setup_shizuku_install_action">Instal·la Shizuku</string>
 	<string name="setup_action_use_root">Utilitza l’accés root</string>
 	<string name="setup_root_request">S’està sol·licitant accés root…</string>
 	<string name="setup_root_grant_failed">No s’ha pogut concedir el permís amb accés root.</string>

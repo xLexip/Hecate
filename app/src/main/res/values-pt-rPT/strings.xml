@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Métodos alternativos</string>
 	<string name="setup_grant_title">Passo 3: conceda a permissão a partir do segundo dispositivo</string>
 	<string name="setup_grant_body">Abra esta ligação no segundo dispositivo e siga as instruções:</string>
-	<string name="setup_alternatives">Em alternativa, pode executar um comando ADB ou utilizar o acesso root para conceder a permissão. O Shizuku também é suportado.</string>
+	<string name="setup_alternatives">Em alternativa, pode executar um comando ADB ou utilizar o acesso root para conceder a permissão.</string>
 	<string name="setup_permission_granted">Permissão concedida.</string>
 	<string name="setup_permission_not_granted">A permissão ainda não foi concedida. Conclua a configuração com o segundo dispositivo.</string>
 	<string name="setup_usb_debugging_disabled">Ativar Depuração USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">É seguro?</string>
 	<string name="setup_is_this_safe_body">Esta permissão permite que as aplicações alterem definições protegidas do sistema. O Adaptive Theme utiliza-a apenas para funcionalidades como a mudança do modo escuro. A desinstalação da aplicação revoga a permissão. O código-fonte está disponível publicamente no GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Se já utiliza o Shizuku, não precisa de um segundo dispositivo nem do ADB. O Shizuku só é necessário uma vez para conceder a permissão.</string>
+	<string name="setup_shizuku_description">Com o Shizuku, não precisa de um segundo dispositivo nem do ADB. A aplicação só é necessária uma vez para conceder a permissão.</string>
 	<string name="setup_shizuku_action">Utilizar Shizuku</string>
+	<string name="setup_shizuku_install_action">Instalar Shizuku</string>
 	<string name="setup_action_use_root">Utilizar acesso root</string>
 	<string name="setup_root_request">A solicitar acesso root…</string>
 	<string name="setup_root_grant_failed">Não foi possível conceder a permissão com acesso root.</string>

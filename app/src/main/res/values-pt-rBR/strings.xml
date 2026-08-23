@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Métodos alternativos</string>
 	<string name="setup_grant_title">Etapa 3: conceda a permissão pelo segundo dispositivo</string>
 	<string name="setup_grant_body">Abra este link no segundo dispositivo e siga as instruções:</string>
-	<string name="setup_alternatives">Se preferir, execute um comando ADB ou use o acesso root para conceder a permissão. O Shizuku também é compatível.</string>
+	<string name="setup_alternatives">Se preferir, execute um comando ADB ou use o acesso root para conceder a permissão.</string>
 	<string name="setup_permission_granted">Permissão concedida.</string>
 	<string name="setup_permission_not_granted">A permissão ainda não foi concedida. Conclua a configuração com o segundo dispositivo.</string>
 	<string name="setup_usb_debugging_disabled">Ativar Depuração USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Isso é seguro?</string>
 	<string name="setup_is_this_safe_body">Esta permissão permite que apps modifiquem configurações protegidas do sistema. O Adaptive Theme a usa apenas em recursos como a mudança do modo escuro. A desinstalação do app revoga a permissão. O código-fonte está disponível publicamente no GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Se você já usa o Shizuku, não precisa de um segundo dispositivo nem do ADB. O Shizuku é necessário apenas uma vez para conceder a permissão.</string>
+	<string name="setup_shizuku_description">Com o Shizuku, você não precisa de um segundo dispositivo nem do ADB. O app é necessário apenas uma vez para conceder a permissão.</string>
 	<string name="setup_shizuku_action">Usar Shizuku</string>
+	<string name="setup_shizuku_install_action">Instalar Shizuku</string>
 	<string name="setup_action_use_root">Usar acesso root</string>
 	<string name="setup_root_request">Solicitando acesso root…</string>
 	<string name="setup_root_grant_failed">Não foi possível conceder a permissão com acesso root.</string>

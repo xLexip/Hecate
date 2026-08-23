@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">其他方法</string>
 	<string name="setup_grant_title">步驟 3：從第二部裝置授予權限</string>
 	<string name="setup_grant_body">在第二部裝置上開啟此連結，然後按照指示操作：</string>
-	<string name="setup_alternatives">您也可以自行執行 ADB 指令，或使用 root 權限授予權限。亦支援 Shizuku。</string>
+	<string name="setup_alternatives">您也可以自行執行 ADB 指令，或使用 root 權限授予權限。</string>
 	<string name="setup_permission_granted">權限已授予。</string>
 	<string name="setup_permission_not_granted">尚未授予權限。請使用第二部裝置完成設定。</string>
 	<string name="setup_usb_debugging_disabled">啟用 USB 偵錯</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">這樣安全嗎？</string>
 	<string name="setup_is_this_safe_body">此權限允許應用程式修改受保護的系統設定。Adaptive Theme 只會將其用於切換深色模式等功能。解除安裝應用程式後，系統會撤銷此權限。原始碼已在 GitHub 公開。</string>
 	<string name="setup_shizuku_title">其他方式：Shizuku</string>
-	<string name="setup_shizuku_description">如果您已在使用 Shizuku，便不需要第二部裝置或 ADB。只需使用一次 Shizuku 即可授予權限。</string>
+	<string name="setup_shizuku_description">使用 Shizuku，便不需要第二部裝置或 ADB。只需使用一次該應用程式即可授予權限。</string>
 	<string name="setup_shizuku_action">使用 Shizuku</string>
+	<string name="setup_shizuku_install_action">安裝 Shizuku</string>
 	<string name="setup_action_use_root">使用 root 權限</string>
 	<string name="setup_root_request">正在要求 root 權限…</string>
 	<string name="setup_root_grant_failed">無法使用 root 權限授予權限。</string>

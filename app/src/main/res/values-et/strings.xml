@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternatiivsed meetodid</string>
 	<string name="setup_grant_title">3. samm: anna luba teisest seadmest</string>
 	<string name="setup_grant_body">Ava see link teises seadmes ja järgi juhiseid:</string>
-	<string name="setup_alternatives">Võid ka ise ADB-käsu käivitada või anda loa juurkasutaja õigustega. Toetatud on ka Shizuku.</string>
+	<string name="setup_alternatives">Võid ka ise ADB-käsu käivitada või anda loa juurkasutaja õigustega.</string>
 	<string name="setup_permission_granted">Luba on antud.</string>
 	<string name="setup_permission_not_granted">Luba pole veel antud. Lõpeta seadistamine teise seadmega.</string>
 	<string name="setup_usb_debugging_disabled">Lülita USB-silumine sisse</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Kas see on ohutu?</string>
 	<string name="setup_is_this_safe_body">See luba võimaldab rakendustel muuta kaitstud süsteemiseadeid. Adaptive Theme kasutab seda ainult tumeda režiimi vahetamise laadseteks funktsioonideks. Rakenduse desinstallimine tühistab loa. Lähtekood on GitHubis avalik.</string>
 	<string name="setup_shizuku_title">Alternatiiv: Shizuku</string>
-	<string name="setup_shizuku_description">Kui kasutad juba Shizukut, pole teist seadet ega ADB-d vaja. Shizukut on loa andmiseks vaja ainult ühe korra.</string>
+	<string name="setup_shizuku_description">Shizukuga pole teist seadet ega ADB-d vaja. Rakendust on loa andmiseks vaja ainult ühe korra.</string>
 	<string name="setup_shizuku_action">Kasuta Shizukut</string>
+	<string name="setup_shizuku_install_action">Installi Shizuku</string>
 	<string name="setup_action_use_root">Kasuta juurkasutaja õigusi</string>
 	<string name="setup_root_request">Juurkasutaja õiguste taotlemine…</string>
 	<string name="setup_root_grant_failed">Luba ei õnnestunud juurkasutaja õigustega anda.</string>

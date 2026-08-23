@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">روش‌های جایگزین</string>
 	<string name="setup_grant_title">مرحلهٔ ۳: اعطای مجوز از دستگاه دوم</string>
 	<string name="setup_grant_body">این پیوند را در دستگاه دوم باز کنید و دستورالعمل‌ها را دنبال کنید:</string>
-	<string name="setup_alternatives">همچنین می‌توانید فرمان ADB را خودتان اجرا کنید یا مجوز را با دسترسی root بدهید. Shizuku نیز پشتیبانی می‌شود.</string>
+	<string name="setup_alternatives">همچنین می‌توانید فرمان ADB را خودتان اجرا کنید یا مجوز را با دسترسی root بدهید.</string>
 	<string name="setup_permission_granted">مجوز اعطا شد.</string>
 	<string name="setup_permission_not_granted">مجوز هنوز داده نشده است. راه‌اندازی را با دستگاه دوم تکمیل کنید.</string>
 	<string name="setup_usb_debugging_disabled">فعال کردن اشکال‌زدایی USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">آیا این کار امن است؟</string>
 	<string name="setup_is_this_safe_body">این مجوز به برنامه‌ها اجازه می‌دهد تنظیمات محافظت‌شدهٔ سیستم را تغییر دهند. Adaptive Theme فقط برای قابلیت‌هایی مانند تغییر حالت تیره از آن استفاده می‌کند. با حذف برنامه، مجوز لغو می‌شود. کد منبع در GitHub عمومی است.</string>
 	<string name="setup_shizuku_title">روش جایگزین: Shizuku</string>
-	<string name="setup_shizuku_description">اگر از قبل Shizuku را استفاده می‌کنید، به دستگاه دوم یا ADB نیاز ندارید. Shizuku فقط یک بار برای اعطای مجوز لازم است.</string>
+	<string name="setup_shizuku_description">با Shizuku به دستگاه دوم یا ADB نیاز ندارید. برنامه فقط یک بار برای اعطای مجوز لازم است.</string>
 	<string name="setup_shizuku_action">استفاده از Shizuku</string>
+	<string name="setup_shizuku_install_action">نصب Shizuku</string>
 	<string name="setup_action_use_root">استفاده از دسترسی root</string>
 	<string name="setup_root_request">در حال درخواست دسترسی root…</string>
 	<string name="setup_root_grant_failed">اعطای مجوز با دسترسی root ممکن نشد.</string>

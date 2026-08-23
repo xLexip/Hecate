@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Iba pang paraan</string>
 	<string name="setup_grant_title">Hakbang 3: Ibigay ang pahintulot mula sa pangalawang device</string>
 	<string name="setup_grant_body">Buksan ang link na ito sa pangalawang device at sundin ang mga tagubilin:</string>
-	<string name="setup_alternatives">Maaari ka ring magpatakbo ng ADB command o gumamit ng root access para ibigay ang pahintulot. Sinusuportahan din ang Shizuku.</string>
+	<string name="setup_alternatives">Maaari ka ring magpatakbo ng ADB command o gumamit ng root access para ibigay ang pahintulot.</string>
 	<string name="setup_permission_granted">Naibigay na ang pahintulot.</string>
 	<string name="setup_permission_not_granted">Hindi pa naibibigay ang pahintulot. Tapusin ang setup gamit ang pangalawang device.</string>
 	<string name="setup_usb_debugging_disabled">I-on ang USB debugging</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Ligtas ba ito?</string>
 	<string name="setup_is_this_safe_body">Hinahayaan ng pahintulot na ito ang mga app na baguhin ang mga protektadong setting ng system. Ginagamit lang ito ng Adaptive Theme para sa mga feature tulad ng pagpapalit ng dark mode. Binabawi ang pahintulot kapag in-uninstall ang app. Pampubliko ang source code sa GitHub.</string>
 	<string name="setup_shizuku_title">Alternatibo: Shizuku</string>
-	<string name="setup_shizuku_description">Kung gumagamit ka na ng Shizuku, hindi mo kailangan ng pangalawang device o ADB. Isang beses lang kailangan ang Shizuku para ibigay ang pahintulot.</string>
+	<string name="setup_shizuku_description">Sa Shizuku, hindi mo kailangan ng pangalawang device o ADB. Isang beses lang kailangan ang app para ibigay ang pahintulot.</string>
 	<string name="setup_shizuku_action">Gamitin ang Shizuku</string>
+	<string name="setup_shizuku_install_action">I-install ang Shizuku</string>
 	<string name="setup_action_use_root">Gamitin ang root access</string>
 	<string name="setup_root_request">Humihiling ng root access…</string>
 	<string name="setup_root_grant_failed">Hindi maibigay ang pahintulot gamit ang root access.</string>

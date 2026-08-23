@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">दूसरे तरीके</string>
 	<string name="setup_grant_title">तीसरा चरण: दूसरे डिवाइस से अनुमति दें</string>
 	<string name="setup_grant_body">दूसरे डिवाइस पर यह लिंक खोलें और निर्देशों का पालन करें:</string>
-	<string name="setup_alternatives">आप खुद ADB कमांड चला सकते हैं या root ऐक्सेस से अनुमति दे सकते हैं। Shizuku भी काम करता है।</string>
+	<string name="setup_alternatives">आप खुद ADB कमांड चला सकते हैं या root ऐक्सेस से अनुमति दे सकते हैं।</string>
 	<string name="setup_permission_granted">अनुमति दी गई।</string>
 	<string name="setup_permission_not_granted">अभी अनुमति नहीं दी गई है। दूसरे डिवाइस से सेटअप पूरा करें।</string>
 	<string name="setup_usb_debugging_disabled">यूएसबी डीबगिंग चालू करें</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">क्या यह सुरक्षित है?</string>
 	<string name="setup_is_this_safe_body">इस अनुमति से ऐप्लिकेशन सुरक्षित सिस्टम सेटिंग बदल सकते हैं। Adaptive Theme इसका इस्तेमाल सिर्फ़ डार्क मोड बदलने जैसी सुविधाओं के लिए करता है। ऐप्लिकेशन को अनइंस्टॉल करने पर अनुमति हट जाती है। सोर्स कोड GitHub पर सार्वजनिक है।</string>
 	<string name="setup_shizuku_title">दूसरा तरीका: Shizuku</string>
-	<string name="setup_shizuku_description">अगर आप पहले से Shizuku का इस्तेमाल करते हैं, तो दूसरे डिवाइस या ADB की ज़रूरत नहीं है। अनुमति देने के लिए Shizuku सिर्फ़ एक बार चाहिए।</string>
+	<string name="setup_shizuku_description">Shizuku के साथ दूसरे डिवाइस या ADB की ज़रूरत नहीं है। अनुमति देने के लिए ऐप सिर्फ़ एक बार चाहिए।</string>
 	<string name="setup_shizuku_action">Shizuku का इस्तेमाल करें</string>
+	<string name="setup_shizuku_install_action">Shizuku इंस्टॉल करें</string>
 	<string name="setup_action_use_root">root ऐक्सेस का इस्तेमाल करें</string>
 	<string name="setup_root_request">root ऐक्सेस का अनुरोध किया जा रहा है…</string>
 	<string name="setup_root_grant_failed">root ऐक्सेस से अनुमति नहीं दी जा सकी।</string>

@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Jiné způsoby</string>
 	<string name="setup_grant_title">Krok 3: udělte oprávnění z druhého zařízení</string>
 	<string name="setup_grant_body">Otevřete tento odkaz na druhém zařízení a postupujte podle pokynů:</string>
-	<string name="setup_alternatives">Můžete také sami spustit příkaz ADB nebo oprávnění udělit pomocí přístupu root. Podporováno je i Shizuku.</string>
+	<string name="setup_alternatives">Můžete také sami spustit příkaz ADB nebo oprávnění udělit pomocí přístupu root.</string>
 	<string name="setup_permission_granted">Oprávnění uděleno.</string>
 	<string name="setup_permission_not_granted">Oprávnění zatím nebylo uděleno. Dokončete nastavení pomocí druhého zařízení.</string>
 	<string name="setup_usb_debugging_disabled">Zapnout Ladění USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Je to bezpečné?</string>
 	<string name="setup_is_this_safe_body">Toto oprávnění umožňuje aplikacím měnit chráněná systémová nastavení. Adaptive Theme ho používá pouze pro funkce, jako je přepínání tmavého režimu. Odinstalováním aplikace se oprávnění odebere. Zdrojový kód je veřejně dostupný na GitHubu.</string>
 	<string name="setup_shizuku_title">Jiný způsob: Shizuku</string>
-	<string name="setup_shizuku_description">Pokud již používáte Shizuku, nepotřebujete druhé zařízení ani ADB. Shizuku je k udělení oprávnění potřeba pouze jednou.</string>
+	<string name="setup_shizuku_description">Se Shizuku nepotřebujete druhé zařízení ani ADB. Aplikace je k udělení oprávnění potřeba pouze jednou.</string>
 	<string name="setup_shizuku_action">Použít Shizuku</string>
+	<string name="setup_shizuku_install_action">Nainstalovat Shizuku</string>
 	<string name="setup_action_use_root">Použít přístup root</string>
 	<string name="setup_root_request">Žádost o přístup root…</string>
 	<string name="setup_root_grant_failed">Oprávnění se nepodařilo udělit pomocí přístupu root.</string>

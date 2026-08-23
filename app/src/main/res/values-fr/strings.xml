@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Autres méthodes</string>
 	<string name="setup_grant_title">Étape 3 : accorder l’autorisation depuis le second appareil</string>
 	<string name="setup_grant_body">Ouvrez ce lien sur le second appareil et suivez les instructions :</string>
-	<string name="setup_alternatives">Vous pouvez aussi exécuter vous-même une commande ADB ou utiliser l’accès root pour accorder l’autorisation. Shizuku est également pris en charge.</string>
+	<string name="setup_alternatives">Vous pouvez aussi exécuter vous-même une commande ADB ou utiliser l’accès root pour accorder l’autorisation.</string>
 	<string name="setup_permission_granted">Autorisation accordée.</string>
 	<string name="setup_permission_not_granted">Autorisation pas encore accordée. Terminez la configuration avec le second appareil.</string>
 	<string name="setup_usb_debugging_disabled">Activer le débogage USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Est-ce sûr ?</string>
 	<string name="setup_is_this_safe_body">Cette autorisation permet aux applications de modifier des paramètres système protégés. Adaptive Theme l’utilise uniquement pour des fonctions telles que le changement de mode sombre. La désinstallation de l’application révoque l’autorisation, et le code source est public sur GitHub.</string>
 	<string name="setup_shizuku_title">Autre méthode : Shizuku</string>
-	<string name="setup_shizuku_description">Si vous utilisez déjà Shizuku, vous n’avez besoin ni d’un second appareil ni d’ADB. Shizuku n’est nécessaire qu’une seule fois pour accorder l’autorisation.</string>
+	<string name="setup_shizuku_description">Avec Shizuku, vous n’avez besoin ni d’un second appareil ni d’ADB. L’application n’est nécessaire qu’une seule fois pour accorder l’autorisation.</string>
 	<string name="setup_shizuku_action">Utiliser Shizuku</string>
+	<string name="setup_shizuku_install_action">Installer Shizuku</string>
 	<string name="setup_action_use_root">Utiliser l’accès root</string>
 	<string name="setup_root_request">Demande d’accès root…</string>
 	<string name="setup_root_grant_failed">Impossible d’accorder l’autorisation avec l’accès root.</string>

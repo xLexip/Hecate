@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Aðrar aðferðir</string>
 	<string name="setup_grant_title">Skref 3: Veittu heimild úr hinu tækinu</string>
 	<string name="setup_grant_body">Opnaðu þennan tengil í hinu tækinu og fylgdu leiðbeiningunum:</string>
-	<string name="setup_alternatives">Þú getur einnig keyrt ADB-skipun sjálf/ur eða veitt heimildina með root-aðgangi. Shizuku er einnig stutt.</string>
+	<string name="setup_alternatives">Þú getur einnig keyrt ADB-skipun sjálf/ur eða veitt heimildina með root-aðgangi.</string>
 	<string name="setup_permission_granted">Heimild veitt.</string>
 	<string name="setup_permission_not_granted">Heimild hefur ekki enn verið veitt. Ljúktu uppsetningunni með hinu tækinu.</string>
 	<string name="setup_usb_debugging_disabled">Kveikja á USB-villuleit</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Er þetta öruggt?</string>
 	<string name="setup_is_this_safe_body">Þessi heimild leyfir forritum að breyta vörðum kerfisstillingum. Adaptive Theme notar hana aðeins fyrir eiginleika á borð við skipti yfir í dökka stillingu. Heimildin er afturkölluð þegar forritið er fjarlægt. Frumkóðinn er opinber á GitHub.</string>
 	<string name="setup_shizuku_title">Önnur leið: Shizuku</string>
-	<string name="setup_shizuku_description">Ef þú notar Shizuku nú þegar þarftu hvorki annað tæki né ADB. Shizuku þarf aðeins einu sinni til að veita heimildina.</string>
+	<string name="setup_shizuku_description">Með Shizuku þarftu hvorki annað tæki né ADB. Aðeins þarf að nota forritið einu sinni til að veita heimildina.</string>
 	<string name="setup_shizuku_action">Nota Shizuku</string>
+	<string name="setup_shizuku_install_action">Setja upp Shizuku</string>
 	<string name="setup_action_use_root">Nota root-aðgang</string>
 	<string name="setup_root_request">Biður um root-aðgang…</string>
 	<string name="setup_root_grant_failed">Ekki tókst að veita heimild með root-aðgangi.</string>

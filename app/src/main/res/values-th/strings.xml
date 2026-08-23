@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">วิธีอื่น</string>
 	<string name="setup_grant_title">ขั้นตอนที่ 3: ให้สิทธิ์จากอุปกรณ์เครื่องที่สอง</string>
 	<string name="setup_grant_body">เปิดลิงก์นี้ในอุปกรณ์เครื่องที่สองแล้วทำตามคำแนะนำ:</string>
-	<string name="setup_alternatives">คุณยังสามารถเรียกใช้คำสั่ง ADB เองหรือให้สิทธิ์ด้วยการเข้าถึง root ได้ และยังรองรับ Shizuku</string>
+	<string name="setup_alternatives">คุณยังสามารถเรียกใช้คำสั่ง ADB เองหรือให้สิทธิ์ด้วยการเข้าถึง root ได้</string>
 	<string name="setup_permission_granted">ให้สิทธิ์แล้ว</string>
 	<string name="setup_permission_not_granted">ยังไม่ได้ให้สิทธิ์ โปรดตั้งค่าให้เสร็จด้วยอุปกรณ์เครื่องที่สอง</string>
 	<string name="setup_usb_debugging_disabled">เปิดการแก้ไขข้อบกพร่อง USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">ปลอดภัยหรือไม่</string>
 	<string name="setup_is_this_safe_body">สิทธิ์นี้อนุญาตให้แอปเปลี่ยนการตั้งค่าระบบที่มีการป้องกัน Adaptive Theme ใช้สิทธิ์นี้เฉพาะกับฟีเจอร์อย่างการสลับโหมดมืด การถอนการติดตั้งแอปจะเพิกถอนสิทธิ์ และซอร์สโค้ดเผยแพร่ต่อสาธารณะบน GitHub</string>
 	<string name="setup_shizuku_title">วิธีอื่น: Shizuku</string>
-	<string name="setup_shizuku_description">หากใช้ Shizuku อยู่แล้ว คุณไม่ต้องใช้อุปกรณ์เครื่องที่สองหรือ ADB โดยต้องใช้ Shizuku เพียงครั้งเดียวเพื่อให้สิทธิ์</string>
+	<string name="setup_shizuku_description">เมื่อใช้ Shizuku คุณไม่ต้องใช้อุปกรณ์เครื่องที่สองหรือ ADB โดยต้องใช้แอปเพียงครั้งเดียวเพื่อให้สิทธิ์</string>
 	<string name="setup_shizuku_action">ใช้ Shizuku</string>
+	<string name="setup_shizuku_install_action">ติดตั้ง Shizuku</string>
 	<string name="setup_action_use_root">ใช้การเข้าถึง root</string>
 	<string name="setup_root_request">กำลังขอการเข้าถึง root…</string>
 	<string name="setup_root_grant_failed">ไม่สามารถให้สิทธิ์ด้วยการเข้าถึง root</string>

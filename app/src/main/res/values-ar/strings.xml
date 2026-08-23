@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">طرق بديلة</string>
 	<string name="setup_grant_title">الخطوة 3: منح الإذن من الجهاز الثاني</string>
 	<string name="setup_grant_body">افتح هذا الرابط على الجهاز الثاني واتبع التعليمات:</string>
-	<string name="setup_alternatives">يمكنك أيضًا تشغيل أمر ADB بنفسك أو استخدام صلاحية root لمنح الإذن. ويتوفر دعم Shizuku أيضًا.</string>
+	<string name="setup_alternatives">يمكنك أيضًا تشغيل أمر ADB بنفسك أو استخدام صلاحية root لمنح الإذن.</string>
 	<string name="setup_permission_granted">تم منح الإذن.</string>
 	<string name="setup_permission_not_granted">لم يُمنح الإذن بعد. أكمل الإعداد باستخدام الجهاز الثاني.</string>
 	<string name="setup_usb_debugging_disabled">تفعيل تصحيح أخطاء USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">هل هذا آمن؟</string>
 	<string name="setup_is_this_safe_body">يسمح هذا الإذن للتطبيقات بتعديل إعدادات النظام المحمية. يستخدمه Adaptive Theme فقط لميزات مثل تبديل الوضع الداكن. تؤدي إزالة التطبيق إلى سحب الإذن. والشيفرة المصدرية متاحة علنًا على GitHub.</string>
 	<string name="setup_shizuku_title">بديل: Shizuku</string>
-	<string name="setup_shizuku_description">إذا كنت تستخدم Shizuku بالفعل، فلن تحتاج إلى جهاز ثانٍ أو ADB. لا يلزم Shizuku إلا مرة واحدة لمنح الإذن.</string>
+	<string name="setup_shizuku_description">مع Shizuku، لن تحتاج إلى جهاز ثانٍ أو ADB. لا يلزم التطبيق إلا مرة واحدة لمنح الإذن.</string>
 	<string name="setup_shizuku_action">استخدام Shizuku</string>
+	<string name="setup_shizuku_install_action">تثبيت Shizuku</string>
 	<string name="setup_action_use_root">استخدام صلاحية root</string>
 	<string name="setup_root_request">جارٍ طلب صلاحية root…</string>
 	<string name="setup_root_grant_failed">تعذّر منح الإذن باستخدام صلاحية root.</string>

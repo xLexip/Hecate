@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">다른 방법</string>
 	<string name="setup_grant_title">3단계: 두 번째 기기에서 권한 부여</string>
 	<string name="setup_grant_body">두 번째 기기에서 이 링크를 열고 안내를 따르세요.</string>
-	<string name="setup_alternatives">ADB 명령어를 직접 실행하거나 루트 액세스로 권한을 부여할 수도 있습니다. Shizuku도 지원됩니다.</string>
+	<string name="setup_alternatives">ADB 명령어를 직접 실행하거나 루트 액세스로 권한을 부여할 수도 있습니다.</string>
 	<string name="setup_permission_granted">권한이 부여되었습니다.</string>
 	<string name="setup_permission_not_granted">아직 권한이 부여되지 않았습니다. 두 번째 기기에서 설정을 완료하세요.</string>
 	<string name="setup_usb_debugging_disabled">USB 디버깅 사용 설정</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">안전한가요?</string>
 	<string name="setup_is_this_safe_body">이 권한을 사용하면 앱에서 보호된 시스템 설정을 변경할 수 있습니다. Adaptive Theme은 다크 모드 전환과 같은 기능에만 이 권한을 사용합니다. 앱을 삭제하면 권한이 취소됩니다. 소스 코드는 GitHub에 공개되어 있습니다.</string>
 	<string name="setup_shizuku_title">다른 방법: Shizuku</string>
-	<string name="setup_shizuku_description">이미 Shizuku를 사용 중이라면 두 번째 기기나 ADB가 필요하지 않습니다. 권한을 부여할 때 Shizuku가 한 번만 필요합니다.</string>
+	<string name="setup_shizuku_description">Shizuku를 사용하면 두 번째 기기나 ADB가 필요하지 않습니다. 권한을 부여할 때 앱이 한 번만 필요합니다.</string>
 	<string name="setup_shizuku_action">Shizuku 사용</string>
+	<string name="setup_shizuku_install_action">Shizuku 설치</string>
 	<string name="setup_action_use_root">루트 액세스 사용</string>
 	<string name="setup_root_request">루트 액세스 요청 중…</string>
 	<string name="setup_root_grant_failed">루트 액세스로 권한을 부여할 수 없습니다.</string>

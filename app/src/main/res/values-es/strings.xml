@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Métodos alternativos</string>
 	<string name="setup_grant_title">Paso 3: Conceder el permiso desde el segundo dispositivo</string>
 	<string name="setup_grant_body">Abre este enlace en el segundo dispositivo y sigue las instrucciones:</string>
-	<string name="setup_alternatives">Alternativamente, puedes ejecutar un comando ADB tú mismo o usar root para conceder el permiso. Shizuku también es compatible.</string>
+	<string name="setup_alternatives">Alternativamente, puedes ejecutar un comando ADB tú mismo o usar root para conceder el permiso.</string>
 	<string name="setup_permission_granted">Permiso concedido.</string>
 	<string name="setup_permission_not_granted">Permiso aún no concedido. Completa la configuración con el segundo dispositivo.</string>
 	<string name="setup_usb_debugging_disabled">Habilitar depuración por USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">¿Es esto seguro?</string>
 	<string name="setup_is_this_safe_body">Este permiso permite que las aplicaciones modifiquen ajustes protegidos del sistema. Adaptive Theme solo lo usa para funciones como cambiar el modo oscuro. Al desinstalar la aplicación se revoca el permiso. El código fuente está disponible públicamente en GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Si ya usas Shizuku, no necesitarás un segundo dispositivo ni ADB. Solo necesitas Shizuku una vez para conceder el permiso.</string>
+	<string name="setup_shizuku_description">Con Shizuku no necesitarás un segundo dispositivo ni ADB. Solo necesitas la aplicación una vez para conceder el permiso.</string>
 	<string name="setup_shizuku_action">Usar Shizuku</string>
+	<string name="setup_shizuku_install_action">Instalar Shizuku</string>
 	<string name="setup_action_use_root">Usar root</string>
 	<string name="setup_root_request">Solicitando acceso root…</string>
 	<string name="setup_root_grant_failed">No se pudo conceder el permiso con root.</string>

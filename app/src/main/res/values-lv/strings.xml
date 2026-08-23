@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternatīvas metodes</string>
 	<string name="setup_grant_title">3. darbība: piešķiriet atļauju no otras ierīces</string>
 	<string name="setup_grant_body">Atveriet šo saiti otrā ierīcē un izpildiet norādījumus:</string>
-	<string name="setup_alternatives">Varat arī pats izpildīt ADB komandu vai piešķirt atļauju ar root piekļuvi. Tiek atbalstīts arī Shizuku.</string>
+	<string name="setup_alternatives">Varat arī pats izpildīt ADB komandu vai piešķirt atļauju ar root piekļuvi.</string>
 	<string name="setup_permission_granted">Atļauja ir piešķirta.</string>
 	<string name="setup_permission_not_granted">Atļauja vēl nav piešķirta. Pabeidziet iestatīšanu ar otru ierīci.</string>
 	<string name="setup_usb_debugging_disabled">Ieslēgt USB atkļūdošanu</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Vai tas ir droši?</string>
 	<string name="setup_is_this_safe_body">Šī atļauja ļauj lietotnēm mainīt aizsargātus sistēmas iestatījumus. Adaptive Theme to izmanto tikai tādām funkcijām kā tumšā režīma pārslēgšana. Lietotnes atinstalēšana atsauc atļauju. Pirmkods ir publiski pieejams vietnē GitHub.</string>
 	<string name="setup_shizuku_title">Alternatīva: Shizuku</string>
-	<string name="setup_shizuku_description">Ja jau izmantojat Shizuku, otra ierīce vai ADB nav nepieciešami. Shizuku vajadzīgs tikai vienreiz, lai piešķirtu atļauju.</string>
+	<string name="setup_shizuku_description">Izmantojot Shizuku, otra ierīce vai ADB nav nepieciešami. Lietotne vajadzīga tikai vienreiz, lai piešķirtu atļauju.</string>
 	<string name="setup_shizuku_action">Izmantot Shizuku</string>
+	<string name="setup_shizuku_install_action">Instalēt Shizuku</string>
 	<string name="setup_action_use_root">Izmantot root piekļuvi</string>
 	<string name="setup_root_request">Pieprasa root piekļuvi…</string>
 	<string name="setup_root_grant_failed">Atļauju neizdevās piešķirt ar root piekļuvi.</string>

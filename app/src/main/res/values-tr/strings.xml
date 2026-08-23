@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Alternatif yöntemler</string>
 	<string name="setup_grant_title">3. adım: İzni ikinci cihazdan verin</string>
 	<string name="setup_grant_body">Bu bağlantıyı ikinci cihazda açıp talimatları izleyin:</string>
-	<string name="setup_alternatives">Alternatif olarak bir ADB komutunu kendiniz çalıştırabilir veya izni root erişimiyle verebilirsiniz. Shizuku da desteklenir.</string>
+	<string name="setup_alternatives">Alternatif olarak bir ADB komutunu kendiniz çalıştırabilir veya izni root erişimiyle verebilirsiniz.</string>
 	<string name="setup_permission_granted">İzin verildi.</string>
 	<string name="setup_permission_not_granted">İzin henüz verilmedi. Kurulumu ikinci cihazla tamamlayın.</string>
 	<string name="setup_usb_debugging_disabled">USB hata ayıklamayı aç</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Bu güvenli mi?</string>
 	<string name="setup_is_this_safe_body">Bu izin, uygulamaların korumalı sistem ayarlarını değiştirmesine olanak tanır. Adaptive Theme bu izni yalnızca koyu modu değiştirme gibi özellikler için kullanır. Uygulama kaldırıldığında izin iptal edilir. Kaynak kodu GitHub’da herkese açıktır.</string>
 	<string name="setup_shizuku_title">Alternatif: Shizuku</string>
-	<string name="setup_shizuku_description">Shizuku kullanıyorsanız ikinci bir cihaza veya ADB’ye gerek yoktur. İzni vermek için Shizuku’ya yalnızca bir kez ihtiyaç duyulur.</string>
+	<string name="setup_shizuku_description">Shizuku ile ikinci bir cihaza veya ADB’ye gerek yoktur. İzni vermek için uygulamaya yalnızca bir kez ihtiyaç duyulur.</string>
 	<string name="setup_shizuku_action">Shizuku kullan</string>
+	<string name="setup_shizuku_install_action">Shizuku’yu yükle</string>
 	<string name="setup_action_use_root">Root erişimini kullan</string>
 	<string name="setup_root_request">Root erişimi isteniyor…</string>
 	<string name="setup_root_grant_failed">İzin root erişimiyle verilemedi.</string>

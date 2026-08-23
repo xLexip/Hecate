@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">その他の方法</string>
 	<string name="setup_grant_title">ステップ 3: 2 台目のデバイスから権限を付与</string>
 	<string name="setup_grant_body">2 台目のデバイスでこのリンクを開き、手順に沿って操作してください。</string>
-	<string name="setup_alternatives">ADB コマンドを自分で実行するか、root アクセスを使用して権限を付与することもできます。Shizuku にも対応しています。</string>
+	<string name="setup_alternatives">ADB コマンドを自分で実行するか、root アクセスを使用して権限を付与することもできます。</string>
 	<string name="setup_permission_granted">権限が付与されました。</string>
 	<string name="setup_permission_not_granted">権限はまだ付与されていません。2 台目のデバイスで設定を完了してください。</string>
 	<string name="setup_usb_debugging_disabled">USB デバッグを有効にする</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">安全ですか？</string>
 	<string name="setup_is_this_safe_body">この権限により、アプリは保護されたシステム設定を変更できます。Adaptive Theme は、ダークモードの切り替えなどの機能にのみ使用します。アプリをアンインストールすると権限は取り消されます。ソースコードは GitHub で公開されています。</string>
 	<string name="setup_shizuku_title">別の方法: Shizuku</string>
-	<string name="setup_shizuku_description">すでに Shizuku を使用している場合、2 台目のデバイスや ADB は不要です。権限を付与する際に一度だけ Shizuku が必要です。</string>
+	<string name="setup_shizuku_description">Shizuku を使用すれば、2 台目のデバイスや ADB は不要です。権限を付与する際に一度だけアプリが必要です。</string>
 	<string name="setup_shizuku_action">Shizuku を使用</string>
+	<string name="setup_shizuku_install_action">Shizuku をインストール</string>
 	<string name="setup_action_use_root">root アクセスを使用</string>
 	<string name="setup_root_request">root アクセスをリクエストしています…</string>
 	<string name="setup_root_grant_failed">root アクセスで権限を付与できませんでした。</string>

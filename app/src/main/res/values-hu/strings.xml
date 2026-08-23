@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternatív módszerek</string>
 	<string name="setup_grant_title">3. lépés: Adja meg az engedélyt a második eszközről</string>
 	<string name="setup_grant_body">Nyissa meg ezt a hivatkozást a második eszközön, és kövesse az utasításokat:</string>
-	<string name="setup_alternatives">Saját maga is futtathat ADB-parancsot, vagy root-hozzáféréssel is megadhatja az engedélyt. A Shizuku szintén támogatott.</string>
+	<string name="setup_alternatives">Saját maga is futtathat ADB-parancsot, vagy root-hozzáféréssel is megadhatja az engedélyt.</string>
 	<string name="setup_permission_granted">Engedély megadva.</string>
 	<string name="setup_permission_not_granted">Az engedély még nincs megadva. Fejezze be a beállítást a második eszközzel.</string>
 	<string name="setup_usb_debugging_disabled">USB-hibakeresés bekapcsolása</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Biztonságos ez?</string>
 	<string name="setup_is_this_safe_body">Ez az engedély lehetővé teszi, hogy az alkalmazások védett rendszerbeállításokat módosítsanak. Az Adaptive Theme csak olyan funkciókhoz használja, mint a sötét mód váltása. Az alkalmazás eltávolítása visszavonja az engedélyt. A forráskód nyilvános a GitHubon.</string>
 	<string name="setup_shizuku_title">Alternatíva: Shizuku</string>
-	<string name="setup_shizuku_description">Ha már használja a Shizukut, nincs szüksége második eszközre vagy ADB-re. A Shizuku csak egyszer szükséges az engedély megadásához.</string>
+	<string name="setup_shizuku_description">A Shizuku használatával nincs szüksége második eszközre vagy ADB-re. Az alkalmazásra csak egyszer van szükség az engedély megadásához.</string>
 	<string name="setup_shizuku_action">Shizuku használata</string>
+	<string name="setup_shizuku_install_action">Shizuku telepítése</string>
 	<string name="setup_action_use_root">Root-hozzáférés használata</string>
 	<string name="setup_root_request">Root-hozzáférés kérése…</string>
 	<string name="setup_root_grant_failed">Az engedély nem adható meg root-hozzáféréssel.</string>

@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">ਹੋਰ ਤਰੀਕੇ</string>
 	<string name="setup_grant_title">ਕਦਮ 3: ਦੂਜੇ ਡਿਵਾਈਸ ਤੋਂ ਇਜਾਜ਼ਤ ਦਿਓ</string>
 	<string name="setup_grant_body">ਦੂਜੇ ਡਿਵਾਈਸ ਤੇ ਇਹ ਲਿੰਕ ਖੋਲ੍ਹੋ ਅਤੇ ਹਦਾਇਤਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ:</string>
-	<string name="setup_alternatives">ਤੁਸੀਂ ਖ਼ੁਦ ADB ਕਮਾਂਡ ਚਲਾ ਸਕਦੇ ਹੋ ਜਾਂ root ਪਹੁੰਚ ਨਾਲ ਇਜਾਜ਼ਤ ਦੇ ਸਕਦੇ ਹੋ। Shizuku ਵੀ ਸਮਰਥਿਤ ਹੈ।</string>
+	<string name="setup_alternatives">ਤੁਸੀਂ ਖ਼ੁਦ ADB ਕਮਾਂਡ ਚਲਾ ਸਕਦੇ ਹੋ ਜਾਂ root ਪਹੁੰਚ ਨਾਲ ਇਜਾਜ਼ਤ ਦੇ ਸਕਦੇ ਹੋ।</string>
 	<string name="setup_permission_granted">ਇਜਾਜ਼ਤ ਦਿੱਤੀ ਗਈ।</string>
 	<string name="setup_permission_not_granted">ਅਜੇ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੱਤੀ ਗਈ। ਦੂਜੇ ਡਿਵਾਈਸ ਨਾਲ ਸੈੱਟਅੱਪ ਪੂਰਾ ਕਰੋ।</string>
 	<string name="setup_usb_debugging_disabled">USB ਡੀਬੱਗਿੰਗ ਚਾਲੂ ਕਰੋ</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">ਕੀ ਇਹ ਸੁਰੱਖਿਅਤ ਹੈ?</string>
 	<string name="setup_is_this_safe_body">ਇਹ ਇਜਾਜ਼ਤ ਐਪਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਬਦਲਣ ਦਿੰਦੀ ਹੈ। Adaptive Theme ਇਸ ਨੂੰ ਸਿਰਫ਼ ਗੂੜ੍ਹਾ ਮੋਡ ਬਦਲਣ ਵਰਗੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਲਈ ਵਰਤਦਾ ਹੈ। ਐਪ ਅਣਇੰਸਟਾਲ ਕਰਨ ਨਾਲ ਇਜਾਜ਼ਤ ਵਾਪਸ ਹੋ ਜਾਂਦੀ ਹੈ। ਸਰੋਤ ਕੋਡ GitHub ਤੇ ਜਨਤਕ ਹੈ।</string>
 	<string name="setup_shizuku_title">ਹੋਰ ਚੋਣ: Shizuku</string>
-	<string name="setup_shizuku_description">ਜੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ Shizuku ਵਰਤਦੇ ਹੋ ਤਾਂ ਦੂਜੇ ਡਿਵਾਈਸ ਜਾਂ ADB ਦੀ ਲੋੜ ਨਹੀਂ। ਇਜਾਜ਼ਤ ਦੇਣ ਲਈ Shizuku ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਚਾਹੀਦਾ ਹੈ।</string>
+	<string name="setup_shizuku_description">Shizuku ਨਾਲ ਦੂਜੇ ਡਿਵਾਈਸ ਜਾਂ ADB ਦੀ ਲੋੜ ਨਹੀਂ। ਇਜਾਜ਼ਤ ਦੇਣ ਲਈ ਐਪ ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਚਾਹੀਦੀ ਹੈ।</string>
 	<string name="setup_shizuku_action">Shizuku ਵਰਤੋ</string>
+	<string name="setup_shizuku_install_action">Shizuku ਇੰਸਟਾਲ ਕਰੋ</string>
 	<string name="setup_action_use_root">root ਪਹੁੰਚ ਵਰਤੋ</string>
 	<string name="setup_root_request">root ਪਹੁੰਚ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
 	<string name="setup_root_grant_failed">root ਪਹੁੰਚ ਨਾਲ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੱਤੀ ਜਾ ਸਕੀ।</string>

@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">पर्यायी पद्धती</string>
 	<string name="setup_grant_title">पायरी ३: दुसऱ्या डिव्हाइसवरून परवानगी द्या</string>
 	<string name="setup_grant_body">दुसऱ्या डिव्हाइसवर ही लिंक उघडा आणि सूचनांचे पालन करा:</string>
-	<string name="setup_alternatives">तुम्ही स्वतः ADB कमांड चालवू शकता किंवा root प्रवेशाने परवानगी देऊ शकता. Shizuku देखील समर्थित आहे.</string>
+	<string name="setup_alternatives">तुम्ही स्वतः ADB कमांड चालवू शकता किंवा root प्रवेशाने परवानगी देऊ शकता.</string>
 	<string name="setup_permission_granted">परवानगी दिली.</string>
 	<string name="setup_permission_not_granted">परवानगी अद्याप दिलेली नाही. दुसऱ्या डिव्हाइसने सेटअप पूर्ण करा.</string>
 	<string name="setup_usb_debugging_disabled">USB डीबगिंग सुरू करा</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">हे सुरक्षित आहे का?</string>
 	<string name="setup_is_this_safe_body">ही परवानगी अ‍ॅपना संरक्षित सिस्टम सेटिंग्ज बदलू देते. Adaptive Theme ती फक्त गडद मोड बदलण्यासारख्या वैशिष्ट्यांसाठी वापरते. अ‍ॅप अनइंस्टॉल केल्यावर परवानगी रद्द होते. स्रोत कोड GitHub वर सार्वजनिक आहे.</string>
 	<string name="setup_shizuku_title">पर्याय: Shizuku</string>
-	<string name="setup_shizuku_description">तुम्ही आधीच Shizuku वापरत असल्यास दुसरे डिव्हाइस किंवा ADB आवश्यक नाही. परवानगी देण्यासाठी Shizuku फक्त एकदाच आवश्यक आहे.</string>
+	<string name="setup_shizuku_description">Shizuku मुळे दुसरे डिव्हाइस किंवा ADB आवश्यक नाही. परवानगी देण्यासाठी अॅप फक्त एकदाच आवश्यक आहे.</string>
 	<string name="setup_shizuku_action">Shizuku वापरा</string>
+	<string name="setup_shizuku_install_action">Shizuku इंस्टॉल करा</string>
 	<string name="setup_action_use_root">root प्रवेश वापरा</string>
 	<string name="setup_root_request">root प्रवेशाची विनंती करत आहे…</string>
 	<string name="setup_root_grant_failed">root प्रवेशाने परवानगी देता आली नाही.</string>

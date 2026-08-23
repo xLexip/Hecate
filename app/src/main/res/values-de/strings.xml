@@ -79,7 +79,7 @@
 	<string name="setup_alternative_methods">Alternative Methoden</string>
 	<string name="setup_grant_title">Schritt 3: Berechtigung vom zweiten Gerät erteilen</string>
 	<string name="setup_grant_body">Öffne diesen Link auf dem zweiten Gerät und folge den Anweisungen:</string>
-	<string name="setup_alternatives">Alternativ kannst du selbst einen ADB-Befehl ausführen oder die Berechtigung mit Root erteilen. Shizuku wird ebenfalls unterstützt.</string>
+	<string name="setup_alternatives">Alternativ kannst du selbst einen ADB-Befehl ausführen oder die Berechtigung mit Root erteilen.</string>
 	<string name="setup_permission_granted">Berechtigung erteilt.</string>
 	<string name="setup_permission_not_granted">Berechtigung noch nicht erteilt. Schließe die Einrichtung mit dem zweiten Gerät ab.</string>
 	<string name="setup_usb_debugging_disabled">USB-Debugging aktivieren</string>
@@ -92,8 +92,9 @@
 	<string name="setup_is_this_safe_title">Ist das sicher?</string>
 	<string name="setup_is_this_safe_body">Diese Berechtigung erlaubt Apps, geschützte Systemeinstellungen zu ändern. Adaptive Theme nutzt sie nur für Funktionen wie den Wechsel des dunklen Modus. Beim Deinstallieren der App wird die Berechtigung entzogen. Der Quellcode ist auf GitHub öffentlich einsehbar.</string>
 	<string name="setup_shizuku_title">Alternative: Shizuku</string>
-	<string name="setup_shizuku_description">Wenn du Shizuku bereits verwendest, benötigst du weder ein zweites Gerät noch ADB. Du brauchst Shizuku nur einmalig, um die Berechtigung zu erteilen.</string>
+	<string name="setup_shizuku_description">Mit Shizuku benötigst du weder ein zweites Gerät noch ADB. Du brauchst die App nur einmalig, um die Berechtigung zu erteilen.</string>
 	<string name="setup_shizuku_action">Shizuku verwenden</string>
+	<string name="setup_shizuku_install_action">Shizuku installieren</string>
 	<string name="setup_action_use_root">Root verwenden</string>
 	<string name="setup_root_request">Root-Zugriff wird angefordert…</string>
 	<string name="setup_root_grant_failed">Die Berechtigung konnte nicht über den Root-Zugriff erteilt werden.</string>

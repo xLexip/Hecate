@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Alternatieve methoden</string>
 	<string name="setup_grant_title">Stap 3: verleen de machtiging vanaf het tweede apparaat</string>
 	<string name="setup_grant_body">Open deze link op het tweede apparaat en volg de instructies:</string>
-	<string name="setup_alternatives">Je kunt ook zelf een ADB-opdracht uitvoeren of roottoegang gebruiken om de machtiging te verlenen. Shizuku wordt eveneens ondersteund.</string>
+	<string name="setup_alternatives">Je kunt ook zelf een ADB-opdracht uitvoeren of roottoegang gebruiken om de machtiging te verlenen.</string>
 	<string name="setup_permission_granted">Machtiging verleend.</string>
 	<string name="setup_permission_not_granted">Machtiging nog niet verleend. Voltooi de installatie met het tweede apparaat.</string>
 	<string name="setup_usb_debugging_disabled">USB-foutopsporing inschakelen</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Is dit veilig?</string>
 	<string name="setup_is_this_safe_body">Met deze machtiging kunnen apps beveiligde systeeminstellingen wijzigen. Adaptive Theme gebruikt de machtiging alleen voor functies zoals het wisselen van de donkere modus. Als je de app verwijdert, wordt de machtiging ingetrokken. De broncode is openbaar op GitHub.</string>
 	<string name="setup_shizuku_title">Alternatief: Shizuku</string>
-	<string name="setup_shizuku_description">Als je Shizuku al gebruikt, heb je geen tweede apparaat of ADB nodig. Shizuku is slechts één keer nodig om de machtiging te verlenen.</string>
+	<string name="setup_shizuku_description">Met Shizuku heb je geen tweede apparaat of ADB nodig. De app is slechts één keer nodig om de machtiging te verlenen.</string>
 	<string name="setup_shizuku_action">Shizuku gebruiken</string>
+	<string name="setup_shizuku_install_action">Shizuku installeren</string>
 	<string name="setup_action_use_root">Roottoegang gebruiken</string>
 	<string name="setup_root_request">Roottoegang aanvragen…</string>
 	<string name="setup_root_grant_failed">Kan de machtiging niet met roottoegang verlenen.</string>
