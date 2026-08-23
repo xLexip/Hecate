@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Fluxo de avaliação de teste concluído</string>
 	<string name="easter_egg_answer">A resposta à questão fundamental sobre a vida, o universo e tudo o resto.</string>
 	<string name="description_service_purpose">Alterna o Android entre os modos claro e escuro com base na luz ambiente.</string>
-	<string name="description_switching_conditions">O tema só muda imediatamente depois de o ecrã ligar e apenas se o sensor não estiver tapado.</string>
+	<string name="description_switching_conditions">O tema só muda pouco depois de o ecrã ligar e apenas se o sensor não estiver tapado.</string>
 	<string name="description_notification_service_running">Pronto para ajustar o tema do sistema quando o ecrã for ligado.</string>
 	<string name="device_covered_title">Sensor tapado</string>
 	<string name="device_covered_message">A mudança de tema está em pausa porque o sensor de luz está tapado.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Métodos alternativos</string>
 	<string name="setup_grant_title">Passo 3: conceda a permissão a partir do segundo dispositivo</string>
 	<string name="setup_grant_body">Abra esta ligação no segundo dispositivo e siga as instruções:</string>
-	<string name="setup_alternatives">Em alternativa, pode executar um comando ADB ou utilizar o acesso root para conceder a permissão. O Shizuku também é suportado.</string>
+	<string name="setup_alternatives">Em alternativa, pode executar um comando ADB ou utilizar o acesso root para conceder a permissão.</string>
 	<string name="setup_permission_granted">Permissão concedida.</string>
 	<string name="setup_permission_not_granted">A permissão ainda não foi concedida. Conclua a configuração com o segundo dispositivo.</string>
 	<string name="setup_usb_debugging_disabled">Ativar Depuração USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">É seguro?</string>
 	<string name="setup_is_this_safe_body">Esta permissão permite que as aplicações alterem definições protegidas do sistema. O Adaptive Theme utiliza-a apenas para funcionalidades como a mudança do modo escuro. A desinstalação da aplicação revoga a permissão. O código-fonte está disponível publicamente no GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Se já utiliza o Shizuku, não precisa de um segundo dispositivo nem do ADB. O Shizuku só é necessário uma vez para conceder a permissão.</string>
+	<string name="setup_shizuku_description">Com o Shizuku, não precisa de um segundo dispositivo nem do ADB. A aplicação só é necessária uma vez para conceder a permissão.</string>
 	<string name="setup_shizuku_action">Utilizar Shizuku</string>
+	<string name="setup_shizuku_install_action">Instalar Shizuku</string>
 	<string name="setup_action_use_root">Utilizar acesso root</string>
 	<string name="setup_root_request">A solicitar acesso root…</string>
 	<string name="setup_root_grant_failed">Não foi possível conceder a permissão com acesso root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Ocorreu um erro inesperado ao utilizar o Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Fundo</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Desfocar ecrã de bloqueio</string>
+	<string name="description_lock_screen_wallpaper_blur">Utilize uma versão desfocada do papel de parede no ecrã de bloqueio.</string>
 	<string name="description_device_wallpaper_sync">Utilize fundos diferentes para os modos claro e escuro. A mudança pode demorar um momento e afetar o desempenho.</string>
 	<string name="action_select_day_wallpaper">Modo claro:</string>
 	<string name="action_select_night_wallpaper">Modo escuro:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Não definido</string>
 	<string name="live_wallpaper_warning_title">Fundo animado ativo</string>
 	<string name="live_wallpaper_warning_message">Ao ativar a sincronização, o fundo animado atual será substituído por fundos estáticos para os modos claro e escuro. Deseja continuar?</string>
+	<string name="github_star_prompt_description">O Adaptive Theme é gratuito, sem anúncios e de código aberto. Se lhe for útil, uma estrela no GitHub é uma forma simples de o apoiar gratuitamente.</string>
+	<string name="github_star_prompt_action">Dar uma estrela no GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ocultar para sempre</string>
+	<string name="github_star_prompt_thank_you">Obrigado!</string>
 </resources>

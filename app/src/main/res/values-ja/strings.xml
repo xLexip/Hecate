@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">テスト用レビュー フローが完了しました</string>
 	<string name="easter_egg_answer">生命、宇宙、そして万物についての究極の疑問の答え。</string>
 	<string name="description_service_purpose">周囲の明るさに応じて Android のライトモードとダークモードを切り替えます。</string>
-	<string name="description_switching_conditions">テーマは、画面が点灯した直後に限り、センサーが覆われていない場合にのみ切り替わります。</string>
+	<string name="description_switching_conditions">テーマは、画面が点灯してからしばらくの間に限り、センサーが覆われていない場合にのみ切り替わります。</string>
 	<string name="description_notification_service_running">画面の点灯時にシステムテーマを調整できます。</string>
 	<string name="device_covered_title">センサーが覆われています</string>
 	<string name="device_covered_message">光センサーが覆われているため、テーマの切り替えを一時停止しています。</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">その他の方法</string>
 	<string name="setup_grant_title">ステップ 3: 2 台目のデバイスから権限を付与</string>
 	<string name="setup_grant_body">2 台目のデバイスでこのリンクを開き、手順に沿って操作してください。</string>
-	<string name="setup_alternatives">ADB コマンドを自分で実行するか、root アクセスを使用して権限を付与することもできます。Shizuku にも対応しています。</string>
+	<string name="setup_alternatives">ADB コマンドを自分で実行するか、root アクセスを使用して権限を付与することもできます。</string>
 	<string name="setup_permission_granted">権限が付与されました。</string>
 	<string name="setup_permission_not_granted">権限はまだ付与されていません。2 台目のデバイスで設定を完了してください。</string>
 	<string name="setup_usb_debugging_disabled">USB デバッグを有効にする</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">安全ですか？</string>
 	<string name="setup_is_this_safe_body">この権限により、アプリは保護されたシステム設定を変更できます。Adaptive Theme は、ダークモードの切り替えなどの機能にのみ使用します。アプリをアンインストールすると権限は取り消されます。ソースコードは GitHub で公開されています。</string>
 	<string name="setup_shizuku_title">別の方法: Shizuku</string>
-	<string name="setup_shizuku_description">すでに Shizuku を使用している場合、2 台目のデバイスや ADB は不要です。権限を付与する際に一度だけ Shizuku が必要です。</string>
+	<string name="setup_shizuku_description">Shizuku を使用すれば、2 台目のデバイスや ADB は不要です。権限を付与する際に一度だけアプリが必要です。</string>
 	<string name="setup_shizuku_action">Shizuku を使用</string>
+	<string name="setup_shizuku_install_action">Shizuku をインストール</string>
 	<string name="setup_action_use_root">root アクセスを使用</string>
 	<string name="setup_root_request">root アクセスをリクエストしています…</string>
 	<string name="setup_root_grant_failed">root アクセスで権限を付与できませんでした。</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku の使用中に予期しないエラーが発生しました。</string>
 	<string name="title_device_wallpaper_sync">壁紙</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">ロック画面をぼかす</string>
+	<string name="description_lock_screen_wallpaper_blur">ロック画面で壁紙のぼかしたバージョンを使用します。</string>
 	<string name="description_device_wallpaper_sync">ライトモードとダークモードで別々の壁紙を使用します。切り替えには少し時間がかかり、パフォーマンスに影響する場合があります。</string>
 	<string name="action_select_day_wallpaper">ライトモード:</string>
 	<string name="action_select_night_wallpaper">ダークモード:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">未設定</string>
 	<string name="live_wallpaper_warning_title">ライブ壁紙が有効です</string>
 	<string name="live_wallpaper_warning_message">壁紙の同期を有効にすると、現在のライブ壁紙がライトモードとダークモード用の静止画に置き換えられます。続行しますか？</string>
+	<string name="github_star_prompt_description">Adaptive Theme は無料、広告なし、オープンソースです。役に立ったら、GitHub のスターで無料で気軽に応援できます。</string>
+	<string name="github_star_prompt_action">GitHub でスターする ↗</string>
+	<string name="github_star_prompt_dismiss_description">永久に非表示</string>
+	<string name="github_star_prompt_thank_you">ありがとうございます！</string>
 </resources>

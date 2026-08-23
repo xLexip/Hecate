@@ -34,7 +34,7 @@ class ScreenOnReceiverTest {
 		val receiver = ScreenOnReceiver(
 			proximitySensorManager = proximity,
 			lightSensorManager = light,
-			themeController = { requestedTheme = it },
+			themeController = { enabled, _ -> requestedTheme = enabled },
 			adaptiveThemeThresholdLux = 100f,
 			stayDarkAtNightEnabled = false,
 			nightStartMinutes = 21 * 60,
@@ -61,7 +61,7 @@ class ScreenOnReceiverTest {
 		val receiver = ScreenOnReceiver(
 			proximitySensorManager = proximity,
 			lightSensorManager = light,
-			themeController = { themeCalls++ },
+			themeController = { _, _ -> themeCalls++ },
 			adaptiveThemeThresholdLux = 100f,
 			stayDarkAtNightEnabled = false,
 			nightStartMinutes = 21 * 60,

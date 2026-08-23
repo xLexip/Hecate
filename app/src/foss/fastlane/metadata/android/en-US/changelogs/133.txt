@@ -1,0 +1,5 @@
+• Added an optional blur effect for lock screen wallpapers (#199).
+• Wallpaper Theme Sync now applies selected wallpapers immediately when enabled. 
+• Improved theme switching and screen-on reliability, including proximity-sensor handling.
+• Made Shizuku a more prominent setup alternative. 
+• Minor test, build, dependency, and documentation improvements.

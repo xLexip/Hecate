@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Preskusni postopek ocenjevanja je končan</string>
 	<string name="easter_egg_answer">Odgovor na temeljno vprašanje o življenju, vesolju in sploh vsem.</string>
 	<string name="description_service_purpose">Preklaplja Android med svetlim in temnim načinom glede na svetlobo okolice.</string>
-	<string name="description_switching_conditions">Tema se spremeni le takoj po vklopu zaslona in le, če tipalo ni prekrito.</string>
+	<string name="description_switching_conditions">Tema se spremeni le kmalu po vklopu zaslona in le, če tipalo ni prekrito.</string>
 	<string name="description_notification_service_running">Pripravljeno na prilagoditev sistemske teme ob vklopu zaslona.</string>
 	<string name="device_covered_title">Tipalo je prekrito</string>
 	<string name="device_covered_message">Preklapljanje teme je začasno ustavljeno, ker je tipalo svetlobe prekrito.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Drugi načini</string>
 	<string name="setup_grant_title">3. korak: dodelite dovoljenje iz druge naprave</string>
 	<string name="setup_grant_body">Odprite to povezavo v drugi napravi in sledite navodilom:</string>
-	<string name="setup_alternatives">Ukaz ADB lahko izvedete tudi sami ali dovoljenje dodelite s korenskim dostopom. Podprt je tudi Shizuku.</string>
+	<string name="setup_alternatives">Ukaz ADB lahko izvedete tudi sami ali dovoljenje dodelite s korenskim dostopom.</string>
 	<string name="setup_permission_granted">Dovoljenje je dodeljeno.</string>
 	<string name="setup_permission_not_granted">Dovoljenje še ni dodeljeno. Dokončajte nastavitev z drugo napravo.</string>
 	<string name="setup_usb_debugging_disabled">Vklopi odpravljanje napak USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Je to varno?</string>
 	<string name="setup_is_this_safe_body">To dovoljenje aplikacijam omogoča spreminjanje zaščitenih sistemskih nastavitev. Adaptive Theme ga uporablja le za funkcije, kot je preklapljanje temnega načina. Z odstranitvijo aplikacije se dovoljenje prekliče. Izvorna koda je javno dostopna na GitHubu.</string>
 	<string name="setup_shizuku_title">Druga možnost: Shizuku</string>
-	<string name="setup_shizuku_description">Če že uporabljate Shizuku, ne potrebujete druge naprave ali ADB-ja. Shizuku potrebujete le enkrat za dodelitev dovoljenja.</string>
+	<string name="setup_shizuku_description">S Shizukujem ne potrebujete druge naprave ali ADB-ja. Aplikacijo potrebujete le enkrat za dodelitev dovoljenja.</string>
 	<string name="setup_shizuku_action">Uporabi Shizuku</string>
+	<string name="setup_shizuku_install_action">Namesti Shizuku</string>
 	<string name="setup_action_use_root">Uporabi korenski dostop</string>
 	<string name="setup_root_request">Zahtevanje korenskega dostopa…</string>
 	<string name="setup_root_grant_failed">Dovoljenja ni bilo mogoče dodeliti s korenskim dostopom.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Pri uporabi aplikacije Shizuku je prišlo do nepričakovane napake.</string>
 	<string name="title_device_wallpaper_sync">Ozadje</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Zamegli zaklenjeni zaslon</string>
+	<string name="description_lock_screen_wallpaper_blur">Na zaklenjenem zaslonu uporabite zamegljeno različico ozadja.</string>
 	<string name="description_device_wallpaper_sync">Uporabljajte ločeni ozadji za svetli in temni način. Preklop lahko traja trenutek in vpliva na delovanje.</string>
 	<string name="action_select_day_wallpaper">Svetli način:</string>
 	<string name="action_select_night_wallpaper">Temni način:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Ni nastavljeno</string>
 	<string name="live_wallpaper_warning_title">Aktivno živo ozadje</string>
 	<string name="live_wallpaper_warning_message">Vklop sinhronizacije bo trenutno živo ozadje zamenjal s statičnima ozadjema za svetli in temni način. Želite nadaljevati?</string>
+	<string name="github_star_prompt_description">Adaptive Theme je brezplačen, brez oglasov in odprtokoden. Če vam koristi, ga lahko preprosto in brezplačno podprete z zvezdico na GitHubu.</string>
+	<string name="github_star_prompt_action">Dodaj zvezdico na GitHubu ↗</string>
+	<string name="github_star_prompt_dismiss_description">Skrij za vedno</string>
+	<string name="github_star_prompt_thank_you">Hvala!</string>
 </resources>

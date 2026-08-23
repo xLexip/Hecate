@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Đã hoàn tất quy trình đánh giá thử</string>
 	<string name="easter_egg_answer">Câu trả lời cho câu hỏi tối thượng về sự sống, vũ trụ và vạn vật.</string>
 	<string name="description_service_purpose">Chuyển Android giữa chế độ sáng và tối dựa trên ánh sáng xung quanh.</string>
-	<string name="description_switching_conditions">Chủ đề chỉ thay đổi ngay sau khi màn hình bật và chỉ khi cảm biến không bị che.</string>
+	<string name="description_switching_conditions">Chủ đề chỉ thay đổi trong thời gian ngắn sau khi màn hình bật và chỉ khi cảm biến không bị che.</string>
 	<string name="description_notification_service_running">Sẵn sàng điều chỉnh giao diện hệ thống khi màn hình bật.</string>
 	<string name="device_covered_title">Cảm biến bị che</string>
 	<string name="device_covered_message">Đã tạm dừng chuyển đổi giao diện vì cảm biến ánh sáng bị che.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Phương thức khác</string>
 	<string name="setup_grant_title">Bước 3: Cấp quyền từ thiết bị thứ hai</string>
 	<string name="setup_grant_body">Mở đường liên kết này trên thiết bị thứ hai rồi làm theo hướng dẫn:</string>
-	<string name="setup_alternatives">Bạn cũng có thể tự chạy lệnh ADB hoặc cấp quyền bằng quyền truy cập root. Shizuku cũng được hỗ trợ.</string>
+	<string name="setup_alternatives">Bạn cũng có thể tự chạy lệnh ADB hoặc cấp quyền bằng quyền truy cập root.</string>
 	<string name="setup_permission_granted">Đã cấp quyền.</string>
 	<string name="setup_permission_not_granted">Chưa cấp quyền. Hãy hoàn tất thiết lập bằng thiết bị thứ hai.</string>
 	<string name="setup_usb_debugging_disabled">Bật tính năng Gỡ lỗi USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Điều này có an toàn không?</string>
 	<string name="setup_is_this_safe_body">Quyền này cho phép ứng dụng thay đổi các cài đặt hệ thống được bảo vệ. Adaptive Theme chỉ dùng quyền này cho các tính năng như chuyển chế độ tối. Việc gỡ cài đặt ứng dụng sẽ thu hồi quyền. Mã nguồn được công khai trên GitHub.</string>
 	<string name="setup_shizuku_title">Phương thức khác: Shizuku</string>
-	<string name="setup_shizuku_description">Nếu đã dùng Shizuku, bạn không cần thiết bị thứ hai hoặc ADB. Chỉ cần dùng Shizuku một lần để cấp quyền.</string>
+	<string name="setup_shizuku_description">Với Shizuku, bạn không cần thiết bị thứ hai hoặc ADB. Chỉ cần dùng ứng dụng một lần để cấp quyền.</string>
 	<string name="setup_shizuku_action">Dùng Shizuku</string>
+	<string name="setup_shizuku_install_action">Cài đặt Shizuku</string>
 	<string name="setup_action_use_root">Dùng quyền truy cập root</string>
 	<string name="setup_root_request">Đang yêu cầu quyền truy cập root…</string>
 	<string name="setup_root_grant_failed">Không thể cấp quyền bằng quyền truy cập root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Đã xảy ra lỗi không mong muốn khi dùng Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Hình nền</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Làm mờ màn hình khóa</string>
+	<string name="description_lock_screen_wallpaper_blur">Sử dụng phiên bản làm mờ của hình nền trên màn hình khóa.</string>
 	<string name="description_device_wallpaper_sync">Sử dụng hình nền riêng cho chế độ sáng và tối. Việc chuyển đổi có thể mất một lúc và ảnh hưởng đến hiệu suất.</string>
 	<string name="action_select_day_wallpaper">Chế độ sáng:</string>
 	<string name="action_select_night_wallpaper">Chế độ tối:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Chưa đặt</string>
 	<string name="live_wallpaper_warning_title">Hình nền động đang hoạt động</string>
 	<string name="live_wallpaper_warning_message">Việc bật đồng bộ hóa hình nền sẽ thay hình nền động hiện tại bằng hình nền tĩnh cho chế độ sáng và tối. Bạn có muốn tiếp tục không?</string>
+	<string name="github_star_prompt_description">Adaptive Theme miễn phí, không quảng cáo và có mã nguồn mở. Nếu ứng dụng hữu ích với bạn, tặng sao trên GitHub là một cách đơn giản để hỗ trợ ứng dụng miễn phí.</string>
+	<string name="github_star_prompt_action">Tặng sao trên GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ẩn vĩnh viễn</string>
+	<string name="github_star_prompt_thank_you">Cảm ơn!</string>
 </resources>

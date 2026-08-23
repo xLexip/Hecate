@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Le thème ne change qu’immédiatement après l’allumage de l’écran, et seulement si le capteur n’est pas couvert.
+		Le thème ne change que peu après l’allumage de l’écran, et seulement si le capteur n’est pas couvert.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Autres méthodes</string>
 	<string name="setup_grant_title">Étape 3 : accorder l’autorisation depuis le second appareil</string>
 	<string name="setup_grant_body">Ouvrez ce lien sur le second appareil et suivez les instructions :</string>
-	<string name="setup_alternatives">Vous pouvez aussi exécuter vous-même une commande ADB ou utiliser l’accès root pour accorder l’autorisation. Shizuku est également pris en charge.</string>
+	<string name="setup_alternatives">Vous pouvez aussi exécuter vous-même une commande ADB ou utiliser l’accès root pour accorder l’autorisation.</string>
 	<string name="setup_permission_granted">Autorisation accordée.</string>
 	<string name="setup_permission_not_granted">Autorisation pas encore accordée. Terminez la configuration avec le second appareil.</string>
 	<string name="setup_usb_debugging_disabled">Activer le débogage USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Est-ce sûr ?</string>
 	<string name="setup_is_this_safe_body">Cette autorisation permet aux applications de modifier des paramètres système protégés. Adaptive Theme l’utilise uniquement pour des fonctions telles que le changement de mode sombre. La désinstallation de l’application révoque l’autorisation, et le code source est public sur GitHub.</string>
 	<string name="setup_shizuku_title">Autre méthode : Shizuku</string>
-	<string name="setup_shizuku_description">Si vous utilisez déjà Shizuku, vous n’avez besoin ni d’un second appareil ni d’ADB. Shizuku n’est nécessaire qu’une seule fois pour accorder l’autorisation.</string>
+	<string name="setup_shizuku_description">Avec Shizuku, vous n’avez besoin ni d’un second appareil ni d’ADB. L’application n’est nécessaire qu’une seule fois pour accorder l’autorisation.</string>
 	<string name="setup_shizuku_action">Utiliser Shizuku</string>
+	<string name="setup_shizuku_install_action">Installer Shizuku</string>
 	<string name="setup_action_use_root">Utiliser l’accès root</string>
 	<string name="setup_root_request">Demande d’accès root…</string>
 	<string name="setup_root_grant_failed">Impossible d’accorder l’autorisation avec l’accès root.</string>
@@ -111,6 +112,8 @@
 	<string name="shizuku_grant_unexpected">Erreur inattendue lors de l’utilisation de Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Fond d’écran</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Flouter l’écran de verrouillage</string>
+	<string name="description_lock_screen_wallpaper_blur">Utilisez une version floutée du fond d’écran sur l’écran de verrouillage.</string>
 	<string name="description_device_wallpaper_sync">Utilisez des fonds d’écran distincts pour les modes clair et sombre. Le changement peut prendre un instant et affecter les performances.</string>
 	<string name="action_select_day_wallpaper">Mode clair :</string>
 	<string name="action_select_night_wallpaper">Mode sombre :</string>
@@ -118,4 +121,8 @@
 	<string name="wallpaper_status_not_set">Non défini</string>
 	<string name="live_wallpaper_warning_title">Fond d’écran animé actif</string>
 	<string name="live_wallpaper_warning_message">L’activation de la synchronisation remplacera votre fond d’écran animé actuel par des fonds statiques pour les modes clair et sombre. Voulez-vous continuer ?</string>
+	<string name="github_star_prompt_description">Adaptive Theme est gratuit, sans publicité et open source. S’il vous est utile, une étoile sur GitHub est un moyen simple de le soutenir gratuitement.</string>
+	<string name="github_star_prompt_action">Ajouter une étoile sur GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Masquer définitivement</string>
+	<string name="github_star_prompt_thank_you">Merci !</string>
 </resources>

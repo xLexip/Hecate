@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Flux de valoració de prova completat</string>
 	<string name="easter_egg_answer">La resposta a la pregunta definitiva sobre la vida, l’univers i tota la resta.</string>
 	<string name="description_service_purpose">Alterna Android entre els modes clar i fosc segons la llum ambiental.</string>
-	<string name="description_switching_conditions">El tema només canvia immediatament després d’encendre la pantalla i només si el sensor no està cobert.</string>
+	<string name="description_switching_conditions">El tema només canvia poc després d’encendre la pantalla i només si el sensor no està cobert.</string>
 	<string name="description_notification_service_running">A punt per ajustar el tema del sistema en encendre la pantalla.</string>
 	<string name="device_covered_title">Sensor cobert</string>
 	<string name="device_covered_message">El canvi de tema està en pausa perquè el sensor de llum està cobert.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Mètodes alternatius</string>
 	<string name="setup_grant_title">Pas 3: concedeix el permís des del segon dispositiu</string>
 	<string name="setup_grant_body">Obre aquest enllaç al segon dispositiu i segueix les instruccions:</string>
-	<string name="setup_alternatives">També pots executar una ordre ADB o utilitzar l’accés root per concedir el permís. Shizuku també és compatible.</string>
+	<string name="setup_alternatives">També pots executar una ordre ADB o utilitzar l’accés root per concedir el permís.</string>
 	<string name="setup_permission_granted">Permís concedit.</string>
 	<string name="setup_permission_not_granted">El permís encara no s’ha concedit. Completa la configuració amb el segon dispositiu.</string>
 	<string name="setup_usb_debugging_disabled">Activa la depuració USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">És segur?</string>
 	<string name="setup_is_this_safe_body">Aquest permís permet que les aplicacions modifiquin opcions protegides del sistema. Adaptive Theme només l’utilitza per a funcions com canviar el mode fosc. En desinstal·lar l’aplicació, es revoca el permís. El codi font és públic a GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Si ja utilitzes Shizuku, no necessites cap segon dispositiu ni ADB. Shizuku només és necessari una vegada per concedir el permís.</string>
+	<string name="setup_shizuku_description">Amb Shizuku no necessites cap segon dispositiu ni ADB. L’aplicació només és necessària una vegada per concedir el permís.</string>
 	<string name="setup_shizuku_action">Utilitza Shizuku</string>
+	<string name="setup_shizuku_install_action">Instal·la Shizuku</string>
 	<string name="setup_action_use_root">Utilitza l’accés root</string>
 	<string name="setup_root_request">S’està sol·licitant accés root…</string>
 	<string name="setup_root_grant_failed">No s’ha pogut concedir el permís amb accés root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">S’ha produït un error inesperat en utilitzar Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Fons de pantalla</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Difumina la pantalla de bloqueig</string>
+	<string name="description_lock_screen_wallpaper_blur">Utilitza una versió difuminada del fons de pantalla a la pantalla de bloqueig.</string>
 	<string name="description_device_wallpaper_sync">Utilitza fons de pantalla separats per als modes clar i fosc. El canvi pot trigar un moment i afectar el rendiment.</string>
 	<string name="action_select_day_wallpaper">Mode clar:</string>
 	<string name="action_select_night_wallpaper">Mode fosc:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">No definit</string>
 	<string name="live_wallpaper_warning_title">Fons de pantalla animat actiu</string>
 	<string name="live_wallpaper_warning_message">En activar la sincronització, el fons de pantalla animat actual se substituirà per fons estàtics per als modes clar i fosc. Vols continuar?</string>
+	<string name="github_star_prompt_description">Adaptive Theme és gratuït, sense anuncis i de codi obert. Si et resulta útil, una estrella a GitHub és una manera senzilla de donar-hi suport de franc.</string>
+	<string name="github_star_prompt_action">Afegeix una estrella a GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Amaga-ho per sempre</string>
+	<string name="github_star_prompt_thank_you">Gràcies!</string>
 </resources>

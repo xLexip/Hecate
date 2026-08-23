@@ -24,27 +24,40 @@ import kotlinx.coroutines.launch
 internal class WallpaperUpdateScheduler(
 	private val scope: CoroutineScope,
 	private val dispatcher: CoroutineDispatcher,
-	private val applyWallpaper: (Boolean, String?, String?) -> Boolean
+	private val applyWallpaper: (Boolean, String?, String?, Boolean) -> Boolean
 ) {
 	private val lock = Any()
 	private var pendingRequest: WallpaperRequest? = null
 	private var worker: Job? = null
 
-	fun schedule(isDark: Boolean, dayUri: String?, nightUri: String?) {
+	fun schedule(
+		isDark: Boolean,
+		dayUri: String?,
+		nightUri: String?,
+		lockScreenWallpaperBlurEnabled: Boolean
+	) {
 		synchronized(lock) {
-			pendingRequest = WallpaperRequest(isDark, dayUri, nightUri)
+			pendingRequest = WallpaperRequest(isDark, dayUri, nightUri, lockScreenWallpaperBlurEnabled)
 			if (worker?.isActive != true) {
 				worker = scope.launch(dispatcher) { drainRequests() }
 			}
 		}
 	}
 
+	fun schedule(isDark: Boolean, dayUri: String?, nightUri: String?) =
+		schedule(isDark, dayUri, nightUri, lockScreenWallpaperBlurEnabled = false)
+
 	private suspend fun drainRequests() {
 		while (true) {
 			val request = synchronized(lock) {
 				pendingRequest.also { pendingRequest = null }
 			} ?: return
-			applyWallpaper(request.isDark, request.dayUri, request.nightUri)
+			applyWallpaper(
+				request.isDark,
+				request.dayUri,
+				request.nightUri,
+				request.lockScreenWallpaperBlurEnabled
+			)
 			synchronized(lock) {
 				if (pendingRequest == null) {
 					worker = null
@@ -58,5 +71,6 @@ internal class WallpaperUpdateScheduler(
 private data class WallpaperRequest(
 	val isDark: Boolean,
 	val dayUri: String?,
-	val nightUri: String?
+	val nightUri: String?,
+	val lockScreenWallpaperBlurEnabled: Boolean
 )

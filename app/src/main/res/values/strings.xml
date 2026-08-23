@@ -27,7 +27,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		The theme changes only immediately after the screen turns on, and only if the sensor is uncovered.
+		The theme changes only shortly after the screen turns on, and only if the sensor is uncovered.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -51,12 +51,19 @@
 	<string name="title_current_brightness">Current Ambient Light</string>
 	<string name="title_custom_threshold">Custom Threshold</string>
 	<string name="title_more">More</string>
-	<string name="title_night_dark_lock">Night mode</string>
+	<string name="title_night_dark_lock">Night Mode</string>
 	<string name="title_night_start_time_picker">Night Start</string>
 	<string name="title_night_end_time_picker">Night End</string>
 	<string name="title_notification_channel_service">Theme Switching Service</string>
 	<string name="title_send_feedback">Send Feedback</string>
 	<string name="title_support_project">Support the project</string>
+	<string name="github_star_prompt_description">
+		Adaptive Theme is free, ad-free, and open source.
+		If it’s useful to you, a GitHub star is a simple way to support it for free.
+	</string>
+	<string name="github_star_prompt_action">Star on GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Hide forever</string>
+	<string name="github_star_prompt_thank_you">Thank you!</string>
 
 	<string name="adaptive_threshold_bright">Bright</string>
 	<string name="adaptive_threshold_custom">Custom</string>
@@ -84,7 +91,7 @@
 	<string name="setup_alternative_methods">Alternative methods</string>
 	<string name="setup_grant_title">Step 3: Grant permission from the second device</string>
 	<string name="setup_grant_body">Open this link on the second device and follow the instructions:</string>
-	<string name="setup_alternatives">Alternatively, you can execute an ADB command yourself or use root to grant the permission. Shizuku is also supported.</string>
+	<string name="setup_alternatives">Alternatively, you can execute an ADB command yourself or use root to grant the permission.</string>
 	<string name="setup_permission_granted">Permission granted.</string>
 	<string name="setup_permission_not_granted">Permission not yet granted. Please complete the setup with the other device.</string>
 	<string name="setup_usb_debugging_disabled">Enable USB Debugging</string>
@@ -97,8 +104,9 @@
 	<string name="setup_is_this_safe_title">Is this safe?</string>
 	<string name="setup_is_this_safe_body">This permission allows apps to modify secure system settings. Adaptive Theme uses it only for features such as switching dark mode. Uninstalling the app revokes the permission, and the source code is public on GitHub.</string>
 	<string name="setup_shizuku_title">Alternative: Shizuku</string>
-	<string name="setup_shizuku_description">If you already use Shizuku, you won’t need a second device or ADB. You only need Shizuku once to grant the permission.</string>
+	<string name="setup_shizuku_description">With Shizuku, you won’t need a second device or ADB. You only need it once to grant the permission.</string>
 	<string name="setup_shizuku_action">Use Shizuku instead</string>
+	<string name="setup_shizuku_install_action">Install Shizuku</string>
 	<string name="setup_action_use_root">Use root</string>
 	<string name="setup_root_request">Requesting root access…</string>
 	<string name="setup_root_grant_failed">Could not grant permission with root.</string>
@@ -116,6 +124,8 @@
 	<string name="title_device_wallpaper_sync">Wallpaper</string>
 	<string name="label_beta">Beta</string>
 	<string name="description_device_wallpaper_sync">Use separate light and dark mode wallpapers. Switching may take a moment and affect performance.</string>
+	<string name="title_lock_screen_wallpaper_blur">Blur Lock Screen</string>
+	<string name="description_lock_screen_wallpaper_blur">Use a blurred version of the wallpaper on the lock screen.</string>
 	<string name="action_select_day_wallpaper">Light mode:</string>
 	<string name="action_select_night_wallpaper">Dark mode:</string>
 	<string name="wallpaper_status_set">Set</string>

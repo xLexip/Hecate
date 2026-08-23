@@ -17,13 +17,14 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.SemanticsProperties
-import androidx.compose.ui.test.assertIsEnabled
-import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assert
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsEnabled
+import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.junit4.accessibility.enableAccessibilityChecks
 import androidx.compose.ui.test.junit4.v2.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
@@ -37,6 +38,7 @@ import dev.lexip.hecate.ui.setup.components.ForExpertsSectionCard
 import dev.lexip.hecate.ui.theme.HecateTheme
 import androidx.compose.ui.unit.dp
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -101,6 +103,41 @@ class SetupScreensTest {
 	}
 
 	@Test
+	fun connectStepOffersShizukuInstallCardWhenShizukuIsNotInstalled() {
+		var installCalls = 0
+		setConnectScreen(
+			state = SetupUiState(isShizukuInstalled = false),
+			onInstallShizuku = { installCalls++ }
+		)
+
+		composeRule.onNodeWithText(context.getString(R.string.setup_shizuku_install_action))
+			.performScrollTo()
+			.assertIsDisplayed()
+			.performClick()
+
+		assertEquals(1, installCalls)
+	}
+
+	@Test
+	fun connectStepUsesShizukuCardForGrantWhenShizukuIsInstalled() {
+		var grantCalls = 0
+		var installCalls = 0
+		setConnectScreen(
+			state = SetupUiState(isShizukuInstalled = true),
+			onGrantViaShizuku = { grantCalls++ },
+			onInstallShizuku = { installCalls++ }
+		)
+
+		composeRule.onNodeWithText(context.getString(R.string.setup_shizuku_action))
+			.performScrollTo()
+			.assertIsDisplayed()
+			.performClick()
+
+		assertEquals(1, grantCalls)
+		assertEquals(0, installCalls)
+	}
+
+	@Test
 	fun grantStepDisablesFinishWithoutPermission() {
 		setGrantScreen(SetupUiState())
 		composeRule.onNodeWithText(context.getString(R.string.action_finish))
@@ -159,6 +196,25 @@ class SetupScreensTest {
 	}
 
 	@Test
+	fun expertSectionDoesNotOfferShizukuAction() {
+		composeRule.setContent {
+			HecateTheme {
+				ForExpertsSectionCard()
+			}
+		}
+
+		composeRule.onNodeWithText(context.getString(R.string.setup_alternative_methods))
+			.performClick()
+		composeRule.waitForIdle()
+
+		assertTrue(
+			composeRule.onAllNodesWithText(context.getString(R.string.setup_shizuku_action))
+				.fetchSemanticsNodes()
+				.isEmpty()
+		)
+	}
+
+	@Test
 	fun expandingAlternativeMethodsAutoScrollsExpertActionsIntoView() {
 		composeRule.setContent {
 			HecateTheme {
@@ -209,18 +265,20 @@ class SetupScreensTest {
 
 	private fun setConnectScreen(
 		state: SetupUiState,
-		onNext: () -> Unit = {}
+		onNext: () -> Unit = {},
+		onGrantViaShizuku: () -> Unit = {},
+		onInstallShizuku: () -> Unit = {}
 	) {
 		composeRule.setContent {
 			HecateTheme {
 				B_ConnectUsbScreen(
 					uiState = state,
-					onGrantViaShizuku = {},
+					onGrantViaShizuku = onGrantViaShizuku,
 					onNext = onNext,
 					onBack = {},
 					onShareExpertCommand = {},
 					onUseRoot = {},
-					onInstallShizuku = {}
+					onInstallShizuku = onInstallShizuku
 				)
 			}
 		}
@@ -238,8 +296,7 @@ class SetupScreensTest {
 					onShareExpertCommand = {},
 					onFinish = onFinish,
 					onBack = {},
-					onUseRoot = {},
-					onInstallShizuku = {}
+					onUseRoot = {}
 				)
 			}
 		}

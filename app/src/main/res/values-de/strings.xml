@@ -23,7 +23,7 @@
     </string>
 
 	<string name="description_switching_conditions">
-		Das Theme wird nur unmittelbar nach dem Einschalten des Bildschirms geändert und nur, wenn der Sensor nicht verdeckt ist.
+		Das Theme wird nur kurz nach dem Einschalten des Bildschirms geändert und nur, wenn der Sensor nicht verdeckt ist.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -79,7 +79,7 @@
 	<string name="setup_alternative_methods">Alternative Methoden</string>
 	<string name="setup_grant_title">Schritt 3: Berechtigung vom zweiten Gerät erteilen</string>
 	<string name="setup_grant_body">Öffne diesen Link auf dem zweiten Gerät und folge den Anweisungen:</string>
-	<string name="setup_alternatives">Alternativ kannst du selbst einen ADB-Befehl ausführen oder die Berechtigung mit Root erteilen. Shizuku wird ebenfalls unterstützt.</string>
+	<string name="setup_alternatives">Alternativ kannst du selbst einen ADB-Befehl ausführen oder die Berechtigung mit Root erteilen.</string>
 	<string name="setup_permission_granted">Berechtigung erteilt.</string>
 	<string name="setup_permission_not_granted">Berechtigung noch nicht erteilt. Schließe die Einrichtung mit dem zweiten Gerät ab.</string>
 	<string name="setup_usb_debugging_disabled">USB-Debugging aktivieren</string>
@@ -92,8 +92,9 @@
 	<string name="setup_is_this_safe_title">Ist das sicher?</string>
 	<string name="setup_is_this_safe_body">Diese Berechtigung erlaubt Apps, geschützte Systemeinstellungen zu ändern. Adaptive Theme nutzt sie nur für Funktionen wie den Wechsel des dunklen Modus. Beim Deinstallieren der App wird die Berechtigung entzogen. Der Quellcode ist auf GitHub öffentlich einsehbar.</string>
 	<string name="setup_shizuku_title">Alternative: Shizuku</string>
-	<string name="setup_shizuku_description">Wenn du Shizuku bereits verwendest, benötigst du weder ein zweites Gerät noch ADB. Du brauchst Shizuku nur einmalig, um die Berechtigung zu erteilen.</string>
+	<string name="setup_shizuku_description">Mit Shizuku benötigst du weder ein zweites Gerät noch ADB. Du brauchst die App nur einmalig, um die Berechtigung zu erteilen.</string>
 	<string name="setup_shizuku_action">Shizuku verwenden</string>
+	<string name="setup_shizuku_install_action">Shizuku installieren</string>
 	<string name="setup_action_use_root">Root verwenden</string>
 	<string name="setup_root_request">Root-Zugriff wird angefordert…</string>
 	<string name="setup_root_grant_failed">Die Berechtigung konnte nicht über den Root-Zugriff erteilt werden.</string>
@@ -112,10 +113,16 @@
 	<string name="title_device_wallpaper_sync">Hintergrundbild</string>
 	<string name="label_beta">Beta</string>
 	<string name="description_device_wallpaper_sync">Verwende separate Hintergrundbilder für den hellen und dunklen Modus. Der Wechsel kann einen Moment dauern und die Leistung beeinträchtigen.</string>
+	<string name="title_lock_screen_wallpaper_blur">Sperrbildschirm weichzeichnen</string>
+	<string name="description_lock_screen_wallpaper_blur">Verwende auf dem Sperrbildschirm eine weichgezeichnete Version des Hintergrundbilds.</string>
 	<string name="action_select_day_wallpaper">Heller Modus:</string>
 	<string name="action_select_night_wallpaper">Dunkler Modus:</string>
 	<string name="wallpaper_status_set">Festgelegt</string>
 	<string name="wallpaper_status_not_set">Nicht festgelegt</string>
 	<string name="live_wallpaper_warning_title">Live-Hintergrundbild aktiv</string>
 	<string name="live_wallpaper_warning_message">Beim Aktivieren der Hintergrundbild-Synchronisierung wird dein aktuelles Live-Hintergrundbild durch statische Hintergrundbilder für den hellen und dunklen Modus ersetzt. Möchtest du fortfahren?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ist kostenlos, werbefrei und quelloffen. Wenn dir die App weiterhilft, kannst du sie mit einem Stern auf GitHub kostenlos unterstützen.</string>
+	<string name="github_star_prompt_action">Stern auf GitHub geben ↗</string>
+	<string name="github_star_prompt_dismiss_description">Für immer ausblenden</string>
+	<string name="github_star_prompt_thank_you">Danke!</string>
 </resources>

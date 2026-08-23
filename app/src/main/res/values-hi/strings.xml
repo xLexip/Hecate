@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">टेस्ट समीक्षा प्रक्रिया पूरी हुई</string>
 	<string name="easter_egg_answer">ज़िंदगी, ब्रह्मांड और हर चीज़ से जुड़े सबसे बड़े सवाल का जवाब।</string>
 	<string name="description_service_purpose">आस-पास की रोशनी के हिसाब से Android को लाइट और डार्क मोड के बीच बदलता है।</string>
-	<string name="description_switching_conditions">थीम केवल स्क्रीन चालू होने के तुरंत बाद और सेंसर ढका न होने पर ही बदलती है।</string>
+	<string name="description_switching_conditions">थीम केवल स्क्रीन चालू होने के कुछ ही समय बाद और सेंसर ढका न होने पर ही बदलती है।</string>
 	<string name="description_notification_service_running">स्क्रीन चालू होने पर सिस्टम थीम बदलने के लिए तैयार है।</string>
 	<string name="device_covered_title">सेंसर ढका हुआ है</string>
 	<string name="device_covered_message">लाइट सेंसर ढका होने की वजह से थीम बदलना रोका गया है।</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">दूसरे तरीके</string>
 	<string name="setup_grant_title">तीसरा चरण: दूसरे डिवाइस से अनुमति दें</string>
 	<string name="setup_grant_body">दूसरे डिवाइस पर यह लिंक खोलें और निर्देशों का पालन करें:</string>
-	<string name="setup_alternatives">आप खुद ADB कमांड चला सकते हैं या root ऐक्सेस से अनुमति दे सकते हैं। Shizuku भी काम करता है।</string>
+	<string name="setup_alternatives">आप खुद ADB कमांड चला सकते हैं या root ऐक्सेस से अनुमति दे सकते हैं।</string>
 	<string name="setup_permission_granted">अनुमति दी गई।</string>
 	<string name="setup_permission_not_granted">अभी अनुमति नहीं दी गई है। दूसरे डिवाइस से सेटअप पूरा करें।</string>
 	<string name="setup_usb_debugging_disabled">यूएसबी डीबगिंग चालू करें</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">क्या यह सुरक्षित है?</string>
 	<string name="setup_is_this_safe_body">इस अनुमति से ऐप्लिकेशन सुरक्षित सिस्टम सेटिंग बदल सकते हैं। Adaptive Theme इसका इस्तेमाल सिर्फ़ डार्क मोड बदलने जैसी सुविधाओं के लिए करता है। ऐप्लिकेशन को अनइंस्टॉल करने पर अनुमति हट जाती है। सोर्स कोड GitHub पर सार्वजनिक है।</string>
 	<string name="setup_shizuku_title">दूसरा तरीका: Shizuku</string>
-	<string name="setup_shizuku_description">अगर आप पहले से Shizuku का इस्तेमाल करते हैं, तो दूसरे डिवाइस या ADB की ज़रूरत नहीं है। अनुमति देने के लिए Shizuku सिर्फ़ एक बार चाहिए।</string>
+	<string name="setup_shizuku_description">Shizuku के साथ दूसरे डिवाइस या ADB की ज़रूरत नहीं है। अनुमति देने के लिए ऐप सिर्फ़ एक बार चाहिए।</string>
 	<string name="setup_shizuku_action">Shizuku का इस्तेमाल करें</string>
+	<string name="setup_shizuku_install_action">Shizuku इंस्टॉल करें</string>
 	<string name="setup_action_use_root">root ऐक्सेस का इस्तेमाल करें</string>
 	<string name="setup_root_request">root ऐक्सेस का अनुरोध किया जा रहा है…</string>
 	<string name="setup_root_grant_failed">root ऐक्सेस से अनुमति नहीं दी जा सकी।</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku का इस्तेमाल करते समय कोई अनचाही गड़बड़ी हुई।</string>
 	<string name="title_device_wallpaper_sync">वॉलपेपर</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">लॉक स्क्रीन धुंधली करें</string>
+	<string name="description_lock_screen_wallpaper_blur">लॉक स्क्रीन पर वॉलपेपर के धुंधले संस्करण का उपयोग करें।</string>
 	<string name="description_device_wallpaper_sync">लाइट और डार्क मोड के लिए अलग-अलग वॉलपेपर इस्तेमाल करें। बदलने में कुछ समय लग सकता है और परफ़ॉर्मेंस प्रभावित हो सकती है।</string>
 	<string name="action_select_day_wallpaper">लाइट मोड:</string>
 	<string name="action_select_night_wallpaper">डार्क मोड:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">सेट नहीं है</string>
 	<string name="live_wallpaper_warning_title">लाइव वॉलपेपर चालू है</string>
 	<string name="live_wallpaper_warning_message">वॉलपेपर सिंक चालू करने पर मौजूदा लाइव वॉलपेपर को लाइट और डार्क मोड के स्थिर वॉलपेपर से बदल दिया जाएगा। क्या आप जारी रखना चाहते हैं?</string>
+	<string name="github_star_prompt_description">Adaptive Theme मुफ़्त, विज्ञापन-मुक्त और ओपन सोर्स है। अगर यह आपके लिए उपयोगी है, तो GitHub पर स्टार देकर आप इसे आसानी से मुफ़्त में समर्थन दे सकते हैं।</string>
+	<string name="github_star_prompt_action">GitHub पर स्टार दें ↗</string>
+	<string name="github_star_prompt_dismiss_description">हमेशा के लिए छिपाएँ</string>
+	<string name="github_star_prompt_thank_you">धन्यवाद!</string>
 </resources>

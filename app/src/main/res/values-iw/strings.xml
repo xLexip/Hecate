@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">תהליך דירוג הבדיקה הושלם</string>
 	<string name="easter_egg_answer">התשובה לשאלה הגדולה של החיים, היקום וכל השאר.</string>
 	<string name="description_service_purpose">מעביר את Android בין מצב בהיר למצב כהה לפי התאורה בסביבה.</string>
-	<string name="description_switching_conditions">ערכת הנושא משתנה רק מיד לאחר שהמסך נדלק ורק אם החיישן אינו מכוסה.</string>
+	<string name="description_switching_conditions">ערכת הנושא משתנה רק זמן קצר לאחר שהמסך נדלק ורק אם החיישן אינו מכוסה.</string>
 	<string name="description_notification_service_running">מוכן להתאים את ערכת הנושא של המערכת כשהמסך נדלק.</string>
 	<string name="device_covered_title">החיישן מכוסה</string>
 	<string name="device_covered_message">החלפת ערכת הנושא הושהתה כי חיישן האור מכוסה.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">שיטות חלופיות</string>
 	<string name="setup_grant_title">שלב 3: הענקת ההרשאה מהמכשיר הנוסף</string>
 	<string name="setup_grant_body">יש לפתוח את הקישור הזה במכשיר הנוסף ולפעול לפי ההוראות:</string>
-	<string name="setup_alternatives">אפשר גם להריץ פקודת ADB באופן ידני או להשתמש בגישת root כדי להעניק את ההרשאה. קיימת גם תמיכה ב-Shizuku.</string>
+	<string name="setup_alternatives">אפשר גם להריץ פקודת ADB באופן ידני או להשתמש בגישת root כדי להעניק את ההרשאה.</string>
 	<string name="setup_permission_granted">ההרשאה הוענקה.</string>
 	<string name="setup_permission_not_granted">ההרשאה עדיין לא הוענקה. יש להשלים את ההגדרה באמצעות המכשיר הנוסף.</string>
 	<string name="setup_usb_debugging_disabled">הפעלת ניפוי באגים ב-USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">האם זה בטוח?</string>
 	<string name="setup_is_this_safe_body">ההרשאה הזו מאפשרת לאפליקציות לשנות הגדרות מערכת מוגנות. Adaptive Theme משתמש בה רק לתכונות כמו החלפת מצב כהה. הסרת האפליקציה מבטלת את ההרשאה. קוד המקור זמין לציבור ב-GitHub.</string>
 	<string name="setup_shizuku_title">אפשרות חלופית: Shizuku</string>
-	<string name="setup_shizuku_description">אם כבר נעשה שימוש ב-Shizuku, אין צורך במכשיר נוסף או ב-ADB. צריך את Shizuku רק פעם אחת כדי להעניק את ההרשאה.</string>
+	<string name="setup_shizuku_description">עם Shizuku אין צורך במכשיר נוסף או ב-ADB. צריך את האפליקציה רק פעם אחת כדי להעניק את ההרשאה.</string>
 	<string name="setup_shizuku_action">שימוש ב-Shizuku</string>
+	<string name="setup_shizuku_install_action">התקנת Shizuku</string>
 	<string name="setup_action_use_root">שימוש בגישת root</string>
 	<string name="setup_root_request">מתבצעת בקשה לגישת root…</string>
 	<string name="setup_root_grant_failed">לא ניתן היה להעניק את ההרשאה באמצעות גישת root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">אירעה שגיאה לא צפויה במהלך השימוש ב-Shizuku.</string>
 	<string name="title_device_wallpaper_sync">טפט</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">טשטש את מסך הנעילה</string>
+	<string name="description_lock_screen_wallpaper_blur">השתמש בגרסה מטושטשת של הטפט במסך הנעילה.</string>
 	<string name="description_device_wallpaper_sync">יש להשתמש בטפטים נפרדים למצב בהיר ולמצב כהה. ההחלפה עשויה להימשך רגע ולהשפיע על הביצועים.</string>
 	<string name="action_select_day_wallpaper">מצב בהיר:</string>
 	<string name="action_select_night_wallpaper">מצב כהה:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">לא הוגדר</string>
 	<string name="live_wallpaper_warning_title">טפט מונפש פעיל</string>
 	<string name="live_wallpaper_warning_message">הפעלת סנכרון הטפטים תחליף את הטפט המונפש הנוכחי בטפטים קבועים למצב בהיר ולמצב כהה. להמשיך?</string>
+	<string name="github_star_prompt_description">Adaptive Theme הוא חינמי, ללא פרסומות ובקוד פתוח. אם הוא שימושי עבורך, כוכב ב-GitHub הוא דרך פשוטה לתמוך בו בחינם.</string>
+	<string name="github_star_prompt_action">הוספת כוכב ב-GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">הסתרה לצמיתות</string>
+	<string name="github_star_prompt_thank_you">תודה!</string>
 </resources>

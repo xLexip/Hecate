@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">ટેસ્ટ સમીક્ષા પ્રક્રિયા પૂર્ણ થઈ</string>
 	<string name="easter_egg_answer">જીવન, બ્રહ્માંડ અને દરેક વસ્તુ વિશેના અંતિમ પ્રશ્નનો જવાબ.</string>
 	<string name="description_service_purpose">આસપાસના પ્રકાશના આધારે Android ને લાઇટ અને ડાર્ક મોડ વચ્ચે બદલે છે.</string>
-	<string name="description_switching_conditions">થીમ ફક્ત સ્ક્રીન ચાલુ થયા પછી તરત જ અને સેન્સર ઢંકાયેલો ન હોય ત્યારે જ બદલાય છે.</string>
+	<string name="description_switching_conditions">થીમ ફક્ત સ્ક્રીન ચાલુ થયા પછી થોડા સમયમાં અને સેન્સર ઢંકાયેલો ન હોય ત્યારે જ બદલાય છે.</string>
 	<string name="description_notification_service_running">સ્ક્રીન ચાલુ થાય ત્યારે સિસ્ટમ થીમ બદલવા માટે તૈયાર.</string>
 	<string name="device_covered_title">સેન્સર ઢંકાયેલો છે</string>
 	<string name="device_covered_message">લાઇટ સેન્સર ઢંકાયેલો હોવાથી થીમ બદલવાનું થોભાવ્યું છે.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">વૈકલ્પિક પદ્ધતિઓ</string>
 	<string name="setup_grant_title">પગલું 3: બીજા ડિવાઇસથી પરવાનગી આપો</string>
 	<string name="setup_grant_body">બીજા ડિવાઇસ પર આ લિંક ખોલો અને સૂચનાઓ અનુસરો:</string>
-	<string name="setup_alternatives">તમે જાતે ADB કમાન્ડ ચલાવી શકો છો અથવા root ઍક્સેસથી પરવાનગી આપી શકો છો. Shizuku પણ સમર્થિત છે.</string>
+	<string name="setup_alternatives">તમે જાતે ADB કમાન્ડ ચલાવી શકો છો અથવા root ઍક્સેસથી પરવાનગી આપી શકો છો.</string>
 	<string name="setup_permission_granted">પરવાનગી અપાઈ.</string>
 	<string name="setup_permission_not_granted">હજુ પરવાનગી અપાઈ નથી. બીજા ડિવાઇસથી સેટઅપ પૂર્ણ કરો.</string>
 	<string name="setup_usb_debugging_disabled">USB ડિબગિંગ ચાલુ કરો</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">શું આ સુરક્ષિત છે?</string>
 	<string name="setup_is_this_safe_body">આ પરવાનગી ઍપને સુરક્ષિત સિસ્ટમ સેટિંગ્સ બદલવા દે છે. Adaptive Theme તેનો ઉપયોગ ફક્ત ડાર્ક મોડ બદલવા જેવી સુવિધાઓ માટે કરે છે. ઍપ અનઇન્સ્ટોલ કરવાથી પરવાનગી રદ થાય છે. સ્રોત કોડ GitHub પર જાહેર છે.</string>
 	<string name="setup_shizuku_title">વિકલ્પ: Shizuku</string>
-	<string name="setup_shizuku_description">જો તમે પહેલેથી Shizuku વાપરો છો, તો બીજા ડિવાઇસ અથવા ADB ની જરૂર નથી. પરવાનગી આપવા Shizuku ફક્ત એક વાર જરૂરી છે.</string>
+	<string name="setup_shizuku_description">Shizuku સાથે બીજા ડિવાઇસ અથવા ADB ની જરૂર નથી. પરવાનગી આપવા ઍપ ફક્ત એક વાર જરૂરી છે.</string>
 	<string name="setup_shizuku_action">Shizuku વાપરો</string>
+	<string name="setup_shizuku_install_action">Shizuku ઇન્સ્ટોલ કરો</string>
 	<string name="setup_action_use_root">root ઍક્સેસ વાપરો</string>
 	<string name="setup_root_request">root ઍક્સેસની વિનંતી થઈ રહી છે…</string>
 	<string name="setup_root_grant_failed">root ઍક્સેસથી પરવાનગી આપી શકાઈ નહીં.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku વાપરતી વખતે અનપેક્ષિત ભૂલ થઈ.</string>
 	<string name="title_device_wallpaper_sync">વૉલપેપર</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">લૉક સ્ક્રીન બ્લર કરો</string>
+	<string name="description_lock_screen_wallpaper_blur">લૉક સ્ક્રીન પર વૉલપેપરનું બ્લર કરેલું સંસ્કરણ વાપરો.</string>
 	<string name="description_device_wallpaper_sync">લાઇટ અને ડાર્ક મોડ માટે અલગ વૉલપેપર વાપરો. બદલવામાં થોડો સમય લાગી શકે છે અને પરફોર્મન્સ પર અસર થઈ શકે છે.</string>
 	<string name="action_select_day_wallpaper">લાઇટ મોડ:</string>
 	<string name="action_select_night_wallpaper">ડાર્ક મોડ:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">સેટ નથી</string>
 	<string name="live_wallpaper_warning_title">લાઇવ વૉલપેપર ચાલુ છે</string>
 	<string name="live_wallpaper_warning_message">વૉલપેપર સિંક ચાલુ કરવાથી હાલનું લાઇવ વૉલપેપર લાઇટ અને ડાર્ક મોડના સ્થિર વૉલપેપરથી બદલાશે. આગળ વધવું છે?</string>
+	<string name="github_star_prompt_description">Adaptive Theme મફત, જાહેરાત-મુક્ત અને ઓપન સોર્સ છે. જો તે તમારા માટે ઉપયોગી હોય, તો GitHub પર સ્ટાર આપવો તેને મફતમાં ટેકો આપવાની સરળ રીત છે.</string>
+	<string name="github_star_prompt_action">GitHub પર સ્ટાર આપો ↗</string>
+	<string name="github_star_prompt_dismiss_description">હંમેશ માટે છુપાવો</string>
+	<string name="github_star_prompt_thank_you">આભાર!</string>
 </resources>

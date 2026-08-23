@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Motiv se změní pouze bezprostředně po zapnutí obrazovky a pouze pokud snímač není zakrytý.
+		Motiv se změní pouze krátce po zapnutí obrazovky a pouze pokud snímač není zakrytý.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Jiné způsoby</string>
 	<string name="setup_grant_title">Krok 3: udělte oprávnění z druhého zařízení</string>
 	<string name="setup_grant_body">Otevřete tento odkaz na druhém zařízení a postupujte podle pokynů:</string>
-	<string name="setup_alternatives">Můžete také sami spustit příkaz ADB nebo oprávnění udělit pomocí přístupu root. Podporováno je i Shizuku.</string>
+	<string name="setup_alternatives">Můžete také sami spustit příkaz ADB nebo oprávnění udělit pomocí přístupu root.</string>
 	<string name="setup_permission_granted">Oprávnění uděleno.</string>
 	<string name="setup_permission_not_granted">Oprávnění zatím nebylo uděleno. Dokončete nastavení pomocí druhého zařízení.</string>
 	<string name="setup_usb_debugging_disabled">Zapnout Ladění USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Je to bezpečné?</string>
 	<string name="setup_is_this_safe_body">Toto oprávnění umožňuje aplikacím měnit chráněná systémová nastavení. Adaptive Theme ho používá pouze pro funkce, jako je přepínání tmavého režimu. Odinstalováním aplikace se oprávnění odebere. Zdrojový kód je veřejně dostupný na GitHubu.</string>
 	<string name="setup_shizuku_title">Jiný způsob: Shizuku</string>
-	<string name="setup_shizuku_description">Pokud již používáte Shizuku, nepotřebujete druhé zařízení ani ADB. Shizuku je k udělení oprávnění potřeba pouze jednou.</string>
+	<string name="setup_shizuku_description">Se Shizuku nepotřebujete druhé zařízení ani ADB. Aplikace je k udělení oprávnění potřeba pouze jednou.</string>
 	<string name="setup_shizuku_action">Použít Shizuku</string>
+	<string name="setup_shizuku_install_action">Nainstalovat Shizuku</string>
 	<string name="setup_action_use_root">Použít přístup root</string>
 	<string name="setup_root_request">Žádost o přístup root…</string>
 	<string name="setup_root_grant_failed">Oprávnění se nepodařilo udělit pomocí přístupu root.</string>
@@ -111,6 +112,8 @@
 	<string name="shizuku_grant_unexpected">Při použití Shizuku došlo k neočekávané chybě.</string>
 	<string name="title_device_wallpaper_sync">Tapeta</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Rozmazat zamykací obrazovku</string>
+	<string name="description_lock_screen_wallpaper_blur">Použijte rozmazanou verzi tapety na zamykací obrazovce.</string>
 	<string name="description_device_wallpaper_sync">Používejte samostatné tapety pro světlý a tmavý režim. Přepnutí může chvíli trvat a ovlivnit výkon.</string>
 	<string name="action_select_day_wallpaper">Světlý režim:</string>
 	<string name="action_select_night_wallpaper">Tmavý režim:</string>
@@ -118,4 +121,8 @@
 	<string name="wallpaper_status_not_set">Nenastavena</string>
 	<string name="live_wallpaper_warning_title">Je aktivní živá tapeta</string>
 	<string name="live_wallpaper_warning_message">Zapnutím synchronizace tapet nahradíte aktuální živou tapetu statickými tapetami pro světlý a tmavý režim. Chcete pokračovat?</string>
+	<string name="github_star_prompt_description">Adaptive Theme je zdarma, bez reklam a s otevřeným zdrojovým kódem. Pokud vám pomáhá, můžete ho jednoduše a zdarma podpořit hvězdičkou na GitHubu.</string>
+	<string name="github_star_prompt_action">Přidat hvězdičku na GitHubu ↗</string>
+	<string name="github_star_prompt_dismiss_description">Skrýt navždy</string>
+	<string name="github_star_prompt_thank_you">Děkujeme!</string>
 </resources>

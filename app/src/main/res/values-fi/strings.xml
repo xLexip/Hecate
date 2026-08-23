@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testiarvostelu suoritettu</string>
 	<string name="easter_egg_answer">Vastaus perimmäiseen kysymykseen elämästä, maailmankaikkeudesta ja kaikesta.</string>
 	<string name="description_service_purpose">Vaihtaa Androidin vaalean ja tumman tilan välillä ympäristön valon mukaan.</string>
-	<string name="description_switching_conditions">Teema vaihtuu vain heti näytön käynnistyttyä ja vain, jos tunnistinta ei ole peitetty.</string>
+	<string name="description_switching_conditions">Teema vaihtuu vain pian näytön käynnistyttyä ja vain, jos tunnistinta ei ole peitetty.</string>
 	<string name="description_notification_service_running">Valmis mukauttamaan järjestelmän teemaa, kun näyttö käynnistyy.</string>
 	<string name="device_covered_title">Tunnistin peitetty</string>
 	<string name="device_covered_message">Teeman vaihto on keskeytetty, koska valoisuustunnistin on peitetty.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Vaihtoehtoiset menetelmät</string>
 	<string name="setup_grant_title">Vaihe 3: Myönnä lupa toisella laitteella</string>
 	<string name="setup_grant_body">Avaa tämä linkki toisella laitteella ja noudata ohjeita:</string>
-	<string name="setup_alternatives">Voit myös suorittaa ADB-komennon itse tai myöntää luvan pääkäyttäjän oikeuksilla. Myös Shizukua tuetaan.</string>
+	<string name="setup_alternatives">Voit myös suorittaa ADB-komennon itse tai myöntää luvan pääkäyttäjän oikeuksilla.</string>
 	<string name="setup_permission_granted">Lupa myönnetty.</string>
 	<string name="setup_permission_not_granted">Lupaa ei ole vielä myönnetty. Viimeistele määritys toisella laitteella.</string>
 	<string name="setup_usb_debugging_disabled">Ota USB-virheenkorjaus käyttöön</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Onko tämä turvallista?</string>
 	<string name="setup_is_this_safe_body">Tällä luvalla sovellukset voivat muuttaa suojattuja järjestelmäasetuksia. Adaptive Theme käyttää sitä vain esimerkiksi tumman tilan vaihtamiseen. Sovelluksen poistaminen kumoaa luvan. Lähdekoodi on julkisesti saatavilla GitHubissa.</string>
 	<string name="setup_shizuku_title">Vaihtoehto: Shizuku</string>
-	<string name="setup_shizuku_description">Jos käytät jo Shizukua, et tarvitse toista laitetta tai ADB:tä. Shizukua tarvitaan vain kerran luvan myöntämiseen.</string>
+	<string name="setup_shizuku_description">Shizukun avulla et tarvitse toista laitetta tai ADB:tä. Sovellusta tarvitaan vain kerran luvan myöntämiseen.</string>
 	<string name="setup_shizuku_action">Käytä Shizukua</string>
+	<string name="setup_shizuku_install_action">Asenna Shizuku</string>
 	<string name="setup_action_use_root">Käytä pääkäyttäjän oikeuksia</string>
 	<string name="setup_root_request">Pyydetään pääkäyttäjän oikeuksia…</string>
 	<string name="setup_root_grant_failed">Lupaa ei voitu myöntää pääkäyttäjän oikeuksilla.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizukun käytössä tapahtui odottamaton virhe.</string>
 	<string name="title_device_wallpaper_sync">Taustakuva</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Sumenna lukitusnäyttö</string>
+	<string name="description_lock_screen_wallpaper_blur">Käytä lukitusnäytössä taustakuvan sumennettua versiota.</string>
 	<string name="description_device_wallpaper_sync">Käytä erillisiä taustakuvia vaaleassa ja tummassa tilassa. Vaihtaminen voi kestää hetken ja vaikuttaa suorituskykyyn.</string>
 	<string name="action_select_day_wallpaper">Vaalea tila:</string>
 	<string name="action_select_night_wallpaper">Tumma tila:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Ei asetettu</string>
 	<string name="live_wallpaper_warning_title">Animoitu taustakuva käytössä</string>
 	<string name="live_wallpaper_warning_message">Taustakuvien synkronoinnin käyttöönotto korvaa nykyisen animoidun taustakuvan vaalean ja tumman tilan staattisilla taustakuvilla. Haluatko jatkaa?</string>
+	<string name="github_star_prompt_description">Adaptive Theme on ilmainen, mainokseton ja avoimen lähdekoodin sovellus. Jos siitä on sinulle hyötyä, voit tukea sitä helposti ja maksutta antamalla tähden GitHubissa.</string>
+	<string name="github_star_prompt_action">Anna tähti GitHubissa ↗</string>
+	<string name="github_star_prompt_dismiss_description">Piilota pysyvästi</string>
+	<string name="github_star_prompt_thank_you">Kiitos!</string>
 </resources>

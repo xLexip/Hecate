@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Пробни поступак оцењивања је завршен</string>
 	<string name="easter_egg_answer">Одговор на крајње питање о животу, свемиру и свему осталом.</string>
 	<string name="description_service_purpose">Пребацује Android између светлог и тамног режима на основу околног светла.</string>
-	<string name="description_switching_conditions">Тема се мења само одмах након укључивања екрана и само ако сензор није прекривен.</string>
+	<string name="description_switching_conditions">Тема се мења само убрзо након укључивања екрана и само ако сензор није прекривен.</string>
 	<string name="description_notification_service_running">Спремно за прилагођавање системске теме при укључивању екрана.</string>
 	<string name="device_covered_title">Сензор је прекривен</string>
 	<string name="device_covered_message">Пребацивање теме је паузирано јер је сензор светла прекривен.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Други начини</string>
 	<string name="setup_grant_title">3. корак: Доделите дозволу са другог уређаја</string>
 	<string name="setup_grant_body">Отворите ову везу на другом уређају и пратите упутства:</string>
-	<string name="setup_alternatives">Можете и сами да покренете ADB команду или доделите дозволу помоћу root приступа. Подржан је и Shizuku.</string>
+	<string name="setup_alternatives">Можете и сами да покренете ADB команду или доделите дозволу помоћу root приступа.</string>
 	<string name="setup_permission_granted">Дозвола је додељена.</string>
 	<string name="setup_permission_not_granted">Дозвола још није додељена. Довршите подешавање помоћу другог уређаја.</string>
 	<string name="setup_usb_debugging_disabled">Укључи USB отклањање грешака</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Да ли је ово безбедно?</string>
 	<string name="setup_is_this_safe_body">Ова дозвола омогућава апликацијама да мењају заштићена системска подешавања. Adaptive Theme је користи само за функције попут пребацивања тамног режима. Деинсталирањем апликације дозвола се укида. Изворни кôд је јавно доступан на GitHub-у.</string>
 	<string name="setup_shizuku_title">Друга могућност: Shizuku</string>
-	<string name="setup_shizuku_description">Ако већ користите Shizuku, није вам потребан други уређај ни ADB. Shizuku је потребан само једном за доделу дозволе.</string>
+	<string name="setup_shizuku_description">Уз Shizuku није вам потребан други уређај ни ADB. Апликација је потребна само једном за доделу дозволе.</string>
 	<string name="setup_shizuku_action">Користи Shizuku</string>
+	<string name="setup_shizuku_install_action">Инсталирај Shizuku</string>
 	<string name="setup_action_use_root">Користи root приступ</string>
 	<string name="setup_root_request">Тражи се root приступ…</string>
 	<string name="setup_root_grant_failed">Дозвола није могла да се додели помоћу root приступа.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Дошло је до неочекиване грешке при коришћењу Shizuku-а.</string>
 	<string name="title_device_wallpaper_sync">Позадина</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Замутите закључани екран</string>
+	<string name="description_lock_screen_wallpaper_blur">Користите замућену верзију позадине на закључаном екрану.</string>
 	<string name="description_device_wallpaper_sync">Користите засебне позадине за светли и тамни режим. Пребацивање може потрајати тренутак и утицати на перформансе.</string>
 	<string name="action_select_day_wallpaper">Светли режим:</string>
 	<string name="action_select_night_wallpaper">Тамни режим:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Није постављено</string>
 	<string name="live_wallpaper_warning_title">Жива позадина је активна</string>
 	<string name="live_wallpaper_warning_message">Укључивањем синхронизације тренутна жива позадина биће замењена статичним позадинама за светли и тамни режим. Желите ли да наставите?</string>
+	<string name="github_star_prompt_description">Adaptive Theme је бесплатан, без огласа и отвореног кода. Ако вам је користан, звездица на GitHub-у је једноставан бесплатан начин да га подржите.</string>
+	<string name="github_star_prompt_action">Додај звездицу на GitHub-у ↗</string>
+	<string name="github_star_prompt_dismiss_description">Сакриј заувек</string>
+	<string name="github_star_prompt_thank_you">Хвала!</string>
 </resources>

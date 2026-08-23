@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Fluxul de evaluare de test s-a încheiat</string>
 	<string name="easter_egg_answer">Răspunsul la întrebarea supremă despre viață, univers și tot restul.</string>
 	<string name="description_service_purpose">Comută Android între modul luminos și cel întunecat în funcție de lumina ambientală.</string>
-	<string name="description_switching_conditions">Tema se schimbă numai imediat după pornirea ecranului și numai dacă senzorul nu este acoperit.</string>
+	<string name="description_switching_conditions">Tema se schimbă numai la scurt timp după pornirea ecranului și numai dacă senzorul nu este acoperit.</string>
 	<string name="description_notification_service_running">Pregătit să ajusteze tema sistemului la pornirea ecranului.</string>
 	<string name="device_covered_title">Senzor acoperit</string>
 	<string name="device_covered_message">Comutarea temei este întreruptă deoarece senzorul de lumină este acoperit.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Metode alternative</string>
 	<string name="setup_grant_title">Pasul 3: acordă permisiunea de pe al doilea dispozitiv</string>
 	<string name="setup_grant_body">Deschide acest link pe al doilea dispozitiv și urmează instrucțiunile:</string>
-	<string name="setup_alternatives">Poți și să rulezi singur o comandă ADB sau să folosești accesul root pentru a acorda permisiunea. Shizuku este de asemenea acceptat.</string>
+	<string name="setup_alternatives">Poți și să rulezi singur o comandă ADB sau să folosești accesul root pentru a acorda permisiunea.</string>
 	<string name="setup_permission_granted">Permisiune acordată.</string>
 	<string name="setup_permission_not_granted">Permisiunea nu a fost încă acordată. Finalizează configurarea cu al doilea dispozitiv.</string>
 	<string name="setup_usb_debugging_disabled">Activează Depanare USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Este sigur?</string>
 	<string name="setup_is_this_safe_body">Această permisiune permite aplicațiilor să modifice setări protejate ale sistemului. Adaptive Theme o folosește numai pentru funcții precum schimbarea modului întunecat. Dezinstalarea aplicației revocă permisiunea. Codul sursă este public pe GitHub.</string>
 	<string name="setup_shizuku_title">Alternativă: Shizuku</string>
-	<string name="setup_shizuku_description">Dacă folosești deja Shizuku, nu ai nevoie de un al doilea dispozitiv sau de ADB. Shizuku este necesar o singură dată pentru acordarea permisiunii.</string>
+	<string name="setup_shizuku_description">Cu Shizuku, nu ai nevoie de un al doilea dispozitiv sau de ADB. Aplicația este necesară o singură dată pentru acordarea permisiunii.</string>
 	<string name="setup_shizuku_action">Folosește Shizuku</string>
+	<string name="setup_shizuku_install_action">Instalează Shizuku</string>
 	<string name="setup_action_use_root">Folosește accesul root</string>
 	<string name="setup_root_request">Se solicită acces root…</string>
 	<string name="setup_root_grant_failed">Permisiunea nu a putut fi acordată prin acces root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">A apărut o eroare neașteptată la folosirea Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Imagine de fundal</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Estompează ecranul de blocare</string>
+	<string name="description_lock_screen_wallpaper_blur">Utilizați o versiune estompată a fundalului pe ecranul de blocare.</string>
 	<string name="description_device_wallpaper_sync">Folosește imagini de fundal separate pentru modul luminos și cel întunecat. Comutarea poate dura puțin și poate afecta performanța.</string>
 	<string name="action_select_day_wallpaper">Mod luminos:</string>
 	<string name="action_select_night_wallpaper">Mod întunecat:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Nesetată</string>
 	<string name="live_wallpaper_warning_title">Imagine de fundal animată activă</string>
 	<string name="live_wallpaper_warning_message">Activarea sincronizării va înlocui imaginea de fundal animată actuală cu imagini statice pentru modul luminos și cel întunecat. Vrei să continui?</string>
+	<string name="github_star_prompt_description">Adaptive Theme este gratuită, fără reclame și cu sursă deschisă. Dacă vă este utilă, o stea pe GitHub este o modalitate simplă de a o susține gratuit.</string>
+	<string name="github_star_prompt_action">Adaugă o stea pe GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ascunde pentru totdeauna</string>
+	<string name="github_star_prompt_thank_you">Mulțumim!</string>
 </resources>

@@ -18,7 +18,9 @@ import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.Transition
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.updateTransition
 import androidx.compose.animation.expandVertically
@@ -48,6 +50,7 @@ import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
+import androidx.compose.material3.Badge
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -55,6 +58,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
@@ -67,6 +73,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.runtime.withFrameNanos
@@ -86,6 +93,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.lexip.hecate.R
 import dev.lexip.hecate.data.AdaptiveThreshold
+import dev.lexip.hecate.ui.components.GitHubStarPromptCard
 import dev.lexip.hecate.ui.components.MainSwitchPreferenceCard
 import dev.lexip.hecate.ui.components.SetupRequiredCard
 import dev.lexip.hecate.ui.components.ThreeDotMenu
@@ -96,6 +104,7 @@ import dev.lexip.hecate.ui.components.preferences.SliderDetailCard
 import dev.lexip.hecate.ui.components.preferences.TimePickerPreferenceDialog
 import dev.lexip.hecate.ui.theme.hecateTopAppBarColors
 import java.util.Calendar
+import kotlinx.coroutines.launch
 
 private val ScreenHorizontalMargin = 20.dp
 private val horizontalOffsetPadding = 8.dp
@@ -113,6 +122,8 @@ fun MainScreenContent(
 ) {
 	val haptic = LocalHapticFeedback.current
 	val scrollState = rememberScrollState()
+	val snackbarHostState = remember { SnackbarHostState() }
+	val coroutineScope = rememberCoroutineScope()
 	var isLargeTitleVisible by remember { mutableStateOf(true) }
 	var showCustomDialog by remember { mutableStateOf(false) }
 	var showNightStartPicker by remember { mutableStateOf(false) }
@@ -152,6 +163,7 @@ fun MainScreenContent(
 	Scaffold(
 		modifier = Modifier.fillMaxSize(),
 		containerColor = MaterialTheme.colorScheme.surfaceContainer,
+		snackbarHost = { SnackbarHost(snackbarHostState) },
 		topBar = {
 			MainScreenTopBar(
 				showCollapsedTitle = !isLargeTitleVisible,
@@ -210,6 +222,32 @@ fun MainScreenContent(
 				onShowNightStartPicker = { showNightStartPicker = true },
 				onShowNightEndPicker = { showNightEndPicker = true }
 			)
+			if (uiState.showGitHubStarPrompt &&
+				!isBatterySaverActive &&
+				!isDeviceCovered
+			) {
+				val dismissMessage = stringResource(
+					R.string.github_star_prompt_dismiss_description
+				)
+				val cancelLabel = stringResource(R.string.action_cancel)
+				GitHubStarPromptCard(
+					onImpression = callbacks.onGitHubStarPromptImpression,
+					onDismiss = {
+						callbacks.onDismissGitHubStarPrompt()
+						coroutineScope.launch {
+							val result = snackbarHostState.showSnackbar(
+								message = dismissMessage,
+								actionLabel = cancelLabel,
+								withDismissAction = true
+							)
+							if (result == SnackbarResult.ActionPerformed) {
+								callbacks.onUndoGitHubStarPromptDismissal()
+							}
+						}
+					},
+					onOpenGitHub = callbacks.onOpenGitHubRepository
+				)
+			}
 			Spacer(modifier = Modifier.padding(bottom = 4.dp))
 		}
 	}
@@ -289,7 +327,10 @@ private fun MainScreenTopBar(
 				enter = fadeIn(animationSpec = tween(180)) +
 						slideInHorizontally(
 							initialOffsetX = { fullWidth -> -fullWidth / 2 },
-							animationSpec = tween(220)
+							animationSpec = spring(
+								dampingRatio = Spring.DampingRatioMediumBouncy,
+								stiffness = Spring.StiffnessMediumLow
+							)
 						),
 				exit = fadeOut(animationSpec = tween(120)) +
 						slideOutHorizontally(
@@ -514,6 +555,8 @@ private fun ThresholdAndAdvancedSettings(
 		CollapsedAdvancedSettingsControl(
 			transition = transition,
 			enabled = uiState.adaptiveThemeEnabled,
+			showActiveFeatureIndicator =
+				uiState.stayDarkAtNightEnabled || uiState.wallpaperSyncEnabled,
 			haptic = haptic,
 			onExpand = onExpand,
 			onCheckReviewPrompt = callbacks.onCheckReviewPrompt
@@ -576,6 +619,7 @@ private fun ThresholdCards(
 private fun CollapsedAdvancedSettingsControl(
 	transition: Transition<Boolean>,
 	enabled: Boolean,
+	showActiveFeatureIndicator: Boolean,
 	haptic: HapticFeedback,
 	onExpand: () -> Unit,
 	onCheckReviewPrompt: () -> Unit
@@ -601,7 +645,17 @@ private fun CollapsedAdvancedSettingsControl(
 				},
 				enabled = enabled,
 				shape = RoundedCornerShape(20.dp),
-				label = { Text(text = stringResource(id = R.string.action_advanced_settings)) },
+				label = {
+					Row(verticalAlignment = Alignment.CenterVertically) {
+						Text(text = stringResource(id = R.string.action_advanced_settings))
+						if (showActiveFeatureIndicator) {
+							Badge(
+								modifier = Modifier.padding(start = 6.dp),
+								containerColor = MaterialTheme.colorScheme.primary
+							)
+						}
+					}
+				},
 				leadingIcon = {
 					Icon(
 						imageVector = Icons.Filled.KeyboardArrowDown,
@@ -645,6 +699,10 @@ private fun ExpandedAdvancedSettings(
 				haptic = haptic,
 				callbacks = callbacks,
 				onWallpaperButtonsShake = onWallpaperButtonsShake
+			)
+			LockScreenWallpaperBlurPreference(
+				uiState = uiState,
+				onLockScreenWallpaperBlurChanged = callbacks.onLockScreenWallpaperBlurChanged
 			)
 			AssistChip(
 				modifier = Modifier.align(Alignment.CenterHorizontally),
@@ -744,7 +802,7 @@ private fun WallpaperSyncPreference(
 		title = stringResource(id = R.string.title_device_wallpaper_sync),
 		enabled = uiState.adaptiveThemeEnabled,
 		firstCard = false,
-		lastCard = true,
+		lastCard = false,
 		toggleableValue = uiState.wallpaperSyncEnabled,
 		onToggle = requestToggle,
 		titleTrailingContent = { BetaLabel() }
@@ -763,6 +821,35 @@ private fun WallpaperSyncPreference(
 			offset = wallpaperButtonsOffset,
 			onSelectDayWallpaper = callbacks.onSelectDayWallpaper,
 			onSelectNightWallpaper = callbacks.onSelectNightWallpaper
+		)
+	}
+}
+
+@Composable
+private fun LockScreenWallpaperBlurPreference(
+	uiState: MainUiState,
+	onLockScreenWallpaperBlurChanged: (Boolean) -> Unit
+) {
+	DetailPreferenceCard(
+		title = stringResource(id = R.string.title_lock_screen_wallpaper_blur),
+		enabled = uiState.adaptiveThemeEnabled && uiState.wallpaperSyncEnabled,
+		firstCard = false,
+		lastCard = true,
+		toggleableValue = uiState.lockScreenWallpaperBlurEnabled,
+		onToggle = onLockScreenWallpaperBlurChanged,
+		cardTrailingContent = {
+			PreferenceSwitch(
+				checked = uiState.lockScreenWallpaperBlurEnabled,
+				enabled = uiState.adaptiveThemeEnabled && uiState.wallpaperSyncEnabled,
+				onCheckedChange = onLockScreenWallpaperBlurChanged,
+				modifier = Modifier.padding(start = 14.dp, end = 4.dp)
+			)
+		}
+	) {
+		Text(
+			modifier = Modifier.padding(top = 4.dp),
+			text = stringResource(id = R.string.description_lock_screen_wallpaper_blur),
+			style = MaterialTheme.typography.bodyMedium
 		)
 	}
 }
@@ -802,23 +889,38 @@ private fun PreferenceDescriptionSwitch(
 			style = MaterialTheme.typography.bodyMedium,
 			modifier = Modifier.weight(1f)
 		)
-		Switch(
-			modifier = Modifier
-				.padding(start = 14.dp, top = switchTopPadding, end = 4.dp)
-				.offset(y = (-6).dp)
-				.align(Alignment.Top),
+		PreferenceSwitch(
 			checked = checked,
 			enabled = enabled,
 			onCheckedChange = onCheckedChange,
-			thumbContent = {
-				Icon(
-					imageVector = if (checked) Icons.Filled.Check else Icons.Filled.Clear,
-					contentDescription = null,
-					modifier = Modifier.size(SwitchDefaults.IconSize)
-				)
-			}
+			modifier = Modifier
+				.padding(start = 14.dp, top = switchTopPadding, end = 4.dp)
+				.offset(y = (-6).dp)
+				.align(Alignment.Top)
 		)
 	}
+}
+
+@Composable
+private fun PreferenceSwitch(
+	checked: Boolean,
+	enabled: Boolean,
+	onCheckedChange: ((Boolean) -> Unit)?,
+	modifier: Modifier = Modifier
+) {
+	Switch(
+		modifier = modifier,
+		checked = checked,
+		enabled = enabled,
+		onCheckedChange = onCheckedChange,
+		thumbContent = {
+			Icon(
+				imageVector = if (checked) Icons.Filled.Check else Icons.Filled.Clear,
+				contentDescription = null,
+				modifier = Modifier.size(SwitchDefaults.IconSize)
+			)
+		}
+	)
 }
 
 @Composable

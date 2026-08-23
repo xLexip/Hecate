@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Mchakato wa majaribio ya ukaguzi umekamilika</string>
 	<string name="easter_egg_answer">Jibu la swali kuu kuhusu maisha, ulimwengu na kila kitu.</string>
 	<string name="description_service_purpose">Hubadilisha Android kati ya hali angavu na hali nyeusi kulingana na mwanga wa mazingira.</string>
-	<string name="description_switching_conditions">Mandhari hubadilika tu mara tu skrini inapowashwa na tu kama kihisi hakijafunikwa.</string>
+	<string name="description_switching_conditions">Mandhari hubadilika tu muda mfupi baada ya skrini kuwashwa na tu kama kihisi hakijafunikwa.</string>
 	<string name="description_notification_service_running">Tayari kurekebisha mandhari ya mfumo skrini inapowashwa.</string>
 	<string name="device_covered_title">Kihisi kimefunikwa</string>
 	<string name="device_covered_message">Ubadilishaji wa mandhari umesitishwa kwa sababu kihisi cha mwanga kimefunikwa.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Mbinu mbadala</string>
 	<string name="setup_grant_title">Hatua ya 3: Toa ruhusa kutoka kifaa cha pili</string>
 	<string name="setup_grant_body">Fungua kiungo hiki kwenye kifaa cha pili na ufuate maelekezo:</string>
-	<string name="setup_alternatives">Unaweza pia kutekeleza amri ya ADB mwenyewe au kutumia ufikiaji wa root kutoa ruhusa. Shizuku pia inatumika.</string>
+	<string name="setup_alternatives">Unaweza pia kutekeleza amri ya ADB mwenyewe au kutumia ufikiaji wa root kutoa ruhusa.</string>
 	<string name="setup_permission_granted">Ruhusa imetolewa.</string>
 	<string name="setup_permission_not_granted">Ruhusa bado haijatolewa. Kamilisha usanidi kwa kifaa cha pili.</string>
 	<string name="setup_usb_debugging_disabled">Washa Utatuzi wa USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Je, hii ni salama?</string>
 	<string name="setup_is_this_safe_body">Ruhusa hii huruhusu programu kubadilisha mipangilio ya mfumo iliyolindwa. Adaptive Theme huitumia tu kwa vipengele kama kubadilisha hali nyeusi. Kuondoa programu hubatilisha ruhusa. Msimbo chanzo uko wazi kwenye GitHub.</string>
 	<string name="setup_shizuku_title">Mbadala: Shizuku</string>
-	<string name="setup_shizuku_description">Ikiwa tayari unatumia Shizuku, huhitaji kifaa cha pili wala ADB. Shizuku inahitajika mara moja tu kutoa ruhusa.</string>
+	<string name="setup_shizuku_description">Ukitumia Shizuku, huhitaji kifaa cha pili wala ADB. Programu inahitajika mara moja tu kutoa ruhusa.</string>
 	<string name="setup_shizuku_action">Tumia Shizuku</string>
+	<string name="setup_shizuku_install_action">Sakinisha Shizuku</string>
 	<string name="setup_action_use_root">Tumia ufikiaji wa root</string>
 	<string name="setup_root_request">Inaomba ufikiaji wa root…</string>
 	<string name="setup_root_grant_failed">Imeshindwa kutoa ruhusa kwa ufikiaji wa root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Hitilafu isiyotarajiwa imetokea wakati wa kutumia Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Mandhari</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Fifisha skrini iliyofungwa</string>
+	<string name="description_lock_screen_wallpaper_blur">Tumia toleo lililofifishwa la mandhari kwenye skrini iliyofungwa.</string>
 	<string name="description_device_wallpaper_sync">Tumia mandhari-nyuma tofauti kwa hali angavu na nyeusi. Kubadilisha kunaweza kuchukua muda mfupi na kuathiri utendaji.</string>
 	<string name="action_select_day_wallpaper">Hali angavu:</string>
 	<string name="action_select_night_wallpaper">Hali nyeusi:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Haijawekwa</string>
 	<string name="live_wallpaper_warning_title">Mandhari-nyuma hai inatumika</string>
 	<string name="live_wallpaper_warning_message">Kuwasha usawazishaji kutabadilisha mandhari-nyuma hai ya sasa na picha tuli za hali angavu na nyeusi. Uendelee?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ni bila malipo, haina matangazo na ina chanzo huria. Ikiwa ni muhimu kwako, kutoa nyota kwenye GitHub ni njia rahisi ya kuiunga mkono bila malipo.</string>
+	<string name="github_star_prompt_action">Toa nyota kwenye GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ficha milele</string>
+	<string name="github_star_prompt_thank_you">Asante!</string>
 </resources>

@@ -15,9 +15,12 @@ package dev.lexip.hecate.broadcasts
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import dev.lexip.hecate.logging.Logger
 import dev.lexip.hecate.util.AdaptiveAppearanceController
 import dev.lexip.hecate.util.AdaptiveAppearanceHandler
+import dev.lexip.hecate.util.DelayedActionScheduler
 import dev.lexip.hecate.util.LightSensorManager
+import dev.lexip.hecate.util.MainThreadDelayedActionScheduler
 import dev.lexip.hecate.util.MinuteProvider
 import dev.lexip.hecate.util.ProximitySensorManager
 import dev.lexip.hecate.util.ProximitySensorReader
@@ -36,7 +39,7 @@ internal interface ScreenOnReceiverSettings {
  * Adaptive theme switching logic. Executes when the screen is turned on.
  * The theme is switched based on the environment brightness and proximity sensor values.
  */
-class ScreenOnReceiver(
+class ScreenOnReceiver internal constructor(
 	proximitySensorManager: ProximitySensorReader,
 	lightSensorManager: SensorReader,
 	themeController: ThemeController,
@@ -44,7 +47,8 @@ class ScreenOnReceiver(
 	stayDarkAtNightEnabled: Boolean,
 	nightStartMinutes: Int,
 	nightEndMinutes: Int,
-	minuteProvider: MinuteProvider = SystemMinuteProvider
+	minuteProvider: MinuteProvider = SystemMinuteProvider,
+	delayedActionScheduler: DelayedActionScheduler = MainThreadDelayedActionScheduler()
 ) : BroadcastReceiver(), ScreenOnReceiverSettings {
 
 	constructor(
@@ -70,6 +74,7 @@ class ScreenOnReceiver(
 		lightSensor = lightSensorManager,
 		themeController = themeController,
 		minuteProvider = minuteProvider,
+		delayedActionScheduler = delayedActionScheduler,
 		adaptiveThemeThresholdLux = adaptiveThemeThresholdLux,
 		stayDarkAtNightEnabled = stayDarkAtNightEnabled,
 		nightStartMinutes = nightStartMinutes,
@@ -102,7 +107,17 @@ class ScreenOnReceiver(
 
 	override fun onReceive(context: Context, intent: Intent) {
 		if (intent.action == Intent.ACTION_SCREEN_ON) {
-			coordinator.onScreenOn()
+			coordinator.onScreenOn { reason, screenOnProximityResult ->
+				Logger.logThemeSwitchSkipped(
+					context = context.applicationContext,
+					reason = reason,
+					screenOnProximityResult = screenOnProximityResult
+				)
+			}
 		}
+	}
+
+	fun cancelPendingEvaluation() {
+		coordinator.cancelPendingEvaluation()
 	}
 }

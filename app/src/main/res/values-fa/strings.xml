@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">فرایند آزمایشی بازبینی تکمیل شد</string>
 	<string name="easter_egg_answer">پاسخ پرسش نهایی دربارهٔ زندگی، جهان و همه‌چیز.</string>
 	<string name="description_service_purpose">Android را بر اساس نور محیط بین حالت روشن و تیره جابه‌جا می‌کند.</string>
-	<string name="description_switching_conditions">پوسته فقط بلافاصله پس از روشن شدن صفحه و تنها در صورتی تغییر می‌کند که حسگر پوشیده نباشد.</string>
+	<string name="description_switching_conditions">پوسته فقط اندکی پس از روشن شدن صفحه و تنها در صورتی تغییر می‌کند که حسگر پوشیده نباشد.</string>
 	<string name="description_notification_service_running">آمادهٔ تنظیم پوستهٔ سیستم هنگام روشن شدن صفحه است.</string>
 	<string name="device_covered_title">حسگر پوشیده است</string>
 	<string name="device_covered_message">تغییر پوسته متوقف شده است، زیرا حسگر نور پوشیده است.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">روش‌های جایگزین</string>
 	<string name="setup_grant_title">مرحلهٔ ۳: اعطای مجوز از دستگاه دوم</string>
 	<string name="setup_grant_body">این پیوند را در دستگاه دوم باز کنید و دستورالعمل‌ها را دنبال کنید:</string>
-	<string name="setup_alternatives">همچنین می‌توانید فرمان ADB را خودتان اجرا کنید یا مجوز را با دسترسی root بدهید. Shizuku نیز پشتیبانی می‌شود.</string>
+	<string name="setup_alternatives">همچنین می‌توانید فرمان ADB را خودتان اجرا کنید یا مجوز را با دسترسی root بدهید.</string>
 	<string name="setup_permission_granted">مجوز اعطا شد.</string>
 	<string name="setup_permission_not_granted">مجوز هنوز داده نشده است. راه‌اندازی را با دستگاه دوم تکمیل کنید.</string>
 	<string name="setup_usb_debugging_disabled">فعال کردن اشکال‌زدایی USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">آیا این کار امن است؟</string>
 	<string name="setup_is_this_safe_body">این مجوز به برنامه‌ها اجازه می‌دهد تنظیمات محافظت‌شدهٔ سیستم را تغییر دهند. Adaptive Theme فقط برای قابلیت‌هایی مانند تغییر حالت تیره از آن استفاده می‌کند. با حذف برنامه، مجوز لغو می‌شود. کد منبع در GitHub عمومی است.</string>
 	<string name="setup_shizuku_title">روش جایگزین: Shizuku</string>
-	<string name="setup_shizuku_description">اگر از قبل Shizuku را استفاده می‌کنید، به دستگاه دوم یا ADB نیاز ندارید. Shizuku فقط یک بار برای اعطای مجوز لازم است.</string>
+	<string name="setup_shizuku_description">با Shizuku به دستگاه دوم یا ADB نیاز ندارید. برنامه فقط یک بار برای اعطای مجوز لازم است.</string>
 	<string name="setup_shizuku_action">استفاده از Shizuku</string>
+	<string name="setup_shizuku_install_action">نصب Shizuku</string>
 	<string name="setup_action_use_root">استفاده از دسترسی root</string>
 	<string name="setup_root_request">در حال درخواست دسترسی root…</string>
 	<string name="setup_root_grant_failed">اعطای مجوز با دسترسی root ممکن نشد.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">هنگام استفاده از Shizuku خطای غیرمنتظره‌ای رخ داد.</string>
 	<string name="title_device_wallpaper_sync">کاغذدیواری</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">تار کردن صفحه قفل</string>
+	<string name="description_lock_screen_wallpaper_blur">از نسخه محوشده کاغذدیواری در صفحه قفل استفاده کنید.</string>
 	<string name="description_device_wallpaper_sync">برای حالت روشن و تیره از پس‌زمینه‌های جداگانه استفاده کنید. جابه‌جایی ممکن است لحظه‌ای طول بکشد و بر عملکرد تأثیر بگذارد.</string>
 	<string name="action_select_day_wallpaper">حالت روشن:</string>
 	<string name="action_select_night_wallpaper">حالت تیره:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">تنظیم‌نشده</string>
 	<string name="live_wallpaper_warning_title">پس‌زمینهٔ زنده فعال است</string>
 	<string name="live_wallpaper_warning_message">با فعال کردن همگام‌سازی، پس‌زمینهٔ زندهٔ فعلی با پس‌زمینه‌های ثابت برای حالت روشن و تیره جایگزین می‌شود. ادامه می‌دهید؟</string>
+	<string name="github_star_prompt_description">Adaptive Theme رایگان، بدون تبلیغ و متن‌باز است. اگر برایتان مفید است، ستاره‌دادن در GitHub راه ساده‌ای برای حمایت رایگان از آن است.</string>
+	<string name="github_star_prompt_action">ستاره‌دادن در GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">برای همیشه پنهان شود</string>
+	<string name="github_star_prompt_thank_you">متشکرم!</string>
 </resources>

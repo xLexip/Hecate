@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Motyw zmienia się tylko bezpośrednio po włączeniu ekranu i tylko wtedy, gdy czujnik nie jest zasłonięty.
+		Motyw zmienia się tylko krótko po włączeniu ekranu i tylko wtedy, gdy czujnik nie jest zasłonięty.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Inne metody</string>
 	<string name="setup_grant_title">Krok 3: przyznaj uprawnienie z drugiego urządzenia</string>
 	<string name="setup_grant_body">Otwórz ten link na drugim urządzeniu i wykonaj instrukcje:</string>
-	<string name="setup_alternatives">Możesz też samodzielnie wykonać polecenie ADB lub przyznać uprawnienie z użyciem roota. Obsługiwany jest również Shizuku.</string>
+	<string name="setup_alternatives">Możesz też samodzielnie wykonać polecenie ADB lub przyznać uprawnienie z użyciem roota.</string>
 	<string name="setup_permission_granted">Uprawnienie przyznane.</string>
 	<string name="setup_permission_not_granted">Uprawnienie nie zostało jeszcze przyznane. Dokończ konfigurację przy użyciu drugiego urządzenia.</string>
 	<string name="setup_usb_debugging_disabled">Włącz Debugowanie USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Czy to jest bezpieczne?</string>
 	<string name="setup_is_this_safe_body">To uprawnienie pozwala aplikacjom zmieniać chronione ustawienia systemu. Adaptive Theme używa go tylko do funkcji takich jak przełączanie trybu ciemnego. Odinstalowanie aplikacji cofa uprawnienie. Kod źródłowy jest publicznie dostępny w serwisie GitHub.</string>
 	<string name="setup_shizuku_title">Inna metoda: Shizuku</string>
-	<string name="setup_shizuku_description">Jeśli używasz już Shizuku, nie potrzebujesz drugiego urządzenia ani ADB. Shizuku jest potrzebny tylko raz, aby przyznać uprawnienie.</string>
+	<string name="setup_shizuku_description">Dzięki Shizuku nie potrzebujesz drugiego urządzenia ani ADB. Aplikacja jest potrzebna tylko raz, aby przyznać uprawnienie.</string>
 	<string name="setup_shizuku_action">Użyj Shizuku</string>
+	<string name="setup_shizuku_install_action">Zainstaluj Shizuku</string>
 	<string name="setup_action_use_root">Użyj roota</string>
 	<string name="setup_root_request">Żądanie dostępu do roota…</string>
 	<string name="setup_root_grant_failed">Nie udało się przyznać uprawnienia z użyciem roota.</string>
@@ -111,6 +112,8 @@
 	<string name="shizuku_grant_unexpected">Nieoczekiwany błąd podczas używania Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Tapeta</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Rozmyj ekran blokady</string>
+	<string name="description_lock_screen_wallpaper_blur">Użyj rozmytej wersji tapety na ekranie blokady.</string>
 	<string name="description_device_wallpaper_sync">Używaj osobnych tapet dla trybu jasnego i ciemnego. Przełączanie może chwilę potrwać i wpłynąć na wydajność.</string>
 	<string name="action_select_day_wallpaper">Tryb jasny:</string>
 	<string name="action_select_night_wallpaper">Tryb ciemny:</string>
@@ -118,4 +121,8 @@
 	<string name="wallpaper_status_not_set">Nieustawiona</string>
 	<string name="live_wallpaper_warning_title">Aktywna animowana tapeta</string>
 	<string name="live_wallpaper_warning_message">Włączenie synchronizacji tapet zastąpi bieżącą animowaną tapetę statycznymi tapetami dla trybu jasnego i ciemnego. Czy chcesz kontynuować?</string>
+	<string name="github_star_prompt_description">Adaptive Theme jest bezpłatna, bez reklam i ma otwarty kod źródłowy. Jeśli jest dla Ciebie przydatna, możesz łatwo wesprzeć ją bezpłatnie, dodając gwiazdkę na GitHubie.</string>
+	<string name="github_star_prompt_action">Dodaj gwiazdkę na GitHubie ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ukryj na zawsze</string>
+	<string name="github_star_prompt_thank_you">Dziękujemy!</string>
 </resources>

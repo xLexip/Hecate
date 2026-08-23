@@ -75,8 +75,16 @@ class UserPreferencesRepositoryTest {
 		assertEquals(21 * 60, preferences.nightStartMinutes)
 		assertEquals(6 * 60, preferences.nightEndMinutes)
 		assertFalse(preferences.wallpaperSyncEnabled)
+		assertFalse(preferences.lockScreenWallpaperBlurEnabled)
 		assertNull(preferences.dayWallpaperUri)
 		assertNull(preferences.nightWallpaperUri)
+		assertFalse(preferences.githubStarPromptDismissed)
+		assertEquals(0, preferences.githubStarPromptImpressionCount)
+		assertEquals(
+			NO_SUPPORT_PROMPT_EPOCH_DAY,
+			preferences.githubStarPromptLastImpressionEpochDay
+		)
+		assertEquals(NO_SUPPORT_PROMPT_EPOCH_DAY, preferences.reviewPromptLastRequestEpochDay)
 	}
 
 	@Test
@@ -131,12 +139,14 @@ class UserPreferencesRepositoryTest {
 	@Test
 	fun wallpaperSettingsArePersistedReplacedAndClearedIndependently() = runTest {
 		repository.updateWallpaperSyncEnabled(true)
+		repository.updateLockScreenWallpaperBlurEnabled(true)
 		repository.updateDayWallpaperUri("content://wallpaper/day-1")
 		repository.updateNightWallpaperUri(NIGHT_WALLPAPER_URI)
 		repository.updateDayWallpaperUri("content://wallpaper/day-2")
 
 		var preferences = repository.fetchInitialPreferences()
 		assertTrue(preferences.wallpaperSyncEnabled)
+		assertTrue(preferences.lockScreenWallpaperBlurEnabled)
 		assertEquals("content://wallpaper/day-2", preferences.dayWallpaperUri)
 		assertEquals(NIGHT_WALLPAPER_URI, preferences.nightWallpaperUri)
 
@@ -149,6 +159,21 @@ class UserPreferencesRepositoryTest {
 		preferences = repository.fetchInitialPreferences()
 		assertNull(preferences.dayWallpaperUri)
 		assertNull(preferences.nightWallpaperUri)
+	}
+
+	@Test
+	fun supportPromptStateIsPersistedAndImpressionsAreCountedOncePerDay() = runTest {
+		repository.recordGitHubStarPromptImpression(20_000L)
+		repository.recordGitHubStarPromptImpression(20_000L)
+		repository.recordGitHubStarPromptImpression(20_001L)
+		repository.updateGitHubStarPromptDismissed(true)
+		repository.updateReviewPromptLastRequestEpochDay(19_999L)
+
+		val preferences = repository.fetchInitialPreferences()
+		assertEquals(2, preferences.githubStarPromptImpressionCount)
+		assertEquals(20_001L, preferences.githubStarPromptLastImpressionEpochDay)
+		assertTrue(preferences.githubStarPromptDismissed)
+		assertEquals(19_999L, preferences.reviewPromptLastRequestEpochDay)
 	}
 
 	@Test

@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">चाचणी पुनरावलोकन प्रक्रिया पूर्ण झाली</string>
 	<string name="easter_egg_answer">जीवन, विश्व आणि सर्वकाही याबद्दलच्या अंतिम प्रश्नाचे उत्तर.</string>
 	<string name="description_service_purpose">सभोवतालच्या प्रकाशानुसार Android ला फिकट आणि गडद मोडमध्ये बदलते.</string>
-	<string name="description_switching_conditions">थीम फक्त स्क्रीन सुरू झाल्यानंतर लगेच आणि सेन्सर झाकलेला नसेल तरच बदलते.</string>
+	<string name="description_switching_conditions">थीम फक्त स्क्रीन सुरू झाल्यानंतर थोड्याच वेळात आणि सेन्सर झाकलेला नसेल तरच बदलते.</string>
 	<string name="description_notification_service_running">स्क्रीन सुरू झाल्यावर सिस्टम थीम बदलण्यासाठी तयार.</string>
 	<string name="device_covered_title">सेन्सर झाकलेला आहे</string>
 	<string name="device_covered_message">प्रकाश सेन्सर झाकलेला असल्यामुळे थीम बदलणे थांबवले आहे.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">पर्यायी पद्धती</string>
 	<string name="setup_grant_title">पायरी ३: दुसऱ्या डिव्हाइसवरून परवानगी द्या</string>
 	<string name="setup_grant_body">दुसऱ्या डिव्हाइसवर ही लिंक उघडा आणि सूचनांचे पालन करा:</string>
-	<string name="setup_alternatives">तुम्ही स्वतः ADB कमांड चालवू शकता किंवा root प्रवेशाने परवानगी देऊ शकता. Shizuku देखील समर्थित आहे.</string>
+	<string name="setup_alternatives">तुम्ही स्वतः ADB कमांड चालवू शकता किंवा root प्रवेशाने परवानगी देऊ शकता.</string>
 	<string name="setup_permission_granted">परवानगी दिली.</string>
 	<string name="setup_permission_not_granted">परवानगी अद्याप दिलेली नाही. दुसऱ्या डिव्हाइसने सेटअप पूर्ण करा.</string>
 	<string name="setup_usb_debugging_disabled">USB डीबगिंग सुरू करा</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">हे सुरक्षित आहे का?</string>
 	<string name="setup_is_this_safe_body">ही परवानगी अ‍ॅपना संरक्षित सिस्टम सेटिंग्ज बदलू देते. Adaptive Theme ती फक्त गडद मोड बदलण्यासारख्या वैशिष्ट्यांसाठी वापरते. अ‍ॅप अनइंस्टॉल केल्यावर परवानगी रद्द होते. स्रोत कोड GitHub वर सार्वजनिक आहे.</string>
 	<string name="setup_shizuku_title">पर्याय: Shizuku</string>
-	<string name="setup_shizuku_description">तुम्ही आधीच Shizuku वापरत असल्यास दुसरे डिव्हाइस किंवा ADB आवश्यक नाही. परवानगी देण्यासाठी Shizuku फक्त एकदाच आवश्यक आहे.</string>
+	<string name="setup_shizuku_description">Shizuku मुळे दुसरे डिव्हाइस किंवा ADB आवश्यक नाही. परवानगी देण्यासाठी अॅप फक्त एकदाच आवश्यक आहे.</string>
 	<string name="setup_shizuku_action">Shizuku वापरा</string>
+	<string name="setup_shizuku_install_action">Shizuku इंस्टॉल करा</string>
 	<string name="setup_action_use_root">root प्रवेश वापरा</string>
 	<string name="setup_root_request">root प्रवेशाची विनंती करत आहे…</string>
 	<string name="setup_root_grant_failed">root प्रवेशाने परवानगी देता आली नाही.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku वापरताना अनपेक्षित त्रुटी आली.</string>
 	<string name="title_device_wallpaper_sync">वॉलपेपर</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">लॉक स्क्रीन अस्पष्ट करा</string>
+	<string name="description_lock_screen_wallpaper_blur">लॉक स्क्रीनवर वॉलपेपरची अस्पष्ट आवृत्ती वापरा.</string>
 	<string name="description_device_wallpaper_sync">फिकट आणि गडद मोडसाठी वेगवेगळे वॉलपेपर वापरा. बदलायला थोडा वेळ लागू शकतो आणि कार्यप्रदर्शनावर परिणाम होऊ शकतो.</string>
 	<string name="action_select_day_wallpaper">फिकट मोड:</string>
 	<string name="action_select_night_wallpaper">गडद मोड:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">सेट केलेले नाही</string>
 	<string name="live_wallpaper_warning_title">लाइव्ह वॉलपेपर सुरू आहे</string>
 	<string name="live_wallpaper_warning_message">वॉलपेपर सिंक सुरू केल्यावर सध्याचा लाइव्ह वॉलपेपर फिकट आणि गडद मोडच्या स्थिर वॉलपेपरने बदलला जाईल. पुढे जायचे?</string>
+	<string name="github_star_prompt_description">Adaptive Theme विनामूल्य, जाहिरात-मुक्त आणि मुक्त स्रोत आहे. ते तुम्हाला उपयुक्त वाटत असल्यास, GitHub वर स्टार देणे हा त्याला विनामूल्य पाठिंबा देण्याचा सोपा मार्ग आहे.</string>
+	<string name="github_star_prompt_action">GitHub वर स्टार द्या ↗</string>
+	<string name="github_star_prompt_dismiss_description">कायमचे लपवा</string>
+	<string name="github_star_prompt_thank_you">धन्यवाद!</string>
 </resources>

@@ -46,6 +46,7 @@ jobs:
           ./gradlew
           testFossDebugUnitTest
           verifyFossDebugCoverage
+          verifyFossStoreMetadata
           lintFossDebug
           --info
 

@@ -1,0 +1,37 @@
+<b>Adaptive Theme</b>, gün batımına veya sabit bir programa bağlı kalmadan ortamın aydınlık düzeyine göre Android'in sistem genelindeki açık ve koyu modu arasında geçiş yapar. Eşiği kendiniz belirleyerek aydınlık ortamlarda açık, az ışıklı ortamlarda koyu modu kullanabilirsiniz.
+
+<b>Özellikler</b>
+
+<ul>
+<li>Cihazın fiziksel ortam ışığı sensörünü kullanır</li>
+<li>Özelleştirilebilir lüks eşiği ile iç mekân, dış mekân ve parlak gün ışığı için hazır ayarlar</li>
+<li>Ana ekran ve kilit ekranı için ayrı açık ve koyu duvar kâğıtlarını eşzamanlama</li>
+<li>Seçtiğiniz saatler boyunca koyu modu etkin tutan isteğe bağlı Gece Kilidi</li>
+<li>Kolay kontrol için Hızlı Ayarlar kutucuğu</li>
+<li>Material You arayüzü ve 50'den fazla dil desteği</li>
+</ul>
+
+<b>Verimlilik odaklı tasarım</b>
+
+Sensör sürekli izlenmek yerine ekran açıldıktan hemen sonra kısa süreliğine okunur. Adaptive Theme, modu değiştirmeden önce sensörün bir el veya cep tarafından kapatılmadığını kontrol eder. Böylece değişiklik ekran açılırken gerçekleşir ve başka bir uygulamayı kullanırken sizi bölmez.
+
+<b>Tek seferlik kurulum</b>
+
+Android normalde sıradan uygulamaların sistem teması gibi korunan sistem ayarlarını değiştirmesine izin vermez. Bu nedenle Adaptive Theme'e bir kez <b>WRITE_SECURE_SETTINGS</b> izni verilmesi gerekir. Bu izin root erişimi sağlamaz ve kişisel verilerin okunmasına olanak tanımaz. Adaptive Theme izni yalnızca sistemin açık ve koyu modu arasında geçiş yapmak için kullanır; uygulama kaldırıldığında izin de iptal edilir.
+
+Kurulum sihirbazı çeşitli seçenekler sunar:
+
+<ul>
+<li>ADB kurmadan, bir bilgisayar veya ikinci Android cihazındaki basit bir web sitesi üzerinden WebADB</li>
+<li>Yalnızca izin verilirken bir kez gereken Shizuku ve uyumlu Shizuku çatalları</li>
+<li>Desteklenen cihazlarda root</li>
+<li>Elle çalıştırılan bir ADB komutu: adb shell pm grant dev.lexip.hecate android.permission.WRITE_SECURE_SETTINGS</li>
+</ul>
+
+<b>Diğer bilgiler</b>
+
+Adaptive Theme, Android 14 veya daha yeni bir sürüm gerektirir. Tabletler şu anda desteklenmemektedir.
+
+FOSS sürümü GPL-3.0 lisansıyla yayımlanır; reklam, analiz, kilitlenme raporlama, izleyici veya özel mülk kitaplık içermez.
+
+Sorun giderme ve ek ayrıntılar için <a href="https://github.com/xLexip/Adaptive-Theme">README ve sık sorulan sorulara</a> bakın.

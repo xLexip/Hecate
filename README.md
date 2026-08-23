@@ -14,15 +14,19 @@ It can also update your **wallpaper** to match the active theme.
 <br>
 
 <a href="https://play.google.com/store/apps/details?id=dev.lexip.hecate&referrer=utm_source%3Dgithub%26utm_medium%3Dreadme_button">
-    <img src=".github/resources/get-it-on-google-play.svg" alt="Get it on Google Play" width="180"/>
+    <img src=".github/resources/get-it-on-google-play.svg" alt="Get Adaptive Theme on Google Play" width="180"/>
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/xLexip/Adaptive-Theme/releases">
-    <img src=".github/resources/github-releases.png" alt="GitHub Releases" width="180"/>
+    <img src=".github/resources/github-releases.png" alt="Get Adaptive Theme as .APK on GitHub Releases" width="180"/>
 </a>
 &nbsp;&nbsp;
-<a href="https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api&referrer=utm_source%3Dgithub_xlexip">
-    <img src=".github/resources/works-with-shizuku.png" alt="Shizuku" width="180"/>
+<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22dev.lexip.hecate%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FxLexip%2FAdaptive-Theme%22%2C%22author%22%3A%22xLexip%22%2C%22name%22%3A%22Adaptive%20Theme%22%7D">
+    <img src="https://raw.githubusercontent.com/xLexip/Adaptive-Theme/develop/.github/resources/get-it-on-obtainium.svg" alt="Get Adaptive Theme on Obtainium" width="180">
+</a>
+&nbsp;&nbsp;
+<a href="#">
+    <img src=".github/resources/works-with-shizuku.png" alt="Works with Shizuku" width="180"/>
 </a>
 &nbsp;&nbsp;
 </div>
@@ -169,6 +173,7 @@ No. Shizuku is only required once to grant the permission. Once granted, the per
 - androidauthority.com — [**5 of the best new Android apps you need to try this April**](https://www.androidauthority.com/best-new-android-apps-games-april-2026-3653008/)
 - androidauthority.com — [**10 awesome Shizuku apps I use to level up my Android experience**](https://www.androidauthority.com/best-shizuku-apps-android-3659353/)
 - computerworld.com — [**The Android dark mode power-pack: 5 secrets for a smarter screen setup**](https://www.computerworld.com/article/4187935/android-dark-mode-power-pack.html)
+- droidwin.com — [**Switch Dark and Light Mode Based on Surrounding Light Level**](https://droidwin.com/switch-dark-and-light-mode-based-on-surrounding-light-level/)
 - androidinsider.ru — [**Автоматическая тёмная тема. Приложение, которого не хватало годами**](https://androidinsider.ru/obzory-prilozhenij/avtomaticheskaya-tyomnaya-tema-na-android-prilozhenie-kotorogo-ne-hvatalo-godami.html)
 - pcguia.pt — [**App do Dia – Adaptive Theme: Modo Escuro**](https://www.pcguia.pt/2026/04/app-do-dia-adaptive-theme-modo-escuro/)
 - android-zone.fr — [**Adaptive Theme Android: mode clair/sombre automatique**](https://www.android-zone.fr/adaptive-theme-android-mode-clair-sombre-automatique/)

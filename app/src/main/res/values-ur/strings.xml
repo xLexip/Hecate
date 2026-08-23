@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">آزمائشی جائزے کا عمل مکمل ہو گیا</string>
 	<string name="easter_egg_answer">زندگی، کائنات اور ہر چیز کے متعلق حتمی سوال کا جواب۔</string>
 	<string name="description_service_purpose">Android کو ارد گرد کی روشنی کے مطابق روشن اور گہرے موڈ کے درمیان تبدیل کرتا ہے۔</string>
-	<string name="description_switching_conditions">تھیم صرف اسکرین آن ہونے کے فوراً بعد اور صرف اس صورت میں تبدیل ہوتی ہے جب سینسر ڈھکا نہ ہو۔</string>
+	<string name="description_switching_conditions">تھیم صرف اسکرین آن ہونے کے کچھ ہی دیر بعد اور صرف اس صورت میں تبدیل ہوتی ہے جب سینسر ڈھکا نہ ہو۔</string>
 	<string name="description_notification_service_running">اسکرین آن ہونے پر سسٹم تھیم کو ایڈجسٹ کرنے کے لیے تیار ہے۔</string>
 	<string name="device_covered_title">سینسر ڈھکا ہوا ہے</string>
 	<string name="device_covered_message">روشنی کا سینسر ڈھکا ہونے کی وجہ سے تھیم کی تبدیلی روک دی گئی ہے۔</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">متبادل طریقے</string>
 	<string name="setup_grant_title">مرحلہ 3: دوسرے آلے سے اجازت دیں</string>
 	<string name="setup_grant_body">دوسرے آلے پر یہ لنک کھولیں اور ہدایات پر عمل کریں:</string>
-	<string name="setup_alternatives">آپ خود بھی ADB کمانڈ چلا سکتے ہیں یا root رسائی کے ذریعے اجازت دے سکتے ہیں۔ Shizuku بھی معاون ہے۔</string>
+	<string name="setup_alternatives">آپ خود بھی ADB کمانڈ چلا سکتے ہیں یا root رسائی کے ذریعے اجازت دے سکتے ہیں۔</string>
 	<string name="setup_permission_granted">اجازت دے دی گئی۔</string>
 	<string name="setup_permission_not_granted">ابھی اجازت نہیں دی گئی۔ دوسرے آلے کے ذریعے سیٹ اپ مکمل کریں۔</string>
 	<string name="setup_usb_debugging_disabled">USB ڈیبگنگ فعال کریں</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">کیا یہ محفوظ ہے؟</string>
 	<string name="setup_is_this_safe_body">یہ اجازت ایپس کو محفوظ سسٹم ترتیبات تبدیل کرنے دیتی ہے۔ Adaptive Theme اسے صرف گہرا موڈ تبدیل کرنے جیسی خصوصیات کے لیے استعمال کرتا ہے۔ ایپ اَن انسٹال کرنے سے اجازت واپس ہو جاتی ہے۔ ماخذ کوڈ GitHub پر عوامی ہے۔</string>
 	<string name="setup_shizuku_title">متبادل: Shizuku</string>
-	<string name="setup_shizuku_description">اگر آپ پہلے ہی Shizuku استعمال کرتے ہیں تو دوسرے آلے یا ADB کی ضرورت نہیں۔ اجازت دینے کے لیے Shizuku صرف ایک مرتبہ درکار ہے۔</string>
+	<string name="setup_shizuku_description">Shizuku کے ساتھ دوسرے آلے یا ADB کی ضرورت نہیں۔ اجازت دینے کے لیے ایپ صرف ایک مرتبہ درکار ہے۔</string>
 	<string name="setup_shizuku_action">Shizuku استعمال کریں</string>
+	<string name="setup_shizuku_install_action">Shizuku انسٹال کریں</string>
 	<string name="setup_action_use_root">root رسائی استعمال کریں</string>
 	<string name="setup_root_request">root رسائی کی درخواست کی جا رہی ہے…</string>
 	<string name="setup_root_grant_failed">root رسائی سے اجازت نہیں دی جا سکی۔</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku استعمال کرتے ہوئے غیر متوقع خرابی پیش آئی۔</string>
 	<string name="title_device_wallpaper_sync">وال پیپر</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">لاک اسکرین دھندلی کریں</string>
+	<string name="description_lock_screen_wallpaper_blur">لاک اسکرین پر وال پیپر کا دھندلا ورژن استعمال کریں۔</string>
 	<string name="description_device_wallpaper_sync">روشن اور گہرے موڈ کے لیے الگ وال پیپرز استعمال کریں۔ تبدیلی میں ایک لمحہ لگ سکتا ہے اور کارکردگی متاثر ہو سکتی ہے۔</string>
 	<string name="action_select_day_wallpaper">روشن موڈ:</string>
 	<string name="action_select_night_wallpaper">گہرا موڈ:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">سیٹ نہیں</string>
 	<string name="live_wallpaper_warning_title">لائیو وال پیپر فعال ہے</string>
 	<string name="live_wallpaper_warning_message">وال پیپر سنک فعال کرنے سے موجودہ لائیو وال پیپر روشن اور گہرے موڈ کے جامد وال پیپرز سے بدل جائے گا۔ جاری رکھیں؟</string>
+	<string name="github_star_prompt_description">Adaptive Theme مفت، اشتہارات سے پاک اور اوپن سورس ہے۔ اگر یہ آپ کے لیے مفید ہے تو GitHub پر اسٹار دینا اسے مفت سپورٹ کرنے کا ایک آسان طریقہ ہے۔</string>
+	<string name="github_star_prompt_action">GitHub پر اسٹار دیں ↗</string>
+	<string name="github_star_prompt_dismiss_description">ہمیشہ کے لیے چھپائیں</string>
+	<string name="github_star_prompt_thank_you">شکریہ!</string>
 </resources>

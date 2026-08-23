@@ -63,7 +63,7 @@ object ProcessExitDetector {
         val reasonName = exitReasonToString(reason)
         val description = exitInfo.description ?: "None"
         val importanceName = importanceToString(exitInfo.importance)
-        val pssMb = exitInfo.pss / (1024L * 1024L)
+        val pssMb = exitInfo.pss / 1024L
 
         Log.i(
             TAG,

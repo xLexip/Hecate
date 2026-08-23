@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Bandomasis vertinimo procesas baigtas</string>
 	<string name="easter_egg_answer">Atsakymas į svarbiausią klausimą apie gyvenimą, visatą ir visa kita.</string>
 	<string name="description_service_purpose">Perjungia „Android“ šviesų ir tamsų režimą pagal aplinkos apšvietimą.</string>
-	<string name="description_switching_conditions">Tema keičiama tik iškart įjungus ekraną ir tik jei jutiklis neuždengtas.</string>
+	<string name="description_switching_conditions">Tema keičiama tik netrukus įjungus ekraną ir tik jei jutiklis neuždengtas.</string>
 	<string name="description_notification_service_running">Pasiruošta pakeisti sistemos temą įjungus ekraną.</string>
 	<string name="device_covered_title">Jutiklis uždengtas</string>
 	<string name="device_covered_message">Temos perjungimas pristabdytas, nes šviesos jutiklis uždengtas.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternatyvūs būdai</string>
 	<string name="setup_grant_title">3 veiksmas: suteikite leidimą iš antro įrenginio</string>
 	<string name="setup_grant_body">Atidarykite šią nuorodą antrame įrenginyje ir vykdykite nurodymus:</string>
-	<string name="setup_alternatives">Taip pat galite patys vykdyti ADB komandą arba suteikti leidimą naudodami šakninę prieigą. „Shizuku“ taip pat palaikoma.</string>
+	<string name="setup_alternatives">Taip pat galite patys vykdyti ADB komandą arba suteikti leidimą naudodami šakninę prieigą.</string>
 	<string name="setup_permission_granted">Leidimas suteiktas.</string>
 	<string name="setup_permission_not_granted">Leidimas dar nesuteiktas. Užbaikite sąranką naudodami antrą įrenginį.</string>
 	<string name="setup_usb_debugging_disabled">Įjungti USB derinimą</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Ar tai saugu?</string>
 	<string name="setup_is_this_safe_body">Šis leidimas leidžia programoms keisti apsaugotus sistemos nustatymus. „Adaptive Theme“ jį naudoja tik tokioms funkcijoms kaip tamsaus režimo perjungimas. Pašalinus programą leidimas atšaukiamas. Šaltinio kodas viešai pasiekiamas „GitHub“.</string>
 	<string name="setup_shizuku_title">Kitas būdas: „Shizuku“</string>
-	<string name="setup_shizuku_description">Jei jau naudojate „Shizuku“, antro įrenginio ar ADB nereikia. „Shizuku“ reikia tik vieną kartą leidimui suteikti.</string>
+	<string name="setup_shizuku_description">Naudojant „Shizuku“, antro įrenginio ar ADB nereikia. Programėlės reikia tik vieną kartą leidimui suteikti.</string>
 	<string name="setup_shizuku_action">Naudoti „Shizuku“</string>
+	<string name="setup_shizuku_install_action">Įdiegti „Shizuku“</string>
 	<string name="setup_action_use_root">Naudoti šakninę prieigą</string>
 	<string name="setup_root_request">Prašoma šakninės prieigos…</string>
 	<string name="setup_root_grant_failed">Nepavyko suteikti leidimo naudojant šakninę prieigą.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Naudojant „Shizuku“ įvyko netikėta klaida.</string>
 	<string name="title_device_wallpaper_sync">Ekrano fonas</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Sulieti užrakto ekraną</string>
+	<string name="description_lock_screen_wallpaper_blur">Užrakto ekrane naudokite sulietą ekrano fono versiją.</string>
 	<string name="description_device_wallpaper_sync">Naudokite atskirus šviesaus ir tamsaus režimo ekrano fonus. Perjungimas gali užtrukti akimirką ir paveikti našumą.</string>
 	<string name="action_select_day_wallpaper">Šviesus režimas:</string>
 	<string name="action_select_night_wallpaper">Tamsus režimas:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Nenustatytas</string>
 	<string name="live_wallpaper_warning_title">Aktyvus animuotasis ekrano fonas</string>
 	<string name="live_wallpaper_warning_message">Įjungus ekrano fonų sinchronizavimą, dabartinis animuotasis ekrano fonas bus pakeistas statiniais šviesaus ir tamsaus režimo ekrano fonais. Ar tęsti?</string>
+	<string name="github_star_prompt_description">Adaptive Theme yra nemokama, be reklamų ir atvirojo kodo programa. Jei ji jums naudinga, galite ją nemokamai paremti pažymėdami žvaigždute „GitHub“.</string>
+	<string name="github_star_prompt_action">Pažymėti žvaigždute „GitHub“ ↗</string>
+	<string name="github_star_prompt_dismiss_description">Slėpti visam laikui</string>
+	<string name="github_star_prompt_thank_you">Ačiū!</string>
 </resources>

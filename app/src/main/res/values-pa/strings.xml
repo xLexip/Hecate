@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">ਟੈਸਟ ਸਮੀਖਿਆ ਪ੍ਰਕਿਰਿਆ ਪੂਰੀ ਹੋਈ</string>
 	<string name="easter_egg_answer">ਜ਼ਿੰਦਗੀ, ਬ੍ਰਹਿਮੰਡ ਅਤੇ ਹਰ ਚੀਜ਼ ਦੇ ਅੰਤਿਮ ਸਵਾਲ ਦਾ ਜਵਾਬ।</string>
 	<string name="description_service_purpose">ਆਲੇ-ਦੁਆਲੇ ਦੀ ਰੌਸ਼ਨੀ ਮੁਤਾਬਕ Android ਨੂੰ ਹਲਕੇ ਅਤੇ ਗੂੜ੍ਹੇ ਮੋਡ ਵਿਚਕਾਰ ਬਦਲਦਾ ਹੈ।</string>
-	<string name="description_switching_conditions">ਥੀਮ ਸਿਰਫ਼ ਸਕ੍ਰੀਨ ਚਾਲੂ ਹੋਣ ਤੋਂ ਤੁਰੰਤ ਬਾਅਦ ਅਤੇ ਸੈਂਸਰ ਨਾ ਢੱਕਿਆ ਹੋਣ ਤੇ ਹੀ ਬਦਲਦੀ ਹੈ।</string>
+	<string name="description_switching_conditions">ਥੀਮ ਸਿਰਫ਼ ਸਕ੍ਰੀਨ ਚਾਲੂ ਹੋਣ ਤੋਂ ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਅਤੇ ਸੈਂਸਰ ਨਾ ਢੱਕਿਆ ਹੋਣ ਤੇ ਹੀ ਬਦਲਦੀ ਹੈ।</string>
 	<string name="description_notification_service_running">ਸਕ੍ਰੀਨ ਚਾਲੂ ਹੋਣ ਤੇ ਸਿਸਟਮ ਥੀਮ ਬਦਲਣ ਲਈ ਤਿਆਰ।</string>
 	<string name="device_covered_title">ਸੈਂਸਰ ਢੱਕਿਆ ਹੋਇਆ ਹੈ</string>
 	<string name="device_covered_message">ਰੌਸ਼ਨੀ ਦਾ ਸੈਂਸਰ ਢੱਕਿਆ ਹੋਣ ਕਰਕੇ ਥੀਮ ਬਦਲਣਾ ਰੋਕਿਆ ਗਿਆ ਹੈ।</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">ਹੋਰ ਤਰੀਕੇ</string>
 	<string name="setup_grant_title">ਕਦਮ 3: ਦੂਜੇ ਡਿਵਾਈਸ ਤੋਂ ਇਜਾਜ਼ਤ ਦਿਓ</string>
 	<string name="setup_grant_body">ਦੂਜੇ ਡਿਵਾਈਸ ਤੇ ਇਹ ਲਿੰਕ ਖੋਲ੍ਹੋ ਅਤੇ ਹਦਾਇਤਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ:</string>
-	<string name="setup_alternatives">ਤੁਸੀਂ ਖ਼ੁਦ ADB ਕਮਾਂਡ ਚਲਾ ਸਕਦੇ ਹੋ ਜਾਂ root ਪਹੁੰਚ ਨਾਲ ਇਜਾਜ਼ਤ ਦੇ ਸਕਦੇ ਹੋ। Shizuku ਵੀ ਸਮਰਥਿਤ ਹੈ।</string>
+	<string name="setup_alternatives">ਤੁਸੀਂ ਖ਼ੁਦ ADB ਕਮਾਂਡ ਚਲਾ ਸਕਦੇ ਹੋ ਜਾਂ root ਪਹੁੰਚ ਨਾਲ ਇਜਾਜ਼ਤ ਦੇ ਸਕਦੇ ਹੋ।</string>
 	<string name="setup_permission_granted">ਇਜਾਜ਼ਤ ਦਿੱਤੀ ਗਈ।</string>
 	<string name="setup_permission_not_granted">ਅਜੇ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੱਤੀ ਗਈ। ਦੂਜੇ ਡਿਵਾਈਸ ਨਾਲ ਸੈੱਟਅੱਪ ਪੂਰਾ ਕਰੋ।</string>
 	<string name="setup_usb_debugging_disabled">USB ਡੀਬੱਗਿੰਗ ਚਾਲੂ ਕਰੋ</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">ਕੀ ਇਹ ਸੁਰੱਖਿਅਤ ਹੈ?</string>
 	<string name="setup_is_this_safe_body">ਇਹ ਇਜਾਜ਼ਤ ਐਪਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਬਦਲਣ ਦਿੰਦੀ ਹੈ। Adaptive Theme ਇਸ ਨੂੰ ਸਿਰਫ਼ ਗੂੜ੍ਹਾ ਮੋਡ ਬਦਲਣ ਵਰਗੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਲਈ ਵਰਤਦਾ ਹੈ। ਐਪ ਅਣਇੰਸਟਾਲ ਕਰਨ ਨਾਲ ਇਜਾਜ਼ਤ ਵਾਪਸ ਹੋ ਜਾਂਦੀ ਹੈ। ਸਰੋਤ ਕੋਡ GitHub ਤੇ ਜਨਤਕ ਹੈ।</string>
 	<string name="setup_shizuku_title">ਹੋਰ ਚੋਣ: Shizuku</string>
-	<string name="setup_shizuku_description">ਜੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ Shizuku ਵਰਤਦੇ ਹੋ ਤਾਂ ਦੂਜੇ ਡਿਵਾਈਸ ਜਾਂ ADB ਦੀ ਲੋੜ ਨਹੀਂ। ਇਜਾਜ਼ਤ ਦੇਣ ਲਈ Shizuku ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਚਾਹੀਦਾ ਹੈ।</string>
+	<string name="setup_shizuku_description">Shizuku ਨਾਲ ਦੂਜੇ ਡਿਵਾਈਸ ਜਾਂ ADB ਦੀ ਲੋੜ ਨਹੀਂ। ਇਜਾਜ਼ਤ ਦੇਣ ਲਈ ਐਪ ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਚਾਹੀਦੀ ਹੈ।</string>
 	<string name="setup_shizuku_action">Shizuku ਵਰਤੋ</string>
+	<string name="setup_shizuku_install_action">Shizuku ਇੰਸਟਾਲ ਕਰੋ</string>
 	<string name="setup_action_use_root">root ਪਹੁੰਚ ਵਰਤੋ</string>
 	<string name="setup_root_request">root ਪਹੁੰਚ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
 	<string name="setup_root_grant_failed">root ਪਹੁੰਚ ਨਾਲ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੱਤੀ ਜਾ ਸਕੀ।</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ਵਰਤਦਿਆਂ ਅਚਾਨਕ ਗਲਤੀ ਆਈ।</string>
 	<string name="title_device_wallpaper_sync">ਵਾਲਪੇਪਰ</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">ਲੌਕ ਸਕ੍ਰੀਨ ਨੂੰ ਧੁੰਦਲਾ ਕਰੋ</string>
+	<string name="description_lock_screen_wallpaper_blur">ਲੌਕ ਸਕ੍ਰੀਨ \'ਤੇ ਵਾਲਪੇਪਰ ਦਾ ਧੁੰਦਲਾ ਵਰਜਨ ਵਰਤੋ।</string>
 	<string name="description_device_wallpaper_sync">ਹਲਕੇ ਅਤੇ ਗੂੜ੍ਹੇ ਮੋਡ ਲਈ ਵੱਖਰੇ ਵਾਲਪੇਪਰ ਵਰਤੋ। ਬਦਲਣ ਵਿੱਚ ਕੁਝ ਸਮਾਂ ਲੱਗ ਸਕਦਾ ਹੈ ਅਤੇ ਕਾਰਗੁਜ਼ਾਰੀ ਪ੍ਰਭਾਵਿਤ ਹੋ ਸਕਦੀ ਹੈ।</string>
 	<string name="action_select_day_wallpaper">ਹਲਕਾ ਮੋਡ:</string>
 	<string name="action_select_night_wallpaper">ਗੂੜ੍ਹਾ ਮੋਡ:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">ਸੈੱਟ ਨਹੀਂ</string>
 	<string name="live_wallpaper_warning_title">ਲਾਈਵ ਵਾਲਪੇਪਰ ਚਾਲੂ ਹੈ</string>
 	<string name="live_wallpaper_warning_message">ਵਾਲਪੇਪਰ ਸਿੰਕ ਚਾਲੂ ਕਰਨ ਨਾਲ ਮੌਜੂਦਾ ਲਾਈਵ ਵਾਲਪੇਪਰ ਹਲਕੇ ਅਤੇ ਗੂੜ੍ਹੇ ਮੋਡ ਦੇ ਸਥਿਰ ਵਾਲਪੇਪਰਾਂ ਨਾਲ ਬਦਲ ਜਾਵੇਗਾ। ਜਾਰੀ ਰੱਖਣਾ ਹੈ?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ਮੁਫ਼ਤ, ਇਸ਼ਤਿਹਾਰ-ਮੁਕਤ ਅਤੇ ਓਪਨ ਸੋਰਸ ਹੈ। ਜੇ ਇਹ ਤੁਹਾਡੇ ਲਈ ਲਾਭਦਾਇਕ ਹੈ, ਤਾਂ GitHub ਉੱਤੇ ਸਟਾਰ ਦੇਣਾ ਇਸ ਨੂੰ ਮੁਫ਼ਤ ਸਮਰਥਨ ਕਰਨ ਦਾ ਸੌਖਾ ਤਰੀਕਾ ਹੈ।</string>
+	<string name="github_star_prompt_action">GitHub ਉੱਤੇ ਸਟਾਰ ਦਿਓ ↗</string>
+	<string name="github_star_prompt_dismiss_description">ਹਮੇਸ਼ਾ ਲਈ ਲੁਕਾਓ</string>
+	<string name="github_star_prompt_thank_you">ਧੰਨਵਾਦ!</string>
 </resources>

@@ -12,12 +12,13 @@
 
 package dev.lexip.hecate.ui
 
-import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.accessibility.enableAccessibilityChecks
 import androidx.compose.ui.test.junit4.v2.createComposeRule
-import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -82,6 +83,38 @@ class MainScreenContentTest {
 			.assertExists()
 		composeRule.onNodeWithText(context.getString(R.string.action_advanced_settings))
 			.assertExists()
+	}
+
+	@Test
+	fun githubStarPromptForwardsOpenDismissAndUndoActions() {
+		var impressionCalls = 0
+		var openCalls = 0
+		var dismissCalls = 0
+		var undoCalls = 0
+		setMainContent(
+			uiState = MainUiState(
+				adaptiveThemeEnabled = true,
+				showGitHubStarPrompt = true
+			),
+			hasPermission = true,
+			callbacks = callbacks(
+				onGitHubImpression = { impressionCalls++ },
+				onOpenGitHub = { openCalls++ },
+				onDismissGitHub = { dismissCalls++ },
+				onUndoGitHubDismissal = { undoCalls++ }
+			)
+		)
+		composeRule.waitForIdle()
+		assertEquals(1, impressionCalls)
+
+		clickTextAfterScroll(context.getString(R.string.github_star_prompt_action))
+		assertEquals(1, openCalls)
+
+		clickTextAfterScroll(context.getString(R.string.github_star_prompt_dismiss_description))
+		assertEquals(1, dismissCalls)
+
+		composeRule.onNodeWithText(context.getString(R.string.action_cancel)).performClick()
+		assertEquals(1, undoCalls)
 	}
 
 	@Test
@@ -266,6 +299,26 @@ class MainScreenContentTest {
 	}
 
 	@Test
+	fun lockScreenBlurStaysVisibleWithoutWallpaperSyncAndDispatchesWhenEnabled() {
+		val blurRequests = mutableListOf<Boolean>()
+		val uiState = mutableStateOf(MainUiState(adaptiveThemeEnabled = true))
+		setMainContent(
+			uiState = { uiState.value },
+			hasPermission = true,
+			callbacks = callbacks(onLockScreenBlur = blurRequests::add)
+		)
+		expandAdvancedSettings()
+		scrollToText(context.getString(R.string.title_lock_screen_wallpaper_blur))
+		composeRule.onNodeWithText(context.getString(R.string.title_lock_screen_wallpaper_blur))
+			.assertIsDisplayed()
+		assertEquals(emptyList<Boolean>(), blurRequests)
+
+		uiState.value = uiState.value.copy(wallpaperSyncEnabled = true)
+		clickTextAfterScroll(context.getString(R.string.title_lock_screen_wallpaper_blur))
+		assertEquals(listOf(true), blurRequests)
+	}
+
+	@Test
 	fun liveWallpaperWarningDispatchesConfirm() {
 		var confirmCalls = 0
 		var dismissCalls = 0
@@ -306,11 +359,21 @@ class MainScreenContentTest {
 		uiState: MainUiState,
 		hasPermission: Boolean,
 		callbacks: MainScreenCallbacks = callbacks()
+	) = setMainContent(
+		uiState = { uiState },
+		hasPermission = hasPermission,
+		callbacks = callbacks
+	)
+
+	private fun setMainContent(
+		uiState: () -> MainUiState,
+		hasPermission: Boolean,
+		callbacks: MainScreenCallbacks = callbacks()
 	) {
 		composeRule.setContent {
 			HecateTheme {
 				MainScreenContent(
-					uiState = uiState,
+					uiState = uiState(),
 					currentSensorLux = 25f,
 					isDeviceCovered = false,
 					isBatterySaverActive = false,
@@ -326,22 +389,32 @@ class MainScreenContentTest {
 		onToggle: (Boolean, Boolean) -> Boolean = { _, _ -> true },
 		onReview: () -> Unit = {},
 		onWallpaperToggle: (Boolean) -> Unit = {},
+		onLockScreenBlur: (Boolean) -> Unit = {},
 		onSelectDay: () -> Unit = {},
 		onSelectNight: () -> Unit = {},
 		onConfirmLiveWallpaper: () -> Unit = {},
-		onDismissLiveWallpaper: () -> Unit = {}
+		onDismissLiveWallpaper: () -> Unit = {},
+		onGitHubImpression: () -> Unit = {},
+		onOpenGitHub: () -> Unit = {},
+		onDismissGitHub: () -> Unit = {},
+		onUndoGitHubDismissal: () -> Unit = {}
 	): MainScreenCallbacks = MainScreenCallbacks(
 		onServiceToggleRequested = onToggle,
 		onThresholdSelected = { _, _ -> },
 		onCheckReviewPrompt = onReview,
 		onStayDarkAtNightChanged = {},
 		onWallpaperSyncToggleRequested = onWallpaperToggle,
+		onLockScreenWallpaperBlurChanged = onLockScreenBlur,
 		onSelectDayWallpaper = onSelectDay,
 		onSelectNightWallpaper = onSelectNight,
 		onConfirmLiveWallpaper = onConfirmLiveWallpaper,
 		onDismissLiveWallpaperWarning = onDismissLiveWallpaper,
 		onCustomThresholdConfirmed = {},
-		onNightWindowChanged = { _, _, _ -> }
+		onNightWindowChanged = { _, _, _ -> },
+		onGitHubStarPromptImpression = onGitHubImpression,
+		onOpenGitHubRepository = onOpenGitHub,
+		onDismissGitHubStarPrompt = onDismissGitHub,
+		onUndoGitHubStarPromptDismissal = onUndoGitHubDismissal
 	)
 
 	private fun adaptiveThemeAction(): String = context.getString(

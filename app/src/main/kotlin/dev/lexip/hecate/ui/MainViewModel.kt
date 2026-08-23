@@ -26,6 +26,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import dev.lexip.hecate.Application
 import dev.lexip.hecate.data.AdaptiveThreshold
+import dev.lexip.hecate.data.UserPreferences
 import dev.lexip.hecate.data.UserPreferencesDataSource
 import dev.lexip.hecate.data.UserPreferencesRepository
 import dev.lexip.hecate.logging.Logger
@@ -42,10 +43,11 @@ import dev.lexip.hecate.util.WallpaperImagePreparer
 import dev.lexip.hecate.util.WallpaperImagePreprocessor
 import dev.lexip.hecate.util.WallpaperPlatform
 import dev.lexip.hecate.util.WallpaperSlot
+import dev.lexip.hecate.util.WallpaperStorageMigrator
 import dev.lexip.hecate.util.CURRENT_WALLPAPER_STORAGE_VERSION
-import dev.lexip.hecate.util.LegacyWallpaperCleanupAction
-import dev.lexip.hecate.util.legacyWallpaperCleanupAction
+import dev.lexip.hecate.util.isNightConfigurationEnabled
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.BufferOverflow
@@ -58,9 +60,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import java.io.InputStream
+import java.time.LocalDate
 
 private const val TAG = "MainViewModel"
-private const val REVIEW_MIN_SWITCH_COUNT = 10
 
 sealed interface UiEvent
 
@@ -81,9 +84,11 @@ data class MainUiState(
 	val nightStartMinutes: Int = 21 * 60,
 	val nightEndMinutes: Int = 6 * 60,
 	val wallpaperSyncEnabled: Boolean = false,
+	val lockScreenWallpaperBlurEnabled: Boolean = false,
 	val dayWallpaperUri: String? = null,
 	val nightWallpaperUri: String? = null,
-	val showLiveWallpaperWarningDialog: Boolean = false
+	val showLiveWallpaperWarningDialog: Boolean = false,
+	val showGitHubStarPrompt: Boolean = false
 )
 
 class MainViewModel internal constructor(
@@ -101,8 +106,13 @@ class MainViewModel internal constructor(
 		WallpaperHandler(application.applicationContext),
 	private val wallpaperImagePreparer: WallpaperImagePreparer =
 		WallpaperImagePreprocessor(application.applicationContext),
+	private val wallpaperStorageMigrator: WallpaperStorageMigrator =
+		WallpaperImagePreprocessor(application.applicationContext),
+	private val openWallpaperInputStream: (Uri) -> InputStream? =
+		application.applicationContext.contentResolver::openInputStream,
 	private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
-	private val mainDispatcher: CoroutineDispatcher = Dispatchers.Main
+	private val mainDispatcher: CoroutineDispatcher = Dispatchers.Main,
+	private val todayEpochDay: () -> Long = { LocalDate.now().toEpochDay() }
 ) : ViewModel() {
 
 	private val _uiState = MutableStateFlow(MainUiState())
@@ -155,8 +165,12 @@ class MainViewModel internal constructor(
 
 		if (isListeningToProximity) return
 		isListeningToProximity = true
-		proximitySensorManager.startListening({ distance: Float ->
-			val covered = distance < 5f
+		val registered = proximitySensorManager.startListening({ distance: Float ->
+			val maximumRange = proximitySensorManager.maximumRange
+			val covered = distance.isFinite() &&
+				maximumRange.isFinite() &&
+				maximumRange > 0f &&
+				distance < maximumRange
 			if (covered) {
 				if (_uiState.value.isDeviceCovered || coveredJob?.isActive == true) return@startListening
 				coveredJob = viewModelScope.launch {
@@ -182,6 +196,10 @@ class MainViewModel internal constructor(
 				}
 			}
 		}, sensorDelay = SensorManager.SENSOR_DELAY_UI)
+		if (!registered) {
+			isListeningToProximity = false
+			Log.w(TAG, "Failed to register proximity sensor listener in MainViewModel.")
+		}
 	}
 
 	private fun stopProximityListening() {
@@ -276,12 +294,19 @@ class MainViewModel internal constructor(
 	private var serviceEnabledAtStart: Boolean? = null
 	private var reviewRequestedInSession: Boolean = false
 	private var hasChangedBrightnessThresholdInSession: Boolean = false
+	private var githubStarPromptImpressionRecordedInSession: Boolean = false
+	private var latestUserPreferences: UserPreferences? = null
 	private val wallpaperSelectionMutex = Mutex()
+	private val wallpaperMigrationCompleted = CompletableDeferred<Unit>()
 
 	init {
 		viewModelScope.launch(ioDispatcher) {
-			wallpaperSelectionMutex.withLock {
-				resetLegacyWallpaperSelectionIfNeeded()
+			try {
+				wallpaperSelectionMutex.withLock {
+					migrateWallpaperStorage()
+				}
+			} finally {
+				wallpaperMigrationCompleted.complete(Unit)
 			}
 		}
 		viewModelScope.launch(ioDispatcher) {
@@ -291,6 +316,7 @@ class MainViewModel internal constructor(
 
 		viewModelScope.launch {
 			userPreferencesRepository.userPreferencesFlow.collect { userPreferences ->
+				latestUserPreferences = userPreferences
 				if (serviceEnabledAtStart == null) {
 					serviceEnabledAtStart = userPreferences.adaptiveThemeEnabled
 				}
@@ -303,8 +329,10 @@ class MainViewModel internal constructor(
 					nightStartMinutes = userPreferences.nightStartMinutes,
 					nightEndMinutes = userPreferences.nightEndMinutes,
 					wallpaperSyncEnabled = userPreferences.wallpaperSyncEnabled,
+					lockScreenWallpaperBlurEnabled = userPreferences.lockScreenWallpaperBlurEnabled,
 					dayWallpaperUri = userPreferences.dayWallpaperUri,
-					nightWallpaperUri = userPreferences.nightWallpaperUri
+					nightWallpaperUri = userPreferences.nightWallpaperUri,
+					showGitHubStarPrompt = shouldShowGitHubStarPrompt(userPreferences)
 				)
 
 				updateUiSensorMonitoring()
@@ -312,37 +340,65 @@ class MainViewModel internal constructor(
 		}
 	}
 
-	private suspend fun resetLegacyWallpaperSelectionIfNeeded() {
-		val preferences = userPreferencesRepository.fetchInitialPreferences()
-		when (
-			legacyWallpaperCleanupAction(
-				storageVersion = preferences.wallpaperStorageVersion,
-				dayWallpaperUri = preferences.dayWallpaperUri,
-				nightWallpaperUri = preferences.nightWallpaperUri
+	private fun shouldShowGitHubStarPrompt(
+		userPreferences: UserPreferences
+	): Boolean {
+		if (githubStarPromptImpressionRecordedInSession) {
+			return userPreferences.hasSetupCompleted &&
+				userPreferences.adaptiveThemeEnabled &&
+				!userPreferences.githubStarPromptDismissed
+		}
+		return shouldShowGitHubStarPrompt(
+			GitHubStarPromptEligibility(
+				hasSetupCompleted = userPreferences.hasSetupCompleted,
+				adaptiveThemeEnabled = userPreferences.adaptiveThemeEnabled,
+				daysSinceFirstInstall = installMetadataProvider.daysSinceFirstInstall(),
+				dismissed = userPreferences.githubStarPromptDismissed,
+				lastReviewRequestEpochDay = userPreferences.reviewPromptLastRequestEpochDay,
+				todayEpochDay = todayEpochDay()
 			)
-		) {
-			LegacyWallpaperCleanupAction.NONE -> Unit
-			LegacyWallpaperCleanupAction.MARK_CURRENT ->
-				userPreferencesRepository.updateWallpaperStorageVersion(CURRENT_WALLPAPER_STORAGE_VERSION)
+		)
+	}
 
-			LegacyWallpaperCleanupAction.RESET_LEGACY_SELECTION -> {
-				userPreferencesRepository.updateWallpaperSyncEnabled(false)
-				userPreferencesRepository.updateDayWallpaperUri(null)
-				userPreferencesRepository.updateNightWallpaperUri(null)
-				userPreferencesRepository.updateWallpaperStorageVersion(CURRENT_WALLPAPER_STORAGE_VERSION)
-				Log.i(TAG, "Cleared legacy wallpaper selections that could not be migrated safely")
-			}
+	private suspend fun migrateWallpaperStorage() {
+		val preferences = userPreferencesRepository.fetchInitialPreferences()
+		val migration = wallpaperStorageMigrator.migrate(
+			dayWallpaperUri = preferences.dayWallpaperUri,
+			nightWallpaperUri = preferences.nightWallpaperUri
+		)
+		if (migration.failed) {
+			userPreferencesRepository.updateWallpaperSyncEnabled(false)
+			userPreferencesRepository.updateLockScreenWallpaperBlurEnabled(false)
+			userPreferencesRepository.updateDayWallpaperUri(null)
+			userPreferencesRepository.updateNightWallpaperUri(null)
+			userPreferencesRepository.updateWallpaperStorageVersion(CURRENT_WALLPAPER_STORAGE_VERSION)
+			Log.i(TAG, "Cleared wallpaper selections that could not be migrated safely")
+			return
+		}
+
+		if (migration.dayWallpaperUri != preferences.dayWallpaperUri) {
+			userPreferencesRepository.updateDayWallpaperUri(migration.dayWallpaperUri)
+		}
+		if (migration.nightWallpaperUri != preferences.nightWallpaperUri) {
+			userPreferencesRepository.updateNightWallpaperUri(migration.nightWallpaperUri)
+		}
+		if (preferences.wallpaperStorageVersion < CURRENT_WALLPAPER_STORAGE_VERSION) {
+			userPreferencesRepository.updateWallpaperStorageVersion(CURRENT_WALLPAPER_STORAGE_VERSION)
 		}
 	}
 
 	private fun startLightSensorListening() {
 		if (isListeningToSensor) return
 		isListeningToSensor = true
-		lightSensorManager.startListening({ lux: Float ->
+		val registered = lightSensorManager.startListening({ lux: Float ->
 			viewModelScope.launch {
 				updateCurrentSensorLux(lux)
 			}
 		}, sensorDelay = SensorManager.SENSOR_DELAY_NORMAL)
+		if (!registered) {
+			isListeningToSensor = false
+			Log.w(TAG, "Failed to register light sensor listener in MainViewModel.")
+		}
 	}
 
 	private fun stopLightSensorListening() {
@@ -395,8 +451,21 @@ class MainViewModel internal constructor(
 	}
 
 	private fun shouldPromptForReview(): Boolean {
-		val daysSinceFirstInstall = installMetadataProvider.daysSinceFirstInstall()
-		return !reviewRequestedInSession && serviceEnabledAtStart == true && daysSinceFirstInstall >= 2
+		val preferences = latestUserPreferences ?: return false
+		return shouldRequestReview(
+			ReviewPromptEligibility(
+				isPlayStoreInstall = installMetadataProvider.isInstalledFromPlayStore(),
+				serviceEnabledAtStart = serviceEnabledAtStart == true,
+				daysSinceFirstInstall = installMetadataProvider.daysSinceFirstInstall(),
+				requestedInSession = reviewRequestedInSession,
+				githubPromptRenderedInSession =
+					githubStarPromptImpressionRecordedInSession,
+				lastReviewRequestEpochDay = preferences.reviewPromptLastRequestEpochDay,
+				lastGitHubImpressionEpochDay =
+					preferences.githubStarPromptLastImpressionEpochDay,
+				todayEpochDay = todayEpochDay()
+			)
+		)
 	}
 
 	fun checkReviewPrompt() {
@@ -405,6 +474,59 @@ class MainViewModel internal constructor(
 			viewModelScope.launch {
 				_uiEvents.emit(RequestInAppReview)
 			}
+		}
+	}
+
+	fun recordReviewPromptLaunch() {
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateReviewPromptLastRequestEpochDay(todayEpochDay())
+		}
+	}
+
+	fun recordGitHubStarPromptImpression() {
+		if (!_uiState.value.showGitHubStarPrompt ||
+			githubStarPromptImpressionRecordedInSession
+		) return
+
+		githubStarPromptImpressionRecordedInSession = true
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.recordGitHubStarPromptImpression(todayEpochDay())
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "impression"
+			)
+		}
+	}
+
+	fun dismissGitHubStarPrompt() {
+		_uiState.value = _uiState.value.copy(showGitHubStarPrompt = false)
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateGitHubStarPromptDismissed(true)
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "dismiss"
+			)
+		}
+	}
+
+	fun undoGitHubStarPromptDismissal() {
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateGitHubStarPromptDismissed(false)
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "undo_dismiss"
+			)
+		}
+	}
+
+	fun onGitHubStarPromptOpened() {
+		_uiState.value = _uiState.value.copy(showGitHubStarPrompt = false)
+		viewModelScope.launch(ioDispatcher) {
+			userPreferencesRepository.updateGitHubStarPromptDismissed(true)
+			Logger.logGitHubStarPromptAction(
+				application.applicationContext,
+				action = "open_github"
+			)
 		}
 	}
 
@@ -506,18 +628,37 @@ class MainViewModel internal constructor(
 	}
 
 	fun onDayWallpaperPicked(uri: Uri) {
-		viewModelScope.launch(ioDispatcher) {
-			storeWallpaperSelection(uri, isDayWallpaper = true)
-		}
+		openAndStoreWallpaperSelection(uri, isDayWallpaper = true)
 	}
 
 	fun onNightWallpaperPicked(uri: Uri) {
-		viewModelScope.launch(ioDispatcher) {
-			storeWallpaperSelection(uri, isDayWallpaper = false)
-		}
+		openAndStoreWallpaperSelection(uri, isDayWallpaper = false)
 	}
 
-	private suspend fun storeWallpaperSelection(uri: Uri, isDayWallpaper: Boolean) {
+	private fun openAndStoreWallpaperSelection(uri: Uri, isDayWallpaper: Boolean) {
+		val sourceStream = try {
+			openWallpaperInputStream(uri)
+		} catch (e: Exception) {
+			Log.w(TAG, "Failed to open selected wallpaper", e)
+			null
+		}
+		if (sourceStream == null) {
+			Log.w(TAG, "Selected wallpaper returned no readable stream: $uri")
+			return
+		}
+		val job = viewModelScope.launch(ioDispatcher) {
+			sourceStream.use {
+				storeWallpaperSelection(uri, it, isDayWallpaper)
+			}
+		}
+		job.invokeOnCompletion { runCatching(sourceStream::close) }
+	}
+
+	private suspend fun storeWallpaperSelection(
+		uri: Uri,
+		sourceStream: InputStream,
+		isDayWallpaper: Boolean
+	) {
 		wallpaperSelectionMutex.withLock {
 			val preferencesBefore = userPreferencesRepository.fetchInitialPreferences()
 			try {
@@ -528,7 +669,8 @@ class MainViewModel internal constructor(
 			}
 			val storedUri = try {
 				wallpaperImagePreparer.prepare(
-					source = uri,
+					sourceUri = uri,
+					sourceStream = sourceStream,
 					slot = if (isDayWallpaper) WallpaperSlot.DAY else WallpaperSlot.NIGHT
 				)
 			} catch (e: Exception) {
@@ -569,6 +711,38 @@ class MainViewModel internal constructor(
 		}
 	}
 
+	fun updateLockScreenWallpaperBlurEnabled(enabled: Boolean) {
+		viewModelScope.launch(ioDispatcher) {
+			wallpaperMigrationCompleted.await()
+			wallpaperSelectionMutex.withLock {
+				val preferences = userPreferencesRepository.fetchInitialPreferences()
+				if (enabled && (!preferences.wallpaperSyncEnabled ||
+					preferences.dayWallpaperUri.isNullOrEmpty() ||
+					preferences.nightWallpaperUri.isNullOrEmpty())
+				) return@withLock
+
+				userPreferencesRepository.updateLockScreenWallpaperBlurEnabled(enabled)
+				applyCurrentWallpaper(
+					preferences.copy(
+						lockScreenWallpaperBlurEnabled = enabled
+					)
+				)
+			}
+		}
+	}
+
+	private fun applyCurrentWallpaper(preferences: UserPreferences) {
+		if (!preferences.wallpaperSyncEnabled) return
+		wallpaperPlatform.applyWallpaperForTheme(
+			isDark = isNightConfigurationEnabled(
+				application.applicationContext.resources.configuration.uiMode
+			),
+			dayUriStr = preferences.dayWallpaperUri,
+			nightUriStr = preferences.nightWallpaperUri,
+			lockScreenWallpaperBlurEnabled = preferences.lockScreenWallpaperBlurEnabled
+		)
+	}
+
 	fun confirmEnableWithLiveWallpaper() {
 		_uiState.value = _uiState.value.copy(showLiveWallpaperWarningDialog = false)
 		enableWallpaperSync()
@@ -580,8 +754,17 @@ class MainViewModel internal constructor(
 
 	private fun enableWallpaperSync() {
 		viewModelScope.launch(ioDispatcher) {
-			userPreferencesRepository.updateWallpaperSyncEnabled(true)
-			Logger.logWallpaperSyncToggled(application.applicationContext, enabled = true)
+			wallpaperMigrationCompleted.await()
+			wallpaperSelectionMutex.withLock {
+				val preferences = userPreferencesRepository.fetchInitialPreferences()
+				userPreferencesRepository.updateWallpaperSyncEnabled(true)
+				Logger.logWallpaperSyncToggled(application.applicationContext, enabled = true)
+				if (!preferences.dayWallpaperUri.isNullOrEmpty() &&
+					!preferences.nightWallpaperUri.isNullOrEmpty()
+				) {
+					applyCurrentWallpaper(preferences.copy(wallpaperSyncEnabled = true))
+				}
+			}
 		}
 	}
 

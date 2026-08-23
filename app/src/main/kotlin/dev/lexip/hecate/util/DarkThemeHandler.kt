@@ -27,7 +27,12 @@ private const val NIGHT_MODE_UNSET = -1
 /**
  * Handler for managing the system dark theme.
  */
-class DarkThemeHandler(context: Context) {
+class DarkThemeHandler internal constructor(
+    context: Context,
+    delayedActionScheduler: DelayedActionScheduler
+) {
+    constructor(context: Context) : this(context, MainThreadDelayedActionScheduler())
+
     private val appContext = context.applicationContext ?: context
     private val contentResolver = appContext.contentResolver
     private val uiModeManager = requireNotNull(
@@ -35,6 +40,10 @@ class DarkThemeHandler(context: Context) {
     ) {
         "UiModeManager is unavailable"
     }
+    private val themeChangeVerifier = ThemeChangeVerifier(
+        delayedActionScheduler = delayedActionScheduler,
+        effectiveUiModeProvider = { appContext.resources.configuration.uiMode }
+    )
 
     /**
      * @return True if the system dark theme is enabled, false otherwise.
@@ -48,10 +57,25 @@ class DarkThemeHandler(context: Context) {
     /**
      * Set the system dark theme based on the given parameter.
      * @param enable True to enable dark theme, false to disable.
-     * @return The result of attempting to change the system theme.
+     * @param onComplete Called once the effective system configuration has been verified.
      */
     @Synchronized
-    fun setDarkTheme(enable: Boolean): DarkThemeChangeResult {
+    fun setDarkTheme(
+        enable: Boolean,
+        screenOnProximityResult: ScreenOnProximityResult,
+        onComplete: (DarkThemeChangeResult) -> Unit = {}
+    ) {
+        if (themeChangeVerifier.isVerificationInProgress) {
+            Log.w(TAG, "Theme verification already in progress")
+            Logger.logThemeSwitchSkipped(
+                context = appContext,
+                reason = ThemeSwitchSkipReason.THEME_TRANSITION_IN_PROGRESS,
+                screenOnProximityResult = screenOnProximityResult
+            )
+            onComplete(DarkThemeChangeResult(succeeded = false, changed = false))
+            return
+        }
+
         val isCurrentlyDark = isDarkThemeEnabled()
         val configuredMode = Secure.getInt(
             contentResolver,
@@ -64,10 +88,11 @@ class DarkThemeHandler(context: Context) {
             enable = enable
         )
         if (!plan.writeSetting && !plan.refreshUi) {
-            return DarkThemeChangeResult(succeeded = true, changed = false)
+            onComplete(DarkThemeChangeResult(succeeded = true, changed = false))
+            return
         }
 
-        val succeeded = try {
+        val requestSucceeded = try {
             if (plan.refreshUi &&
                 uiModeManager.currentModeType == Configuration.UI_MODE_TYPE_CAR
             ) {
@@ -91,17 +116,67 @@ class DarkThemeHandler(context: Context) {
             Log.e(TAG, "Unexpected exception while changing dark theme", e)
             false
         }
+        if (!requestSucceeded) {
+            if (plan.refreshUi) {
+                completeFailedThemeChange(
+                    targetMode = plan.targetMode,
+                    screenOnProximityResult = screenOnProximityResult,
+                    onComplete = onComplete
+                )
+            } else {
+                onComplete(DarkThemeChangeResult(succeeded = false, changed = false))
+            }
+            return
+        }
+        if (!plan.refreshUi) {
+            onComplete(DarkThemeChangeResult(succeeded = true, changed = false))
+            return
+        }
 
-        Logger.logThemeSwitched(
-            context = appContext,
-            targetMode = plan.targetMode,
-            succeeded = succeeded
-        )
+        val verificationStarted = themeChangeVerifier.start(enable) { verification ->
+            val result = DarkThemeChangeResult(
+                succeeded = verification.succeeded,
+                changed = verification.succeeded
+            )
+            if (verification.succeeded) {
+                Log.i(
+                    TAG,
+                    "Theme change verified for target mode ${plan.targetMode} " +
+                        "on attempt ${verification.attempt}"
+                )
+            } else {
+                Log.w(
+                    TAG,
+                    "Theme change did not reach target mode ${plan.targetMode} " +
+                        "after ${verification.elapsedMillis} ms"
+                )
+            }
+            try {
+                Logger.logThemeSwitched(
+                    context = appContext,
+                    targetMode = plan.targetMode,
+                    succeeded = verification.succeeded,
+                    verificationAttempt = verification.attempt,
+                    verificationElapsedMs = verification.elapsedMillis,
+                    effectiveUiMode = verification.effectiveUiMode,
+                    screenOnProximityResult = screenOnProximityResult
+                )
+            } finally {
+                onComplete(result)
+            }
+        }
+        if (!verificationStarted) {
+            Logger.logThemeSwitchSkipped(
+                context = appContext,
+                reason = ThemeSwitchSkipReason.THEME_TRANSITION_IN_PROGRESS,
+                screenOnProximityResult = screenOnProximityResult
+            )
+            onComplete(DarkThemeChangeResult(succeeded = false, changed = false))
+        }
+    }
 
-        return DarkThemeChangeResult(
-            succeeded = succeeded,
-            changed = succeeded && plan.refreshUi
-        )
+    fun cancelPendingVerification() {
+        themeChangeVerifier.cancel()
     }
 
     /**
@@ -117,10 +192,39 @@ class DarkThemeHandler(context: Context) {
         uiModeManager.enableCarMode(0)
         uiModeManager.disableCarMode(0)
     }
+
+    private fun completeFailedThemeChange(
+        targetMode: Int,
+        screenOnProximityResult: ScreenOnProximityResult,
+        onComplete: (DarkThemeChangeResult) -> Unit
+    ) {
+        try {
+            Logger.logThemeSwitched(
+                context = appContext,
+                targetMode = targetMode,
+                succeeded = false,
+                verificationAttempt = 0,
+                verificationElapsedMs = 0,
+                effectiveUiMode = appContext.resources.configuration.uiMode,
+                screenOnProximityResult = screenOnProximityResult
+            )
+        } finally {
+            onComplete(DarkThemeChangeResult(succeeded = false, changed = false))
+        }
+    }
 }
 
 internal fun isNightConfigurationEnabled(uiMode: Int): Boolean =
     uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+
+internal fun doesNightConfigurationMatchTarget(uiMode: Int, expectedDark: Boolean): Boolean {
+    val expectedNightMode = if (expectedDark) {
+        Configuration.UI_MODE_NIGHT_YES
+    } else {
+        Configuration.UI_MODE_NIGHT_NO
+    }
+    return uiMode and Configuration.UI_MODE_NIGHT_MASK == expectedNightMode
+}
 
 internal data class NightModeUpdatePlan(
     val targetMode: Int,

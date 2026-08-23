@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Probni postupak ocjenjivanja dovršen</string>
 	<string name="easter_egg_answer">Odgovor na konačno pitanje o životu, svemiru i svemu ostalom.</string>
 	<string name="description_service_purpose">Prebacuje Android između svijetlog i tamnog načina rada ovisno o okolnom svjetlu.</string>
-	<string name="description_switching_conditions">Tema se mijenja samo odmah nakon uključivanja zaslona i samo ako senzor nije prekriven.</string>
+	<string name="description_switching_conditions">Tema se mijenja samo ubrzo nakon uključivanja zaslona i samo ako senzor nije prekriven.</string>
 	<string name="description_notification_service_running">Spremno za prilagodbu teme sustava pri uključivanju zaslona.</string>
 	<string name="device_covered_title">Senzor je prekriven</string>
 	<string name="device_covered_message">Prebacivanje teme pauzirano je jer je senzor svjetla prekriven.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternativni načini</string>
 	<string name="setup_grant_title">3. korak: dodijelite dopuštenje s drugog uređaja</string>
 	<string name="setup_grant_body">Otvorite ovu poveznicu na drugom uređaju i slijedite upute:</string>
-	<string name="setup_alternatives">Možete i sami pokrenuti ADB naredbu ili dodijeliti dopuštenje s pomoću root pristupa. Podržan je i Shizuku.</string>
+	<string name="setup_alternatives">Možete i sami pokrenuti ADB naredbu ili dodijeliti dopuštenje s pomoću root pristupa.</string>
 	<string name="setup_permission_granted">Dopuštenje je dodijeljeno.</string>
 	<string name="setup_permission_not_granted">Dopuštenje još nije dodijeljeno. Dovršite postavljanje s pomoću drugog uređaja.</string>
 	<string name="setup_usb_debugging_disabled">Uključi Otklanjanje pogrešaka putem USB-a</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Je li ovo sigurno?</string>
 	<string name="setup_is_this_safe_body">Ovo dopuštenje aplikacijama omogućuje promjenu zaštićenih postavki sustava. Adaptive Theme upotrebljava ga samo za značajke poput prebacivanja tamnog načina rada. Deinstaliranjem aplikacije dopuštenje se ukida. Izvorni kod javno je dostupan na GitHubu.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Ako već upotrebljavate Shizuku, ne trebate drugi uređaj ni ADB. Shizuku je potreban samo jednom za dodjelu dopuštenja.</string>
+	<string name="setup_shizuku_description">Uz Shizuku ne trebate drugi uređaj ni ADB. Aplikacija je potrebna samo jednom za dodjelu dopuštenja.</string>
 	<string name="setup_shizuku_action">Upotrijebi Shizuku</string>
+	<string name="setup_shizuku_install_action">Instaliraj Shizuku</string>
 	<string name="setup_action_use_root">Upotrijebi root pristup</string>
 	<string name="setup_root_request">Traženje root pristupa…</string>
 	<string name="setup_root_grant_failed">Dopuštenje nije moguće dodijeliti root pristupom.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Došlo je do neočekivane pogreške pri upotrebi Shizukua.</string>
 	<string name="title_device_wallpaper_sync">Pozadina</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Zamuti zaključani zaslon</string>
+	<string name="description_lock_screen_wallpaper_blur">Upotrijebite zamućenu verziju pozadine na zaključanom zaslonu.</string>
 	<string name="description_device_wallpaper_sync">Upotrebljavajte zasebne pozadine za svijetli i tamni način rada. Prebacivanje može potrajati trenutak i utjecati na performanse.</string>
 	<string name="action_select_day_wallpaper">Svijetli način rada:</string>
 	<string name="action_select_night_wallpaper">Tamni način rada:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Nije postavljeno</string>
 	<string name="live_wallpaper_warning_title">Aktivna je živa pozadina</string>
 	<string name="live_wallpaper_warning_message">Uključivanjem sinkronizacije trenutačna živa pozadina zamijenit će se statičnim pozadinama za svijetli i tamni način rada. Želite li nastaviti?</string>
+	<string name="github_star_prompt_description">Adaptive Theme je besplatan, bez oglasa i otvorenog koda. Ako vam je koristan, zvjezdica na GitHubu jednostavan je način da ga besplatno podržite.</string>
+	<string name="github_star_prompt_action">Dodaj zvjezdicu na GitHubu ↗</string>
+	<string name="github_star_prompt_dismiss_description">Sakrij zauvijek</string>
+	<string name="github_star_prompt_thank_you">Hvala!</string>
 </resources>

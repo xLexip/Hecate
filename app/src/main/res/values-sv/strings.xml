@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testflödet för omdömen har slutförts</string>
 	<string name="easter_egg_answer">Svaret på den yttersta frågan om livet, universum och allting.</string>
 	<string name="description_service_purpose">Växlar Android mellan ljust och mörkt läge utifrån omgivningsljuset.</string>
-	<string name="description_switching_conditions">Temat ändras endast direkt efter att skärmen tänds och endast om sensorn inte är täckt.</string>
+	<string name="description_switching_conditions">Temat ändras endast kort efter att skärmen tänds och endast om sensorn inte är täckt.</string>
 	<string name="description_notification_service_running">Redo att anpassa systemtemat när skärmen tänds.</string>
 	<string name="device_covered_title">Sensorn är täckt</string>
 	<string name="device_covered_message">Temaväxlingen har pausats eftersom ljussensorn är täckt.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternativa metoder</string>
 	<string name="setup_grant_title">Steg 3: Bevilja behörigheten från den andra enheten</string>
 	<string name="setup_grant_body">Öppna den här länken på den andra enheten och följ anvisningarna:</string>
-	<string name="setup_alternatives">Du kan också köra ett ADB-kommando själv eller använda rootåtkomst för att bevilja behörigheten. Shizuku stöds också.</string>
+	<string name="setup_alternatives">Du kan också köra ett ADB-kommando själv eller använda rootåtkomst för att bevilja behörigheten.</string>
 	<string name="setup_permission_granted">Behörighet beviljad.</string>
 	<string name="setup_permission_not_granted">Behörigheten har inte beviljats ännu. Slutför konfigurationen med den andra enheten.</string>
 	<string name="setup_usb_debugging_disabled">Aktivera USB-felsökning</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Är det säkert?</string>
 	<string name="setup_is_this_safe_body">Den här behörigheten gör att appar kan ändra skyddade systeminställningar. Adaptive Theme använder den endast för funktioner som att växla mörkt läge. Behörigheten återkallas när appen avinstalleras. Källkoden är offentlig på GitHub.</string>
 	<string name="setup_shizuku_title">Alternativ: Shizuku</string>
-	<string name="setup_shizuku_description">Om du redan använder Shizuku behöver du varken en andra enhet eller ADB. Shizuku behövs bara en gång för att bevilja behörigheten.</string>
+	<string name="setup_shizuku_description">Med Shizuku behöver du varken en andra enhet eller ADB. Appen behövs bara en gång för att bevilja behörigheten.</string>
 	<string name="setup_shizuku_action">Använd Shizuku</string>
+	<string name="setup_shizuku_install_action">Installera Shizuku</string>
 	<string name="setup_action_use_root">Använd rootåtkomst</string>
 	<string name="setup_root_request">Begär rootåtkomst…</string>
 	<string name="setup_root_grant_failed">Det gick inte att bevilja behörigheten med rootåtkomst.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Ett oväntat fel inträffade när Shizuku användes.</string>
 	<string name="title_device_wallpaper_sync">Bakgrund</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Gör låsskärmen suddig</string>
+	<string name="description_lock_screen_wallpaper_blur">Använd en suddig version av bakgrundsbilden på låsskärmen.</string>
 	<string name="description_device_wallpaper_sync">Använd separata bakgrunder för ljust och mörkt läge. Växling kan ta en stund och påverka prestandan.</string>
 	<string name="action_select_day_wallpaper">Ljust läge:</string>
 	<string name="action_select_night_wallpaper">Mörkt läge:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Inte inställd</string>
 	<string name="live_wallpaper_warning_title">Livebakgrund är aktiv</string>
 	<string name="live_wallpaper_warning_message">Om du aktiverar synkronisering av bakgrunder ersätts din nuvarande livebakgrund med statiska bakgrunder för ljust och mörkt läge. Vill du fortsätta?</string>
+	<string name="github_star_prompt_description">Adaptive Theme är gratis, reklamfri och har öppen källkod. Om appen är användbar för dig kan du enkelt stödja den gratis med en stjärna på GitHub.</string>
+	<string name="github_star_prompt_action">Ge en stjärna på GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Dölj för alltid</string>
+	<string name="github_star_prompt_thank_you">Tack!</string>
 </resources>

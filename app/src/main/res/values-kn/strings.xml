@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">ಪರೀಕ್ಷಾ ವಿಮರ್ಶೆ ಪ್ರಕ್ರಿಯೆ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
 	<string name="easter_egg_answer">ಜೀವನ, ಬ್ರಹ್ಮಾಂಡ ಮತ್ತು ಎಲ್ಲದರ ಅಂತಿಮ ಪ್ರಶ್ನೆಗೆ ಉತ್ತರ.</string>
 	<string name="description_service_purpose">ಸುತ್ತಲಿನ ಬೆಳಕಿನ ಆಧಾರದಲ್ಲಿ Android ಅನ್ನು ಲೈಟ್ ಮತ್ತು ಡಾರ್ಕ್ ಮೋಡ್‌ಗಳ ನಡುವೆ ಬದಲಾಯಿಸುತ್ತದೆ.</string>
-	<string name="description_switching_conditions">ಪರದೆ ಆನ್ ಆದ ತಕ್ಷಣ ಮತ್ತು ಸೆನ್ಸರ್ ಮುಚ್ಚಿಲ್ಲದಿದ್ದಾಗ ಮಾತ್ರ ಥೀಮ್ ಬದಲಾಗುತ್ತದೆ.</string>
+	<string name="description_switching_conditions">ಪರದೆ ಆನ್ ಆದ ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತು ಸೆನ್ಸರ್ ಮುಚ್ಚಿಲ್ಲದಿದ್ದಾಗ ಮಾತ್ರ ಥೀಮ್ ಬದಲಾಗುತ್ತದೆ.</string>
 	<string name="description_notification_service_running">ಪರದೆ ಆನ್ ಆದಾಗ ಸಿಸ್ಟಮ್ ಥೀಮ್ ಹೊಂದಿಸಲು ಸಿದ್ಧವಾಗಿದೆ.</string>
 	<string name="device_covered_title">ಸೆನ್ಸರ್ ಮುಚ್ಚಿದೆ</string>
 	<string name="device_covered_message">ಬೆಳಕಿನ ಸೆನ್ಸರ್ ಮುಚ್ಚಿರುವುದರಿಂದ ಥೀಮ್ ಬದಲಾವಣೆ ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">ಪರ್ಯಾಯ ವಿಧಾನಗಳು</string>
 	<string name="setup_grant_title">ಹಂತ 3: ಎರಡನೇ ಸಾಧನದಿಂದ ಅನುಮತಿ ನೀಡಿ</string>
 	<string name="setup_grant_body">ಎರಡನೇ ಸಾಧನದಲ್ಲಿ ಈ ಲಿಂಕ್ ತೆರೆದು ಸೂಚನೆಗಳನ್ನು ಅನುಸರಿಸಿ:</string>
-	<string name="setup_alternatives">ನೀವೇ ADB ಕಮಾಂಡ್ ಚಲಾಯಿಸಬಹುದು ಅಥವಾ root ಪ್ರವೇಶದಿಂದ ಅನುಮತಿ ನೀಡಬಹುದು. Shizuku ಸಹ ಬೆಂಬಲಿತವಾಗಿದೆ.</string>
+	<string name="setup_alternatives">ನೀವೇ ADB ಕಮಾಂಡ್ ಚಲಾಯಿಸಬಹುದು ಅಥವಾ root ಪ್ರವೇಶದಿಂದ ಅನುಮತಿ ನೀಡಬಹುದು.</string>
 	<string name="setup_permission_granted">ಅನುಮತಿ ನೀಡಲಾಗಿದೆ.</string>
 	<string name="setup_permission_not_granted">ಅನುಮತಿ ಇನ್ನೂ ನೀಡಿಲ್ಲ. ಎರಡನೇ ಸಾಧನದೊಂದಿಗೆ ಸೆಟಪ್ ಪೂರ್ಣಗೊಳಿಸಿ.</string>
 	<string name="setup_usb_debugging_disabled">USB ಡೀಬಗ್ಗಿಂಗ್ ಆನ್ ಮಾಡಿ</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">ಇದು ಸುರಕ್ಷಿತವೇ?</string>
 	<string name="setup_is_this_safe_body">ಈ ಅನುಮತಿ ರಕ್ಷಿತ ಸಿಸ್ಟಮ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಲು ಆ್ಯಪ್‌ಗಳಿಗೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ. Adaptive Theme ಇದನ್ನು ಡಾರ್ಕ್ ಮೋಡ್ ಬದಲಾಯಿಸುವಂತಹ ವೈಶಿಷ್ಟ್ಯಗಳಿಗೆ ಮಾತ್ರ ಬಳಸುತ್ತದೆ. ಆ್ಯಪ್ ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿದರೆ ಅನುಮತಿ ರದ್ದಾಗುತ್ತದೆ. ಮೂಲ ಕೋಡ್ GitHubನಲ್ಲಿ ಸಾರ್ವಜನಿಕವಾಗಿದೆ.</string>
 	<string name="setup_shizuku_title">ಪರ್ಯಾಯ: Shizuku</string>
-	<string name="setup_shizuku_description">ನೀವು ಈಗಾಗಲೇ Shizuku ಬಳಸುತ್ತಿದ್ದರೆ ಎರಡನೇ ಸಾಧನ ಅಥವಾ ADB ಬೇಕಿಲ್ಲ. ಅನುಮತಿ ನೀಡಲು Shizuku ಒಮ್ಮೆ ಮಾತ್ರ ಬೇಕು.</string>
+	<string name="setup_shizuku_description">Shizuku ಬಳಸಿದರೆ ಎರಡನೇ ಸಾಧನ ಅಥವಾ ADB ಬೇಕಿಲ್ಲ. ಅನುಮತಿ ನೀಡಲು ಆ್ಯಪ್ ಒಮ್ಮೆ ಮಾತ್ರ ಬೇಕು.</string>
 	<string name="setup_shizuku_action">Shizuku ಬಳಸಿ</string>
+	<string name="setup_shizuku_install_action">Shizuku ಸ್ಥಾಪಿಸಿ</string>
 	<string name="setup_action_use_root">root ಪ್ರವೇಶ ಬಳಸಿ</string>
 	<string name="setup_root_request">root ಪ್ರವೇಶವನ್ನು ವಿನಂತಿಸಲಾಗುತ್ತಿದೆ…</string>
 	<string name="setup_root_grant_failed">root ಪ್ರವೇಶದಿಂದ ಅನುಮತಿ ನೀಡಲಾಗಲಿಲ್ಲ.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ಬಳಸುವಾಗ ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ.</string>
 	<string name="title_device_wallpaper_sync">ವಾಲ್‌ಪೇಪರ್</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">ಲಾಕ್ ಪರದೆಯನ್ನು ಮಸುಕುಗೊಳಿಸಿ</string>
+	<string name="description_lock_screen_wallpaper_blur">ಲಾಕ್ ಪರದೆಯಲ್ಲಿ ವಾಲ್‌ಪೇಪರ್‌ನ ಮಸುಕಾದ ಆವೃತ್ತಿಯನ್ನು ಬಳಸಿ.</string>
 	<string name="description_device_wallpaper_sync">ಲೈಟ್ ಮತ್ತು ಡಾರ್ಕ್ ಮೋಡ್‌ಗಳಿಗೆ ಪ್ರತ್ಯೇಕ ವಾಲ್‌ಪೇಪರ್‌ಗಳನ್ನು ಬಳಸಿ. ಬದಲಾಯಿಸಲು ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತೆಯ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರಬಹುದು.</string>
 	<string name="action_select_day_wallpaper">ಲೈಟ್ ಮೋಡ್:</string>
 	<string name="action_select_night_wallpaper">ಡಾರ್ಕ್ ಮೋಡ್:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">ಹೊಂದಿಸಲಾಗಿಲ್ಲ</string>
 	<string name="live_wallpaper_warning_title">ಲೈವ್ ವಾಲ್‌ಪೇಪರ್ ಸಕ್ರಿಯವಾಗಿದೆ</string>
 	<string name="live_wallpaper_warning_message">ವಾಲ್‌ಪೇಪರ್ ಸಿಂಕ್ ಆನ್ ಮಾಡಿದರೆ ಈಗಿನ ಲೈವ್ ವಾಲ್‌ಪೇಪರ್ ಅನ್ನು ಲೈಟ್ ಮತ್ತು ಡಾರ್ಕ್ ಮೋಡ್‌ಗಳ ಸ್ಥಿರ ವಾಲ್‌ಪೇಪರ್‌ಗಳಿಂದ ಬದಲಾಯಿಸಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಸಬೇಕೇ?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ಉಚಿತ, ಜಾಹೀರಾತು-ರಹಿತ ಮತ್ತು ಮುಕ್ತ ಮೂಲವಾಗಿದೆ. ಇದು ನಿಮಗೆ ಉಪಯುಕ್ತವಾಗಿದ್ದರೆ, GitHub ನಲ್ಲಿ ಸ್ಟಾರ್ ನೀಡುವುದು ಅದನ್ನು ಉಚಿತವಾಗಿ ಬೆಂಬಲಿಸುವ ಸರಳ ಮಾರ್ಗವಾಗಿದೆ.</string>
+	<string name="github_star_prompt_action">GitHub ನಲ್ಲಿ ಸ್ಟಾರ್ ನೀಡಿ ↗</string>
+	<string name="github_star_prompt_dismiss_description">ಶಾಶ್ವತವಾಗಿ ಮರೆಮಾಡಿ</string>
+	<string name="github_star_prompt_thank_you">ಧನ್ಯವಾದಗಳು!</string>
 </resources>

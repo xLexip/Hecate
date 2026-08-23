@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Тестовый процесс отзыва завершён</string>
 	<string name="easter_egg_answer">Ответ на главный вопрос жизни, Вселенной и всего остального.</string>
 	<string name="description_service_purpose">Переключает Android между светлой и тёмной темой в зависимости от окружающего освещения.</string>
-	<string name="description_switching_conditions">Тема меняется только сразу после включения экрана и только если датчик не закрыт.</string>
+	<string name="description_switching_conditions">Тема меняется только вскоре после включения экрана и только если датчик не закрыт.</string>
 	<string name="description_notification_service_running">Готово изменить системную тему при включении экрана.</string>
 	<string name="device_covered_title">Датчик закрыт</string>
 	<string name="device_covered_message">Переключение темы приостановлено, потому что датчик освещения закрыт.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Другие способы</string>
 	<string name="setup_grant_title">Шаг 3. Предоставьте разрешение со второго устройства</string>
 	<string name="setup_grant_body">Откройте эту ссылку на втором устройстве и следуйте инструкциям:</string>
-	<string name="setup_alternatives">Также можно самостоятельно выполнить команду ADB или предоставить разрешение с помощью root-доступа. Shizuku тоже поддерживается.</string>
+	<string name="setup_alternatives">Также можно самостоятельно выполнить команду ADB или предоставить разрешение с помощью root-доступа.</string>
 	<string name="setup_permission_granted">Разрешение предоставлено.</string>
 	<string name="setup_permission_not_granted">Разрешение ещё не предоставлено. Завершите настройку с помощью второго устройства.</string>
 	<string name="setup_usb_debugging_disabled">Включить отладку по USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Это безопасно?</string>
 	<string name="setup_is_this_safe_body">Это разрешение позволяет приложениям изменять защищённые системные настройки. Adaptive Theme использует его только для таких функций, как переключение тёмной темы. При удалении приложения разрешение отзывается. Исходный код открыт на GitHub.</string>
 	<string name="setup_shizuku_title">Другой способ: Shizuku</string>
-	<string name="setup_shizuku_description">Если вы уже используете Shizuku, второе устройство и ADB не понадобятся. Shizuku нужен только один раз для предоставления разрешения.</string>
+	<string name="setup_shizuku_description">С Shizuku второе устройство и ADB не понадобятся. Приложение нужно только один раз для предоставления разрешения.</string>
 	<string name="setup_shizuku_action">Использовать Shizuku</string>
+	<string name="setup_shizuku_install_action">Установить Shizuku</string>
 	<string name="setup_action_use_root">Использовать root-доступ</string>
 	<string name="setup_root_request">Запрос root-доступа…</string>
 	<string name="setup_root_grant_failed">Не удалось предоставить разрешение с помощью root-доступа.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">При использовании Shizuku произошла непредвиденная ошибка.</string>
 	<string name="title_device_wallpaper_sync">Обои</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Размыть экран блокировки</string>
+	<string name="description_lock_screen_wallpaper_blur">Использовать размытую версию обоев на экране блокировки.</string>
 	<string name="description_device_wallpaper_sync">Используйте разные обои для светлой и тёмной темы. Переключение может занять некоторое время и повлиять на производительность.</string>
 	<string name="action_select_day_wallpaper">Светлая тема:</string>
 	<string name="action_select_night_wallpaper">Тёмная тема:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Не установлены</string>
 	<string name="live_wallpaper_warning_title">Включены живые обои</string>
 	<string name="live_wallpaper_warning_message">При включении синхронизации текущие живые обои будут заменены статичными обоями для светлой и тёмной темы. Продолжить?</string>
+	<string name="github_star_prompt_description">Adaptive Theme — бесплатное приложение без рекламы с открытым исходным кодом. Если оно вам полезно, бесплатно поддержите его, поставив звезду на GitHub.</string>
+	<string name="github_star_prompt_action">Поставить звезду на GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Скрыть навсегда</string>
+	<string name="github_star_prompt_thank_you">Спасибо!</string>
 </resources>

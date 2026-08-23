@@ -249,8 +249,7 @@ private fun NavGraphBuilder.setupNavGraph(
 				onShareExpertCommand = setupViewModel::shareAdbCommand,
 				onFinish = setupViewModel::checkPermissionAndComplete,
 				onBack = setupViewModel::navigateBack,
-				onUseRoot = setupViewModel::onGrantViaRootRequested,
-				onInstallShizuku = setupViewModel::installShizuku
+				onUseRoot = setupViewModel::onGrantViaRootRequested
 			)
 		}
 	}

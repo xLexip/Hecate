@@ -12,6 +12,7 @@
 
 package dev.lexip.hecate.ui.setup.components
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -35,6 +36,7 @@ import dev.lexip.hecate.R
 @Composable
 internal fun ShizukuOptionCard(
 	isVisible: Boolean,
+	@StringRes actionRes: Int = R.string.setup_shizuku_action,
 	onClick: () -> Unit,
 ) {
 	if (!isVisible) return
@@ -69,7 +71,7 @@ internal fun ShizukuOptionCard(
 				}
 			) {
 				Text(
-					text = stringResource(id = R.string.setup_shizuku_action),
+					text = stringResource(id = actionRes),
 					textAlign = TextAlign.Center
 				)
 			}

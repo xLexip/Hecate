@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		O tema muda apenas imediatamente após a tela ligar e somente se o sensor não estiver coberto.
+		O tema muda apenas pouco depois que a tela liga e somente se o sensor não estiver coberto.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Métodos alternativos</string>
 	<string name="setup_grant_title">Etapa 3: conceda a permissão pelo segundo dispositivo</string>
 	<string name="setup_grant_body">Abra este link no segundo dispositivo e siga as instruções:</string>
-	<string name="setup_alternatives">Se preferir, execute um comando ADB ou use o acesso root para conceder a permissão. O Shizuku também é compatível.</string>
+	<string name="setup_alternatives">Se preferir, execute um comando ADB ou use o acesso root para conceder a permissão.</string>
 	<string name="setup_permission_granted">Permissão concedida.</string>
 	<string name="setup_permission_not_granted">A permissão ainda não foi concedida. Conclua a configuração com o segundo dispositivo.</string>
 	<string name="setup_usb_debugging_disabled">Ativar Depuração USB</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Isso é seguro?</string>
 	<string name="setup_is_this_safe_body">Esta permissão permite que apps modifiquem configurações protegidas do sistema. O Adaptive Theme a usa apenas em recursos como a mudança do modo escuro. A desinstalação do app revoga a permissão. O código-fonte está disponível publicamente no GitHub.</string>
 	<string name="setup_shizuku_title">Alternativa: Shizuku</string>
-	<string name="setup_shizuku_description">Se você já usa o Shizuku, não precisa de um segundo dispositivo nem do ADB. O Shizuku é necessário apenas uma vez para conceder a permissão.</string>
+	<string name="setup_shizuku_description">Com o Shizuku, você não precisa de um segundo dispositivo nem do ADB. O app é necessário apenas uma vez para conceder a permissão.</string>
 	<string name="setup_shizuku_action">Usar Shizuku</string>
+	<string name="setup_shizuku_install_action">Instalar Shizuku</string>
 	<string name="setup_action_use_root">Usar acesso root</string>
 	<string name="setup_root_request">Solicitando acesso root…</string>
 	<string name="setup_root_grant_failed">Não foi possível conceder a permissão com acesso root.</string>
@@ -111,6 +112,8 @@
 	<string name="shizuku_grant_unexpected">Erro inesperado ao usar o Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Papel de parede</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Desfocar tela de bloqueio</string>
+	<string name="description_lock_screen_wallpaper_blur">Use uma versão desfocada do papel de parede na tela de bloqueio.</string>
 	<string name="description_device_wallpaper_sync">Use planos de fundo distintos para os modos claro e escuro. A mudança pode levar um instante e afetar o desempenho.</string>
 	<string name="action_select_day_wallpaper">Modo claro:</string>
 	<string name="action_select_night_wallpaper">Modo escuro:</string>
@@ -118,4 +121,8 @@
 	<string name="wallpaper_status_not_set">Não definido</string>
 	<string name="live_wallpaper_warning_title">Plano de fundo animado ativo</string>
 	<string name="live_wallpaper_warning_message">Ativar a sincronização substituirá o plano de fundo animado atual por planos de fundo estáticos para os modos claro e escuro. Quer continuar?</string>
+	<string name="github_star_prompt_description">O Adaptive Theme é gratuito, sem anúncios e de código aberto. Se ele for útil para você, uma estrela no GitHub é uma forma simples de apoiá-lo gratuitamente.</string>
+	<string name="github_star_prompt_action">Dar uma estrela no GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Ocultar para sempre</string>
+	<string name="github_star_prompt_thank_you">Obrigado!</string>
 </resources>

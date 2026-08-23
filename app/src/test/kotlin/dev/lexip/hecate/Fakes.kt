@@ -25,11 +25,14 @@ import dev.lexip.hecate.ui.setup.SetupPermissionListenerRegistration
 import dev.lexip.hecate.util.InstallMetadataProvider
 import dev.lexip.hecate.util.ProximitySensorReader
 import dev.lexip.hecate.util.SensorReader
+import dev.lexip.hecate.util.WallpaperMigrationResult
 import dev.lexip.hecate.util.WallpaperPlatform
 import dev.lexip.hecate.util.WallpaperImagePreparer
 import dev.lexip.hecate.util.WallpaperSlot
+import dev.lexip.hecate.util.WallpaperStorageMigrator
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import java.io.InputStream
 
 class FakeUserPreferencesDataSource(
 	initial: UserPreferences = UserPreferences(
@@ -102,6 +105,10 @@ class FakeUserPreferencesDataSource(
 		state.value = current.copy(wallpaperSyncEnabled = enabled)
 	}
 
+	override suspend fun updateLockScreenWallpaperBlurEnabled(enabled: Boolean) {
+		state.value = current.copy(lockScreenWallpaperBlurEnabled = enabled)
+	}
+
 	override suspend fun updateDayWallpaperUri(uri: String?) {
 		state.value = current.copy(dayWallpaperUri = uri)
 	}
@@ -113,16 +120,37 @@ class FakeUserPreferencesDataSource(
 	override suspend fun updateWallpaperStorageVersion(version: Int) {
 		state.value = current.copy(wallpaperStorageVersion = version)
 	}
+
+	override suspend fun recordGitHubStarPromptImpression(epochDay: Long) {
+		val isNewDay = current.githubStarPromptLastImpressionEpochDay != epochDay
+		state.value = current.copy(
+			githubStarPromptImpressionCount = current.githubStarPromptImpressionCount +
+					if (isNewDay) 1 else 0,
+			githubStarPromptLastImpressionEpochDay = epochDay
+		)
+	}
+
+	override suspend fun updateGitHubStarPromptDismissed(dismissed: Boolean) {
+		state.value = current.copy(githubStarPromptDismissed = dismissed)
+	}
+
+	override suspend fun updateReviewPromptLastRequestEpochDay(epochDay: Long) {
+		state.value = current.copy(reviewPromptLastRequestEpochDay = epochDay)
+	}
 }
 
-open class FakeSensorReader : SensorReader {
+open class FakeSensorReader(
+	var registrationSucceeds: Boolean = true
+) : SensorReader {
 	private var callback: ((Float) -> Unit)? = null
 	var startCalls = 0
 	var stopCalls = 0
 
-	override fun startListening(callback: (Float) -> Unit, sensorDelay: Int) {
+	override fun startListening(callback: (Float) -> Unit, sensorDelay: Int): Boolean {
 		startCalls++
+		if (!registrationSucceeds) return false
 		this.callback = callback
+		return true
 	}
 
 	override fun stopListening() {
@@ -136,8 +164,10 @@ open class FakeSensorReader : SensorReader {
 }
 
 class FakeProximitySensorReader(
-	override val hasProximitySensor: Boolean = true
-) : FakeSensorReader(), ProximitySensorReader
+	override val hasProximitySensor: Boolean = true,
+	override val maximumRange: Float = 5f,
+	registrationSucceeds: Boolean = true
+) : FakeSensorReader(registrationSucceeds), ProximitySensorReader
 
 class FakeAdaptiveThemeServiceController : AdaptiveThemeServiceController {
 	var startCalls = 0
@@ -168,6 +198,7 @@ class FakeWallpaperPlatform : WallpaperPlatform {
 	var liveWallpaperActive = false
 	var permissionFailure: Exception? = null
 	val persistedUris = mutableListOf<Uri>()
+	val appliedRequests = mutableListOf<WallpaperApplyRequest>()
 
 	override fun isLiveWallpaperActive(): Boolean = liveWallpaperActive
 
@@ -179,19 +210,48 @@ class FakeWallpaperPlatform : WallpaperPlatform {
 	override fun applyWallpaperForTheme(
 		isDark: Boolean,
 		dayUriStr: String?,
-		nightUriStr: String?
-	): Boolean = true
+		nightUriStr: String?,
+		lockScreenWallpaperBlurEnabled: Boolean
+	): Boolean {
+		appliedRequests += WallpaperApplyRequest(
+			isDark,
+			dayUriStr,
+			nightUriStr,
+			lockScreenWallpaperBlurEnabled
+		)
+		return true
+	}
 }
+
+data class WallpaperApplyRequest(
+	val isDark: Boolean,
+	val dayUri: String?,
+	val nightUri: String?,
+	val lockScreenBlurEnabled: Boolean
+)
 
 internal class FakeWallpaperImagePreparer : WallpaperImagePreparer {
 	var failure: Exception? = null
 	val prepared = mutableListOf<Pair<Uri, WallpaperSlot>>()
 	var preparedUri: Uri? = null
 
-	override fun prepare(source: Uri, slot: WallpaperSlot): Uri {
+	override fun prepare(sourceUri: Uri, sourceStream: InputStream, slot: WallpaperSlot): Uri {
 		failure?.let { throw it }
-		prepared += source to slot
-		return preparedUri ?: source
+		prepared += sourceUri to slot
+		return preparedUri ?: sourceUri
+	}
+}
+
+internal class FakeWallpaperStorageMigrator : WallpaperStorageMigrator {
+	val requests = mutableListOf<Pair<String?, String?>>()
+	var result: WallpaperMigrationResult? = null
+
+	override fun migrate(
+		dayWallpaperUri: String?,
+		nightWallpaperUri: String?
+	): WallpaperMigrationResult {
+		requests += dayWallpaperUri to nightWallpaperUri
+		return result ?: WallpaperMigrationResult(dayWallpaperUri, nightWallpaperUri)
 	}
 }
 

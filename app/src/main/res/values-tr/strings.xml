@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Tema, yalnızca ekran açıldıktan hemen sonra ve yalnızca sensörün üzeri kapalı değilse değişir.
+		Tema, yalnızca ekran açıldıktan kısa süre sonra ve yalnızca sensörün üzeri kapalı değilse değişir.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Alternatif yöntemler</string>
 	<string name="setup_grant_title">3. adım: İzni ikinci cihazdan verin</string>
 	<string name="setup_grant_body">Bu bağlantıyı ikinci cihazda açıp talimatları izleyin:</string>
-	<string name="setup_alternatives">Alternatif olarak bir ADB komutunu kendiniz çalıştırabilir veya izni root erişimiyle verebilirsiniz. Shizuku da desteklenir.</string>
+	<string name="setup_alternatives">Alternatif olarak bir ADB komutunu kendiniz çalıştırabilir veya izni root erişimiyle verebilirsiniz.</string>
 	<string name="setup_permission_granted">İzin verildi.</string>
 	<string name="setup_permission_not_granted">İzin henüz verilmedi. Kurulumu ikinci cihazla tamamlayın.</string>
 	<string name="setup_usb_debugging_disabled">USB hata ayıklamayı aç</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Bu güvenli mi?</string>
 	<string name="setup_is_this_safe_body">Bu izin, uygulamaların korumalı sistem ayarlarını değiştirmesine olanak tanır. Adaptive Theme bu izni yalnızca koyu modu değiştirme gibi özellikler için kullanır. Uygulama kaldırıldığında izin iptal edilir. Kaynak kodu GitHub’da herkese açıktır.</string>
 	<string name="setup_shizuku_title">Alternatif: Shizuku</string>
-	<string name="setup_shizuku_description">Shizuku kullanıyorsanız ikinci bir cihaza veya ADB’ye gerek yoktur. İzni vermek için Shizuku’ya yalnızca bir kez ihtiyaç duyulur.</string>
+	<string name="setup_shizuku_description">Shizuku ile ikinci bir cihaza veya ADB’ye gerek yoktur. İzni vermek için uygulamaya yalnızca bir kez ihtiyaç duyulur.</string>
 	<string name="setup_shizuku_action">Shizuku kullan</string>
+	<string name="setup_shizuku_install_action">Shizuku’yu yükle</string>
 	<string name="setup_action_use_root">Root erişimini kullan</string>
 	<string name="setup_root_request">Root erişimi isteniyor…</string>
 	<string name="setup_root_grant_failed">İzin root erişimiyle verilemedi.</string>
@@ -111,6 +112,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku kullanılırken beklenmeyen bir hata oluştu.</string>
 	<string name="title_device_wallpaper_sync">Duvar kâğıdı</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Kilit ekranını bulanıklaştır</string>
+	<string name="description_lock_screen_wallpaper_blur">Kilit ekranında duvar kâğıdının bulanık bir sürümünü kullanın.</string>
 	<string name="description_device_wallpaper_sync">Açık ve koyu mod için ayrı duvar kâğıtları kullanın. Geçiş biraz sürebilir ve performansı etkileyebilir.</string>
 	<string name="action_select_day_wallpaper">Açık mod:</string>
 	<string name="action_select_night_wallpaper">Koyu mod:</string>
@@ -118,4 +121,8 @@
 	<string name="wallpaper_status_not_set">Ayarlanmadı</string>
 	<string name="live_wallpaper_warning_title">Canlı duvar kâğıdı etkin</string>
 	<string name="live_wallpaper_warning_message">Duvar kâğıdı eşitleme etkinleştirildiğinde mevcut canlı duvar kâğıdınız, açık ve koyu mod için statik duvar kâğıtlarıyla değiştirilir. Devam etmek istiyor musunuz?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ücretsiz, reklamsız ve açık kaynaklıdır. İşinize yarıyorsa GitHub’da yıldız vermek onu ücretsiz desteklemenin kolay bir yoludur.</string>
+	<string name="github_star_prompt_action">GitHub’da yıldız ver ↗</string>
+	<string name="github_star_prompt_dismiss_description">Sonsuza dek gizle</string>
+	<string name="github_star_prompt_thank_you">Teşekkürler!</string>
 </resources>

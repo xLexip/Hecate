@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">পরীক্ষামূলক পর্যালোচনা প্রক্রিয়া সম্পন্ন হয়েছে</string>
 	<string name="easter_egg_answer">জীবন, মহাবিশ্ব ও সবকিছুর চূড়ান্ত প্রশ্নের উত্তর।</string>
 	<string name="description_service_purpose">চারপাশের আলোর ভিত্তিতে Android-কে হালকা ও গাঢ় মোডের মধ্যে পরিবর্তন করে।</string>
-	<string name="description_switching_conditions">স্ক্রিন চালু হওয়ার ঠিক পরেই এবং সেন্সর ঢাকা না থাকলেই থিম পরিবর্তন হয়।</string>
+	<string name="description_switching_conditions">স্ক্রিন চালু হওয়ার কিছুক্ষণ পরেই এবং সেন্সর ঢাকা না থাকলেই থিম পরিবর্তন হয়।</string>
 	<string name="description_notification_service_running">স্ক্রিন চালু হলে সিস্টেম থিম সামঞ্জস্য করতে প্রস্তুত।</string>
 	<string name="device_covered_title">সেন্সর ঢাকা</string>
 	<string name="device_covered_message">আলোর সেন্সর ঢাকা থাকায় থিম পরিবর্তন সাময়িকভাবে বন্ধ আছে।</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">বিকল্প পদ্ধতি</string>
 	<string name="setup_grant_title">ধাপ ৩: দ্বিতীয় ডিভাইস থেকে অনুমতি দিন</string>
 	<string name="setup_grant_body">দ্বিতীয় ডিভাইসে এই লিঙ্কটি খুলে নির্দেশনা অনুসরণ করুন:</string>
-	<string name="setup_alternatives">নিজে ADB কমান্ড চালাতে বা root অ্যাক্সেস দিয়ে অনুমতি দিতেও পারেন। Shizuku-ও সমর্থিত।</string>
+	<string name="setup_alternatives">নিজে ADB কমান্ড চালাতে বা root অ্যাক্সেস দিয়ে অনুমতি দিতেও পারেন।</string>
 	<string name="setup_permission_granted">অনুমতি দেওয়া হয়েছে।</string>
 	<string name="setup_permission_not_granted">এখনও অনুমতি দেওয়া হয়নি। দ্বিতীয় ডিভাইস দিয়ে সেটআপ সম্পন্ন করুন।</string>
 	<string name="setup_usb_debugging_disabled">USB ডিবাগিং চালু করুন</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">এটি কি নিরাপদ?</string>
 	<string name="setup_is_this_safe_body">এই অনুমতি অ্যাপকে সুরক্ষিত সিস্টেম সেটিংস পরিবর্তন করতে দেয়। Adaptive Theme এটি শুধু গাঢ় মোড পরিবর্তনের মতো ফিচারে ব্যবহার করে। অ্যাপ আনইনস্টল করলে অনুমতি বাতিল হয়। সোর্স কোড GitHub-এ সবার জন্য উন্মুক্ত।</string>
 	<string name="setup_shizuku_title">বিকল্প: Shizuku</string>
-	<string name="setup_shizuku_description">আগে থেকেই Shizuku ব্যবহার করলে দ্বিতীয় ডিভাইস বা ADB লাগবে না। অনুমতি দেওয়ার জন্য Shizuku শুধু একবার প্রয়োজন।</string>
+	<string name="setup_shizuku_description">Shizuku ব্যবহার করলে দ্বিতীয় ডিভাইস বা ADB লাগবে না। অনুমতি দেওয়ার জন্য অ্যাপটি শুধু একবার প্রয়োজন।</string>
 	<string name="setup_shizuku_action">Shizuku ব্যবহার করুন</string>
+	<string name="setup_shizuku_install_action">Shizuku ইনস্টল করুন</string>
 	<string name="setup_action_use_root">root অ্যাক্সেস ব্যবহার করুন</string>
 	<string name="setup_root_request">root অ্যাক্সেস চাওয়া হচ্ছে…</string>
 	<string name="setup_root_grant_failed">root অ্যাক্সেস দিয়ে অনুমতি দেওয়া যায়নি।</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ব্যবহার করার সময় অপ্রত্যাশিত ত্রুটি হয়েছে।</string>
 	<string name="title_device_wallpaper_sync">ওয়ালপেপার</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">লক স্ক্রিন ঝাপসা করুন</string>
+	<string name="description_lock_screen_wallpaper_blur">লক স্ক্রিনে ওয়ালপেপারের একটি ঝাপসা সংস্করণ ব্যবহার করুন।</string>
 	<string name="description_device_wallpaper_sync">হালকা ও গাঢ় মোডের জন্য আলাদা ওয়ালপেপার ব্যবহার করুন। পরিবর্তনে কিছু সময় লাগতে পারে এবং পারফরম্যান্সে প্রভাব পড়তে পারে।</string>
 	<string name="action_select_day_wallpaper">হালকা মোড:</string>
 	<string name="action_select_night_wallpaper">গাঢ় মোড:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">সেট করা নেই</string>
 	<string name="live_wallpaper_warning_title">লাইভ ওয়ালপেপার সক্রিয়</string>
 	<string name="live_wallpaper_warning_message">ওয়ালপেপার সিঙ্ক চালু করলে বর্তমান লাইভ ওয়ালপেপারটি হালকা ও গাঢ় মোডের স্থির ওয়ালপেপার দিয়ে প্রতিস্থাপিত হবে। চালিয়ে যাবেন?</string>
+	<string name="github_star_prompt_description">Adaptive Theme বিনামূল্যের, বিজ্ঞাপনমুক্ত এবং ওপেন সোর্স। এটি আপনার কাজে লাগলে GitHub-এ একটি স্টার দিয়ে বিনামূল্যে সহজেই এটিকে সমর্থন করতে পারেন।</string>
+	<string name="github_star_prompt_action">GitHub-এ স্টার দিন ↗</string>
+	<string name="github_star_prompt_dismiss_description">চিরতরে লুকান</string>
+	<string name="github_star_prompt_thank_you">ধন্যবাদ!</string>
 </resources>

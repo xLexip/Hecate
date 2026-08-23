@@ -16,7 +16,9 @@ import android.Manifest
 import android.app.Activity
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -28,6 +30,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import dev.lexip.hecate.R
 import dev.lexip.hecate.util.InAppReviewHandler
 import dev.lexip.hecate.util.shizuku.ShizukuAvailability
@@ -38,6 +41,7 @@ data class MainScreenCallbacks(
 	val onCheckReviewPrompt: () -> Unit,
 	val onStayDarkAtNightChanged: (Boolean) -> Unit,
 	val onWallpaperSyncToggleRequested: (Boolean) -> Unit = {},
+	val onLockScreenWallpaperBlurChanged: (Boolean) -> Unit = {},
 	val onSelectDayWallpaper: () -> Unit = {},
 	val onSelectNightWallpaper: () -> Unit = {},
 	val onConfirmLiveWallpaper: () -> Unit = {},
@@ -47,7 +51,11 @@ data class MainScreenCallbacks(
 		startMinutes: Int,
 		endMinutes: Int,
 		onRejected: (() -> Unit)?
-	) -> Unit
+	) -> Unit,
+	val onGitHubStarPromptImpression: () -> Unit = {},
+	val onDismissGitHubStarPrompt: () -> Unit = {},
+	val onUndoGitHubStarPromptDismissal: () -> Unit = {},
+	val onOpenGitHubRepository: () -> Unit = {}
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -103,7 +111,12 @@ fun MainScreen(
 				is NavigateToSetup -> Unit
 
 				is RequestInAppReview -> {
-					(context as? Activity)?.let(InAppReviewHandler::triggerReview)
+					(context as? Activity)?.let { activity ->
+						InAppReviewHandler.triggerReview(
+							activity = activity,
+							onLaunchStarted = mainViewModel::recordReviewPromptLaunch
+						)
+					}
 				}
 			}
 		}
@@ -125,6 +138,7 @@ fun MainScreen(
 			onCheckReviewPrompt = mainViewModel::checkReviewPrompt,
 			onStayDarkAtNightChanged = mainViewModel::updateStayDarkAtNightEnabled,
 			onWallpaperSyncToggleRequested = mainViewModel::onWallpaperSyncToggleRequested,
+			onLockScreenWallpaperBlurChanged = mainViewModel::updateLockScreenWallpaperBlurEnabled,
 			onSelectDayWallpaper = {
 				dayWallpaperPicker.launch(
 					PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
@@ -138,7 +152,24 @@ fun MainScreen(
 			onConfirmLiveWallpaper = mainViewModel::confirmEnableWithLiveWallpaper,
 			onDismissLiveWallpaperWarning = mainViewModel::dismissLiveWallpaperWarningDialog,
 			onCustomThresholdConfirmed = mainViewModel::setCustomAdaptiveThemeThreshold,
-			onNightWindowChanged = mainViewModel::updateNightWindow
+			onNightWindowChanged = mainViewModel::updateNightWindow,
+			onGitHubStarPromptImpression = mainViewModel::recordGitHubStarPromptImpression,
+			onDismissGitHubStarPrompt = mainViewModel::dismissGitHubStarPrompt,
+			onUndoGitHubStarPromptDismissal = mainViewModel::undoGitHubStarPromptDismissal,
+			onOpenGitHubRepository = {
+				Toast.makeText(
+					context,
+					R.string.github_star_prompt_thank_you,
+					Toast.LENGTH_LONG
+				).show()
+				context.startActivity(
+					Intent(
+						Intent.ACTION_VIEW,
+						"https://github.com/xLexip/Adaptive-Theme".toUri()
+					)
+				)
+				mainViewModel.onGitHubStarPromptOpened()
+			}
 		)
 	)
 }

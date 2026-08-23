@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Η δοκιμαστική διαδικασία αξιολόγησης ολοκληρώθηκε</string>
 	<string name="easter_egg_answer">Η απάντηση στο υπέρτατο ερώτημα για τη ζωή, το σύμπαν και τα πάντα.</string>
 	<string name="description_service_purpose">Εναλλάσσει το Android μεταξύ φωτεινής και σκοτεινής λειτουργίας ανάλογα με τον φωτισμό περιβάλλοντος.</string>
-	<string name="description_switching_conditions">Το θέμα αλλάζει μόνο αμέσως μετά την ενεργοποίηση της οθόνης και μόνο αν ο αισθητήρας δεν είναι καλυμμένος.</string>
+	<string name="description_switching_conditions">Το θέμα αλλάζει μόνο λίγο μετά την ενεργοποίηση της οθόνης και μόνο αν ο αισθητήρας δεν είναι καλυμμένος.</string>
 	<string name="description_notification_service_running">Έτοιμο για προσαρμογή του θέματος συστήματος όταν ενεργοποιείται η οθόνη.</string>
 	<string name="device_covered_title">Ο αισθητήρας είναι καλυμμένος</string>
 	<string name="device_covered_message">Η εναλλαγή θέματος έχει διακοπεί επειδή ο αισθητήρας φωτός είναι καλυμμένος.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Εναλλακτικές μέθοδοι</string>
 	<string name="setup_grant_title">Βήμα 3: Παραχωρήστε την άδεια από τη δεύτερη συσκευή</string>
 	<string name="setup_grant_body">Ανοίξτε αυτόν τον σύνδεσμο στη δεύτερη συσκευή και ακολουθήστε τις οδηγίες:</string>
-	<string name="setup_alternatives">Μπορείτε επίσης να εκτελέσετε μόνοι σας μια εντολή ADB ή να παραχωρήσετε την άδεια με πρόσβαση root. Υποστηρίζεται επίσης το Shizuku.</string>
+	<string name="setup_alternatives">Μπορείτε επίσης να εκτελέσετε μόνοι σας μια εντολή ADB ή να παραχωρήσετε την άδεια με πρόσβαση root.</string>
 	<string name="setup_permission_granted">Η άδεια παραχωρήθηκε.</string>
 	<string name="setup_permission_not_granted">Η άδεια δεν έχει παραχωρηθεί ακόμα. Ολοκληρώστε τη ρύθμιση με τη δεύτερη συσκευή.</string>
 	<string name="setup_usb_debugging_disabled">Ενεργοποίηση Εντοπισμού σφαλμάτων USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Είναι ασφαλές;</string>
 	<string name="setup_is_this_safe_body">Αυτή η άδεια επιτρέπει στις εφαρμογές να αλλάζουν προστατευμένες ρυθμίσεις συστήματος. Το Adaptive Theme τη χρησιμοποιεί μόνο για λειτουργίες όπως η εναλλαγή σκοτεινής λειτουργίας. Η απεγκατάσταση της εφαρμογής ανακαλεί την άδεια. Ο πηγαίος κώδικας είναι δημόσιος στο GitHub.</string>
 	<string name="setup_shizuku_title">Εναλλακτικά: Shizuku</string>
-	<string name="setup_shizuku_description">Αν χρησιμοποιείτε ήδη το Shizuku, δεν χρειάζεστε δεύτερη συσκευή ή ADB. Το Shizuku χρειάζεται μόνο μία φορά για την παραχώρηση της άδειας.</string>
+	<string name="setup_shizuku_description">Με το Shizuku δεν χρειάζεστε δεύτερη συσκευή ή ADB. Η εφαρμογή χρειάζεται μόνο μία φορά για την παραχώρηση της άδειας.</string>
 	<string name="setup_shizuku_action">Χρήση Shizuku</string>
+	<string name="setup_shizuku_install_action">Εγκατάσταση Shizuku</string>
 	<string name="setup_action_use_root">Χρήση πρόσβασης root</string>
 	<string name="setup_root_request">Αίτημα πρόσβασης root…</string>
 	<string name="setup_root_grant_failed">Δεν ήταν δυνατή η παραχώρηση της άδειας με πρόσβαση root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Παρουσιάστηκε απροσδόκητο σφάλμα κατά τη χρήση του Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Ταπετσαρία</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Θόλωση οθόνης κλειδώματος</string>
+	<string name="description_lock_screen_wallpaper_blur">Χρησιμοποιήστε μια θολή έκδοση της ταπετσαρίας στην οθόνη κλειδώματος.</string>
 	<string name="description_device_wallpaper_sync">Χρησιμοποιήστε ξεχωριστές ταπετσαρίες για φωτεινή και σκοτεινή λειτουργία. Η εναλλαγή μπορεί να διαρκέσει λίγο και να επηρεάσει την απόδοση.</string>
 	<string name="action_select_day_wallpaper">Φωτεινή λειτουργία:</string>
 	<string name="action_select_night_wallpaper">Σκοτεινή λειτουργία:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Δεν ορίστηκε</string>
 	<string name="live_wallpaper_warning_title">Ενεργή κινούμενη ταπετσαρία</string>
 	<string name="live_wallpaper_warning_message">Η ενεργοποίηση του συγχρονισμού θα αντικαταστήσει την τρέχουσα κινούμενη ταπετσαρία με στατικές ταπετσαρίες για φωτεινή και σκοτεινή λειτουργία. Θέλετε να συνεχίσετε;</string>
+	<string name="github_star_prompt_description">Το Adaptive Theme είναι δωρεάν, χωρίς διαφημίσεις και ανοιχτού κώδικα. Αν σας είναι χρήσιμο, ένα αστέρι στο GitHub είναι ένας απλός δωρεάν τρόπος να το υποστηρίξετε.</string>
+	<string name="github_star_prompt_action">Προσθήκη αστεριού στο GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Μόνιμη απόκρυψη</string>
+	<string name="github_star_prompt_thank_you">Ευχαριστούμε!</string>
 </resources>

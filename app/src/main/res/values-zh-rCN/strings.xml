@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">测试评价流程已完成</string>
 	<string name="easter_egg_answer">关于生命、宇宙以及一切终极问题的答案。</string>
 	<string name="description_service_purpose">根据环境光线在 Android 的浅色和深色模式之间切换。</string>
-	<string name="description_switching_conditions">主题仅会在屏幕亮起后立即切换，且仅在传感器未被遮挡时。</string>
+	<string name="description_switching_conditions">主题仅会在屏幕亮起后的短时间内切换，且仅在传感器未被遮挡时。</string>
 	<string name="description_notification_service_running">已准备好在屏幕亮起时调整系统主题。</string>
 	<string name="device_covered_title">传感器被遮挡</string>
 	<string name="device_covered_message">光线传感器被遮挡，主题切换已暂停。</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">其他方法</string>
 	<string name="setup_grant_title">第 3 步：从第二台设备授予权限</string>
 	<string name="setup_grant_body">在第二台设备上打开此链接，然后按照说明操作：</string>
-	<string name="setup_alternatives">也可以自行运行 ADB 命令或使用 root 权限授予权限。还支持 Shizuku。</string>
+	<string name="setup_alternatives">也可以自行运行 ADB 命令或使用 root 权限授予权限。</string>
 	<string name="setup_permission_granted">权限已授予。</string>
 	<string name="setup_permission_not_granted">尚未授予权限。请使用第二台设备完成设置。</string>
 	<string name="setup_usb_debugging_disabled">启用 USB 调试</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">这样安全吗？</string>
 	<string name="setup_is_this_safe_body">此权限允许应用修改受保护的系统设置。Adaptive Theme 仅将其用于切换深色模式等功能。卸载应用后，此权限将被撤销。源代码已在 GitHub 上公开。</string>
 	<string name="setup_shizuku_title">其他方法：Shizuku</string>
-	<string name="setup_shizuku_description">如果您已在使用 Shizuku，则不需要第二台设备或 ADB。只需使用一次 Shizuku 即可授予权限。</string>
+	<string name="setup_shizuku_description">使用 Shizuku，无需第二台设备或 ADB。只需使用一次该应用即可授予权限。</string>
 	<string name="setup_shizuku_action">使用 Shizuku</string>
+	<string name="setup_shizuku_install_action">安装 Shizuku</string>
 	<string name="setup_action_use_root">使用 root 权限</string>
 	<string name="setup_root_request">正在请求 root 权限…</string>
 	<string name="setup_root_grant_failed">无法使用 root 权限授予权限。</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">使用 Shizuku 时发生意外错误。</string>
 	<string name="title_device_wallpaper_sync">壁纸</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">模糊锁屏</string>
+	<string name="description_lock_screen_wallpaper_blur">在锁屏上使用壁纸的模糊版本。</string>
 	<string name="description_device_wallpaper_sync">为浅色和深色模式使用不同的壁纸。切换可能需要一点时间并影响性能。</string>
 	<string name="action_select_day_wallpaper">浅色模式：</string>
 	<string name="action_select_night_wallpaper">深色模式：</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">未设置</string>
 	<string name="live_wallpaper_warning_title">动态壁纸已启用</string>
 	<string name="live_wallpaper_warning_message">启用壁纸同步后，当前的动态壁纸将替换为浅色和深色模式的静态壁纸。是否继续？</string>
+	<string name="github_star_prompt_description">Adaptive Theme 免费、无广告且开源。如果它对您有帮助，在 GitHub 上点亮星标就是免费支持它的简单方式。</string>
+	<string name="github_star_prompt_action">在 GitHub 上加星 ↗</string>
+	<string name="github_star_prompt_dismiss_description">永久隐藏</string>
+	<string name="github_star_prompt_thank_you">谢谢！</string>
 </resources>

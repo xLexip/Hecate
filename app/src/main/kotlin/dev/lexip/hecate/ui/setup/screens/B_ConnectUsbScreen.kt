@@ -106,11 +106,15 @@ fun B_ConnectUsbScreen(
 
 				SetupFAQCards()
 
+				ShizukuOptionCard(
+					isVisible = !uiState.isShizukuInstalled,
+					actionRes = R.string.setup_shizuku_install_action,
+					onClick = onInstallShizuku
+				)
+
 				ForExpertsSectionCard(
 					onUseRoot = onUseRoot,
 					onShareADBCommand = onShareExpertCommand,
-					isShizukuInstalled = uiState.isShizukuInstalled,
-					onInstallShizuku = onInstallShizuku,
 					onExpansionStarted = {
 						coroutineScope.launch {
 							var previousMaxValue = -1

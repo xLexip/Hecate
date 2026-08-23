@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Aliran ulasan ujian selesai</string>
 	<string name="easter_egg_answer">Jawapan kepada persoalan utama tentang kehidupan, alam semesta dan segala-galanya.</string>
 	<string name="description_service_purpose">Menukar Android antara mod cerah dan gelap berdasarkan cahaya persekitaran.</string>
-	<string name="description_switching_conditions">Tema hanya berubah sejurus selepas skrin dihidupkan dan hanya jika penderia tidak dilitupi.</string>
+	<string name="description_switching_conditions">Tema hanya berubah seketika selepas skrin dihidupkan dan hanya jika penderia tidak dilitupi.</string>
 	<string name="description_notification_service_running">Sedia melaraskan tema sistem apabila skrin dihidupkan.</string>
 	<string name="device_covered_title">Penderia dilitupi</string>
 	<string name="device_covered_message">Penukaran tema dijeda kerana penderia cahaya dilitupi.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Kaedah alternatif</string>
 	<string name="setup_grant_title">Langkah 3: Berikan kebenaran daripada peranti kedua</string>
 	<string name="setup_grant_body">Buka pautan ini pada peranti kedua dan ikut arahan:</string>
-	<string name="setup_alternatives">Anda juga boleh menjalankan perintah ADB sendiri atau memberikan kebenaran dengan akses root. Shizuku turut disokong.</string>
+	<string name="setup_alternatives">Anda juga boleh menjalankan perintah ADB sendiri atau memberikan kebenaran dengan akses root.</string>
 	<string name="setup_permission_granted">Kebenaran diberikan.</string>
 	<string name="setup_permission_not_granted">Kebenaran belum diberikan. Lengkapkan persediaan dengan peranti kedua.</string>
 	<string name="setup_usb_debugging_disabled">Dayakan Penyahpepijatan USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Adakah ini selamat?</string>
 	<string name="setup_is_this_safe_body">Kebenaran ini membolehkan aplikasi mengubah tetapan sistem yang dilindungi. Adaptive Theme hanya menggunakannya untuk ciri seperti penukaran mod gelap. Menyahpasang aplikasi akan membatalkan kebenaran. Kod sumber tersedia secara umum di GitHub.</string>
 	<string name="setup_shizuku_title">Alternatif: Shizuku</string>
-	<string name="setup_shizuku_description">Jika anda sudah menggunakan Shizuku, anda tidak memerlukan peranti kedua atau ADB. Shizuku hanya diperlukan sekali untuk memberikan kebenaran.</string>
+	<string name="setup_shizuku_description">Dengan Shizuku, anda tidak memerlukan peranti kedua atau ADB. Aplikasi ini hanya diperlukan sekali untuk memberikan kebenaran.</string>
 	<string name="setup_shizuku_action">Gunakan Shizuku</string>
+	<string name="setup_shizuku_install_action">Pasang Shizuku</string>
 	<string name="setup_action_use_root">Gunakan akses root</string>
 	<string name="setup_root_request">Meminta akses root…</string>
 	<string name="setup_root_grant_failed">Tidak dapat memberikan kebenaran dengan akses root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Ralat tidak dijangka berlaku semasa menggunakan Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Kertas dinding</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Kaburkan skrin kunci</string>
+	<string name="description_lock_screen_wallpaper_blur">Gunakan versi kabur kertas dinding pada skrin kunci.</string>
 	<string name="description_device_wallpaper_sync">Gunakan hias latar berasingan untuk mod cerah dan gelap. Penukaran mungkin mengambil masa seketika dan menjejaskan prestasi.</string>
 	<string name="action_select_day_wallpaper">Mod cerah:</string>
 	<string name="action_select_night_wallpaper">Mod gelap:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Belum ditetapkan</string>
 	<string name="live_wallpaper_warning_title">Hias latar langsung aktif</string>
 	<string name="live_wallpaper_warning_message">Mendayakan penyegerakan hias latar akan menggantikan hias latar langsung semasa dengan hias latar statik untuk mod cerah dan gelap. Teruskan?</string>
+	<string name="github_star_prompt_description">Adaptive Theme adalah percuma, tanpa iklan dan sumber terbuka. Jika aplikasi ini berguna kepada anda, memberikan bintang di GitHub ialah cara mudah untuk menyokongnya secara percuma.</string>
+	<string name="github_star_prompt_action">Beri bintang di GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Sembunyikan selama-lamanya</string>
+	<string name="github_star_prompt_thank_you">Terima kasih!</string>
 </resources>

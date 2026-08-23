@@ -16,6 +16,8 @@ import android.content.Context
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.logEvent
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import dev.lexip.hecate.util.ScreenOnProximityResult
+import dev.lexip.hecate.util.ThemeSwitchSkipReason
 
 object Logger {
 
@@ -71,12 +73,39 @@ object Logger {
 	fun logThemeSwitched(
 		context: Context,
 		targetMode: Int,
-		succeeded: Boolean
+		succeeded: Boolean,
+		verificationAttempt: Int,
+		verificationElapsedMs: Long,
+		effectiveUiMode: Int,
+		screenOnProximityResult: ScreenOnProximityResult
 	) {
 		ifAllowed {
 			analytics(context).logEvent("theme_switched") {
 				param("target_mode", targetMode.toLong())
 				param("succeeded", if (succeeded) 1L else 0L)
+				param("verification_attempt", verificationAttempt.toLong())
+				param("verification_elapsed_ms", verificationElapsedMs)
+				param("effective_ui_mode", effectiveUiMode.toLong())
+				param(
+					"screen_on_proximity_result",
+					screenOnProximityResult.analyticsValue
+				)
+			}
+		}
+	}
+
+	fun logThemeSwitchSkipped(
+		context: Context,
+		reason: ThemeSwitchSkipReason,
+		screenOnProximityResult: ScreenOnProximityResult
+	) {
+		ifAllowed {
+			analytics(context).logEvent("theme_switch_skipped") {
+				param("reason", reason.analyticsValue)
+				param(
+					"screen_on_proximity_result",
+					screenOnProximityResult.analyticsValue
+				)
 			}
 		}
 	}
@@ -93,6 +122,14 @@ object Logger {
 		ifAllowed {
 			analytics(context).logEvent("share_link_clicked") {
 				param("source", source)
+			}
+		}
+	}
+
+	fun logGitHubStarPromptAction(context: Context, action: String) {
+		ifAllowed {
+			analytics(context).logEvent("github_star_prompt") {
+				param("action", action)
 			}
 		}
 	}

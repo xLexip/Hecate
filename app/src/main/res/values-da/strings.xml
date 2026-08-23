@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Testanmeldelse gennemført</string>
 	<string name="easter_egg_answer">Svaret på det ultimative spørgsmål om livet, universet og alt.</string>
 	<string name="description_service_purpose">Skifter Android mellem lys og mørk tilstand ud fra det omgivende lys.</string>
-	<string name="description_switching_conditions">Temaet ændres kun lige efter, at skærmen tændes, og kun hvis sensoren ikke er dækket.</string>
+	<string name="description_switching_conditions">Temaet ændres kun kort efter, at skærmen tændes, og kun hvis sensoren ikke er dækket.</string>
 	<string name="description_notification_service_running">Klar til at tilpasse systemtemaet, når skærmen tændes.</string>
 	<string name="device_covered_title">Sensor dækket</string>
 	<string name="device_covered_message">Temaskift er sat på pause, fordi lyssensoren er dækket.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Alternative metoder</string>
 	<string name="setup_grant_title">Trin 3: Giv tilladelsen fra den anden enhed</string>
 	<string name="setup_grant_body">Åbn dette link på den anden enhed, og følg vejledningen:</string>
-	<string name="setup_alternatives">Du kan også selv køre en ADB-kommando eller bruge rootadgang til at give tilladelsen. Shizuku understøttes også.</string>
+	<string name="setup_alternatives">Du kan også selv køre en ADB-kommando eller bruge rootadgang til at give tilladelsen.</string>
 	<string name="setup_permission_granted">Tilladelse givet.</string>
 	<string name="setup_permission_not_granted">Tilladelsen er endnu ikke givet. Fuldfør konfigurationen med den anden enhed.</string>
 	<string name="setup_usb_debugging_disabled">Aktivér USB-fejlretning</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Er det sikkert?</string>
 	<string name="setup_is_this_safe_body">Denne tilladelse gør det muligt for apps at ændre beskyttede systemindstillinger. Adaptive Theme bruger den kun til funktioner som skift af mørk tilstand. Tilladelsen tilbagekaldes, når appen afinstalleres. Kildekoden er offentlig på GitHub.</string>
 	<string name="setup_shizuku_title">Alternativ: Shizuku</string>
-	<string name="setup_shizuku_description">Hvis du allerede bruger Shizuku, behøver du hverken en anden enhed eller ADB. Shizuku skal kun bruges én gang for at give tilladelsen.</string>
+	<string name="setup_shizuku_description">Med Shizuku behøver du hverken en anden enhed eller ADB. Appen skal kun bruges én gang for at give tilladelsen.</string>
 	<string name="setup_shizuku_action">Brug Shizuku</string>
+	<string name="setup_shizuku_install_action">Installer Shizuku</string>
 	<string name="setup_action_use_root">Brug rootadgang</string>
 	<string name="setup_root_request">Anmoder om rootadgang…</string>
 	<string name="setup_root_grant_failed">Tilladelsen kunne ikke gives med rootadgang.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Der opstod en uventet fejl under brug af Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Baggrund</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Slør låseskærmen</string>
+	<string name="description_lock_screen_wallpaper_blur">Brug en sløret version af baggrundsbilledet på låseskærmen.</string>
 	<string name="description_device_wallpaper_sync">Brug separate baggrunde til lys og mørk tilstand. Skiftet kan tage et øjeblik og påvirke ydeevnen.</string>
 	<string name="action_select_day_wallpaper">Lys tilstand:</string>
 	<string name="action_select_night_wallpaper">Mørk tilstand:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Ikke indstillet</string>
 	<string name="live_wallpaper_warning_title">Levende baggrund aktiv</string>
 	<string name="live_wallpaper_warning_message">Hvis synkronisering af baggrunde aktiveres, erstattes din nuværende levende baggrund med statiske baggrunde til lys og mørk tilstand. Vil du fortsætte?</string>
+	<string name="github_star_prompt_description">Adaptive Theme er gratis, uden reklamer og med åben kildekode. Hvis appen er nyttig for dig, kan du nemt støtte den gratis med en stjerne på GitHub.</string>
+	<string name="github_star_prompt_action">Giv en stjerne på GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Skjul permanent</string>
+	<string name="github_star_prompt_thank_you">Tak!</string>
 </resources>

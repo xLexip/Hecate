@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">சோதனை மதிப்பாய்வு முடிந்தது</string>
 	<string name="easter_egg_answer">வாழ்க்கை, பிரபஞ்சம் மற்றும் அனைத்தையும் பற்றிய இறுதிக் கேள்விக்கான விடை.</string>
 	<string name="description_service_purpose">சுற்றுப்புற ஒளியின் அடிப்படையில் Android-ஐ வெளிர் மற்றும் இருள் பயன்முறைகளுக்கு இடையே மாற்றுகிறது.</string>
-	<string name="description_switching_conditions">திரை இயக்கப்பட்ட உடனேயே மற்றும் சென்சார் மறைக்கப்படாதபோது மட்டுமே தீம் மாறும்.</string>
+	<string name="description_switching_conditions">திரை இயக்கப்பட்ட சிறிது நேரத்திற்குள் மற்றும் சென்சார் மறைக்கப்படாதபோது மட்டுமே தீம் மாறும்.</string>
 	<string name="description_notification_service_running">திரை இயக்கப்படும்போது சிஸ்டம் தீமை மாற்றத் தயார்.</string>
 	<string name="device_covered_title">சென்சார் மறைக்கப்பட்டுள்ளது</string>
 	<string name="device_covered_message">ஒளி சென்சார் மறைக்கப்பட்டுள்ளதால் தீம் மாற்றம் இடைநிறுத்தப்பட்டுள்ளது.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">மாற்று முறைகள்</string>
 	<string name="setup_grant_title">படி 3: இரண்டாவது சாதனத்திலிருந்து அனுமதி வழங்கவும்</string>
 	<string name="setup_grant_body">இரண்டாவது சாதனத்தில் இந்த இணைப்பைத் திறந்து வழிமுறைகளைப் பின்பற்றவும்:</string>
-	<string name="setup_alternatives">நீங்களே ADB கட்டளையை இயக்கலாம் அல்லது root அணுகலால் அனுமதி வழங்கலாம். Shizuku-வும் ஆதரிக்கப்படுகிறது.</string>
+	<string name="setup_alternatives">நீங்களே ADB கட்டளையை இயக்கலாம் அல்லது root அணுகலால் அனுமதி வழங்கலாம்.</string>
 	<string name="setup_permission_granted">அனுமதி வழங்கப்பட்டது.</string>
 	<string name="setup_permission_not_granted">அனுமதி இன்னும் வழங்கப்படவில்லை. இரண்டாவது சாதனத்துடன் அமைவை முடிக்கவும்.</string>
 	<string name="setup_usb_debugging_disabled">USB பிழைத்திருத்தத்தை இயக்கு</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">இது பாதுகாப்பானதா?</string>
 	<string name="setup_is_this_safe_body">இந்த அனுமதி பாதுகாக்கப்பட்ட சிஸ்டம் அமைப்புகளை மாற்ற செயலிகளை அனுமதிக்கிறது. Adaptive Theme இதை இருள் பயன்முறையை மாற்றுவது போன்ற அம்சங்களுக்கு மட்டுமே பயன்படுத்துகிறது. செயலியை நிறுவல் நீக்கினால் அனுமதி திரும்பப் பெறப்படும். மூலக் குறியீடு GitHub-ல் பொதுவாக உள்ளது.</string>
 	<string name="setup_shizuku_title">மாற்று: Shizuku</string>
-	<string name="setup_shizuku_description">ஏற்கனவே Shizuku பயன்படுத்தினால் இரண்டாவது சாதனம் அல்லது ADB தேவையில்லை. அனுமதி வழங்க Shizuku ஒரு முறை மட்டுமே தேவை.</string>
+	<string name="setup_shizuku_description">Shizuku பயன்படுத்தினால் இரண்டாவது சாதனம் அல்லது ADB தேவையில்லை. அனுமதி வழங்க ஆப்ஸ் ஒரு முறை மட்டுமே தேவை.</string>
 	<string name="setup_shizuku_action">Shizuku பயன்படுத்து</string>
+	<string name="setup_shizuku_install_action">Shizuku-வை நிறுவு</string>
 	<string name="setup_action_use_root">root அணுகலைப் பயன்படுத்து</string>
 	<string name="setup_root_request">root அணுகல் கோரப்படுகிறது…</string>
 	<string name="setup_root_grant_failed">root அணுகலால் அனுமதி வழங்க முடியவில்லை.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku பயன்படுத்தும்போது எதிர்பாராத பிழை ஏற்பட்டது.</string>
 	<string name="title_device_wallpaper_sync">வால்பேப்பர்</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">பூட்டுத் திரையை மங்கலாக்கு</string>
+	<string name="description_lock_screen_wallpaper_blur">பூட்டுத் திரையில் வால்பேப்பரின் மங்கலான பதிப்பைப் பயன்படுத்தவும்.</string>
 	<string name="description_device_wallpaper_sync">வெளிர் மற்றும் இருள் பயன்முறைகளுக்குத் தனித்தனி வால்பேப்பர்களைப் பயன்படுத்தவும். மாற்ற சிறிது நேரம் ஆகலாம்; செயல்திறன் பாதிக்கப்படலாம்.</string>
 	<string name="action_select_day_wallpaper">வெளிர் பயன்முறை:</string>
 	<string name="action_select_night_wallpaper">இருள் பயன்முறை:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">அமைக்கப்படவில்லை</string>
 	<string name="live_wallpaper_warning_title">லைவ் வால்பேப்பர் இயக்கத்தில் உள்ளது</string>
 	<string name="live_wallpaper_warning_message">வால்பேப்பர் ஒத்திசைவை இயக்கினால் தற்போதைய லைவ் வால்பேப்பர் வெளிர் மற்றும் இருள் பயன்முறைகளுக்கான நிலையான வால்பேப்பர்களால் மாற்றப்படும். தொடரவா?</string>
+	<string name="github_star_prompt_description">Adaptive Theme இலவசமானது, விளம்பரமற்றது மற்றும் திறந்த மூலமாகும். இது உங்களுக்கு பயனுள்ளதாக இருந்தால், GitHub-ல் ஸ்டார் வழங்குவது அதை இலவசமாக ஆதரிப்பதற்கான எளிய வழியாகும்.</string>
+	<string name="github_star_prompt_action">GitHub-ல் ஸ்டார் வழங்கவும் ↗</string>
+	<string name="github_star_prompt_dismiss_description">என்றென்றும் மறை</string>
+	<string name="github_star_prompt_thank_you">நன்றி!</string>
 </resources>

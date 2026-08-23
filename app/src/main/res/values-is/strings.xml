@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Prófunarferli umsagnar lokið</string>
 	<string name="easter_egg_answer">Svarið við hinni endanlegu spurningu um lífið, alheiminn og allt.</string>
 	<string name="description_service_purpose">Skiptir Android á milli ljósrar og dökkrar stillingar eftir umhverfislýsingu.</string>
-	<string name="description_switching_conditions">Þemað breytist aðeins strax eftir að kveikt er á skjánum og aðeins ef skynjarinn er ekki hulinn.</string>
+	<string name="description_switching_conditions">Þemað breytist aðeins skömmu eftir að kveikt er á skjánum og aðeins ef skynjarinn er ekki hulinn.</string>
 	<string name="description_notification_service_running">Tilbúið að laga kerfisþemað þegar kveikt er á skjánum.</string>
 	<string name="device_covered_title">Skynjari hulinn</string>
 	<string name="device_covered_message">Þemaskipti eru í bið vegna þess að ljósneminn er hulinn.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Aðrar aðferðir</string>
 	<string name="setup_grant_title">Skref 3: Veittu heimild úr hinu tækinu</string>
 	<string name="setup_grant_body">Opnaðu þennan tengil í hinu tækinu og fylgdu leiðbeiningunum:</string>
-	<string name="setup_alternatives">Þú getur einnig keyrt ADB-skipun sjálf/ur eða veitt heimildina með root-aðgangi. Shizuku er einnig stutt.</string>
+	<string name="setup_alternatives">Þú getur einnig keyrt ADB-skipun sjálf/ur eða veitt heimildina með root-aðgangi.</string>
 	<string name="setup_permission_granted">Heimild veitt.</string>
 	<string name="setup_permission_not_granted">Heimild hefur ekki enn verið veitt. Ljúktu uppsetningunni með hinu tækinu.</string>
 	<string name="setup_usb_debugging_disabled">Kveikja á USB-villuleit</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Er þetta öruggt?</string>
 	<string name="setup_is_this_safe_body">Þessi heimild leyfir forritum að breyta vörðum kerfisstillingum. Adaptive Theme notar hana aðeins fyrir eiginleika á borð við skipti yfir í dökka stillingu. Heimildin er afturkölluð þegar forritið er fjarlægt. Frumkóðinn er opinber á GitHub.</string>
 	<string name="setup_shizuku_title">Önnur leið: Shizuku</string>
-	<string name="setup_shizuku_description">Ef þú notar Shizuku nú þegar þarftu hvorki annað tæki né ADB. Shizuku þarf aðeins einu sinni til að veita heimildina.</string>
+	<string name="setup_shizuku_description">Með Shizuku þarftu hvorki annað tæki né ADB. Aðeins þarf að nota forritið einu sinni til að veita heimildina.</string>
 	<string name="setup_shizuku_action">Nota Shizuku</string>
+	<string name="setup_shizuku_install_action">Setja upp Shizuku</string>
 	<string name="setup_action_use_root">Nota root-aðgang</string>
 	<string name="setup_root_request">Biður um root-aðgang…</string>
 	<string name="setup_root_grant_failed">Ekki tókst að veita heimild með root-aðgangi.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Óvænt villa kom upp við notkun Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Veggfóður</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Gera læsiskjá óskýran</string>
+	<string name="description_lock_screen_wallpaper_blur">Notaðu óskýra útgáfu af bakgrunnsmyndinni á læsiskjánum.</string>
 	<string name="description_device_wallpaper_sync">Notaðu aðskildar veggfóðursmyndir fyrir ljósa og dökka stillingu. Skipting getur tekið smástund og haft áhrif á afköst.</string>
 	<string name="action_select_day_wallpaper">Ljós stilling:</string>
 	<string name="action_select_night_wallpaper">Dökk stilling:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Ekki stillt</string>
 	<string name="live_wallpaper_warning_title">Lifandi veggfóður virkt</string>
 	<string name="live_wallpaper_warning_message">Ef samstilling veggfóðurs er virkjuð verður núverandi lifandi veggfóðri skipt út fyrir kyrrstæðar myndir fyrir ljósa og dökka stillingu. Halda áfram?</string>
+	<string name="github_star_prompt_description">Adaptive Theme er ókeypis, án auglýsinga og með opinn frumkóða. Ef appið nýtist þér er stjarna á GitHub einföld leið til að styðja það ókeypis.</string>
+	<string name="github_star_prompt_action">Gefa stjörnu á GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Fela varanlega</string>
+	<string name="github_star_prompt_thank_you">Takk!</string>
 </resources>

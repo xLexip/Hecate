@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Тестовият процес за оценка завърши</string>
 	<string name="easter_egg_answer">Отговорът на върховния въпрос за живота, Вселената и всичко останало.</string>
 	<string name="description_service_purpose">Превключва Android между светъл и тъмен режим според околната светлина.</string>
-	<string name="description_switching_conditions">Темата се променя само веднага след включване на екрана и само ако сензорът не е покрит.</string>
+	<string name="description_switching_conditions">Темата се променя само малко след включване на екрана и само ако сензорът не е покрит.</string>
 	<string name="description_notification_service_running">В готовност за промяна на системната тема при включване на екрана.</string>
 	<string name="device_covered_title">Сензорът е покрит</string>
 	<string name="device_covered_message">Превключването на темата е поставено на пауза, защото сензорът за светлина е покрит.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Алтернативни начини</string>
 	<string name="setup_grant_title">Стъпка 3: Дайте разрешението от второто устройство</string>
 	<string name="setup_grant_body">Отворете тази връзка на второто устройство и следвайте инструкциите:</string>
-	<string name="setup_alternatives">Може сами да изпълните ADB команда или да дадете разрешението чрез root достъп. Поддържа се и Shizuku.</string>
+	<string name="setup_alternatives">Може сами да изпълните ADB команда или да дадете разрешението чрез root достъп.</string>
 	<string name="setup_permission_granted">Разрешението е дадено.</string>
 	<string name="setup_permission_not_granted">Разрешението още не е дадено. Завършете настройването с второто устройство.</string>
 	<string name="setup_usb_debugging_disabled">Включване на Отстраняване на грешки чрез USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Безопасно ли е?</string>
 	<string name="setup_is_this_safe_body">Това разрешение позволява на приложенията да променят защитени системни настройки. Adaptive Theme го използва само за функции като превключването на тъмния режим. Деинсталирането на приложението отменя разрешението. Изходният код е публичен в GitHub.</string>
 	<string name="setup_shizuku_title">Алтернатива: Shizuku</string>
-	<string name="setup_shizuku_description">Ако вече използвате Shizuku, не ви трябва второ устройство или ADB. Shizuku е нужен само веднъж за даване на разрешението.</string>
+	<string name="setup_shizuku_description">Със Shizuku не ви трябва второ устройство или ADB. Приложението е нужно само веднъж за даване на разрешението.</string>
 	<string name="setup_shizuku_action">Използване на Shizuku</string>
+	<string name="setup_shizuku_install_action">Инсталиране на Shizuku</string>
 	<string name="setup_action_use_root">Използване на root достъп</string>
 	<string name="setup_root_request">Заявяване на root достъп…</string>
 	<string name="setup_root_grant_failed">Разрешението не може да бъде дадено чрез root достъп.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Възникна неочаквана грешка при използване на Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Тапет</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Замъгляване на заключения екран</string>
+	<string name="description_lock_screen_wallpaper_blur">Използвайте замъглена версия на тапета на заключения екран.</string>
 	<string name="description_device_wallpaper_sync">Използвайте отделни тапети за светъл и тъмен режим. Превключването може да отнеме момент и да повлияе на производителността.</string>
 	<string name="action_select_day_wallpaper">Светъл режим:</string>
 	<string name="action_select_night_wallpaper">Тъмен режим:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Не е зададен</string>
 	<string name="live_wallpaper_warning_title">Активен динамичен тапет</string>
 	<string name="live_wallpaper_warning_message">Включването на синхронизирането ще замени текущия динамичен тапет със статични тапети за светъл и тъмен режим. Искате ли да продължите?</string>
+	<string name="github_star_prompt_description">Adaptive Theme е безплатно приложение без реклами и с отворен код. Ако ви е полезно, можете лесно и безплатно да го подкрепите със звезда в GitHub.</string>
+	<string name="github_star_prompt_action">Добавяне на звезда в GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Скриване завинаги</string>
+	<string name="github_star_prompt_thank_you">Благодарим!</string>
 </resources>

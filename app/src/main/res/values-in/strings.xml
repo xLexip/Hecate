@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">Alur ulasan uji selesai</string>
 	<string name="easter_egg_answer">Jawaban atas pertanyaan utama tentang kehidupan, alam semesta, dan segalanya.</string>
 	<string name="description_service_purpose">Mengalihkan Android antara mode terang dan gelap berdasarkan cahaya sekitar.</string>
-	<string name="description_switching_conditions">Tema hanya berubah segera setelah layar dinyalakan dan hanya jika sensor tidak tertutup.</string>
+	<string name="description_switching_conditions">Tema hanya berubah sesaat setelah layar dinyalakan dan hanya jika sensor tidak tertutup.</string>
 	<string name="description_notification_service_running">Siap menyesuaikan tema sistem saat layar dinyalakan.</string>
 	<string name="device_covered_title">Sensor tertutup</string>
 	<string name="device_covered_message">Peralihan tema dijeda karena sensor cahaya tertutup.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">Metode alternatif</string>
 	<string name="setup_grant_title">Langkah 3: Berikan izin dari perangkat kedua</string>
 	<string name="setup_grant_body">Buka tautan ini di perangkat kedua dan ikuti petunjuknya:</string>
-	<string name="setup_alternatives">Anda juga dapat menjalankan perintah ADB sendiri atau memberikan izin dengan akses root. Shizuku juga didukung.</string>
+	<string name="setup_alternatives">Anda juga dapat menjalankan perintah ADB sendiri atau memberikan izin dengan akses root.</string>
 	<string name="setup_permission_granted">Izin diberikan.</string>
 	<string name="setup_permission_not_granted">Izin belum diberikan. Selesaikan penyiapan dengan perangkat kedua.</string>
 	<string name="setup_usb_debugging_disabled">Aktifkan Debug USB</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">Apakah ini aman?</string>
 	<string name="setup_is_this_safe_body">Izin ini memungkinkan aplikasi mengubah setelan sistem yang dilindungi. Adaptive Theme hanya menggunakannya untuk fitur seperti peralihan mode gelap. Meng-uninstal aplikasi akan mencabut izin. Kode sumber tersedia untuk umum di GitHub.</string>
 	<string name="setup_shizuku_title">Alternatif: Shizuku</string>
-	<string name="setup_shizuku_description">Jika sudah menggunakan Shizuku, Anda tidak memerlukan perangkat kedua atau ADB. Shizuku hanya diperlukan sekali untuk memberikan izin.</string>
+	<string name="setup_shizuku_description">Dengan Shizuku, Anda tidak memerlukan perangkat kedua atau ADB. Aplikasi ini hanya diperlukan sekali untuk memberikan izin.</string>
 	<string name="setup_shizuku_action">Gunakan Shizuku</string>
+	<string name="setup_shizuku_install_action">Instal Shizuku</string>
 	<string name="setup_action_use_root">Gunakan akses root</string>
 	<string name="setup_root_request">Meminta akses root…</string>
 	<string name="setup_root_grant_failed">Tidak dapat memberikan izin dengan akses root.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Terjadi kesalahan tak terduga saat menggunakan Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Wallpaper</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Buramkan layar kunci</string>
+	<string name="description_lock_screen_wallpaper_blur">Gunakan versi buram wallpaper di layar kunci.</string>
 	<string name="description_device_wallpaper_sync">Gunakan wallpaper terpisah untuk mode terang dan gelap. Peralihan mungkin memerlukan waktu sejenak dan memengaruhi performa.</string>
 	<string name="action_select_day_wallpaper">Mode terang:</string>
 	<string name="action_select_night_wallpaper">Mode gelap:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">Belum disetel</string>
 	<string name="live_wallpaper_warning_title">Wallpaper animasi aktif</string>
 	<string name="live_wallpaper_warning_message">Mengaktifkan sinkronisasi wallpaper akan mengganti wallpaper animasi saat ini dengan wallpaper statis untuk mode terang dan gelap. Lanjutkan?</string>
+	<string name="github_star_prompt_description">Adaptive Theme gratis, bebas iklan, dan bersumber terbuka. Jika aplikasi ini berguna bagi Anda, memberi bintang di GitHub adalah cara mudah untuk mendukungnya secara gratis.</string>
+	<string name="github_star_prompt_action">Beri bintang di GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Sembunyikan selamanya</string>
+	<string name="github_star_prompt_thank_you">Terima kasih!</string>
 </resources>

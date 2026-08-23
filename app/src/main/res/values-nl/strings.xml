@@ -23,7 +23,7 @@
 	</string>
 
 	<string name="description_switching_conditions">
-		Het thema verandert alleen onmiddellijk nadat het scherm wordt ingeschakeld, en alleen als de sensor niet bedekt is.
+		Het thema verandert alleen kort nadat het scherm wordt ingeschakeld, en alleen als de sensor niet bedekt is.
 	</string>
 
 	<string name="description_notification_service_running">
@@ -80,7 +80,7 @@
 	<string name="setup_alternative_methods">Alternatieve methoden</string>
 	<string name="setup_grant_title">Stap 3: verleen de machtiging vanaf het tweede apparaat</string>
 	<string name="setup_grant_body">Open deze link op het tweede apparaat en volg de instructies:</string>
-	<string name="setup_alternatives">Je kunt ook zelf een ADB-opdracht uitvoeren of roottoegang gebruiken om de machtiging te verlenen. Shizuku wordt eveneens ondersteund.</string>
+	<string name="setup_alternatives">Je kunt ook zelf een ADB-opdracht uitvoeren of roottoegang gebruiken om de machtiging te verlenen.</string>
 	<string name="setup_permission_granted">Machtiging verleend.</string>
 	<string name="setup_permission_not_granted">Machtiging nog niet verleend. Voltooi de installatie met het tweede apparaat.</string>
 	<string name="setup_usb_debugging_disabled">USB-foutopsporing inschakelen</string>
@@ -93,8 +93,9 @@
 	<string name="setup_is_this_safe_title">Is dit veilig?</string>
 	<string name="setup_is_this_safe_body">Met deze machtiging kunnen apps beveiligde systeeminstellingen wijzigen. Adaptive Theme gebruikt de machtiging alleen voor functies zoals het wisselen van de donkere modus. Als je de app verwijdert, wordt de machtiging ingetrokken. De broncode is openbaar op GitHub.</string>
 	<string name="setup_shizuku_title">Alternatief: Shizuku</string>
-	<string name="setup_shizuku_description">Als je Shizuku al gebruikt, heb je geen tweede apparaat of ADB nodig. Shizuku is slechts één keer nodig om de machtiging te verlenen.</string>
+	<string name="setup_shizuku_description">Met Shizuku heb je geen tweede apparaat of ADB nodig. De app is slechts één keer nodig om de machtiging te verlenen.</string>
 	<string name="setup_shizuku_action">Shizuku gebruiken</string>
+	<string name="setup_shizuku_install_action">Shizuku installeren</string>
 	<string name="setup_action_use_root">Roottoegang gebruiken</string>
 	<string name="setup_root_request">Roottoegang aanvragen…</string>
 	<string name="setup_root_grant_failed">Kan de machtiging niet met roottoegang verlenen.</string>
@@ -111,6 +112,8 @@
 	<string name="shizuku_grant_unexpected">Onverwachte fout bij het gebruik van Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Achtergrond</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Vervaag vergrendelscherm</string>
+	<string name="description_lock_screen_wallpaper_blur">Gebruik een vervaagde versie van de achtergrond op het vergrendelscherm.</string>
 	<string name="description_device_wallpaper_sync">Gebruik afzonderlijke achtergronden voor de lichte en donkere modus. Wisselen kan even duren en de prestaties beïnvloeden.</string>
 	<string name="action_select_day_wallpaper">Lichte modus:</string>
 	<string name="action_select_night_wallpaper">Donkere modus:</string>
@@ -118,4 +121,8 @@
 	<string name="wallpaper_status_not_set">Niet ingesteld</string>
 	<string name="live_wallpaper_warning_title">Live achtergrond actief</string>
 	<string name="live_wallpaper_warning_message">Als je achtergrondsynchronisatie inschakelt, wordt je huidige live achtergrond vervangen door statische achtergronden voor de lichte en donkere modus. Wil je doorgaan?</string>
+	<string name="github_star_prompt_description">Adaptive Theme is gratis, advertentievrij en open source. Als de app nuttig voor je is, kun je die eenvoudig gratis steunen met een ster op GitHub.</string>
+	<string name="github_star_prompt_action">Ster geven op GitHub ↗</string>
+	<string name="github_star_prompt_dismiss_description">Voor altijd verbergen</string>
+	<string name="github_star_prompt_thank_you">Bedankt!</string>
 </resources>

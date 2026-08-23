@@ -18,7 +18,7 @@
 	<string name="debug_review_flow_completed">టెస్ట్ రివ్యూ ప్రక్రియ పూర్తయింది</string>
 	<string name="easter_egg_answer">జీవితం, విశ్వం మరియు అన్నింటి గురించిన అంతిమ ప్రశ్నకు సమాధానం.</string>
 	<string name="description_service_purpose">పరిసర కాంతి ఆధారంగా Androidను లైట్ మరియు డార్క్ మోడ్‌ల మధ్య మారుస్తుంది.</string>
-	<string name="description_switching_conditions">స్క్రీన్ ఆన్ అయిన వెంటనే మరియు సెన్సార్ కప్పబడనప్పుడు మాత్రమే థీమ్ మారుతుంది.</string>
+	<string name="description_switching_conditions">స్క్రీన్ ఆన్ అయిన కొద్దిసేపటికే మరియు సెన్సార్ కప్పబడనప్పుడు మాత్రమే థీమ్ మారుతుంది.</string>
 	<string name="description_notification_service_running">స్క్రీన్ ఆన్ అయినప్పుడు సిస్టమ్ థీమ్‌ను సర్దుబాటు చేయడానికి సిద్ధంగా ఉంది.</string>
 	<string name="device_covered_title">సెన్సార్ కప్పబడింది</string>
 	<string name="device_covered_message">లైట్ సెన్సార్ కప్పబడినందున థీమ్ మార్పు పాజ్ చేయబడింది.</string>
@@ -65,7 +65,7 @@
 	<string name="setup_alternative_methods">ప్రత్యామ్నాయ పద్ధతులు</string>
 	<string name="setup_grant_title">దశ 3: రెండవ పరికరం నుండి అనుమతి ఇవ్వండి</string>
 	<string name="setup_grant_body">రెండవ పరికరంలో ఈ లింక్‌ను తెరిచి సూచనలను అనుసరించండి:</string>
-	<string name="setup_alternatives">మీరు స్వయంగా ADB కమాండ్‌ను అమలు చేయవచ్చు లేదా root యాక్సెస్‌తో అనుమతి ఇవ్వవచ్చు. Shizukuకు కూడా మద్దతు ఉంది.</string>
+	<string name="setup_alternatives">మీరు స్వయంగా ADB కమాండ్‌ను అమలు చేయవచ్చు లేదా root యాక్సెస్‌తో అనుమతి ఇవ్వవచ్చు.</string>
 	<string name="setup_permission_granted">అనుమతి ఇవ్వబడింది.</string>
 	<string name="setup_permission_not_granted">అనుమతి ఇంకా ఇవ్వబడలేదు. రెండవ పరికరంతో సెటప్‌ను పూర్తి చేయండి.</string>
 	<string name="setup_usb_debugging_disabled">USB డీబగ్గింగ్‌ను ఆన్ చేయి</string>
@@ -78,8 +78,9 @@
 	<string name="setup_is_this_safe_title">ఇది సురక్షితమేనా?</string>
 	<string name="setup_is_this_safe_body">ఈ అనుమతి రక్షిత సిస్టమ్ సెట్టింగ్‌లను మార్చడానికి యాప్‌లను అనుమతిస్తుంది. Adaptive Theme దీన్ని డార్క్ మోడ్‌ను మార్చడం వంటి ఫీచర్‌లకు మాత్రమే ఉపయోగిస్తుంది. యాప్‌ను అన్‌ఇన్‌స్టాల్ చేస్తే అనుమతి రద్దవుతుంది. సోర్స్ కోడ్ GitHubలో పబ్లిక్‌గా ఉంది.</string>
 	<string name="setup_shizuku_title">ప్రత్యామ్నాయం: Shizuku</string>
-	<string name="setup_shizuku_description">మీరు ఇప్పటికే Shizuku ఉపయోగిస్తుంటే రెండవ పరికరం లేదా ADB అవసరం లేదు. అనుమతి ఇవ్వడానికి Shizuku ఒక్కసారి మాత్రమే అవసరం.</string>
+	<string name="setup_shizuku_description">Shizukuతో రెండవ పరికరం లేదా ADB అవసరం లేదు. అనుమతి ఇవ్వడానికి యాప్ ఒక్కసారి మాత్రమే అవసరం.</string>
 	<string name="setup_shizuku_action">Shizuku ఉపయోగించు</string>
+	<string name="setup_shizuku_install_action">Shizukuను ఇన్‌స్టాల్ చేయండి</string>
 	<string name="setup_action_use_root">root యాక్సెస్ ఉపయోగించు</string>
 	<string name="setup_root_request">root యాక్సెస్ కోరుతోంది…</string>
 	<string name="setup_root_grant_failed">root యాక్సెస్‌తో అనుమతి ఇవ్వలేకపోయింది.</string>
@@ -94,6 +95,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ఉపయోగిస్తున్నప్పుడు ఊహించని లోపం సంభవించింది.</string>
 	<string name="title_device_wallpaper_sync">వాల్‌పేపర్</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">లాక్ స్క్రీన్‌ను బ్లర్ చేయండి</string>
+	<string name="description_lock_screen_wallpaper_blur">లాక్ స్క్రీన్‌లో వాల్‌పేపర్ యొక్క బ్లర్ చేసిన వెర్షన్‌ను ఉపయోగించండి.</string>
 	<string name="description_device_wallpaper_sync">లైట్ మరియు డార్క్ మోడ్‌ల కోసం వేర్వేరు వాల్‌పేపర్‌లను ఉపయోగించండి. మారడానికి కొంత సమయం పట్టవచ్చు మరియు పనితీరుపై ప్రభావం పడవచ్చు.</string>
 	<string name="action_select_day_wallpaper">లైట్ మోడ్:</string>
 	<string name="action_select_night_wallpaper">డార్క్ మోడ్:</string>
@@ -101,4 +104,8 @@
 	<string name="wallpaper_status_not_set">సెట్ చేయలేదు</string>
 	<string name="live_wallpaper_warning_title">లైవ్ వాల్‌పేపర్ యాక్టివ్‌గా ఉంది</string>
 	<string name="live_wallpaper_warning_message">వాల్‌పేపర్ సింక్‌ను ఆన్ చేస్తే ప్రస్తుత లైవ్ వాల్‌పేపర్ లైట్ మరియు డార్క్ మోడ్‌ల స్టాటిక్ వాల్‌పేపర్‌లతో భర్తీ అవుతుంది. కొనసాగించాలా?</string>
+	<string name="github_star_prompt_description">Adaptive Theme ఉచితం, ప్రకటనలు లేనిది మరియు ఓపెన్ సోర్స్. ఇది మీకు ఉపయోగకరంగా ఉంటే, GitHubలో స్టార్ ఇవ్వడం దీనికి ఉచితంగా మద్దతు ఇచ్చే సులభమైన మార్గం.</string>
+	<string name="github_star_prompt_action">GitHubలో స్టార్ ఇవ్వండి ↗</string>
+	<string name="github_star_prompt_dismiss_description">శాశ్వతంగా దాచు</string>
+	<string name="github_star_prompt_thank_you">ధన్యవాదాలు!</string>
 </resources>
