@@ -5,7 +5,7 @@
 [![Latest Version](https://img.shields.io/github/v/release/xLexip/Adaptive-Theme?style=flat&logo=github&label=Release)](https://github.com/xLexip/Adaptive-Theme/releases)
 [![Stars](https://img.shields.io/github/stars/xLexip/Adaptive-Theme?style=flat&logo=github&label=Stars)]()
 <a href="https://play.google.com/store/apps/details?id=dev.lexip.hecate">
-<img src="https://img.shields.io/badge/Downloads-17,000+-brightgreen?logo=google-play&logoColor=white" alt="Play Store Download Count 17,000+">
+<img src="https://img.shields.io/badge/Downloads-20,000+-brightgreen?logo=google-play&logoColor=white" alt="Play Store Download Count 20,000+">
 </a>
 
 Adaptive Theme uses your device’s **ambient light sensor** to intelligently switch between light and **dark theme**, optimizing readability and eye comfort for your current surroundings. 
@@ -70,13 +70,14 @@ you can make dark mode (and light mode) switch with the lighting around you."** 
 
 - **Sensor-driven switching**: Uses the physical ambient light sensor – not a clock or sunset schedule – to intelligently switch the system theme.
 - **Custom lux threshold**: Dial in exactly when the theme flips, or choose a preset (e.g.indoor, outdoor, sunlight).
+- **Wallpaper Theme Sync**: Automatically swap your home and lock screen wallpaper with the system theme changes.
+- **Lock Screen Blur**: Optionally apply a blur effect to your lock screen wallpaper.
 - **Night lock**: Optionally hold dark mode during a fixed time window, e.g. 9 PM – 6 AM.
-- **Wallpaper Theme Sync**: Automatically swap your home and lock screen wallpaper when the system theme switches between light and dark mode.
 - **Battery friendly**: The sensor is only checked once when you turn the screen on. Zero background drain.
-- **50+ languages**: Fully localized for a global audience.
 - **Shizuku support**: Includes native Shizuku integration as one of several setup options.
 - **Material You design**: Dynamic UI that adapts to your system theme and colors.
 - **Quick Settings Tile**: Toggle the service directly from your quick settings.
+- **50+ languages**: Fully localized for a global audience.
 - **Free, open-source, no ads**
 
 ---
