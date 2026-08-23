@@ -48,6 +48,7 @@ import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
+import androidx.compose.material3.Badge
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -549,6 +550,8 @@ private fun ThresholdAndAdvancedSettings(
 		CollapsedAdvancedSettingsControl(
 			transition = transition,
 			enabled = uiState.adaptiveThemeEnabled,
+			showActiveFeatureIndicator =
+				uiState.stayDarkAtNightEnabled || uiState.wallpaperSyncEnabled,
 			haptic = haptic,
 			onExpand = onExpand,
 			onCheckReviewPrompt = callbacks.onCheckReviewPrompt
@@ -611,6 +614,7 @@ private fun ThresholdCards(
 private fun CollapsedAdvancedSettingsControl(
 	transition: Transition<Boolean>,
 	enabled: Boolean,
+	showActiveFeatureIndicator: Boolean,
 	haptic: HapticFeedback,
 	onExpand: () -> Unit,
 	onCheckReviewPrompt: () -> Unit
@@ -636,7 +640,17 @@ private fun CollapsedAdvancedSettingsControl(
 				},
 				enabled = enabled,
 				shape = RoundedCornerShape(20.dp),
-				label = { Text(text = stringResource(id = R.string.action_advanced_settings)) },
+				label = {
+					Row(verticalAlignment = Alignment.CenterVertically) {
+						Text(text = stringResource(id = R.string.action_advanced_settings))
+						if (showActiveFeatureIndicator) {
+							Badge(
+								modifier = Modifier.padding(start = 6.dp),
+								containerColor = MaterialTheme.colorScheme.primary
+							)
+						}
+					}
+				},
 				leadingIcon = {
 					Icon(
 						imageVector = Icons.Filled.KeyboardArrowDown,
