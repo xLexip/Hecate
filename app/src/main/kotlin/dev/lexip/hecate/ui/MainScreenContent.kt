@@ -18,7 +18,9 @@ import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.Transition
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.updateTransition
 import androidx.compose.animation.expandVertically
@@ -325,7 +327,10 @@ private fun MainScreenTopBar(
 				enter = fadeIn(animationSpec = tween(180)) +
 						slideInHorizontally(
 							initialOffsetX = { fullWidth -> -fullWidth / 2 },
-							animationSpec = tween(220)
+							animationSpec = spring(
+								dampingRatio = Spring.DampingRatioMediumBouncy,
+								stiffness = Spring.StiffnessMediumLow
+							)
 						),
 				exit = fadeOut(animationSpec = tween(120)) +
 						slideOutHorizontally(
