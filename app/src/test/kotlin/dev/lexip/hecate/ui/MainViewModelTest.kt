@@ -546,6 +546,28 @@ class MainViewModelTest {
 		}
 
 	@Test
+	fun enablingWallpaperSyncAppliesTheCurrentWallpaperPair() =
+		runTest(mainDispatcherRule.dispatcher) {
+			preferences.emit(
+				preferences.current.copy(
+					dayWallpaperUri = DAY_WALLPAPER_URI,
+					nightWallpaperUri = NIGHT_WALLPAPER_URI,
+					wallpaperStorageVersion = 1
+				)
+			)
+			val viewModel = createViewModel()
+			advanceUntilIdle()
+
+			viewModel.onWallpaperSyncToggleRequested(true)
+			advanceUntilIdle()
+
+			assertTrue(preferences.current.wallpaperSyncEnabled)
+			assertEquals(1, wallpaperPlatform.appliedRequests.size)
+			assertEquals(DAY_WALLPAPER_URI, wallpaperPlatform.appliedRequests.single().dayUri)
+			assertEquals(NIGHT_WALLPAPER_URI, wallpaperPlatform.appliedRequests.single().nightUri)
+		}
+
+	@Test
 	fun lockScreenBlurPersistsAndAppliesCurrentWallpaperWithoutPreparingImages() =
 		runTest(mainDispatcherRule.dispatcher) {
 			preferences.emit(

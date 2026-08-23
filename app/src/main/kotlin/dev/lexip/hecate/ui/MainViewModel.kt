@@ -754,8 +754,17 @@ class MainViewModel internal constructor(
 
 	private fun enableWallpaperSync() {
 		viewModelScope.launch(ioDispatcher) {
-			userPreferencesRepository.updateWallpaperSyncEnabled(true)
-			Logger.logWallpaperSyncToggled(application.applicationContext, enabled = true)
+			wallpaperMigrationCompleted.await()
+			wallpaperSelectionMutex.withLock {
+				val preferences = userPreferencesRepository.fetchInitialPreferences()
+				userPreferencesRepository.updateWallpaperSyncEnabled(true)
+				Logger.logWallpaperSyncToggled(application.applicationContext, enabled = true)
+				if (!preferences.dayWallpaperUri.isNullOrEmpty() &&
+					!preferences.nightWallpaperUri.isNullOrEmpty()
+				) {
+					applyCurrentWallpaper(preferences.copy(wallpaperSyncEnabled = true))
+				}
+			}
 		}
 	}
 
