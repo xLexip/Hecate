@@ -22,7 +22,7 @@ import dev.lexip.hecate.util.ThemeController
 import dev.lexip.hecate.util.ThemeDecisionPolicy
 import dev.lexip.hecate.util.ThemeSwitchSkipReason
 
-internal const val PROXIMITY_GRACE_PERIOD_MS = 400L
+internal const val PROXIMITY_GRACE_PERIOD_MS = 500L
 internal const val SENSOR_READING_TIMEOUT_MS = 1_000L
 
 private val NO_OP_SKIP_REPORTER: (ThemeSwitchSkipReason, ScreenOnProximityResult) -> Unit =
