@@ -44,6 +44,7 @@ fun DetailPreferenceCard(
 	toggleableValue: Boolean? = null,
 	onToggle: ((Boolean) -> Unit)? = null,
 	titleTrailingContent: (@Composable RowScope.() -> Unit)? = null,
+	cardTrailingContent: (@Composable () -> Unit)? = null,
 	content: @Composable () -> Unit
 ) {
 	val largeRadius = 20.dp
@@ -79,7 +80,7 @@ fun DetailPreferenceCard(
 		shape = shape,
 		colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceBright)
 	) {
-		Column(
+		Row(
 			modifier = Modifier
 				.fillMaxWidth()
 				.padding(14.dp)
@@ -89,22 +90,26 @@ fun DetailPreferenceCard(
 						stiffness = Spring.StiffnessMediumLow
 					)
 				)
-				.alpha(animatedAlpha.value)
+				.alpha(animatedAlpha.value),
+			verticalAlignment = Alignment.CenterVertically
 		) {
-			Row(
-				modifier = Modifier.fillMaxWidth(),
-				verticalAlignment = Alignment.CenterVertically
-			) {
-				Text(
-					text = title,
-					modifier = Modifier.weight(1f),
-					style = MaterialTheme.typography.titleMedium,
-					color = MaterialTheme.colorScheme.onSurface
-				)
-				titleTrailingContent?.invoke(this)
-			}
+			Column(modifier = Modifier.weight(1f)) {
+				Row(
+					modifier = Modifier.fillMaxWidth(),
+					verticalAlignment = Alignment.CenterVertically
+				) {
+					Text(
+						text = title,
+						modifier = Modifier.weight(1f),
+						style = MaterialTheme.typography.titleMedium,
+						color = MaterialTheme.colorScheme.onSurface
+					)
+					titleTrailingContent?.invoke(this)
+				}
 
-			content()
+				content()
+			}
+			cardTrailingContent?.invoke()
 		}
 	}
 }

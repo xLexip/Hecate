@@ -836,14 +836,20 @@ private fun LockScreenWallpaperBlurPreference(
 		firstCard = false,
 		lastCard = true,
 		toggleableValue = uiState.lockScreenWallpaperBlurEnabled,
-		onToggle = onLockScreenWallpaperBlurChanged
+		onToggle = onLockScreenWallpaperBlurChanged,
+		cardTrailingContent = {
+			PreferenceSwitch(
+				checked = uiState.lockScreenWallpaperBlurEnabled,
+				enabled = uiState.adaptiveThemeEnabled && uiState.wallpaperSyncEnabled,
+				onCheckedChange = onLockScreenWallpaperBlurChanged,
+				modifier = Modifier.padding(start = 14.dp, end = 4.dp)
+			)
+		}
 	) {
-		PreferenceDescriptionSwitch(
-			description = stringResource(id = R.string.description_lock_screen_wallpaper_blur),
-			checked = uiState.lockScreenWallpaperBlurEnabled,
-			enabled = uiState.adaptiveThemeEnabled && uiState.wallpaperSyncEnabled,
-			onCheckedChange = onLockScreenWallpaperBlurChanged,
-			centerSwitchVertically = true
+		Text(
+			modifier = Modifier.padding(top = 4.dp),
+			text = stringResource(id = R.string.description_lock_screen_wallpaper_blur),
+			style = MaterialTheme.typography.bodyMedium
 		)
 	}
 }
@@ -869,15 +875,13 @@ private fun PreferenceDescriptionSwitch(
 	checked: Boolean,
 	enabled: Boolean,
 	onCheckedChange: ((Boolean) -> Unit)?,
-	switchTopPadding: Dp = 0.dp,
-	centerSwitchVertically: Boolean = false
+	switchTopPadding: Dp = 0.dp
 ) {
-	val switchAlignment = if (centerSwitchVertically) Alignment.CenterVertically else Alignment.Top
 	Row(
 		modifier = Modifier
 			.fillMaxWidth()
 			.padding(top = 4.dp),
-		verticalAlignment = switchAlignment,
+		verticalAlignment = Alignment.Top,
 		horizontalArrangement = Arrangement.SpaceBetween
 	) {
 		Text(
@@ -885,23 +889,38 @@ private fun PreferenceDescriptionSwitch(
 			style = MaterialTheme.typography.bodyMedium,
 			modifier = Modifier.weight(1f)
 		)
-		Switch(
-			modifier = Modifier
-				.padding(start = 14.dp, top = switchTopPadding, end = 4.dp)
-				.offset(y = if (centerSwitchVertically) 0.dp else (-6).dp)
-				.align(switchAlignment),
+		PreferenceSwitch(
 			checked = checked,
 			enabled = enabled,
 			onCheckedChange = onCheckedChange,
-			thumbContent = {
-				Icon(
-					imageVector = if (checked) Icons.Filled.Check else Icons.Filled.Clear,
-					contentDescription = null,
-					modifier = Modifier.size(SwitchDefaults.IconSize)
-				)
-			}
+			modifier = Modifier
+				.padding(start = 14.dp, top = switchTopPadding, end = 4.dp)
+				.offset(y = (-6).dp)
+				.align(Alignment.Top)
 		)
 	}
+}
+
+@Composable
+private fun PreferenceSwitch(
+	checked: Boolean,
+	enabled: Boolean,
+	onCheckedChange: ((Boolean) -> Unit)?,
+	modifier: Modifier = Modifier
+) {
+	Switch(
+		modifier = modifier,
+		checked = checked,
+		enabled = enabled,
+		onCheckedChange = onCheckedChange,
+		thumbContent = {
+			Icon(
+				imageVector = if (checked) Icons.Filled.Check else Icons.Filled.Clear,
+				contentDescription = null,
+				modifier = Modifier.size(SwitchDefaults.IconSize)
+			)
+		}
+	)
 }
 
 @Composable
