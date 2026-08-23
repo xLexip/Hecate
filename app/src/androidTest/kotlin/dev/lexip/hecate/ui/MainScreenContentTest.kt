@@ -12,8 +12,9 @@
 
 package dev.lexip.hecate.ui
 
-import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.accessibility.enableAccessibilityChecks
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -300,8 +301,9 @@ class MainScreenContentTest {
 	@Test
 	fun lockScreenBlurStaysVisibleWithoutWallpaperSyncAndDispatchesWhenEnabled() {
 		val blurRequests = mutableListOf<Boolean>()
+		val uiState = mutableStateOf(MainUiState(adaptiveThemeEnabled = true))
 		setMainContent(
-			uiState = MainUiState(adaptiveThemeEnabled = true),
+			uiState = { uiState.value },
 			hasPermission = true,
 			callbacks = callbacks(onLockScreenBlur = blurRequests::add)
 		)
@@ -311,14 +313,7 @@ class MainScreenContentTest {
 			.assertIsDisplayed()
 		assertEquals(emptyList<Boolean>(), blurRequests)
 
-		setMainContent(
-			uiState = MainUiState(
-				adaptiveThemeEnabled = true,
-				wallpaperSyncEnabled = true
-			),
-			hasPermission = true,
-			callbacks = callbacks(onLockScreenBlur = blurRequests::add)
-		)
+		uiState.value = uiState.value.copy(wallpaperSyncEnabled = true)
 		clickTextAfterScroll(context.getString(R.string.title_lock_screen_wallpaper_blur))
 		assertEquals(listOf(true), blurRequests)
 	}
@@ -364,11 +359,21 @@ class MainScreenContentTest {
 		uiState: MainUiState,
 		hasPermission: Boolean,
 		callbacks: MainScreenCallbacks = callbacks()
+	) = setMainContent(
+		uiState = { uiState },
+		hasPermission = hasPermission,
+		callbacks = callbacks
+	)
+
+	private fun setMainContent(
+		uiState: () -> MainUiState,
+		hasPermission: Boolean,
+		callbacks: MainScreenCallbacks = callbacks()
 	) {
 		composeRule.setContent {
 			HecateTheme {
 				MainScreenContent(
-					uiState = uiState,
+					uiState = uiState(),
 					currentSensorLux = 25f,
 					isDeviceCovered = false,
 					isBatterySaverActive = false,
