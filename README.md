@@ -5,7 +5,7 @@
 [![Latest Version](https://img.shields.io/github/v/release/xLexip/Adaptive-Theme?style=flat&logo=github&label=Release)](https://github.com/xLexip/Adaptive-Theme/releases)
 [![Stars](https://img.shields.io/github/stars/xLexip/Adaptive-Theme?style=flat&logo=github&label=Stars)]()
 <a href="https://play.google.com/store/apps/details?id=dev.lexip.hecate">
-<img src="https://img.shields.io/badge/Downloads-17,000+-brightgreen?logo=google-play&logoColor=white" alt="Play Store Download Count 17,000+">
+<img src="https://img.shields.io/badge/Downloads-20,000+-brightgreen?logo=google-play&logoColor=white" alt="Play Store Download Count 20,000+">
 </a>
 
 Adaptive Theme uses your device’s **ambient light sensor** to intelligently switch between light and **dark theme**, optimizing readability and eye comfort for your current surroundings. 
