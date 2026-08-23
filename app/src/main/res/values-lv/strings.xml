@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Izmantojot Shizuku, radās neparedzēta kļūda.</string>
 	<string name="title_device_wallpaper_sync">Fona attēls</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Aizmiglot bloķēšanas ekrānu</string>
+	<string name="description_lock_screen_wallpaper_blur">Bloķēšanas ekrānā izmantojiet aizmiglotu fona attēla versiju.</string>
 	<string name="description_device_wallpaper_sync">Izmantojiet atsevišķus fona attēlus gaišajam un tumšajam režīmam. Pārslēgšana var aizņemt brīdi un ietekmēt veiktspēju.</string>
 	<string name="action_select_day_wallpaper">Gaišais režīms:</string>
 	<string name="action_select_night_wallpaper">Tumšais režīms:</string>

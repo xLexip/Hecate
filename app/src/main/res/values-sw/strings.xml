@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Hitilafu isiyotarajiwa imetokea wakati wa kutumia Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Mandhari</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Fifisha skrini iliyofungwa</string>
+	<string name="description_lock_screen_wallpaper_blur">Tumia toleo lililofifishwa la mandhari kwenye skrini iliyofungwa.</string>
 	<string name="description_device_wallpaper_sync">Tumia mandhari-nyuma tofauti kwa hali angavu na nyeusi. Kubadilisha kunaweza kuchukua muda mfupi na kuathiri utendaji.</string>
 	<string name="action_select_day_wallpaper">Hali angavu:</string>
 	<string name="action_select_night_wallpaper">Hali nyeusi:</string>

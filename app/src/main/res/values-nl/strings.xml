@@ -111,6 +111,8 @@
 	<string name="shizuku_grant_unexpected">Onverwachte fout bij het gebruik van Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Achtergrond</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Vervaag vergrendelscherm</string>
+	<string name="description_lock_screen_wallpaper_blur">Gebruik een vervaagde versie van de achtergrond op het vergrendelscherm.</string>
 	<string name="description_device_wallpaper_sync">Gebruik afzonderlijke achtergronden voor de lichte en donkere modus. Wisselen kan even duren en de prestaties beïnvloeden.</string>
 	<string name="action_select_day_wallpaper">Lichte modus:</string>
 	<string name="action_select_night_wallpaper">Donkere modus:</string>

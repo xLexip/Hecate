@@ -75,6 +75,7 @@ class UserPreferencesRepositoryTest {
 		assertEquals(21 * 60, preferences.nightStartMinutes)
 		assertEquals(6 * 60, preferences.nightEndMinutes)
 		assertFalse(preferences.wallpaperSyncEnabled)
+		assertFalse(preferences.lockScreenWallpaperBlurEnabled)
 		assertNull(preferences.dayWallpaperUri)
 		assertNull(preferences.nightWallpaperUri)
 		assertFalse(preferences.githubStarPromptDismissed)
@@ -138,12 +139,14 @@ class UserPreferencesRepositoryTest {
 	@Test
 	fun wallpaperSettingsArePersistedReplacedAndClearedIndependently() = runTest {
 		repository.updateWallpaperSyncEnabled(true)
+		repository.updateLockScreenWallpaperBlurEnabled(true)
 		repository.updateDayWallpaperUri("content://wallpaper/day-1")
 		repository.updateNightWallpaperUri(NIGHT_WALLPAPER_URI)
 		repository.updateDayWallpaperUri("content://wallpaper/day-2")
 
 		var preferences = repository.fetchInitialPreferences()
 		assertTrue(preferences.wallpaperSyncEnabled)
+		assertTrue(preferences.lockScreenWallpaperBlurEnabled)
 		assertEquals("content://wallpaper/day-2", preferences.dayWallpaperUri)
 		assertEquals(NIGHT_WALLPAPER_URI, preferences.nightWallpaperUri)
 

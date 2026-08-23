@@ -111,6 +111,8 @@
 	<string name="shizuku_grant_unexpected">Při použití Shizuku došlo k neočekávané chybě.</string>
 	<string name="title_device_wallpaper_sync">Tapeta</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Rozmazat zamykací obrazovku</string>
+	<string name="description_lock_screen_wallpaper_blur">Použijte rozmazanou verzi tapety na zamykací obrazovce.</string>
 	<string name="description_device_wallpaper_sync">Používejte samostatné tapety pro světlý a tmavý režim. Přepnutí může chvíli trvat a ovlivnit výkon.</string>
 	<string name="action_select_day_wallpaper">Světlý režim:</string>
 	<string name="action_select_night_wallpaper">Tmavý režim:</string>

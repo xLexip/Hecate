@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku વાપરતી વખતે અનપેક્ષિત ભૂલ થઈ.</string>
 	<string name="title_device_wallpaper_sync">વૉલપેપર</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">લૉક સ્ક્રીન બ્લર કરો</string>
+	<string name="description_lock_screen_wallpaper_blur">લૉક સ્ક્રીન પર વૉલપેપરનું બ્લર કરેલું સંસ્કરણ વાપરો.</string>
 	<string name="description_device_wallpaper_sync">લાઇટ અને ડાર્ક મોડ માટે અલગ વૉલપેપર વાપરો. બદલવામાં થોડો સમય લાગી શકે છે અને પરફોર્મન્સ પર અસર થઈ શકે છે.</string>
 	<string name="action_select_day_wallpaper">લાઇટ મોડ:</string>
 	<string name="action_select_night_wallpaper">ડાર્ક મોડ:</string>

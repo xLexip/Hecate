@@ -111,6 +111,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku kullanılırken beklenmeyen bir hata oluştu.</string>
 	<string name="title_device_wallpaper_sync">Duvar kâğıdı</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Kilit ekranını bulanıklaştır</string>
+	<string name="description_lock_screen_wallpaper_blur">Kilit ekranında duvar kâğıdının bulanık bir sürümünü kullanın.</string>
 	<string name="description_device_wallpaper_sync">Açık ve koyu mod için ayrı duvar kâğıtları kullanın. Geçiş biraz sürebilir ve performansı etkileyebilir.</string>
 	<string name="action_select_day_wallpaper">Açık mod:</string>
 	<string name="action_select_night_wallpaper">Koyu mod:</string>

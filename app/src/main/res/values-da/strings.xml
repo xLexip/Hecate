@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Der opstod en uventet fejl under brug af Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Baggrund</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Slør låseskærmen</string>
+	<string name="description_lock_screen_wallpaper_blur">Brug en sløret version af baggrundsbilledet på låseskærmen.</string>
 	<string name="description_device_wallpaper_sync">Brug separate baggrunde til lys og mørk tilstand. Skiftet kan tage et øjeblik og påvirke ydeevnen.</string>
 	<string name="action_select_day_wallpaper">Lys tilstand:</string>
 	<string name="action_select_night_wallpaper">Mørk tilstand:</string>

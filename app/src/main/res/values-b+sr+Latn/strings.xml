@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Došlo je do neočekivane greške pri korišćenju Shizuku-a.</string>
 	<string name="title_device_wallpaper_sync">Pozadina</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Zamuti zaključani ekran</string>
+	<string name="description_lock_screen_wallpaper_blur">Koristite zamućenu verziju pozadine na zaključanom ekranu.</string>
 	<string name="description_device_wallpaper_sync">Koristite zasebne pozadine za svetli i tamni režim. Prebacivanje može potrajati trenutak i uticati na performanse.</string>
 	<string name="action_select_day_wallpaper">Svetli režim:</string>
 	<string name="action_select_night_wallpaper">Tamni režim:</string>

@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Παρουσιάστηκε απροσδόκητο σφάλμα κατά τη χρήση του Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Ταπετσαρία</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Θόλωση οθόνης κλειδώματος</string>
+	<string name="description_lock_screen_wallpaper_blur">Χρησιμοποιήστε μια θολή έκδοση της ταπετσαρίας στην οθόνη κλειδώματος.</string>
 	<string name="description_device_wallpaper_sync">Χρησιμοποιήστε ξεχωριστές ταπετσαρίες για φωτεινή και σκοτεινή λειτουργία. Η εναλλαγή μπορεί να διαρκέσει λίγο και να επηρεάσει την απόδοση.</string>
 	<string name="action_select_day_wallpaper">Φωτεινή λειτουργία:</string>
 	<string name="action_select_night_wallpaper">Σκοτεινή λειτουργία:</string>

@@ -298,6 +298,32 @@ class MainScreenContentTest {
 	}
 
 	@Test
+	fun lockScreenBlurStaysVisibleWithoutWallpaperSyncAndDispatchesWhenEnabled() {
+		val blurRequests = mutableListOf<Boolean>()
+		setMainContent(
+			uiState = MainUiState(adaptiveThemeEnabled = true),
+			hasPermission = true,
+			callbacks = callbacks(onLockScreenBlur = blurRequests::add)
+		)
+		expandAdvancedSettings()
+		scrollToText(context.getString(R.string.title_lock_screen_wallpaper_blur))
+		composeRule.onNodeWithText(context.getString(R.string.title_lock_screen_wallpaper_blur))
+			.assertIsDisplayed()
+		assertEquals(emptyList<Boolean>(), blurRequests)
+
+		setMainContent(
+			uiState = MainUiState(
+				adaptiveThemeEnabled = true,
+				wallpaperSyncEnabled = true
+			),
+			hasPermission = true,
+			callbacks = callbacks(onLockScreenBlur = blurRequests::add)
+		)
+		clickTextAfterScroll(context.getString(R.string.title_lock_screen_wallpaper_blur))
+		assertEquals(listOf(true), blurRequests)
+	}
+
+	@Test
 	fun liveWallpaperWarningDispatchesConfirm() {
 		var confirmCalls = 0
 		var dismissCalls = 0
@@ -358,6 +384,7 @@ class MainScreenContentTest {
 		onToggle: (Boolean, Boolean) -> Boolean = { _, _ -> true },
 		onReview: () -> Unit = {},
 		onWallpaperToggle: (Boolean) -> Unit = {},
+		onLockScreenBlur: (Boolean) -> Unit = {},
 		onSelectDay: () -> Unit = {},
 		onSelectNight: () -> Unit = {},
 		onConfirmLiveWallpaper: () -> Unit = {},
@@ -372,6 +399,7 @@ class MainScreenContentTest {
 		onCheckReviewPrompt = onReview,
 		onStayDarkAtNightChanged = {},
 		onWallpaperSyncToggleRequested = onWallpaperToggle,
+		onLockScreenWallpaperBlurChanged = onLockScreenBlur,
 		onSelectDayWallpaper = onSelectDay,
 		onSelectNightWallpaper = onSelectNight,
 		onConfirmLiveWallpaper = onConfirmLiveWallpaper,

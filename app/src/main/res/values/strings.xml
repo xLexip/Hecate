@@ -51,7 +51,7 @@
 	<string name="title_current_brightness">Current Ambient Light</string>
 	<string name="title_custom_threshold">Custom Threshold</string>
 	<string name="title_more">More</string>
-	<string name="title_night_dark_lock">Night mode</string>
+	<string name="title_night_dark_lock">Night Mode</string>
 	<string name="title_night_start_time_picker">Night Start</string>
 	<string name="title_night_end_time_picker">Night End</string>
 	<string name="title_notification_channel_service">Theme Switching Service</string>
@@ -123,6 +123,8 @@
 	<string name="title_device_wallpaper_sync">Wallpaper</string>
 	<string name="label_beta">Beta</string>
 	<string name="description_device_wallpaper_sync">Use separate light and dark mode wallpapers. Switching may take a moment and affect performance.</string>
+	<string name="title_lock_screen_wallpaper_blur">Blur Lock Screen</string>
+	<string name="description_lock_screen_wallpaper_blur">Use a blurred version of the wallpaper on the lock screen.</string>
 	<string name="action_select_day_wallpaper">Light mode:</string>
 	<string name="action_select_night_wallpaper">Dark mode:</string>
 	<string name="wallpaper_status_set">Set</string>

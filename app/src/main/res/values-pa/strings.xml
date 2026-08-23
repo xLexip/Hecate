@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ਵਰਤਦਿਆਂ ਅਚਾਨਕ ਗਲਤੀ ਆਈ।</string>
 	<string name="title_device_wallpaper_sync">ਵਾਲਪੇਪਰ</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">ਲੌਕ ਸਕ੍ਰੀਨ ਨੂੰ ਧੁੰਦਲਾ ਕਰੋ</string>
+	<string name="description_lock_screen_wallpaper_blur">ਲੌਕ ਸਕ੍ਰੀਨ \'ਤੇ ਵਾਲਪੇਪਰ ਦਾ ਧੁੰਦਲਾ ਵਰਜਨ ਵਰਤੋ।</string>
 	<string name="description_device_wallpaper_sync">ਹਲਕੇ ਅਤੇ ਗੂੜ੍ਹੇ ਮੋਡ ਲਈ ਵੱਖਰੇ ਵਾਲਪੇਪਰ ਵਰਤੋ। ਬਦਲਣ ਵਿੱਚ ਕੁਝ ਸਮਾਂ ਲੱਗ ਸਕਦਾ ਹੈ ਅਤੇ ਕਾਰਗੁਜ਼ਾਰੀ ਪ੍ਰਭਾਵਿਤ ਹੋ ਸਕਦੀ ਹੈ।</string>
 	<string name="action_select_day_wallpaper">ਹਲਕਾ ਮੋਡ:</string>
 	<string name="action_select_night_wallpaper">ਗੂੜ੍ਹਾ ਮੋਡ:</string>

@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">S’ha produït un error inesperat en utilitzar Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Fons de pantalla</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Difumina la pantalla de bloqueig</string>
+	<string name="description_lock_screen_wallpaper_blur">Utilitza una versió difuminada del fons de pantalla a la pantalla de bloqueig.</string>
 	<string name="description_device_wallpaper_sync">Utilitza fons de pantalla separats per als modes clar i fosc. El canvi pot trigar un moment i afectar el rendiment.</string>
 	<string name="action_select_day_wallpaper">Mode clar:</string>
 	<string name="action_select_night_wallpaper">Mode fosc:</string>

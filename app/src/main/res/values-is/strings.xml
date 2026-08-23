@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Óvænt villa kom upp við notkun Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Veggfóður</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Gera læsiskjá óskýran</string>
+	<string name="description_lock_screen_wallpaper_blur">Notaðu óskýra útgáfu af bakgrunnsmyndinni á læsiskjánum.</string>
 	<string name="description_device_wallpaper_sync">Notaðu aðskildar veggfóðursmyndir fyrir ljósa og dökka stillingu. Skipting getur tekið smástund og haft áhrif á afköst.</string>
 	<string name="action_select_day_wallpaper">Ljós stilling:</string>
 	<string name="action_select_night_wallpaper">Dökk stilling:</string>

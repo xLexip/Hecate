@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">אירעה שגיאה לא צפויה במהלך השימוש ב-Shizuku.</string>
 	<string name="title_device_wallpaper_sync">טפט</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">טשטש את מסך הנעילה</string>
+	<string name="description_lock_screen_wallpaper_blur">השתמש בגרסה מטושטשת של הטפט במסך הנעילה.</string>
 	<string name="description_device_wallpaper_sync">יש להשתמש בטפטים נפרדים למצב בהיר ולמצב כהה. ההחלפה עשויה להימשך רגע ולהשפיע על הביצועים.</string>
 	<string name="action_select_day_wallpaper">מצב בהיר:</string>
 	<string name="action_select_night_wallpaper">מצב כהה:</string>

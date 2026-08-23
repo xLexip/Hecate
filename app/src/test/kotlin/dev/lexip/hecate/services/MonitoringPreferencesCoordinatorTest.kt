@@ -17,8 +17,8 @@ class MonitoringPreferencesCoordinatorTest {
 	@Test
 	fun appliesReceiverAndWallpaperPreferencesTogether() {
 		val wallpaperConfigurations = mutableListOf<WallpaperConfiguration>()
-		val coordinator = MonitoringPreferencesCoordinator { enabled, dayUri, nightUri ->
-			wallpaperConfigurations += WallpaperConfiguration(enabled, dayUri, nightUri)
+		val coordinator = MonitoringPreferencesCoordinator { enabled, dayUri, nightUri, lockBlurEnabled ->
+			wallpaperConfigurations += WallpaperConfiguration(enabled, dayUri, nightUri, lockBlurEnabled)
 		}
 		val receiver = FakeScreenOnReceiverSettings()
 		val preferences = preferences(
@@ -27,6 +27,7 @@ class MonitoringPreferencesCoordinatorTest {
 			nightStartMinutes = 22 * 60,
 			nightEndMinutes = 5 * 60,
 			wallpaperSyncEnabled = true,
+			lockScreenWallpaperBlurEnabled = true,
 			dayUri = "content://wallpaper/day",
 			nightUri = "content://wallpaper/night"
 		)
@@ -42,7 +43,8 @@ class MonitoringPreferencesCoordinatorTest {
 				WallpaperConfiguration(
 					true,
 					"content://wallpaper/day",
-					"content://wallpaper/night"
+					"content://wallpaper/night",
+					true
 				)
 			),
 			wallpaperConfigurations
@@ -52,8 +54,8 @@ class MonitoringPreferencesCoordinatorTest {
 	@Test
 	fun appliesWallpaperConfigurationWithoutARegisteredReceiver() {
 		var configuration: WallpaperConfiguration? = null
-		val coordinator = MonitoringPreferencesCoordinator { enabled, dayUri, nightUri ->
-			configuration = WallpaperConfiguration(enabled, dayUri, nightUri)
+		val coordinator = MonitoringPreferencesCoordinator { enabled, dayUri, nightUri, lockBlurEnabled ->
+			configuration = WallpaperConfiguration(enabled, dayUri, nightUri, lockBlurEnabled)
 		}
 
 		coordinator.apply(
@@ -65,7 +67,7 @@ class MonitoringPreferencesCoordinatorTest {
 			receiver = null
 		)
 
-		assertEquals(WallpaperConfiguration(false, null, null), configuration)
+		assertEquals(WallpaperConfiguration(false, null, null, false), configuration)
 	}
 
 	private fun preferences(
@@ -74,6 +76,7 @@ class MonitoringPreferencesCoordinatorTest {
 		nightStartMinutes: Int = 21 * 60,
 		nightEndMinutes: Int = 6 * 60,
 		wallpaperSyncEnabled: Boolean = false,
+		lockScreenWallpaperBlurEnabled: Boolean = false,
 		dayUri: String? = null,
 		nightUri: String? = null
 	) = UserPreferences(
@@ -83,6 +86,7 @@ class MonitoringPreferencesCoordinatorTest {
 		nightStartMinutes = nightStartMinutes,
 		nightEndMinutes = nightEndMinutes,
 		wallpaperSyncEnabled = wallpaperSyncEnabled,
+		lockScreenWallpaperBlurEnabled = lockScreenWallpaperBlurEnabled,
 		dayWallpaperUri = dayUri,
 		nightWallpaperUri = nightUri
 	)
@@ -91,7 +95,8 @@ class MonitoringPreferencesCoordinatorTest {
 private data class WallpaperConfiguration(
 	val enabled: Boolean,
 	val dayUri: String?,
-	val nightUri: String?
+	val nightUri: String?,
+	val lockBlurEnabled: Boolean
 )
 
 private class FakeScreenOnReceiverSettings : ScreenOnReceiverSettings {

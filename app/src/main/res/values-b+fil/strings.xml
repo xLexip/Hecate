@@ -35,7 +35,7 @@
 	<string name="title_current_brightness">Kasalukuyang liwanag sa paligid</string>
 	<string name="title_custom_threshold">Custom na threshold</string>
 	<string name="title_more">Higit pa</string>
-	<string name="title_night_dark_lock">Night mode</string>
+	<string name="title_night_dark_lock">Night Mode</string>
 	<string name="title_night_start_time_picker">Simula ng gabi</string>
 	<string name="title_night_end_time_picker">Katapusan ng gabi</string>
 	<string name="title_notification_channel_service">Serbisyo ng pagpapalit ng tema</string>
@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Nagkaroon ng hindi inaasahang error habang ginagamit ang Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Wallpaper</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">I-blur ang lock screen</string>
+	<string name="description_lock_screen_wallpaper_blur">Gumamit ng malabong bersyon ng wallpaper sa lock screen.</string>
 	<string name="description_device_wallpaper_sync">Gumamit ng magkahiwalay na wallpaper para sa light at dark mode. Maaaring magtagal nang kaunti ang pagpapalit at maapektuhan ang performance.</string>
 	<string name="action_select_day_wallpaper">Maliwanag na mode:</string>
 	<string name="action_select_night_wallpaper">Madilim na mode:</string>

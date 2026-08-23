@@ -22,11 +22,13 @@ import dev.lexip.hecate.FakeSensorReader
 import dev.lexip.hecate.FakeUserPreferencesDataSource
 import dev.lexip.hecate.FakeWallpaperPlatform
 import dev.lexip.hecate.FakeWallpaperImagePreparer
+import dev.lexip.hecate.FakeWallpaperStorageMigrator
 import dev.lexip.hecate.MainDispatcherRule
 import dev.lexip.hecate.data.AdaptiveThreshold
 import dev.lexip.hecate.data.NO_SUPPORT_PROMPT_EPOCH_DAY
 import dev.lexip.hecate.data.UserPreferences
 import dev.lexip.hecate.util.WallpaperSlot
+import dev.lexip.hecate.util.WallpaperMigrationResult
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
@@ -35,6 +37,8 @@ import kotlinx.coroutines.test.advanceTimeBy
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runCurrent
 import kotlinx.coroutines.test.runTest
+import java.io.ByteArrayInputStream
+import java.io.InputStream
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -65,6 +69,7 @@ class MainViewModelTest {
 	private lateinit var installMetadata: FakeInstallMetadataProvider
 	private lateinit var wallpaperPlatform: FakeWallpaperPlatform
 	private lateinit var wallpaperImagePreparer: FakeWallpaperImagePreparer
+	private lateinit var wallpaperStorageMigrator: FakeWallpaperStorageMigrator
 
 	@Before
 	fun setUp() {
@@ -76,6 +81,7 @@ class MainViewModelTest {
 		installMetadata = FakeInstallMetadataProvider()
 		wallpaperPlatform = FakeWallpaperPlatform()
 		wallpaperImagePreparer = FakeWallpaperImagePreparer()
+		wallpaperStorageMigrator = FakeWallpaperStorageMigrator()
 	}
 
 	@Test
@@ -93,6 +99,7 @@ class MainViewModelTest {
 				nightStartMinutes = 20 * 60,
 				nightEndMinutes = 7 * 60,
 				wallpaperSyncEnabled = true,
+				lockScreenWallpaperBlurEnabled = true,
 				dayWallpaperUri = DAY_WALLPAPER_URI,
 				nightWallpaperUri = NIGHT_WALLPAPER_URI,
 				wallpaperStorageVersion = 1
@@ -108,6 +115,7 @@ class MainViewModelTest {
 		assertEquals(20 * 60, viewModel.uiState.value.nightStartMinutes)
 		assertEquals(7 * 60, viewModel.uiState.value.nightEndMinutes)
 		assertTrue(viewModel.uiState.value.wallpaperSyncEnabled)
+		assertTrue(viewModel.uiState.value.lockScreenWallpaperBlurEnabled)
 		assertEquals(DAY_WALLPAPER_URI, viewModel.uiState.value.dayWallpaperUri)
 		assertEquals(NIGHT_WALLPAPER_URI, viewModel.uiState.value.nightWallpaperUri)
 	}
@@ -367,8 +375,32 @@ class MainViewModelTest {
 		}
 
 	@Test
+	fun wallpaperSourceIsOpenedBeforeBackgroundPreparationStarts() =
+		runTest(mainDispatcherRule.dispatcher) {
+			var openedUri: Uri? = null
+			val viewModel = createViewModel { uri ->
+				openedUri = uri
+				ByteArrayInputStream(byteArrayOf(1))
+			}
+			val sourceUri = Uri.parse(DAY_WALLPAPER_URI)
+			advanceUntilIdle()
+
+			viewModel.onDayWallpaperPicked(sourceUri)
+
+			assertEquals(sourceUri, openedUri)
+			assertTrue(wallpaperImagePreparer.prepared.isEmpty())
+			advanceUntilIdle()
+			assertEquals(listOf(sourceUri to WallpaperSlot.DAY), wallpaperImagePreparer.prepared)
+		}
+
+	@Test
 	fun legacyWallpaperSelectionsAreClearedAndSyncIsDisabled() =
 		runTest(mainDispatcherRule.dispatcher) {
+			wallpaperStorageMigrator.result = WallpaperMigrationResult(
+				dayWallpaperUri = DAY_WALLPAPER_URI,
+				nightWallpaperUri = NIGHT_WALLPAPER_URI,
+				failed = true
+			)
 			preferences.emit(
 				preferences.current.copy(
 					wallpaperSyncEnabled = true,
@@ -384,6 +416,54 @@ class MainViewModelTest {
 			assertEquals(null, preferences.current.dayWallpaperUri)
 			assertEquals(null, preferences.current.nightWallpaperUri)
 			assertEquals(1, preferences.current.wallpaperStorageVersion)
+		}
+
+	@Test
+	fun existingLocalWallpapersArePreparedForBlurAtStartup() =
+		runTest(mainDispatcherRule.dispatcher) {
+			val dayUri = "file:///data/user/0/dev.lexip.hecate/files/wallpaper_sources/day_wallpaper.jpg"
+			val nightUri = "file:///data/user/0/dev.lexip.hecate/files/wallpaper_sources/night_wallpaper.jpg"
+			preferences.emit(
+				preferences.current.copy(
+					dayWallpaperUri = dayUri,
+					nightWallpaperUri = nightUri,
+					wallpaperStorageVersion = 1
+				)
+			)
+
+			createViewModel()
+			advanceUntilIdle()
+
+			assertEquals(
+				listOf(dayUri to nightUri),
+				wallpaperStorageMigrator.requests
+			)
+		}
+
+	@Test
+	fun legacyPickerUrisAreMigratedEvenWhenStorageVersionIsAlreadyCurrent() =
+		runTest(mainDispatcherRule.dispatcher) {
+			val migratedDayUri = "file:///data/user/0/dev.lexip.hecate/files/wallpaper_sources/day_wallpaper.jpg"
+			val migratedNightUri = "file:///data/user/0/dev.lexip.hecate/files/wallpaper_sources/night_wallpaper.jpg"
+			preferences.emit(
+				preferences.current.copy(
+					wallpaperSyncEnabled = true,
+					dayWallpaperUri = DAY_WALLPAPER_URI,
+					nightWallpaperUri = NIGHT_WALLPAPER_URI,
+					wallpaperStorageVersion = 1
+				)
+			)
+			wallpaperStorageMigrator.result = WallpaperMigrationResult(
+				dayWallpaperUri = migratedDayUri,
+				nightWallpaperUri = migratedNightUri
+			)
+
+			createViewModel()
+			advanceUntilIdle()
+
+			assertEquals(migratedDayUri, preferences.current.dayWallpaperUri)
+			assertEquals(migratedNightUri, preferences.current.nightWallpaperUri)
+			assertTrue(preferences.current.wallpaperSyncEnabled)
 		}
 
 	@Test
@@ -466,6 +546,29 @@ class MainViewModelTest {
 		}
 
 	@Test
+	fun lockScreenBlurPersistsAndAppliesCurrentWallpaperWithoutPreparingImages() =
+		runTest(mainDispatcherRule.dispatcher) {
+			preferences.emit(
+				preferences.current.copy(
+					wallpaperSyncEnabled = true,
+					dayWallpaperUri = DAY_WALLPAPER_URI,
+					nightWallpaperUri = NIGHT_WALLPAPER_URI,
+					wallpaperStorageVersion = 1
+				)
+			)
+			val viewModel = createViewModel()
+			advanceUntilIdle()
+
+			viewModel.updateLockScreenWallpaperBlurEnabled(true)
+			advanceUntilIdle()
+
+			assertTrue(preferences.current.lockScreenWallpaperBlurEnabled)
+			assertTrue(wallpaperImagePreparer.prepared.isEmpty())
+			assertEquals(1, wallpaperPlatform.appliedRequests.size)
+			assertTrue(wallpaperPlatform.appliedRequests.single().lockScreenBlurEnabled)
+		}
+
+	@Test
 	fun liveWallpaperRequiresConfirmationBeforeEnablingSync() =
 		runTest(mainDispatcherRule.dispatcher) {
 			wallpaperPlatform.liveWallpaperActive = true
@@ -497,7 +600,11 @@ class MainViewModelTest {
 			assertFalse(preferences.current.wallpaperSyncEnabled)
 		}
 
-	private fun createViewModel(): MainViewModel = MainViewModel(
+	private fun createViewModel(
+		openWallpaperInputStream: (Uri) -> InputStream? = {
+			ByteArrayInputStream(byteArrayOf(1))
+		}
+	): MainViewModel = MainViewModel(
 		application = application,
 		userPreferencesRepository = preferences,
 		lightSensorManager = lightSensor,
@@ -506,6 +613,8 @@ class MainViewModelTest {
 		installMetadataProvider = installMetadata,
 		wallpaperPlatform = wallpaperPlatform,
 		wallpaperImagePreparer = wallpaperImagePreparer,
+		wallpaperStorageMigrator = wallpaperStorageMigrator,
+		openWallpaperInputStream = openWallpaperInputStream,
 		ioDispatcher = mainDispatcherRule.dispatcher,
 		mainDispatcher = mainDispatcherRule.dispatcher,
 		todayEpochDay = { TODAY_EPOCH_DAY }

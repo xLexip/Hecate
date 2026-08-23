@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">A apărut o eroare neașteptată la folosirea Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Imagine de fundal</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Estompează ecranul de blocare</string>
+	<string name="description_lock_screen_wallpaper_blur">Utilizați o versiune estompată a fundalului pe ecranul de blocare.</string>
 	<string name="description_device_wallpaper_sync">Folosește imagini de fundal separate pentru modul luminos și cel întunecat. Comutarea poate dura puțin și poate afecta performanța.</string>
 	<string name="action_select_day_wallpaper">Mod luminos:</string>
 	<string name="action_select_night_wallpaper">Mod întunecat:</string>

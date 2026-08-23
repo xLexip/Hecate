@@ -112,6 +112,8 @@
 	<string name="title_device_wallpaper_sync">Hintergrundbild</string>
 	<string name="label_beta">Beta</string>
 	<string name="description_device_wallpaper_sync">Verwende separate Hintergrundbilder für den hellen und dunklen Modus. Der Wechsel kann einen Moment dauern und die Leistung beeinträchtigen.</string>
+	<string name="title_lock_screen_wallpaper_blur">Sperrbildschirm weichzeichnen</string>
+	<string name="description_lock_screen_wallpaper_blur">Verwende auf dem Sperrbildschirm eine weichgezeichnete Version des Hintergrundbilds.</string>
 	<string name="action_select_day_wallpaper">Heller Modus:</string>
 	<string name="action_select_night_wallpaper">Dunkler Modus:</string>
 	<string name="wallpaper_status_set">Festgelegt</string>

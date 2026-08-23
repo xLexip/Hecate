@@ -115,6 +115,66 @@ class WallpaperHandlerTest {
 	}
 
 	@Test
+	fun blurredLockScreenApplicationUsesSeparateSharpAndBlurredStreams() {
+		val openedUris = mutableListOf<String>()
+		val appliedFlags = mutableListOf<Int>()
+		val handler = handler(
+			openInputStream = { uri ->
+				openedUris += uri.toString()
+				ByteArrayInputStream(byteArrayOf(1))
+			},
+			setStream = { _, flags -> appliedFlags += flags }
+		)
+
+		assertTrue(
+			handler.applyWallpaperForTheme(
+				isDark = false,
+				dayUriStr = DAY_WALLPAPER_URI,
+				nightUriStr = NIGHT_WALLPAPER_URI,
+				lockScreenWallpaperBlurEnabled = true
+			)
+		)
+
+		assertEquals(DAY_WALLPAPER_URI, openedUris.first())
+		assertTrue(openedUris.last().endsWith("day_wallpaper_lock_blur.jpg"))
+		assertEquals(
+			listOf(WallpaperManager.FLAG_SYSTEM, WallpaperManager.FLAG_LOCK),
+			appliedFlags
+		)
+	}
+
+	@Test
+	fun missingBlurredWallpaperFallsBackToSharpLockWallpaper() {
+		val openedUris = mutableListOf<String>()
+		val appliedFlags = mutableListOf<Int>()
+		val handler = handler(
+			openInputStream = { uri ->
+				openedUris += uri.toString()
+				if (uri.toString().endsWith("_lock_blur.jpg")) null
+				else ByteArrayInputStream(byteArrayOf(1))
+			},
+			setStream = { _, flags -> appliedFlags += flags }
+		)
+
+		assertTrue(
+			handler.applyWallpaperForTheme(
+				isDark = false,
+				dayUriStr = DAY_WALLPAPER_URI,
+				nightUriStr = NIGHT_WALLPAPER_URI,
+				lockScreenWallpaperBlurEnabled = true
+			)
+		)
+
+		assertEquals(DAY_WALLPAPER_URI, openedUris.first())
+		assertTrue(openedUris[1].endsWith("day_wallpaper_lock_blur.jpg"))
+		assertEquals(DAY_WALLPAPER_URI, openedUris.last())
+		assertEquals(
+			listOf(WallpaperManager.FLAG_SYSTEM, WallpaperManager.FLAG_LOCK),
+			appliedFlags
+		)
+	}
+
+	@Test
 	fun delegatesLiveWallpaperAndPersistablePermissionChecks() {
 		val persisted = mutableListOf<Uri>()
 		val handler = handler(

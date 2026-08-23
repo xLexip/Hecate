@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku kasutamisel tekkis ootamatu viga.</string>
 	<string name="title_device_wallpaper_sync">Taustapilt</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Hägusta lukustuskuva</string>
+	<string name="description_lock_screen_wallpaper_blur">Kasuta lukustuskuval taustapildi hägustatud versiooni.</string>
 	<string name="description_device_wallpaper_sync">Kasuta heleda ja tumeda režiimi jaoks eraldi taustapilte. Vahetamine võib võtta hetke ja mõjutada jõudlust.</string>
 	<string name="action_select_day_wallpaper">Hele režiim:</string>
 	<string name="action_select_night_wallpaper">Tume režiim:</string>

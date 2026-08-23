@@ -111,6 +111,8 @@
 	<string name="shizuku_grant_unexpected">Errore imprevisto durante l’uso di Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Sfondo</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Sfoca schermata di blocco</string>
+	<string name="description_lock_screen_wallpaper_blur">Usa una versione sfocata dello sfondo nella schermata di blocco.</string>
 	<string name="description_device_wallpaper_sync">Usa sfondi distinti per la modalità chiara e scura. Il passaggio può richiedere un momento e influire sulle prestazioni.</string>
 	<string name="action_select_day_wallpaper">Modalità chiara:</string>
 	<string name="action_select_night_wallpaper">Modalità scura:</string>

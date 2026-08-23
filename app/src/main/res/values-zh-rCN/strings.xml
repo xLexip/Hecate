@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">使用 Shizuku 时发生意外错误。</string>
 	<string name="title_device_wallpaper_sync">壁纸</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">模糊锁屏</string>
+	<string name="description_lock_screen_wallpaper_blur">在锁屏上使用壁纸的模糊版本。</string>
 	<string name="description_device_wallpaper_sync">为浅色和深色模式使用不同的壁纸。切换可能需要一点时间并影响性能。</string>
 	<string name="action_select_day_wallpaper">浅色模式：</string>
 	<string name="action_select_night_wallpaper">深色模式：</string>
