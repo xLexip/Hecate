@@ -111,6 +111,8 @@
 	<string name="shizuku_grant_unexpected">Під час використання Shizuku сталася неочікувана помилка.</string>
 	<string name="title_device_wallpaper_sync">Шпалери</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Розмити екран блокування</string>
+	<string name="description_lock_screen_wallpaper_blur">Використовуйте розмиту версію шпалер на екрані блокування.</string>
 	<string name="description_device_wallpaper_sync">Використовуйте окремі шпалери для світлого й темного режимів. Перемикання може тривати мить і вплинути на продуктивність.</string>
 	<string name="action_select_day_wallpaper">Світлий режим:</string>
 	<string name="action_select_night_wallpaper">Темний режим:</string>

@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">При использовании Shizuku произошла непредвиденная ошибка.</string>
 	<string name="title_device_wallpaper_sync">Обои</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Размыть экран блокировки</string>
+	<string name="description_lock_screen_wallpaper_blur">Использовать размытую версию обоев на экране блокировки.</string>
 	<string name="description_device_wallpaper_sync">Используйте разные обои для светлой и тёмной темы. Переключение может занять некоторое время и повлиять на производительность.</string>
 	<string name="action_select_day_wallpaper">Светлая тема:</string>
 	<string name="action_select_night_wallpaper">Тёмная тема:</string>

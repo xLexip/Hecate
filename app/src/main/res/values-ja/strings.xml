@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku の使用中に予期しないエラーが発生しました。</string>
 	<string name="title_device_wallpaper_sync">壁紙</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">ロック画面をぼかす</string>
+	<string name="description_lock_screen_wallpaper_blur">ロック画面で壁紙のぼかしたバージョンを使用します。</string>
 	<string name="description_device_wallpaper_sync">ライトモードとダークモードで別々の壁紙を使用します。切り替えには少し時間がかかり、パフォーマンスに影響する場合があります。</string>
 	<string name="action_select_day_wallpaper">ライトモード:</string>
 	<string name="action_select_night_wallpaper">ダークモード:</string>

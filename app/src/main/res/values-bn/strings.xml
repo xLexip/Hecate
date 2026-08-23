@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ব্যবহার করার সময় অপ্রত্যাশিত ত্রুটি হয়েছে।</string>
 	<string name="title_device_wallpaper_sync">ওয়ালপেপার</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">লক স্ক্রিন ঝাপসা করুন</string>
+	<string name="description_lock_screen_wallpaper_blur">লক স্ক্রিনে ওয়ালপেপারের একটি ঝাপসা সংস্করণ ব্যবহার করুন।</string>
 	<string name="description_device_wallpaper_sync">হালকা ও গাঢ় মোডের জন্য আলাদা ওয়ালপেপার ব্যবহার করুন। পরিবর্তনে কিছু সময় লাগতে পারে এবং পারফরম্যান্সে প্রভাব পড়তে পারে।</string>
 	<string name="action_select_day_wallpaper">হালকা মোড:</string>
 	<string name="action_select_night_wallpaper">গাঢ় মোড:</string>

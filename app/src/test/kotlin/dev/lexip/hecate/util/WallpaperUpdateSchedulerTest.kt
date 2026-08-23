@@ -23,21 +23,26 @@ import org.junit.Test
 class WallpaperUpdateSchedulerTest {
 	@Test
 	fun `coalesces pending wallpaper updates to the latest target`() = runTest {
-		val appliedThemes = mutableListOf<Boolean>()
+		val appliedRequests = mutableListOf<Pair<Boolean, Boolean>>()
 		val scheduler = WallpaperUpdateScheduler(
 			scope = this,
 			dispatcher = StandardTestDispatcher(testScheduler),
-			applyWallpaper = { isDark, _, _ ->
-				appliedThemes += isDark
+			applyWallpaper = { isDark, _, _, lockScreenBlurEnabled ->
+				appliedRequests += isDark to lockScreenBlurEnabled
 				true
 			}
 		)
 
 		scheduler.schedule(isDark = false, dayUri = "day-1", nightUri = "night-1")
-		scheduler.schedule(isDark = true, dayUri = "day-2", nightUri = "night-2")
+		scheduler.schedule(
+			isDark = true,
+			dayUri = "day-2",
+			nightUri = "night-2",
+			lockScreenWallpaperBlurEnabled = true
+		)
 		advanceUntilIdle()
 
-		assertEquals(listOf(true), appliedThemes)
+		assertEquals(listOf(true to true), appliedRequests)
 	}
 
 	@Test
@@ -46,7 +51,7 @@ class WallpaperUpdateSchedulerTest {
 		val scheduler = WallpaperUpdateScheduler(
 			scope = this,
 			dispatcher = StandardTestDispatcher(testScheduler),
-			applyWallpaper = { isDark, _, _ ->
+			applyWallpaper = { isDark, _, _, _ ->
 				appliedThemes += isDark
 				true
 			}

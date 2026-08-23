@@ -111,6 +111,8 @@
 	<string name="shizuku_grant_unexpected">Erro inesperado ao usar o Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Papel de parede</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Desfocar tela de bloqueio</string>
+	<string name="description_lock_screen_wallpaper_blur">Use uma versão desfocada do papel de parede na tela de bloqueio.</string>
 	<string name="description_device_wallpaper_sync">Use planos de fundo distintos para os modos claro e escuro. A mudança pode levar um instante e afetar o desempenho.</string>
 	<string name="action_select_day_wallpaper">Modo claro:</string>
 	<string name="action_select_night_wallpaper">Modo escuro:</string>

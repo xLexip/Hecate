@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Váratlan hiba történt a Shizuku használata közben.</string>
 	<string name="title_device_wallpaper_sync">Háttérkép</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Zárolási képernyő elmosása</string>
+	<string name="description_lock_screen_wallpaper_blur">Használja a háttérkép elmosott változatát a zárolási képernyőn.</string>
 	<string name="description_device_wallpaper_sync">Használjon külön háttérképeket világos és sötét módban. A váltás eltarthat egy pillanatig, és befolyásolhatja a teljesítményt.</string>
 	<string name="action_select_day_wallpaper">Világos mód:</string>
 	<string name="action_select_night_wallpaper">Sötét mód:</string>

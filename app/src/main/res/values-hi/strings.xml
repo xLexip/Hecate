@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku का इस्तेमाल करते समय कोई अनचाही गड़बड़ी हुई।</string>
 	<string name="title_device_wallpaper_sync">वॉलपेपर</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">लॉक स्क्रीन धुंधली करें</string>
+	<string name="description_lock_screen_wallpaper_blur">लॉक स्क्रीन पर वॉलपेपर के धुंधले संस्करण का उपयोग करें।</string>
 	<string name="description_device_wallpaper_sync">लाइट और डार्क मोड के लिए अलग-अलग वॉलपेपर इस्तेमाल करें। बदलने में कुछ समय लग सकता है और परफ़ॉर्मेंस प्रभावित हो सकती है।</string>
 	<string name="action_select_day_wallpaper">लाइट मोड:</string>
 	<string name="action_select_night_wallpaper">डार्क मोड:</string>

@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizukun käytössä tapahtui odottamaton virhe.</string>
 	<string name="title_device_wallpaper_sync">Taustakuva</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Sumenna lukitusnäyttö</string>
+	<string name="description_lock_screen_wallpaper_blur">Käytä lukitusnäytössä taustakuvan sumennettua versiota.</string>
 	<string name="description_device_wallpaper_sync">Käytä erillisiä taustakuvia vaaleassa ja tummassa tilassa. Vaihtaminen voi kestää hetken ja vaikuttaa suorituskykyyn.</string>
 	<string name="action_select_day_wallpaper">Vaalea tila:</string>
 	<string name="action_select_night_wallpaper">Tumma tila:</string>

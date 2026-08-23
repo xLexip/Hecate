@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku பயன்படுத்தும்போது எதிர்பாராத பிழை ஏற்பட்டது.</string>
 	<string name="title_device_wallpaper_sync">வால்பேப்பர்</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">பூட்டுத் திரையை மங்கலாக்கு</string>
+	<string name="description_lock_screen_wallpaper_blur">பூட்டுத் திரையில் வால்பேப்பரின் மங்கலான பதிப்பைப் பயன்படுத்தவும்.</string>
 	<string name="description_device_wallpaper_sync">வெளிர் மற்றும் இருள் பயன்முறைகளுக்குத் தனித்தனி வால்பேப்பர்களைப் பயன்படுத்தவும். மாற்ற சிறிது நேரம் ஆகலாம்; செயல்திறன் பாதிக்கப்படலாம்.</string>
 	<string name="action_select_day_wallpaper">வெளிர் பயன்முறை:</string>
 	<string name="action_select_night_wallpaper">இருள் பயன்முறை:</string>

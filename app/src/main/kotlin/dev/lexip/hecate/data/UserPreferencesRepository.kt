@@ -42,6 +42,7 @@ data class UserPreferences(
 	val nightStartMinutes: Int = DEFAULT_NIGHT_START_MINUTES,
 	val nightEndMinutes: Int = DEFAULT_NIGHT_END_MINUTES,
 	val wallpaperSyncEnabled: Boolean = false,
+	val lockScreenWallpaperBlurEnabled: Boolean = false,
 	val dayWallpaperUri: String? = null,
 	val nightWallpaperUri: String? = null,
 	val wallpaperStorageVersion: Int = 0,
@@ -68,6 +69,7 @@ interface UserPreferencesDataSource {
 	suspend fun updateStayDarkAtNightEnabled(enabled: Boolean)
 	suspend fun updateNightWindow(startMinutes: Int, endMinutes: Int): Boolean
 	suspend fun updateWallpaperSyncEnabled(enabled: Boolean)
+	suspend fun updateLockScreenWallpaperBlurEnabled(enabled: Boolean)
 	suspend fun updateDayWallpaperUri(uri: String?)
 	suspend fun updateNightWallpaperUri(uri: String?)
 	suspend fun updateWallpaperStorageVersion(version: Int)
@@ -90,6 +92,8 @@ class UserPreferencesRepository(
 		val NIGHT_START_MINUTES = intPreferencesKey("night_start_minutes")
 		val NIGHT_END_MINUTES = intPreferencesKey("night_end_minutes")
 		val WALLPAPER_SYNC_ENABLED = booleanPreferencesKey("wallpaper_sync_enabled")
+		val LOCK_SCREEN_WALLPAPER_BLUR_ENABLED =
+			booleanPreferencesKey("lock_screen_wallpaper_blur_enabled")
 		val DAY_WALLPAPER_URI = stringPreferencesKey("day_wallpaper_uri")
 		val NIGHT_WALLPAPER_URI = stringPreferencesKey("night_wallpaper_uri")
 		val WALLPAPER_STORAGE_VERSION = intPreferencesKey("wallpaper_storage_version")
@@ -156,6 +160,8 @@ class UserPreferencesRepository(
 		val nightEndMinutes =
 			preferences[PreferencesKeys.NIGHT_END_MINUTES] ?: DEFAULT_NIGHT_END_MINUTES
 		val wallpaperSyncEnabled = preferences[PreferencesKeys.WALLPAPER_SYNC_ENABLED] == true
+		val lockScreenWallpaperBlurEnabled =
+			preferences[PreferencesKeys.LOCK_SCREEN_WALLPAPER_BLUR_ENABLED] == true
 		val dayWallpaperUri = preferences[PreferencesKeys.DAY_WALLPAPER_URI]
 		val nightWallpaperUri = preferences[PreferencesKeys.NIGHT_WALLPAPER_URI]
 		val wallpaperStorageVersion = preferences[PreferencesKeys.WALLPAPER_STORAGE_VERSION] ?: 0
@@ -178,6 +184,7 @@ class UserPreferencesRepository(
 			nightStartMinutes = nightStartMinutes,
 			nightEndMinutes = nightEndMinutes,
 			wallpaperSyncEnabled = wallpaperSyncEnabled,
+			lockScreenWallpaperBlurEnabled = lockScreenWallpaperBlurEnabled,
 			dayWallpaperUri = dayWallpaperUri,
 			nightWallpaperUri = nightWallpaperUri,
 			wallpaperStorageVersion = wallpaperStorageVersion,
@@ -224,6 +231,12 @@ class UserPreferencesRepository(
 	override suspend fun updateWallpaperSyncEnabled(enabled: Boolean) {
 		dataStore.edit { preferences ->
 			preferences[PreferencesKeys.WALLPAPER_SYNC_ENABLED] = enabled
+		}
+	}
+
+	override suspend fun updateLockScreenWallpaperBlurEnabled(enabled: Boolean) {
+		dataStore.edit { preferences ->
+			preferences[PreferencesKeys.LOCK_SCREEN_WALLPAPER_BLUR_ENABLED] = enabled
 		}
 	}
 

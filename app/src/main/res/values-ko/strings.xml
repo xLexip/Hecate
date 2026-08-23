@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku 사용 중 예기치 않은 오류가 발생했습니다.</string>
 	<string name="title_device_wallpaper_sync">배경화면</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">잠금 화면 흐리게 하기</string>
+	<string name="description_lock_screen_wallpaper_blur">잠금 화면에 배경화면의 흐린 버전을 사용합니다.</string>
 	<string name="description_device_wallpaper_sync">라이트 모드와 다크 모드에 각각 다른 배경화면을 사용합니다. 전환에는 잠시 시간이 걸리고 성능에 영향을 줄 수 있습니다.</string>
 	<string name="action_select_day_wallpaper">라이트 모드:</string>
 	<string name="action_select_night_wallpaper">다크 모드:</string>

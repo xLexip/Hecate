@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Възникна неочаквана грешка при използване на Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Тапет</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Замъгляване на заключения екран</string>
+	<string name="description_lock_screen_wallpaper_blur">Използвайте замъглена версия на тапета на заключения екран.</string>
 	<string name="description_device_wallpaper_sync">Използвайте отделни тапети за светъл и тъмен режим. Превключването може да отнеме момент и да повлияе на производителността.</string>
 	<string name="action_select_day_wallpaper">Светъл режим:</string>
 	<string name="action_select_night_wallpaper">Тъмен режим:</string>

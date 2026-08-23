@@ -111,6 +111,8 @@
 	<string name="shizuku_grant_unexpected">Erreur inattendue lors de l’utilisation de Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Fond d’écran</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Flouter l’écran de verrouillage</string>
+	<string name="description_lock_screen_wallpaper_blur">Utilisez une version floutée du fond d’écran sur l’écran de verrouillage.</string>
 	<string name="description_device_wallpaper_sync">Utilisez des fonds d’écran distincts pour les modes clair et sombre. Le changement peut prendre un instant et affecter les performances.</string>
 	<string name="action_select_day_wallpaper">Mode clair :</string>
 	<string name="action_select_night_wallpaper">Mode sombre :</string>

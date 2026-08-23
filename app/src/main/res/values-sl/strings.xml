@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Pri uporabi aplikacije Shizuku je prišlo do nepričakovane napake.</string>
 	<string name="title_device_wallpaper_sync">Ozadje</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Zamegli zaklenjeni zaslon</string>
+	<string name="description_lock_screen_wallpaper_blur">Na zaklenjenem zaslonu uporabite zamegljeno različico ozadja.</string>
 	<string name="description_device_wallpaper_sync">Uporabljajte ločeni ozadji za svetli in temni način. Preklop lahko traja trenutek in vpliva na delovanje.</string>
 	<string name="action_select_day_wallpaper">Svetli način:</string>
 	<string name="action_select_night_wallpaper">Temni način:</string>

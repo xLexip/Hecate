@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">使用 Shizuku 時發生未預期的錯誤。</string>
 	<string name="title_device_wallpaper_sync">桌布</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">模糊鎖定螢幕</string>
+	<string name="description_lock_screen_wallpaper_blur">在鎖定螢幕上使用桌布的模糊版本。</string>
 	<string name="description_device_wallpaper_sync">為淺色與深色模式使用不同的桌布。切換可能需要一點時間並影響效能。</string>
 	<string name="action_select_day_wallpaper">淺色模式：</string>
 	<string name="action_select_night_wallpaper">深色模式：</string>

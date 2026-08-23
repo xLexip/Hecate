@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">حدث خطأ غير متوقع أثناء استخدام Shizuku.</string>
 	<string name="title_device_wallpaper_sync">خلفية</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">تمويه شاشة القفل</string>
+	<string name="description_lock_screen_wallpaper_blur">استخدم نسخة مموهة من الخلفية على شاشة القفل.</string>
 	<string name="description_device_wallpaper_sync">استخدم خلفيات منفصلة للوضعين الفاتح والداكن. قد يستغرق التبديل لحظة ويؤثر في الأداء.</string>
 	<string name="action_select_day_wallpaper">الوضع الفاتح:</string>
 	<string name="action_select_night_wallpaper">الوضع الداكن:</string>

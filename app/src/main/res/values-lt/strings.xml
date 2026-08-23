@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Naudojant „Shizuku“ įvyko netikėta klaida.</string>
 	<string name="title_device_wallpaper_sync">Ekrano fonas</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Sulieti užrakto ekraną</string>
+	<string name="description_lock_screen_wallpaper_blur">Užrakto ekrane naudokite sulietą ekrano fono versiją.</string>
 	<string name="description_device_wallpaper_sync">Naudokite atskirus šviesaus ir tamsaus režimo ekrano fonus. Perjungimas gali užtrukti akimirką ir paveikti našumą.</string>
 	<string name="action_select_day_wallpaper">Šviesus režimas:</string>
 	<string name="action_select_night_wallpaper">Tamsus režimas:</string>

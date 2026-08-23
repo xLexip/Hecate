@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ఉపయోగిస్తున్నప్పుడు ఊహించని లోపం సంభవించింది.</string>
 	<string name="title_device_wallpaper_sync">వాల్‌పేపర్</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">లాక్ స్క్రీన్‌ను బ్లర్ చేయండి</string>
+	<string name="description_lock_screen_wallpaper_blur">లాక్ స్క్రీన్‌లో వాల్‌పేపర్ యొక్క బ్లర్ చేసిన వెర్షన్‌ను ఉపయోగించండి.</string>
 	<string name="description_device_wallpaper_sync">లైట్ మరియు డార్క్ మోడ్‌ల కోసం వేర్వేరు వాల్‌పేపర్‌లను ఉపయోగించండి. మారడానికి కొంత సమయం పట్టవచ్చు మరియు పనితీరుపై ప్రభావం పడవచ్చు.</string>
 	<string name="action_select_day_wallpaper">లైట్ మోడ్:</string>
 	<string name="action_select_night_wallpaper">డార్క్ మోడ్:</string>

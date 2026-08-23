@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku ഉപയോഗിക്കുമ്പോൾ അപ്രതീക്ഷിത പിശക് സംഭവിച്ചു.</string>
 	<string name="title_device_wallpaper_sync">വാൾപേപ്പർ</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">ലോക്ക് സ്ക്രീൻ മങ്ങിക്കുക</string>
+	<string name="description_lock_screen_wallpaper_blur">ലോക്ക് സ്ക്രീനിൽ വാൾപേപ്പറിന്റെ മങ്ങിയ പതിപ്പ് ഉപയോഗിക്കുക.</string>
 	<string name="description_device_wallpaper_sync">ലൈറ്റ്, ഡാർക്ക് മോഡുകൾക്ക് വെവ്വേറെ വാൾപേപ്പറുകൾ ഉപയോഗിക്കുക. മാറ്റാൻ അൽപസമയം എടുത്തേക്കാം, പ്രകടനത്തെ ബാധിക്കുകയും ചെയ്യാം.</string>
 	<string name="action_select_day_wallpaper">ലൈറ്റ് മോഡ്:</string>
 	<string name="action_select_night_wallpaper">ഡാർക്ക് മോഡ്:</string>

@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku वापरताना अनपेक्षित त्रुटी आली.</string>
 	<string name="title_device_wallpaper_sync">वॉलपेपर</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">लॉक स्क्रीन अस्पष्ट करा</string>
+	<string name="description_lock_screen_wallpaper_blur">लॉक स्क्रीनवर वॉलपेपरची अस्पष्ट आवृत्ती वापरा.</string>
 	<string name="description_device_wallpaper_sync">फिकट आणि गडद मोडसाठी वेगवेगळे वॉलपेपर वापरा. बदलायला थोडा वेळ लागू शकतो आणि कार्यप्रदर्शनावर परिणाम होऊ शकतो.</string>
 	<string name="action_select_day_wallpaper">फिकट मोड:</string>
 	<string name="action_select_night_wallpaper">गडद मोड:</string>

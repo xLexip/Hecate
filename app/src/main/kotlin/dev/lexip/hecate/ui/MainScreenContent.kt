@@ -681,6 +681,10 @@ private fun ExpandedAdvancedSettings(
 				callbacks = callbacks,
 				onWallpaperButtonsShake = onWallpaperButtonsShake
 			)
+			LockScreenWallpaperBlurPreference(
+				uiState = uiState,
+				onLockScreenWallpaperBlurChanged = callbacks.onLockScreenWallpaperBlurChanged
+			)
 			AssistChip(
 				modifier = Modifier.align(Alignment.CenterHorizontally),
 				onClick = {
@@ -779,7 +783,7 @@ private fun WallpaperSyncPreference(
 		title = stringResource(id = R.string.title_device_wallpaper_sync),
 		enabled = uiState.adaptiveThemeEnabled,
 		firstCard = false,
-		lastCard = true,
+		lastCard = false,
 		toggleableValue = uiState.wallpaperSyncEnabled,
 		onToggle = requestToggle,
 		titleTrailingContent = { BetaLabel() }
@@ -798,6 +802,29 @@ private fun WallpaperSyncPreference(
 			offset = wallpaperButtonsOffset,
 			onSelectDayWallpaper = callbacks.onSelectDayWallpaper,
 			onSelectNightWallpaper = callbacks.onSelectNightWallpaper
+		)
+	}
+}
+
+@Composable
+private fun LockScreenWallpaperBlurPreference(
+	uiState: MainUiState,
+	onLockScreenWallpaperBlurChanged: (Boolean) -> Unit
+) {
+	DetailPreferenceCard(
+		title = stringResource(id = R.string.title_lock_screen_wallpaper_blur),
+		enabled = uiState.adaptiveThemeEnabled && uiState.wallpaperSyncEnabled,
+		firstCard = false,
+		lastCard = true,
+		toggleableValue = uiState.lockScreenWallpaperBlurEnabled,
+		onToggle = onLockScreenWallpaperBlurChanged
+	) {
+		PreferenceDescriptionSwitch(
+			description = stringResource(id = R.string.description_lock_screen_wallpaper_blur),
+			checked = uiState.lockScreenWallpaperBlurEnabled,
+			enabled = uiState.adaptiveThemeEnabled && uiState.wallpaperSyncEnabled,
+			onCheckedChange = onLockScreenWallpaperBlurChanged,
+			centerSwitchVertically = true
 		)
 	}
 }
@@ -823,13 +850,15 @@ private fun PreferenceDescriptionSwitch(
 	checked: Boolean,
 	enabled: Boolean,
 	onCheckedChange: ((Boolean) -> Unit)?,
-	switchTopPadding: Dp = 0.dp
+	switchTopPadding: Dp = 0.dp,
+	centerSwitchVertically: Boolean = false
 ) {
+	val switchAlignment = if (centerSwitchVertically) Alignment.CenterVertically else Alignment.Top
 	Row(
 		modifier = Modifier
 			.fillMaxWidth()
 			.padding(top = 4.dp),
-		verticalAlignment = Alignment.Top,
+		verticalAlignment = switchAlignment,
 		horizontalArrangement = Arrangement.SpaceBetween
 	) {
 		Text(
@@ -840,8 +869,8 @@ private fun PreferenceDescriptionSwitch(
 		Switch(
 			modifier = Modifier
 				.padding(start = 14.dp, top = switchTopPadding, end = 4.dp)
-				.offset(y = (-6).dp)
-				.align(Alignment.Top),
+				.offset(y = if (centerSwitchVertically) 0.dp else (-6).dp)
+				.align(switchAlignment),
 			checked = checked,
 			enabled = enabled,
 			onCheckedChange = onCheckedChange,

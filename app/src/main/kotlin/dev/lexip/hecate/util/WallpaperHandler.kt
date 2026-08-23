@@ -31,7 +31,8 @@ internal interface WallpaperPlatform {
 	fun applyWallpaperForTheme(
 		isDark: Boolean,
 		dayUriStr: String?,
-		nightUriStr: String?
+		nightUriStr: String?,
+		lockScreenWallpaperBlurEnabled: Boolean
 	): Boolean
 }
 
@@ -87,12 +88,14 @@ internal class WallpaperHandler internal constructor(
 	 * @param isDark True if target theme is dark, false for light.
 	 * @param dayUriStr Content URI string for day wallpaper.
 	 * @param nightUriStr Content URI string for night wallpaper.
+	 * @param lockScreenWallpaperBlurEnabled Whether to use a pre-rendered blurred lock variant.
 	 * @return true if wallpaper was successfully applied, false otherwise.
 	 */
 	override fun applyWallpaperForTheme(
 		isDark: Boolean,
 		dayUriStr: String?,
-		nightUriStr: String?
+		nightUriStr: String?,
+		lockScreenWallpaperBlurEnabled: Boolean
 	): Boolean {
 		val context = contextRef.get() ?: return false
 
@@ -102,24 +105,28 @@ internal class WallpaperHandler internal constructor(
 			return false
 		}
 
-		val succeeded: Boolean = try {
-			val uri = targetUriStr.toUri()
-			val stream = openInputStream(uri)
-			if (stream != null) {
-				stream.use { s ->
-					setStream(
-						s,
-						WallpaperManager.FLAG_SYSTEM or WallpaperManager.FLAG_LOCK
-					)
-				}
-				true
+		val succeeded = if (lockScreenWallpaperBlurEnabled) {
+			val slot = if (isDark) WallpaperSlot.NIGHT else WallpaperSlot.DAY
+			val systemSucceeded = setWallpaper(
+				targetUriStr,
+				WallpaperManager.FLAG_SYSTEM
+			)
+			val blurredLockSucceeded = systemSucceeded && setWallpaper(
+				blurredLockScreenWallpaperUri(context, slot).toString(),
+				WallpaperManager.FLAG_LOCK
+			)
+			val lockSucceeded = if (systemSucceeded && !blurredLockSucceeded) {
+				Log.w(TAG, "Blurred lock wallpaper unavailable; applying the sharp wallpaper to the lock screen.")
+				setWallpaper(targetUriStr, WallpaperManager.FLAG_LOCK)
 			} else {
-				Log.w(TAG, "Could not open InputStream for URI: $targetUriStr")
-				false
+				blurredLockSucceeded
 			}
-		} catch (e: Exception) {
-			Log.w(TAG, "Failed to set wallpaper from URI: $targetUriStr", e)
-			false
+			systemSucceeded && lockSucceeded
+		} else {
+			setWallpaper(
+				targetUriStr,
+				WallpaperManager.FLAG_SYSTEM or WallpaperManager.FLAG_LOCK
+			)
 		}
 
 		if (succeeded) {
@@ -127,5 +134,30 @@ internal class WallpaperHandler internal constructor(
 		}
 		Logger.logWallpaperSwitched(context, isDark = isDark, succeeded = succeeded)
 		return succeeded
+	}
+
+	internal fun applyWallpaperForTheme(
+		isDark: Boolean,
+		dayUriStr: String?,
+		nightUriStr: String?
+	): Boolean = applyWallpaperForTheme(
+		isDark = isDark,
+		dayUriStr = dayUriStr,
+		nightUriStr = nightUriStr,
+		lockScreenWallpaperBlurEnabled = false
+	)
+
+	private fun setWallpaper(uriString: String, flags: Int): Boolean = try {
+		val stream = openInputStream(uriString.toUri())
+		if (stream == null) {
+			Log.w(TAG, "Could not open InputStream for URI: $uriString")
+			false
+		} else {
+			stream.use { setStream(it, flags) }
+			true
+		}
+	} catch (e: Exception) {
+		Log.w(TAG, "Failed to set wallpaper from URI: $uriString", e)
+		false
 	}
 }

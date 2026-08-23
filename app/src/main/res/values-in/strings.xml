@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Terjadi kesalahan tak terduga saat menggunakan Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Wallpaper</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Buramkan layar kunci</string>
+	<string name="description_lock_screen_wallpaper_blur">Gunakan versi buram wallpaper di layar kunci.</string>
 	<string name="description_device_wallpaper_sync">Gunakan wallpaper terpisah untuk mode terang dan gelap. Peralihan mungkin memerlukan waktu sejenak dan memengaruhi performa.</string>
 	<string name="action_select_day_wallpaper">Mode terang:</string>
 	<string name="action_select_night_wallpaper">Mode gelap:</string>

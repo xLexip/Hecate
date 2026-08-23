@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Ralat tidak dijangka berlaku semasa menggunakan Shizuku.</string>
 	<string name="title_device_wallpaper_sync">Kertas dinding</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Kaburkan skrin kunci</string>
+	<string name="description_lock_screen_wallpaper_blur">Gunakan versi kabur kertas dinding pada skrin kunci.</string>
 	<string name="description_device_wallpaper_sync">Gunakan hias latar berasingan untuk mod cerah dan gelap. Penukaran mungkin mengambil masa seketika dan menjejaskan prestasi.</string>
 	<string name="action_select_day_wallpaper">Mod cerah:</string>
 	<string name="action_select_night_wallpaper">Mod gelap:</string>

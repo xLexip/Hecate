@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Shizuku استعمال کرتے ہوئے غیر متوقع خرابی پیش آئی۔</string>
 	<string name="title_device_wallpaper_sync">وال پیپر</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">لاک اسکرین دھندلی کریں</string>
+	<string name="description_lock_screen_wallpaper_blur">لاک اسکرین پر وال پیپر کا دھندلا ورژن استعمال کریں۔</string>
 	<string name="description_device_wallpaper_sync">روشن اور گہرے موڈ کے لیے الگ وال پیپرز استعمال کریں۔ تبدیلی میں ایک لمحہ لگ سکتا ہے اور کارکردگی متاثر ہو سکتی ہے۔</string>
 	<string name="action_select_day_wallpaper">روشن موڈ:</string>
 	<string name="action_select_night_wallpaper">گہرا موڈ:</string>

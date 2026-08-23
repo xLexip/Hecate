@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">هنگام استفاده از Shizuku خطای غیرمنتظره‌ای رخ داد.</string>
 	<string name="title_device_wallpaper_sync">کاغذدیواری</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">تار کردن صفحه قفل</string>
+	<string name="description_lock_screen_wallpaper_blur">از نسخه محوشده کاغذدیواری در صفحه قفل استفاده کنید.</string>
 	<string name="description_device_wallpaper_sync">برای حالت روشن و تیره از پس‌زمینه‌های جداگانه استفاده کنید. جابه‌جایی ممکن است لحظه‌ای طول بکشد و بر عملکرد تأثیر بگذارد.</string>
 	<string name="action_select_day_wallpaper">حالت روشن:</string>
 	<string name="action_select_night_wallpaper">حالت تیره:</string>

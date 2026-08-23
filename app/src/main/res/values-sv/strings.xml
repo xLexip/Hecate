@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">Ett oväntat fel inträffade när Shizuku användes.</string>
 	<string name="title_device_wallpaper_sync">Bakgrund</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">Gör låsskärmen suddig</string>
+	<string name="description_lock_screen_wallpaper_blur">Använd en suddig version av bakgrundsbilden på låsskärmen.</string>
 	<string name="description_device_wallpaper_sync">Använd separata bakgrunder för ljust och mörkt läge. Växling kan ta en stund och påverka prestandan.</string>
 	<string name="action_select_day_wallpaper">Ljust läge:</string>
 	<string name="action_select_night_wallpaper">Mörkt läge:</string>

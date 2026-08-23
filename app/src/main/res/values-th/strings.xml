@@ -94,6 +94,8 @@
 	<string name="shizuku_grant_unexpected">เกิดข้อผิดพลาดที่ไม่คาดคิดขณะใช้ Shizuku</string>
 	<string name="title_device_wallpaper_sync">วอลเปเปอร์</string>
 	<string name="label_beta">Beta</string>
+	<string name="title_lock_screen_wallpaper_blur">เบลอหน้าจอล็อก</string>
+	<string name="description_lock_screen_wallpaper_blur">ใช้เวอร์ชันเบลอของวอลเปเปอร์บนหน้าจอล็อก</string>
 	<string name="description_device_wallpaper_sync">ใช้วอลเปเปอร์แยกสำหรับโหมดสว่างและโหมดมืด การสลับอาจใช้เวลาสักครู่และส่งผลต่อประสิทธิภาพ</string>
 	<string name="action_select_day_wallpaper">โหมดสว่าง:</string>
 	<string name="action_select_night_wallpaper">โหมดมืด:</string>
