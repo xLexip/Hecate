@@ -173,6 +173,7 @@ No. Shizuku is only required once to grant the permission. Once granted, the per
 - androidauthority.com — [**5 of the best new Android apps you need to try this April**](https://www.androidauthority.com/best-new-android-apps-games-april-2026-3653008/)
 - androidauthority.com — [**10 awesome Shizuku apps I use to level up my Android experience**](https://www.androidauthority.com/best-shizuku-apps-android-3659353/)
 - computerworld.com — [**The Android dark mode power-pack: 5 secrets for a smarter screen setup**](https://www.computerworld.com/article/4187935/android-dark-mode-power-pack.html)
+- droidwin.com — [**Switch Dark and Light Mode Based on Surrounding Light Level**](https://droidwin.com/switch-dark-and-light-mode-based-on-surrounding-light-level/)
 - androidinsider.ru — [**Автоматическая тёмная тема. Приложение, которого не хватало годами**](https://androidinsider.ru/obzory-prilozhenij/avtomaticheskaya-tyomnaya-tema-na-android-prilozhenie-kotorogo-ne-hvatalo-godami.html)
 - pcguia.pt — [**App do Dia – Adaptive Theme: Modo Escuro**](https://www.pcguia.pt/2026/04/app-do-dia-adaptive-theme-modo-escuro/)
 - android-zone.fr — [**Adaptive Theme Android: mode clair/sombre automatique**](https://www.android-zone.fr/adaptive-theme-android-mode-clair-sombre-automatique/)
