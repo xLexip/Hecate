@@ -5,7 +5,11 @@
 [![Latest Version](https://img.shields.io/github/v/release/xLexip/Adaptive-Theme?style=flat&logo=github&label=Release)](https://github.com/xLexip/Adaptive-Theme/releases)
 [![Stars](https://img.shields.io/github/stars/xLexip/Adaptive-Theme?style=flat&logo=github&label=Stars)]()
 <a href="https://play.google.com/store/apps/details?id=dev.lexip.hecate">
-<img src="https://img.shields.io/badge/Downloads-17,000+-brightgreen?logo=google-play&logoColor=white" alt="Play Store Download Count 17,000+">
+<img src="https://img.shields.io/badge/Downloads-20,000+-brightgreen?logo=google-play&logoColor=white" alt="Play Store Download Count 20,000+">
+</a>
+<br>
+<a href="https://www.youtube.com/watch?v=8zCZFw_wx-Y">
+  <img src="https://img.shields.io/badge/Demo-YouTube-ff0000?logo=youtube&logoColor=white" alt="Feature-Video on YouTube">
 </a>
 
 Adaptive Theme uses your device’s **ambient light sensor** to intelligently switch between light and **dark theme**, optimizing readability and eye comfort for your current surroundings. 
@@ -70,13 +74,14 @@ you can make dark mode (and light mode) switch with the lighting around you."** 
 
 - **Sensor-driven switching**: Uses the physical ambient light sensor – not a clock or sunset schedule – to intelligently switch the system theme.
 - **Custom lux threshold**: Dial in exactly when the theme flips, or choose a preset (e.g.indoor, outdoor, sunlight).
+- **Wallpaper Theme Sync**: Automatically swap your home and lock screen wallpaper with the system theme changes.
+- **Lock Screen Blur**: Optionally apply a blur effect to your lock screen wallpaper.
 - **Night lock**: Optionally hold dark mode during a fixed time window, e.g. 9 PM – 6 AM.
-- **Wallpaper Theme Sync**: Automatically swap your home and lock screen wallpaper when the system theme switches between light and dark mode.
 - **Battery friendly**: The sensor is only checked once when you turn the screen on. Zero background drain.
-- **50+ languages**: Fully localized for a global audience.
 - **Shizuku support**: Includes native Shizuku integration as one of several setup options.
 - **Material You design**: Dynamic UI that adapts to your system theme and colors.
 - **Quick Settings Tile**: Toggle the service directly from your quick settings.
+- **50+ languages**: Fully localized for a global audience.
 - **Free, open-source, no ads**
 
 ---
@@ -168,6 +173,7 @@ No. Shizuku is only required once to grant the permission. Once granted, the per
 - androidauthority.com — [**This app gives Android the automatic dark mode feature it desperately needs**](https://www.androidauthority.com/automatic-dark-mode-android-adaptive-theme-3650081/)
 - computerworld.com — [**The Android dark mode upgrade you deserve**](https://www.computerworld.com/article/4154561/android-dark-mode-upgrade.html)
 - howtogeek.com — [**I ditched sunrise/sunset dark mode for this Android app (it uses your light sensor)**](https://www.howtogeek.com/i-ditched-sunrisesunset-dark-mode-for-this-android-app-it-uses-your-light-sensor/)
+- tech.yahoo.com — [**How to automatically switch Android themes using your ambient light sensor**](https://tech.yahoo.com/apps/articles/automatically-switch-android-themes-using-193016171.html)
 - heise.de – [**Android-Dunkelmodus: Open-Source-App passt Systemdesign an Umgebungslicht an**](https://www.heise.de/news/Android-Dunkelmodus-Open-Source-App-passt-Systemdesign-an-Umgebungslicht-an-11282658.html)
 - tchgdns.de — [**Adaptive Theme für Android: Dunkelmodus automatisch per Umgebungslicht aktivieren**](https://tchgdns.de/adaptive-theme-fuer-android-dunkelmodus-automatisch-per-umgebungslicht-aktivieren/)
 - androidauthority.com — [**5 of the best new Android apps you need to try this April**](https://www.androidauthority.com/best-new-android-apps-games-april-2026-3653008/)
@@ -177,6 +183,8 @@ No. Shizuku is only required once to grant the permission. Once granted, the per
 - androidinsider.ru — [**Автоматическая тёмная тема. Приложение, которого не хватало годами**](https://androidinsider.ru/obzory-prilozhenij/avtomaticheskaya-tyomnaya-tema-na-android-prilozhenie-kotorogo-ne-hvatalo-godami.html)
 - pcguia.pt — [**App do Dia – Adaptive Theme: Modo Escuro**](https://www.pcguia.pt/2026/04/app-do-dia-adaptive-theme-modo-escuro/)
 - android-zone.fr — [**Adaptive Theme Android: mode clair/sombre automatique**](https://www.android-zone.fr/adaptive-theme-android-mode-clair-sombre-automatique/)
+- android-mt.ouest-france.fr — [**Adaptive Theme : l’app qui adapte le mode sombre à la lumière**](https://android-mt.ouest-france.fr/application/adaptive-theme-lapp-qui-adapte-le-mode-sombre-a-la-lumiere/197809/)
+- saudiandroid.net — [**نظرة على تطبيق Adaptive Theme | للتبديل التلقائي بين الوضع الفاتح والداكن حسب شدة الإضاءة المحيطة**](https://www.saudiandroid.net/2026/03/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-adaptive-theme-%D9%81%D9%8A-%D8%A7%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF.html)
 
 **YouTube Videos**
 
