@@ -720,8 +720,13 @@ class MainViewModel internal constructor(
 					preferences.dayWallpaperUri.isNullOrEmpty() ||
 					preferences.nightWallpaperUri.isNullOrEmpty())
 				) return@withLock
+				if (preferences.lockScreenWallpaperBlurEnabled == enabled) return@withLock
 
 				userPreferencesRepository.updateLockScreenWallpaperBlurEnabled(enabled)
+				Logger.logLockScreenWallpaperBlurToggled(
+					application.applicationContext,
+					enabled = enabled
+				)
 				applyCurrentWallpaper(
 					preferences.copy(
 						lockScreenWallpaperBlurEnabled = enabled
