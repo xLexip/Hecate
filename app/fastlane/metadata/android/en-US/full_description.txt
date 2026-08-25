@@ -1,4 +1,6 @@
-<b>Adaptive Theme</b> switches Android's system-wide theme between light and dark mode according to the ambient brightness around you instead of relying on sunset or a fixed schedule. Use light mode in bright surroundings and dark mode in low light, with the threshold under your control.
+<b>Adaptive Theme</b> switches Android's system-wide theme between light and dark mode according to the ambient light sensor instead of relying on sunset or a fixed schedule. Use light mode in bright surroundings and dark mode in low light, with the threshold under your control.
+
+It can also switch your wallpaper to match the active theme.
 
 <b>Features</b>
 
@@ -6,7 +8,8 @@
 <li>Uses the device's physical ambient light sensor</li>
 <li>Custom lux threshold and presets for indoor, outdoor, and daylight conditions</li>
 <li>Wallpaper Theme Sync for separate light and dark home and lock screen wallpapers</li>
-<li>Optional Night Lock to keep dark mode active during a chosen time period</li>
+<li>Optional blur effect for the lock screen wallpaper</li>
+<li>Optional night lock to keep dark mode active during a chosen time period</li>
 <li>Quick Settings tile for convenient control</li>
 <li>Material You interface and more than 50 languages</li>
 </ul>

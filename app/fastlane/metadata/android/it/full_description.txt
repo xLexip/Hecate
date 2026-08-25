@@ -1,4 +1,6 @@
-<b>Adaptive Theme</b> alterna la modalità chiara e quella scura dell'intero sistema Android in base alla luminosità dell'ambiente, senza affidarsi al tramonto o a un orario fisso. Usa la modalità chiara negli ambienti luminosi e quella scura quando c'è poca luce, con una soglia decisa da te.
+<b>Adaptive Theme</b> alterna la modalità chiara e quella scura dell'intero sistema Android in base al sensore di luce ambientale, senza affidarsi al tramonto o a un orario fisso. Usa la modalità chiara negli ambienti luminosi e quella scura quando c'è poca luce, con una soglia decisa da te.
+
+Può anche cambiare lo sfondo per adattarlo al tema attivo.
 
 <b>Funzionalità</b>
 
@@ -6,6 +8,7 @@
 <li>Utilizza il sensore fisico di luce ambientale del dispositivo</li>
 <li>Soglia in lux personalizzabile e valori preimpostati per interni, esterni e luce diurna intensa</li>
 <li>Sincronizzazione di sfondi chiari e scuri separati per la schermata Home e quella di blocco</li>
+<li>Effetto sfocato facoltativo per lo sfondo della schermata di blocco</li>
 <li>Blocco notturno facoltativo per mantenere la modalità scura nell'intervallo di tempo scelto</li>
 <li>Riquadro nelle Impostazioni rapide per un controllo immediato</li>
 <li>Interfaccia Material You e oltre 50 lingue</li>

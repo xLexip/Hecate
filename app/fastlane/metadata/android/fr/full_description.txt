@@ -1,4 +1,6 @@
-<b>Adaptive Theme</b> fait basculer l'ensemble du système Android entre les modes clair et sombre en fonction de la luminosité ambiante, sans dépendre du coucher du soleil ni d'horaires fixes. Profitez du mode clair lorsque l'environnement est lumineux et du mode sombre lorsque la lumière baisse, selon un seuil que vous définissez.
+<b>Adaptive Theme</b> fait basculer l'ensemble du système Android entre les modes clair et sombre en fonction du capteur de luminosité ambiante, sans dépendre du coucher du soleil ni d'horaires fixes. Profitez du mode clair lorsque l'environnement est lumineux et du mode sombre lorsque la lumière baisse, selon un seuil que vous définissez.
+
+Il peut également changer le fond d'écran pour l'adapter au thème actif.
 
 <b>Fonctionnalités</b>
 
@@ -6,6 +8,7 @@
 <li>Utilise le capteur de luminosité physique de l'appareil</li>
 <li>Seuil en lux personnalisable et préréglages pour l'intérieur, l'extérieur et la lumière du jour</li>
 <li>Synchronisation de fonds d'écran clairs et sombres distincts pour l'accueil et l'écran de verrouillage</li>
+<li>Effet de flou facultatif pour le fond d'écran de verrouillage</li>
 <li>Verrouillage nocturne facultatif pour maintenir le mode sombre pendant la plage horaire choisie</li>
 <li>Tuile de réglages rapides pour un contrôle pratique</li>
 <li>Interface Material You et plus de 50 langues</li>
