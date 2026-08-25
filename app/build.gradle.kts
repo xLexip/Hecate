@@ -192,7 +192,7 @@ tasks.register<VerifyJacocoCoverageTask>("verifyFossDebugCoverage") {
 tasks.register<VerifyFossStoreMetadataTask>("verifyFossStoreMetadata") {
     group = "verification"
     description = "Verifies that upstream F-Droid metadata is complete and within supported limits."
-    metadataDirectory.set(layout.projectDirectory.dir("src/foss/fastlane/metadata/android"))
+    metadataDirectory.set(layout.projectDirectory.dir("fastlane/metadata/android"))
     expectedVersionCode.set(android.defaultConfig.versionCode)
 }
 
