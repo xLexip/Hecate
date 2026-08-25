@@ -42,6 +42,7 @@ android {
     namespace = "dev.lexip.hecate"
     compileSdk = 37
     buildToolsVersion = "36.0.0"
+    ndkVersion = "28.2.13676358" // Needs to stay aligned with the F-Droid recipe
 
     defaultConfig {
         applicationId = "dev.lexip.hecate"
