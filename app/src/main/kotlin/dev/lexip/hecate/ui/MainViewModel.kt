@@ -781,7 +781,10 @@ class MainViewModel internal constructor(
 	}
 
 	private fun startBroadcastReceiverService() {
-		serviceController.start()
+		serviceController.start(
+			enableMonitoring = true,
+			evaluateImmediately = true
+		)
 	}
 
 	private fun stopBroadcastReceiverService() {
