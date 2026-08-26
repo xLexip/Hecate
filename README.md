@@ -142,7 +142,7 @@ Adaptive Theme works on Android 14 and above.
 By design, the theme only switches immediately after the screen turns on and when the proximity sensor is uncovered. This prevents flicker, saves battery, and avoids interrupting an active app session. In addition, the target theme (and wallpaper, if enabled) is applied once when you toggle the service on via the switch in the app or the quick-settings tile.
 
 **How does Wallpaper Theme Sync work?**
-Choose a light and a dark wallpaper in the app. When Adaptive Theme changes the system theme, it replaces both the home screen and lock screen wallpapers with the matching image. The change can take a moment and may briefly affect performance, especially with large images.
+Choose a light and a dark wallpaper in the app. When Adaptive Theme changes the system theme, it replaces both the home screen and lock screen wallpapers with the matching image. The change can take a moment and may briefly affect performance, especially with large images. The wallpaper is also switched when you or another app toggle the system theme manually.
 
 **Does it work on tablets?**
 No. Due to a technical limitation, Adaptive Theme is currently limited to smartphones.

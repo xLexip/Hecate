@@ -20,6 +20,7 @@ import android.app.Service
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.ServiceInfo
+import android.content.res.Configuration
 import android.os.IBinder
 import android.provider.Settings
 import android.util.Log
@@ -64,6 +65,7 @@ class BroadcastReceiverService : Service() {
 	private lateinit var lightSensorManager: LightSensorManager
 	private lateinit var proximitySensorManager: ProximitySensorManager
 	private lateinit var monitoringPreferencesCoordinator: MonitoringPreferencesCoordinator
+	private val nightModeChangeTracker = NightModeChangeTracker()
 
 	// Service-bound scope
 	private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
@@ -94,6 +96,7 @@ class BroadcastReceiverService : Service() {
 
 		Log.i(TAG, "Service starting...")
 		initializeUtils()
+		nightModeChangeTracker.initialize(resources.configuration.uiMode)
 
 		// Start foreground immediately to comply with O+ requirements
 		createNotificationChannel()
@@ -157,6 +160,15 @@ class BroadcastReceiverService : Service() {
 		}
 
 		return START_STICKY
+	}
+
+	override fun onConfigurationChanged(newConfig: Configuration) {
+		super.onConfigurationChanged(newConfig)
+		val useDarkTheme = nightModeChangeTracker.onConfigurationChanged(newConfig.uiMode)
+			?: return
+		if (this::adaptiveAppearanceHandler.isInitialized) {
+			adaptiveAppearanceHandler.syncWallpaperToTheme(useDarkTheme)
+		}
 	}
 
 	private suspend fun resetLegacyWallpaperSelectionIfNeeded(
@@ -321,4 +333,27 @@ class BroadcastReceiverService : Service() {
 		}
 	}
 
+}
+
+internal class NightModeChangeTracker {
+	private var lastNightMode: Int? = null
+
+	fun initialize(uiMode: Int) {
+		if (lastNightMode == null) {
+			lastNightMode = uiMode and Configuration.UI_MODE_NIGHT_MASK
+		}
+	}
+
+	fun onConfigurationChanged(uiMode: Int): Boolean? {
+		val newNightMode = uiMode and Configuration.UI_MODE_NIGHT_MASK
+		val previousNightMode = lastNightMode
+		lastNightMode = newNightMode
+		if (previousNightMode == null || previousNightMode == newNightMode) return null
+
+		return when (newNightMode) {
+			Configuration.UI_MODE_NIGHT_YES -> true
+			Configuration.UI_MODE_NIGHT_NO -> false
+			else -> null
+		}
+	}
 }

@@ -64,4 +64,44 @@ class WallpaperUpdateSchedulerTest {
 
 		assertEquals(listOf(false, true), appliedThemes)
 	}
+
+	@Test
+	fun `does not repeat the last successful wallpaper update`() = runTest {
+		var applyCalls = 0
+		val scheduler = WallpaperUpdateScheduler(
+			scope = this,
+			dispatcher = StandardTestDispatcher(testScheduler),
+			applyWallpaper = { _, _, _, _ ->
+				applyCalls++
+				true
+			}
+		)
+
+		scheduler.schedule(isDark = true, dayUri = "day", nightUri = "night")
+		advanceUntilIdle()
+		scheduler.schedule(isDark = true, dayUri = "day", nightUri = "night")
+		advanceUntilIdle()
+
+		assertEquals(1, applyCalls)
+	}
+
+	@Test
+	fun `allows retry after a failed wallpaper update`() = runTest {
+		var applyCalls = 0
+		val scheduler = WallpaperUpdateScheduler(
+			scope = this,
+			dispatcher = StandardTestDispatcher(testScheduler),
+			applyWallpaper = { _, _, _, _ ->
+				applyCalls++
+				applyCalls > 1
+			}
+		)
+
+		scheduler.schedule(isDark = false, dayUri = "day", nightUri = "night")
+		advanceUntilIdle()
+		scheduler.schedule(isDark = false, dayUri = "day", nightUri = "night")
+		advanceUntilIdle()
+
+		assertEquals(2, applyCalls)
+	}
 }
