@@ -1,0 +1,5 @@
+• The target wallpaper is now also applied when the system theme is switched manually (#187).
+• Adaptive Theme now applies the target theme and wallpaper immediately when enabled from the app or Quick Settings tile (#192).
+• Improved wallpaper update reliability and fixed the brightness indicator for 1 lux measurements.
+• Reduced memory usage when migrating selected wallpaper images.
+• Minor test, build, dependency, and documentation improvements.

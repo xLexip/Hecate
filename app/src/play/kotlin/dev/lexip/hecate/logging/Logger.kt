@@ -250,6 +250,14 @@ object Logger {
 		}
 	}
 
+	fun logLockScreenWallpaperBlurToggled(context: Context, enabled: Boolean) {
+		ifAllowed {
+			analytics(context).logEvent("lock_wallpaper_blur_toggled") {
+				param("enabled", if (enabled) 1L else 0L)
+			}
+		}
+	}
+
 	fun logWallpaperPicked(context: Context, mode: String) {
 		ifAllowed {
 			analytics(context).logEvent("wallpaper_picked") {

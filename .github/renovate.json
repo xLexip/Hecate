@@ -30,6 +30,16 @@
 			"matchUpdateTypes": [
 				"minor"
 			]
+		},
+		{
+			"groupName": "Android Gradle Plugin",
+			"groupSlug": "android-gradle-plugin",
+			"matchPackageNames": [
+				"com.android.application",
+				"com.android.application:com.android.application.gradle.plugin",
+				"com.android.tools.build:gradle",
+				"ndk*"
+			]
 		}
 	]
 }

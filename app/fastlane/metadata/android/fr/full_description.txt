@@ -1,0 +1,40 @@
+<b>Adaptive Theme</b> fait basculer l'ensemble du système Android entre les modes clair et sombre en fonction du capteur de luminosité ambiante, sans dépendre du coucher du soleil ni d'horaires fixes. Profitez du mode clair lorsque l'environnement est lumineux et du mode sombre lorsque la lumière baisse, selon un seuil que vous définissez.
+
+Il peut également changer le fond d'écran pour l'adapter au thème actif.
+
+<b>Fonctionnalités</b>
+
+<ul>
+<li>Utilise le capteur de luminosité physique de l'appareil</li>
+<li>Seuil en lux personnalisable et préréglages pour l'intérieur, l'extérieur et la lumière du jour</li>
+<li>Synchronisation de fonds d'écran clairs et sombres distincts pour l'accueil et l'écran de verrouillage</li>
+<li>Effet de flou facultatif pour le fond d'écran de verrouillage</li>
+<li>Verrouillage nocturne facultatif pour maintenir le mode sombre pendant la plage horaire choisie</li>
+<li>Tuile de réglages rapides pour un contrôle pratique</li>
+<li>Interface Material You et plus de 50 langues</li>
+</ul>
+
+<b>Une conception économe</b>
+
+Le capteur est consulté brièvement après l'allumage de l'écran au lieu d'être surveillé en permanence. Avant de changer le thème, Adaptive Theme vérifie que le capteur n'est pas masqué par une main ou une poche. Le changement intervient ainsi à l'allumage de l'écran, sans vous interrompre lorsque vous utilisez une autre application.
+
+<b>Configuration unique</b>
+
+Android n'autorise normalement pas les applications ordinaires à modifier des réglages système protégés tels que le thème. Adaptive Theme nécessite donc l'octroi unique de l'autorisation <b>WRITE_SECURE_SETTINGS</b>. Celle-ci ne donne pas d'accès root et ne permet pas de lire vos données personnelles. Adaptive Theme l'utilise uniquement pour basculer le système entre les modes clair et sombre. Elle est révoquée lorsque l'application est désinstallée.
+
+L'assistant de configuration propose plusieurs méthodes :
+
+<ul>
+<li>WebADB depuis un site web simple ouvert sur un ordinateur ou un second appareil Android, sans installer ADB</li>
+<li>Shizuku et ses variantes compatibles, nécessaires une seule fois pour accorder l'autorisation</li>
+<li>Root sur les appareils compatibles</li>
+<li>Une commande ADB manuelle : adb shell pm grant dev.lexip.hecate android.permission.WRITE_SECURE_SETTINGS</li>
+</ul>
+
+<b>Informations complémentaires</b>
+
+Adaptive Theme nécessite Android 14 ou une version ultérieure. Les tablettes ne sont pas prises en charge pour le moment.
+
+La version FOSS est publiée sous licence GPL-3.0 et ne contient ni publicité, ni analyse d'utilisation, ni rapport de plantage, ni traqueur, ni bibliothèque propriétaire.
+
+Pour obtenir de l'aide et davantage d'informations, consultez le <a href="https://github.com/xLexip/Adaptive-Theme">README et la FAQ</a>.

@@ -35,7 +35,11 @@ enum class ThemeSwitchSkipReason(val analyticsValue: String) {
 
 /** Boundary around the privileged system-theme implementation. */
 fun interface ThemeController {
-	fun setDarkTheme(enabled: Boolean, screenOnProximityResult: ScreenOnProximityResult)
+	fun setDarkTheme(
+		enabled: Boolean,
+		screenOnProximityResult: ScreenOnProximityResult,
+		syncWallpaperWhenThemeUnchanged: Boolean
+	)
 }
 
 class DarkThemeController(
@@ -43,7 +47,8 @@ class DarkThemeController(
 ) : ThemeController {
 	override fun setDarkTheme(
 		enabled: Boolean,
-		screenOnProximityResult: ScreenOnProximityResult
+		screenOnProximityResult: ScreenOnProximityResult,
+		syncWallpaperWhenThemeUnchanged: Boolean
 	) {
 		handler.setDarkTheme(enabled, screenOnProximityResult) { }
 	}
@@ -54,8 +59,13 @@ class AdaptiveAppearanceController(
 ) : ThemeController {
 	override fun setDarkTheme(
 		enabled: Boolean,
-		screenOnProximityResult: ScreenOnProximityResult
+		screenOnProximityResult: ScreenOnProximityResult,
+		syncWallpaperWhenThemeUnchanged: Boolean
 	) {
-		handler.applyAppearance(enabled, screenOnProximityResult) { }
+		handler.applyAppearance(
+			useDarkTheme = enabled,
+			screenOnProximityResult = screenOnProximityResult,
+			syncWallpaperWhenThemeUnchanged = syncWallpaperWhenThemeUnchanged
+		) { }
 	}
 }

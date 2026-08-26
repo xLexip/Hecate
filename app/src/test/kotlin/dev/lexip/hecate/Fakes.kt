@@ -173,11 +173,13 @@ class FakeAdaptiveThemeServiceController : AdaptiveThemeServiceController {
 	var startCalls = 0
 	var stopCalls = 0
 	var lastEnableMonitoring = false
+	var lastEvaluateImmediately = false
 	var startFailure: Exception? = null
 
-	override fun start(enableMonitoring: Boolean) {
+	override fun start(enableMonitoring: Boolean, evaluateImmediately: Boolean) {
 		startCalls++
 		lastEnableMonitoring = enableMonitoring
+		lastEvaluateImmediately = evaluateImmediately
 		startFailure?.let { throw it }
 	}
 

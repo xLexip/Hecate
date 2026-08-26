@@ -58,6 +58,7 @@ class QuickSettingsToggleCoordinatorTest {
 		assertEquals(QuickSettingsToggleResult.Enabled, result)
 		assertEquals(1, service.startCalls)
 		assertTrue(service.lastEnableMonitoring)
+		assertTrue(service.lastEvaluateImmediately)
 		assertEquals(1, preferences.thresholdDefaultCalls)
 		assertTrue(preferences.current.adaptiveThemeEnabled)
 	}

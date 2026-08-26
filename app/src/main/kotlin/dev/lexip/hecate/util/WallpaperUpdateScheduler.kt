@@ -28,6 +28,8 @@ internal class WallpaperUpdateScheduler(
 ) {
 	private val lock = Any()
 	private var pendingRequest: WallpaperRequest? = null
+	private var activeRequest: WallpaperRequest? = null
+	private var lastSuccessfulRequest: WallpaperRequest? = null
 	private var worker: Job? = null
 
 	fun schedule(
@@ -36,8 +38,13 @@ internal class WallpaperUpdateScheduler(
 		nightUri: String?,
 		lockScreenWallpaperBlurEnabled: Boolean
 	) {
+		val request = WallpaperRequest(isDark, dayUri, nightUri, lockScreenWallpaperBlurEnabled)
 		synchronized(lock) {
-			pendingRequest = WallpaperRequest(isDark, dayUri, nightUri, lockScreenWallpaperBlurEnabled)
+			if (request == pendingRequest ||
+				request == activeRequest ||
+				request == lastSuccessfulRequest
+			) return
+			pendingRequest = request
 			if (worker?.isActive != true) {
 				worker = scope.launch(dispatcher) { drainRequests() }
 			}
@@ -50,20 +57,31 @@ internal class WallpaperUpdateScheduler(
 	private suspend fun drainRequests() {
 		while (true) {
 			val request = synchronized(lock) {
-				pendingRequest.also { pendingRequest = null }
+				pendingRequest.also {
+					pendingRequest = null
+					activeRequest = it
+				}
 			} ?: return
-			applyWallpaper(
-				request.isDark,
-				request.dayUri,
-				request.nightUri,
-				request.lockScreenWallpaperBlurEnabled
-			)
-			synchronized(lock) {
-				if (pendingRequest == null) {
-					worker = null
-					return
+			var succeeded = false
+			var shouldStop = false
+			try {
+				succeeded = applyWallpaper(
+					request.isDark,
+					request.dayUri,
+					request.nightUri,
+					request.lockScreenWallpaperBlurEnabled
+				)
+			} finally {
+				synchronized(lock) {
+					activeRequest = null
+					if (succeeded) lastSuccessfulRequest = request
+					if (pendingRequest == null) {
+						worker = null
+						shouldStop = true
+					}
 				}
 			}
+			if (shouldStop) return
 		}
 	}
 }

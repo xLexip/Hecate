@@ -1,1 +1,0 @@
-Switch Android's Dark Mode with your ambient light sensor

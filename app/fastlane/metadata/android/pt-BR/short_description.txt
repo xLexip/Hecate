@@ -1,0 +1,1 @@
+Alterne automaticamente tema escuro e papéis de parede pela luz ambiente

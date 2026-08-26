@@ -78,6 +78,7 @@ you can make dark mode (and light mode) switch with the lighting around you."** 
 - **Lock Screen Blur**: Optionally apply a blur effect to your lock screen wallpaper.
 - **Night lock**: Optionally hold dark mode during a fixed time window, e.g. 9 PM – 6 AM.
 - **Battery friendly**: The sensor is only checked once when you turn the screen on. Zero background drain.
+- **Pocket detection**: Prevents theme switching when the proximity sensor is covered.
 - **Shizuku support**: Includes native Shizuku integration as one of several setup options.
 - **Material You design**: Dynamic UI that adapts to your system theme and colors.
 - **Quick Settings Tile**: Toggle the service directly from your quick settings.
@@ -92,6 +93,7 @@ To avoid screen flicker and unnecessary background work, Adaptive Theme follows 
 
 - **Screen-on trigger** — The light sensor is only sampled right after the screen turns on, not continuously.
 - **Obstruction check** — Validates that the sensor is not covered (e.g. by a hand or pocket).
+- **Battery Saver check** — The theme may not switch while Battery Saver is active.
 - **Instant apply** — The theme is switched before you start interacting.
 
 This design ensures mid-session theme changes never interrupt your use, since some apps handle live theme changes poorly.
@@ -137,10 +139,10 @@ Issues, questions, and feature ideas are welcome — please [open an issue](http
 Adaptive Theme works on Android 14 and above.
 
 **Why didn't the theme change right away?**
-By design, the theme only switches immediately after the screen turns on. This prevents flicker, saves battery, and avoids interrupting an active app session.
+By design, the theme only switches immediately after the screen turns on and when the proximity sensor is uncovered. This prevents flicker, saves battery, and avoids interrupting an active app session. In addition, the target theme (and wallpaper, if enabled) is applied once when you toggle the service on via the switch in the app or the quick-settings tile.
 
 **How does Wallpaper Theme Sync work?**
-Choose a light and a dark wallpaper in the app. When Adaptive Theme changes the system theme, it replaces both the home screen and lock screen wallpapers with the matching image. The change can take a moment and may briefly affect performance, especially with large images.
+Choose a light and a dark wallpaper in the app. When Adaptive Theme changes the system theme, it replaces both the home screen and lock screen wallpapers with the matching image. The change can take a moment and may briefly affect performance, especially with large images. The wallpaper is also switched when you or another app toggle the system theme manually.
 
 **Does it work on tablets?**
 No. Due to a technical limitation, Adaptive Theme is currently limited to smartphones.

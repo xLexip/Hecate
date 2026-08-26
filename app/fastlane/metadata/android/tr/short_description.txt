@@ -1,0 +1,1 @@
+Koyu tema ve duvar kağıtlarını ortam ışığı sensörüyle otomatik değiştirin

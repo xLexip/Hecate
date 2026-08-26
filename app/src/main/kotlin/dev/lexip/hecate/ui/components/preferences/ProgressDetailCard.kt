@@ -106,13 +106,13 @@ fun ProgressDetailCard(
 	}
 }
 
-private fun computeActiveSegmentIndex(luxSteps: List<Float>, currentLux: Float): Int {
+internal fun computeActiveSegmentIndex(luxSteps: List<Float>, currentLux: Float): Int {
 	val n = luxSteps.size
 	if (n < 2) return -1
 	var idx = -1
 	for (i in 0 until n - 1) {
 		val upper = luxSteps.getOrNull(i + 1) ?: continue
-		if (currentLux > upper) idx = i
+		if (currentLux >= upper) idx = i
 	}
 	return idx
 }

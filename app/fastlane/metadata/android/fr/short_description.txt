@@ -1,0 +1,1 @@
+Basculez automatiquement le thème sombre et les fonds via le capteur de lumière

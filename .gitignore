@@ -1,4 +1,5 @@
 # Gradle files
+.gradle*
 .gradle/
 .gradle-user/
 build/

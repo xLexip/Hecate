@@ -153,6 +153,8 @@ class MainViewModelTest {
 			assertTrue(preferences.current.adaptiveThemeEnabled)
 			assertEquals(1, preferences.thresholdDefaultCalls)
 			assertEquals(1, serviceController.startCalls)
+			assertTrue(serviceController.lastEnableMonitoring)
+			assertTrue(serviceController.lastEvaluateImmediately)
 
 			assertTrue(viewModel.onServiceToggleRequested(false, hasPermission = true))
 			advanceUntilIdle()

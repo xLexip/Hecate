@@ -10,7 +10,7 @@ buildscript {
         }
         dependencies {
             classpath("com.google.gms:google-services:4.5.0")
-            classpath("com.google.firebase:firebase-crashlytics-gradle:3.0.7")
+            classpath("com.google.firebase:firebase-crashlytics-gradle:3.0.8")
         }
     }
 }
@@ -42,13 +42,14 @@ android {
     namespace = "dev.lexip.hecate"
     compileSdk = 37
     buildToolsVersion = "36.0.0"
+    ndkVersion = "28.2.13676358" // Needs to stay aligned with the F-Droid recipe
 
     defaultConfig {
         applicationId = "dev.lexip.hecate"
         minSdk = 34
         targetSdk = 36
-        versionCode = 133
-        versionName = "2.4.0"
+        versionCode = 136
+        versionName = "2.5.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -191,7 +192,7 @@ tasks.register<VerifyJacocoCoverageTask>("verifyFossDebugCoverage") {
 tasks.register<VerifyFossStoreMetadataTask>("verifyFossStoreMetadata") {
     group = "verification"
     description = "Verifies that upstream F-Droid metadata is complete and within supported limits."
-    metadataDirectory.set(layout.projectDirectory.dir("src/foss/fastlane/metadata/android"))
+    metadataDirectory.set(layout.projectDirectory.dir("fastlane/metadata/android"))
     expectedVersionCode.set(android.defaultConfig.versionCode)
 }
 

@@ -1,0 +1,1 @@
+Auto-switch dark theme & wallpapers using the ambient light sensor

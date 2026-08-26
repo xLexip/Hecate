@@ -41,7 +41,10 @@ class QuickSettingsToggleCoordinator(
 		val enable = !currentlyEnabled
 		if (enable) {
 			try {
-				serviceController.start(enableMonitoring = true)
+				serviceController.start(
+					enableMonitoring = true,
+					evaluateImmediately = true
+				)
 			} catch (exception: Exception) {
 				return QuickSettingsToggleResult.StartFailed(exception)
 			}

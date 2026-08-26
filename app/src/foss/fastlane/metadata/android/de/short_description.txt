@@ -1,1 +1,0 @@
-Wechselt Hell- und Dunkelmodus per Umgebungslichtsensor

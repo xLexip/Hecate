@@ -141,7 +141,7 @@ internal class WallpaperImagePreprocessor(
 		val destination = blurredLockScreenWallpaperFile(slot)
 		if (destination.isReadableBitmap()) return true
 		try {
-			val bitmap = BitmapFactory.decodeFile(source.absolutePath)
+			val bitmap = decodeBoundedBitmap(source)
 			if (bitmap == null) {
 				Log.w(TAG, "Could not decode existing ${slot.name.lowercase()} wallpaper for blur migration")
 				return false
@@ -158,6 +158,26 @@ internal class WallpaperImagePreprocessor(
 			Log.w(TAG, "Failed to migrate ${slot.name.lowercase()} blurred lock wallpaper", e)
 		}
 		return destination.isReadableBitmap()
+	}
+
+	private fun decodeBoundedBitmap(source: File): Bitmap? {
+		val bounds = BitmapFactory.Options().also { options ->
+			options.inJustDecodeBounds = true
+			BitmapFactory.decodeFile(source.absolutePath, options)
+		}
+		if (bounds.outWidth <= 0 || bounds.outHeight <= 0) return null
+
+		val target = targetDimensions().fitPixelBudget()
+		val decodeOptions = BitmapFactory.Options().apply {
+			inSampleSize = calculateDecodeSampleSize(
+				sourceWidth = bounds.outWidth,
+				sourceHeight = bounds.outHeight,
+				targetWidth = target.width,
+				targetHeight = target.height,
+				maxDecodePixels = MAX_PREPARED_PIXELS
+			)
+		}
+		return BitmapFactory.decodeFile(source.absolutePath, decodeOptions)
 	}
 
 	private fun appPrivateWallpaperFile(uri: Uri): File? {

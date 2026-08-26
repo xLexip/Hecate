@@ -131,6 +131,10 @@ object Logger {
 		// No-op for FOSS build
 	}
 
+	fun logLockScreenWallpaperBlurToggled(context: Context, enabled: Boolean) {
+		// No-op for FOSS build
+	}
+
 	fun logWallpaperPicked(context: Context, mode: String) {
 		// No-op for FOSS build
 	}

@@ -70,6 +70,42 @@ class AdaptiveAppearanceHandlerTest {
 	}
 
 	@Test
+	fun `immediate evaluation applies wallpaper when theme is already correct`() {
+		var appliedTheme: Boolean? = null
+		val handler = AdaptiveAppearanceHandler(
+			setDarkTheme = { _, _, onComplete ->
+				onComplete(DarkThemeChangeResult(succeeded = true, changed = false))
+			},
+			scheduleWallpaperForTheme = { isDark, _, _, _ -> appliedTheme = isDark }
+		)
+		handler.configureWallpaperSync(true, DAY_WALLPAPER_URI, NIGHT_WALLPAPER_URI)
+
+		handler.applyAppearance(
+			useDarkTheme = true,
+			screenOnProximityResult = ScreenOnProximityResult.SENSOR_UNAVAILABLE,
+			syncWallpaperWhenThemeUnchanged = true
+		)
+
+		assertEquals(true, appliedTheme)
+	}
+
+	@Test
+	fun `manual theme change synchronizes wallpaper without changing theme`() {
+		var themeChangeCalls = 0
+		var appliedTheme: Boolean? = null
+		val handler = AdaptiveAppearanceHandler(
+			setDarkTheme = { _, _, _ -> themeChangeCalls++ },
+			scheduleWallpaperForTheme = { isDark, _, _, _ -> appliedTheme = isDark }
+		)
+		handler.configureWallpaperSync(true, DAY_WALLPAPER_URI, NIGHT_WALLPAPER_URI)
+
+		handler.syncWallpaperToTheme(useDarkTheme = false)
+
+		assertEquals(0, themeChangeCalls)
+		assertEquals(false, appliedTheme)
+	}
+
+	@Test
 	fun `does not apply wallpaper when theme change fails`() {
 		var wallpaperApplied = false
 		val handler = createHandler(

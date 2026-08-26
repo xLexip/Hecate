@@ -1,0 +1,1 @@
+Cambia automaticamente tema scuro e sfondi col sensore di luce ambientale
