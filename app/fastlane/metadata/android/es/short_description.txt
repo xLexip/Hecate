@@ -1,1 +1,1 @@
-Cambia entre modo claro y oscuro con el sensor de luz ambiental
+Cambia automáticamente el tema oscuro y fondos con el sensor de luz ambiental

@@ -1,1 +1,1 @@
-Ortam ışığı sensörüyle açık ve koyu mod arasında geçin
+Koyu tema ve duvar kağıtlarını ortam ışığı sensörüyle otomatik değiştirin

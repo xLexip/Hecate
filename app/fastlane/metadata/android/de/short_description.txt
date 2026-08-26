@@ -1,1 +1,1 @@
-Wechselt Hell- und Dunkelmodus per Umgebungslichtsensor
+Dark Mode & Hintergrund automatisch per Lichtsensor wechseln

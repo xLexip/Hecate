@@ -1,1 +1,1 @@
-Alterna modalità chiara e scura con il sensore di luce ambientale
+Cambia automaticamente tema scuro e sfondi col sensore di luce ambientale

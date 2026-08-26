@@ -1,1 +1,1 @@
-Switch Android's Dark Mode with your ambient light sensor
+Auto-switch dark theme & wallpapers using the ambient light sensor

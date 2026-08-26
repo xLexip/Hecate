@@ -1,1 +1,1 @@
-Alterne entre modos claro e escuro pelo sensor de luz ambiente
+Alterne automaticamente tema escuro e papéis de parede pela luz ambiente
