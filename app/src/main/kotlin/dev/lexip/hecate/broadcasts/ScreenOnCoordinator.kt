@@ -44,12 +44,14 @@ internal class ScreenOnCoordinator(
 	private var nextCycleId = 0L
 	private var activeCycleId: Long? = null
 	private var proximityReadingCount = 0
+	private var syncWallpaperWhenThemeUnchanged = false
 	private var proximityInitialTimeout: ScheduledAction? = null
 	private var proximityGraceTimeout: ScheduledAction? = null
 	private var lightReadingTimeout: ScheduledAction? = null
 	private var skipReporter = NO_OP_SKIP_REPORTER
 
 	fun onScreenOn(
+		syncWallpaperWhenThemeUnchanged: Boolean = false,
 		onThemeSwitchSkipped: (
 			reason: ThemeSwitchSkipReason,
 			screenOnProximityResult: ScreenOnProximityResult
@@ -59,6 +61,7 @@ internal class ScreenOnCoordinator(
 
 		val cycleId = ++nextCycleId
 		activeCycleId = cycleId
+		this.syncWallpaperWhenThemeUnchanged = syncWallpaperWhenThemeUnchanged
 		skipReporter = onThemeSwitchSkipped
 
 		if (!proximitySensor.hasProximitySensor) {
@@ -108,6 +111,7 @@ internal class ScreenOnCoordinator(
 		proximityReadingPending = false
 		lightReadingPending = false
 		proximityReadingCount = 0
+		syncWallpaperWhenThemeUnchanged = false
 		skipReporter = NO_OP_SKIP_REPORTER
 	}
 
@@ -183,7 +187,8 @@ internal class ScreenOnCoordinator(
 							nightEndMinutes = nightEndMinutes,
 							nowMinutes = minuteProvider.currentMinutes()
 						),
-						screenOnProximityResult
+						screenOnProximityResult,
+						syncWallpaperWhenThemeUnchanged
 					)
 				} finally {
 					finishCycle(cycleId)
@@ -244,6 +249,7 @@ internal class ScreenOnCoordinator(
 		cancelTimeouts()
 		activeCycleId = null
 		proximityReadingCount = 0
+		syncWallpaperWhenThemeUnchanged = false
 		skipReporter = NO_OP_SKIP_REPORTER
 	}
 

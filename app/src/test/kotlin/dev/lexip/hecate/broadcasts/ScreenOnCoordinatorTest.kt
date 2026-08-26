@@ -28,7 +28,7 @@ class ScreenOnCoordinatorTest {
 		val proximity = FakeProximitySensor(hasProximitySensor = false)
 		val light = FakeSensor()
 		var requestedTheme: Pair<Boolean, ScreenOnProximityResult>? = null
-		val coordinator = coordinator(proximity, light) { enabled, result ->
+		val coordinator = coordinator(proximity, light) { enabled, result, _ ->
 			requestedTheme = enabled to result
 		}
 
@@ -41,12 +41,29 @@ class ScreenOnCoordinatorTest {
 	}
 
 	@Test
+	fun immediateEvaluationRequestsWallpaperSyncWhenThemeIsUnchanged() {
+		val proximity = FakeProximitySensor(hasProximitySensor = false)
+		val light = FakeSensor()
+		val wallpaperSyncRequests = mutableListOf<Boolean>()
+		val coordinator = coordinator(proximity, light) { _, _, syncWallpaper ->
+			wallpaperSyncRequests += syncWallpaper
+		}
+
+		coordinator.onScreenOn(syncWallpaperWhenThemeUnchanged = true)
+		light.emit(25f)
+		coordinator.onScreenOn()
+		light.emit(25f)
+
+		assertEquals(listOf(true, false), wallpaperSyncRequests)
+	}
+
+	@Test
 	fun coveredDeviceWaitsForUncoveredEventBeforeApplyingTheme() {
 		val proximity = FakeProximitySensor(maximumRange = 5f)
 		val light = FakeSensor()
 		val scheduler = FakeDelayedActionScheduler()
 		var requestedTheme: Pair<Boolean, ScreenOnProximityResult>? = null
-		val coordinator = coordinator(proximity, light, scheduler) { enabled, result ->
+		val coordinator = coordinator(proximity, light, scheduler) { enabled, result, _ ->
 			requestedTheme = enabled to result
 		}
 
@@ -67,7 +84,7 @@ class ScreenOnCoordinatorTest {
 		val light = FakeSensor()
 		val scheduler = FakeDelayedActionScheduler()
 		var skipped: Pair<ThemeSwitchSkipReason, ScreenOnProximityResult>? = null
-		val coordinator = coordinator(proximity, light, scheduler) { _, _ -> }
+		val coordinator = coordinator(proximity, light, scheduler) { _, _, _ -> }
 
 		coordinator.onScreenOn { reason, result -> skipped = reason to result }
 		proximity.emit(0f)
@@ -87,7 +104,7 @@ class ScreenOnCoordinatorTest {
 		val proximity = FakeProximitySensor(maximumRange = 1f)
 		val light = FakeSensor()
 		var requestedResult: ScreenOnProximityResult? = null
-		val coordinator = coordinator(proximity, light) { _, result ->
+		val coordinator = coordinator(proximity, light) { _, result, _ ->
 			requestedResult = result
 		}
 
@@ -103,7 +120,7 @@ class ScreenOnCoordinatorTest {
 		val proximity = FakeProximitySensor(registrationSucceeds = false)
 		val light = FakeSensor()
 		var skipped: Pair<ThemeSwitchSkipReason, ScreenOnProximityResult>? = null
-		val coordinator = coordinator(proximity, light) { _, _ -> }
+		val coordinator = coordinator(proximity, light) { _, _, _ -> }
 
 		coordinator.onScreenOn { reason, result -> skipped = reason to result }
 
@@ -121,7 +138,7 @@ class ScreenOnCoordinatorTest {
 		val light = FakeSensor()
 		val scheduler = FakeDelayedActionScheduler()
 		var skipped: Pair<ThemeSwitchSkipReason, ScreenOnProximityResult>? = null
-		val coordinator = coordinator(proximity, light, scheduler) { _, _ -> }
+		val coordinator = coordinator(proximity, light, scheduler) { _, _, _ -> }
 
 		coordinator.onScreenOn { reason, result -> skipped = reason to result }
 		scheduler.advanceBy(SENSOR_READING_TIMEOUT_MS)
@@ -139,7 +156,7 @@ class ScreenOnCoordinatorTest {
 		val proximity = FakeProximitySensor()
 		val light = FakeSensor(registrationSucceeds = false)
 		var skipped: Pair<ThemeSwitchSkipReason, ScreenOnProximityResult>? = null
-		val coordinator = coordinator(proximity, light) { _, _ -> }
+		val coordinator = coordinator(proximity, light) { _, _, _ -> }
 
 		coordinator.onScreenOn { reason, result -> skipped = reason to result }
 		proximity.emit(proximity.maximumRange)
@@ -157,7 +174,7 @@ class ScreenOnCoordinatorTest {
 		val light = FakeSensor()
 		val scheduler = FakeDelayedActionScheduler()
 		var skipped: Pair<ThemeSwitchSkipReason, ScreenOnProximityResult>? = null
-		val coordinator = coordinator(proximity, light, scheduler) { _, _ -> }
+		val coordinator = coordinator(proximity, light, scheduler) { _, _, _ -> }
 
 		coordinator.onScreenOn { reason, result -> skipped = reason to result }
 		scheduler.advanceBy(SENSOR_READING_TIMEOUT_MS)
@@ -175,7 +192,7 @@ class ScreenOnCoordinatorTest {
 		val proximity = FakeProximitySensor()
 		val light = FakeSensor()
 		var requestedTheme: Boolean? = null
-		val coordinator = coordinator(proximity, light) { enabled, _ -> requestedTheme = enabled }
+		val coordinator = coordinator(proximity, light) { enabled, _, _ -> requestedTheme = enabled }
 
 		coordinator.onScreenOn()
 		proximity.emit(0f)
@@ -191,7 +208,7 @@ class ScreenOnCoordinatorTest {
 		proximity: FakeProximitySensor,
 		light: FakeSensor,
 		scheduler: FakeDelayedActionScheduler = FakeDelayedActionScheduler(),
-		onThemeRequested: (Boolean, ScreenOnProximityResult) -> Unit
+		onThemeRequested: (Boolean, ScreenOnProximityResult, Boolean) -> Unit
 	) = ScreenOnCoordinator(
 		proximitySensor = proximity,
 		lightSensor = light,

@@ -50,6 +50,8 @@ private const val TAG = "BroadcastReceiverService"
 private const val NOTIFICATION_CHANNEL_ID = "ForegroundServiceChannel"
 private const val ACTION_PAUSE_SERVICE = "dev.lexip.hecate.action.STOP_SERVICE"
 internal const val EXTRA_ENABLE_MONITORING = "dev.lexip.hecate.extra.ENABLE_MONITORING"
+internal const val EXTRA_EVALUATE_IMMEDIATELY =
+	"dev.lexip.hecate.extra.EVALUATE_IMMEDIATELY"
 
 private var screenOnReceiver: ScreenOnReceiver? = null
 
@@ -126,8 +128,16 @@ class BroadcastReceiverService : Service() {
 
 			// Create screen-on receiver if adaptive theme is enabled
 			val forceEnable = intent?.getBooleanExtra(EXTRA_ENABLE_MONITORING, false) == true
+			val evaluateImmediately =
+				intent?.getBooleanExtra(EXTRA_EVALUATE_IMMEDIATELY, false) == true
 			if (userPreferences.adaptiveThemeEnabled || forceEnable) {
 				createScreenOnReceiver(userPreferences)
+			}
+			if (forceEnable && evaluateImmediately) {
+				screenOnReceiver?.evaluateNow(
+					context = applicationContext,
+					syncWallpaperWhenThemeUnchanged = true
+				)
 			}
 
 			// Abort service start when there is no receiver to handle

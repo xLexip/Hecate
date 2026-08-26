@@ -107,13 +107,20 @@ class ScreenOnReceiver internal constructor(
 
 	override fun onReceive(context: Context, intent: Intent) {
 		if (intent.action == Intent.ACTION_SCREEN_ON) {
-			coordinator.onScreenOn { reason, screenOnProximityResult ->
-				Logger.logThemeSwitchSkipped(
-					context = context.applicationContext,
-					reason = reason,
-					screenOnProximityResult = screenOnProximityResult
-				)
-			}
+			evaluateNow(context.applicationContext)
+		}
+	}
+
+	fun evaluateNow(
+		context: Context,
+		syncWallpaperWhenThemeUnchanged: Boolean = false
+	) {
+		coordinator.onScreenOn(syncWallpaperWhenThemeUnchanged) { reason, screenOnProximityResult ->
+			Logger.logThemeSwitchSkipped(
+				context = context.applicationContext,
+				reason = reason,
+				screenOnProximityResult = screenOnProximityResult
+			)
 		}
 	}
 

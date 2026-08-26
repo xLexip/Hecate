@@ -17,7 +17,10 @@ import android.content.Intent
 import androidx.core.content.ContextCompat
 
 interface AdaptiveThemeServiceController {
-	fun start(enableMonitoring: Boolean = false)
+	fun start(
+		enableMonitoring: Boolean = false,
+		evaluateImmediately: Boolean = false
+	)
 	fun stop()
 }
 
@@ -25,10 +28,13 @@ class AndroidAdaptiveThemeServiceController(
 	private val context: Context
 ) : AdaptiveThemeServiceController {
 
-	override fun start(enableMonitoring: Boolean) {
+	override fun start(enableMonitoring: Boolean, evaluateImmediately: Boolean) {
 		val intent = Intent(context, BroadcastReceiverService::class.java)
 		if (enableMonitoring) {
 			intent.putExtra(EXTRA_ENABLE_MONITORING, true)
+		}
+		if (evaluateImmediately) {
+			intent.putExtra(EXTRA_EVALUATE_IMMEDIATELY, true)
 		}
 		ContextCompat.startForegroundService(context, intent)
 	}
