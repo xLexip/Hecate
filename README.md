@@ -21,12 +21,12 @@ It can also update your **wallpaper** to match the active theme.
     <img src=".github/resources/get-it-on-google-play.svg" alt="Get Adaptive Theme on Google Play" width="180"/>
 </a>
 &nbsp;&nbsp;
-<a href="https://github.com/xLexip/Adaptive-Theme/releases">
-    <img src=".github/resources/github-releases.png" alt="Get Adaptive Theme as .APK on GitHub Releases" width="180"/>
+<a href="https://lexip.dev/hecate/fdroid">
+    <img src=".github/resources/get-it-on-fdroid.svg" alt="Get Adaptive Theme on F-Droid" width="180"/>
 </a>
 &nbsp;&nbsp;
-<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22dev.lexip.hecate%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FxLexip%2FAdaptive-Theme%22%2C%22author%22%3A%22xLexip%22%2C%22name%22%3A%22Adaptive%20Theme%22%7D">
-    <img src="https://raw.githubusercontent.com/xLexip/Adaptive-Theme/develop/.github/resources/get-it-on-obtainium.svg" alt="Get Adaptive Theme on Obtainium" width="180">
+<a href="https://github.com/xLexip/Adaptive-Theme/releases">
+    <img src=".github/resources/github-releases.png" alt="Get Adaptive Theme as .APK on GitHub Releases" width="180"/>
 </a>
 &nbsp;&nbsp;
 <a href="#">
