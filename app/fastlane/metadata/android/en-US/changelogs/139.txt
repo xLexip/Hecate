@@ -1,0 +1,2 @@
+• Upgraded to target SDK 37 (Android 17)
+• Dependency updates

@@ -47,9 +47,9 @@ android {
     defaultConfig {
         applicationId = "dev.lexip.hecate"
         minSdk = 34
-        targetSdk = 36
-        versionCode = 136
-        versionName = "2.5.0"
+        targetSdk = 37
+        versionCode = 139
+        versionName = "2.5.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
